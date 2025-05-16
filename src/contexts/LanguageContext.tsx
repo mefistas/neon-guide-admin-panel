@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'ru';
@@ -15,6 +14,14 @@ const translations: Translations = {
   'firstSteps': {
     en: 'First Steps to Start',
     ru: 'Первые шаги',
+  },
+  'quickStart': {
+    en: 'Quick Start',
+    ru: 'Быстрый старт',
+  },
+  'detailedGuide': {
+    en: 'Detailed Guide',
+    ru: 'Подробное руководство',
   },
   'casinoSetup': {
     en: 'Casino Setup',
@@ -55,6 +62,63 @@ const translations: Translations = {
   'howToAddBots': {
     en: 'How to Add Bots',
     ru: 'Как добавить ботов',
+  },
+  // Quick Start page translations
+  'quickStartTitle': {
+    en: 'Quick Start Guide',
+    ru: 'Руководство по быстрому запуску',
+  },
+  'quickStartDescription': {
+    en: 'This guide will help you get started with the system in the shortest time possible.',
+    ru: 'Это руководство поможет вам начать работу с системой в кратчайшие сроки.',
+  },
+  'quickStartStep1Title': {
+    en: 'Step 1: Create Your First City',
+    ru: 'Шаг 1: Создайте свой первый город',
+  },
+  'quickStartStep1Description': {
+    en: 'Add a city where your business will operate.',
+    ru: 'Добавьте город, в котором будет работать ваш бизнес.',
+  },
+  'quickStartStep2Title': {
+    en: 'Step 2: Add Districts',
+    ru: 'Шаг 2: Добавьте районы',
+  },
+  'quickStartStep2Description': {
+    en: 'Create districts within your city for better organization.',
+    ru: 'Создайте районы в вашем городе для лучшей организации.',
+  },
+  'quickStartStep3Title': {
+    en: 'Step 3: Set Up Couriers',
+    ru: 'Шаг 3: Настройте курьеров',
+  },
+  'quickStartStep3Description': {
+    en: 'Add couriers who will deliver your products.',
+    ru: 'Добавьте курьеров, которые будут доставлять ваши товары.',
+  },
+  'quickStartStep4Title': {
+    en: 'Step 4: Create Product Groups',
+    ru: 'Шаг 4: Создайте группы продуктов',
+  },
+  'quickStartStep4Description': {
+    en: 'Organize your products into logical groups.',
+    ru: 'Организуйте ваши продукты в логические группы.',
+  },
+  'quickStartStep5Title': {
+    en: 'Step 5: Connect Bots',
+    ru: 'Шаг 5: Подключите ботов',
+  },
+  'quickStartStep5Description': {
+    en: 'Set up messaging bots to interact with your customers.',
+    ru: 'Настройте ботов для общения с вашими клиентами.',
+  },
+  'getStartedButton': {
+    en: 'Get Started',
+    ru: 'Начать',
+  },
+  'learnMoreButton': {
+    en: 'Learn More',
+    ru: 'Узнать больше',
   },
   // Common UI elements
   'languageSelector': {
