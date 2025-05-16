@@ -104,16 +104,16 @@ const translations: Translations = {
     ru: 'Чтобы добавить новый город в панель администратора, выполните следующие действия:',
   },
   'cityStep1': {
-    en: 'Navigate to the "MAIN" section in the top navigation bar',
-    ru: 'Перейдите в раздел "ГЛАВНАЯ" в верхней панели навигации',
+    en: 'Navigate to the "STOCK (СКЛАД-if its in russian)" section in the top navigation bar',
+    ru: 'Перейдите в раздел "СКЛАД" в верхней панели навигации',
   },
   'cityStep2': {
-    en: 'Click on "MERCHANTS" dropdown menu',
-    ru: 'Нажмите на выпадающее меню "ТОРГОВЦЫ"',
+    en: 'Click on "CITIES" from dropdown menu',
+    ru: 'Нажмите на выпадающее меню "ГОРОДА"',
   },
   'cityStep3': {
-    en: 'Select "Cities" from the dropdown options',
-    ru: 'Выберите "Города" из выпадающего меню',
+    en: 'Press "Add city" on the top right of the page',
+    ru: 'Нажимай "Добавить город" справа сверху есть кнопка',
   },
   'cityStep4': {
     en: 'Click the "Add New City" button in the top right corner',
