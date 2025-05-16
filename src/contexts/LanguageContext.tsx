@@ -116,40 +116,40 @@ const translations: Translations = {
     ru: 'Нажимай "Добавить город" справа сверху есть кнопка',
   },
   'cityStep4': {
-    en: 'Click the "Add New City" button in the top right corner',
-    ru: 'Нажмите кнопку "Добавить новый город" в правом верхнем углу',
+    en: 'Here you need to fill out all info about your city',
+    ru: 'Теперь нужно заполнить инфу о городе',
   },
   'cityStep5': {
-    en: 'Fill in the required fields:',
-    ru: 'Заполните обязательные поля:',
+    en: 'Enter the city name',
+    ru: 'Введи имя города',
   },
   'cityField1': {
-    en: 'City Name',
-    ru: 'Название города',
+    en: 'tick (доступен для продаж) this will make city available for purchases we just didnt translate this button to english',
+    ru: 'поставь галочку у -ДОСТУПЕН ДЛЯ ПРОДАЖ что бы клиенты видели твой город при покупках',
   },
   'cityField2': {
-    en: 'Region/State',
-    ru: 'Регион/Область',
+    en: 'tick (is active for pre-orders) if you need it to be ready for preorders',
+    ru: 'поставь галочку у -ДОСТУПЕН ДЛЯ ПРЕДЗАКАЗОВ если тебе вообще нужно такое',
   },
   'cityField3': {
-    en: 'Country',
-    ru: 'Страна',
+    en: 'In merchant section select your store name that you would like to add this city to',
+    ru: 'выбери магаз к которому хочешь что бы относился твой город',
   },
   'cityField4': {
-    en: 'Status (Active/Inactive)',
-    ru: 'Статус (Активен/Неактивен)',
+    en: 'sort order 300 - man remember if you make it 301 your city goes up in your bot if 299 it goes down in order, that works for all sort orders where possible',
+    ru: 'порядок сортировки по дефолту 300 если поставишь 301 этот город будет выше остальных в боте если 299 то ниже, запомни это правило работает для всего порядка сортировки',
   },
   'cityStep6': {
-    en: 'Click "Save" to add the new city to the system',
-    ru: 'Нажмите "Сохранить", чтобы добавить новый город в систему',
+    en: 'Save and add another - you will save this city and have an option to add another without returning to the main menu. Save and continue editing - you will just stay on same page. Save - info will be saved and you will go to the cities menu. (works everywhere - remember this buttons) ',
+    ru: 'Сохранить и добавть еще - останешься на этой же странице сможешь добавить еще город, сохранить и продолжить редактирование - сохранишься и останешся на этом же городе. Сохранить - перейдешь в меню в котором был до этого и сохранишь инфу, запомни эти кнопки они везде работают одинаково и помогают тебе не сойти с ума.',
   },
   'importantNote': {
     en: 'Important Note',
     ru: 'Важное примечание',
   },
   'cityImportantNote': {
-    en: 'Make sure that each city has a unique name within the same region to avoid conflicts in the system.',
-    ru: 'Убедитесь, что каждый город имеет уникальное название в пределах одного региона, чтобы избежать конфликтов в системе.',
+    en: 'Make sure that each city has a unique name to avoid conflicts in the system.',
+    ru: 'Убедитесь, что каждый город имеет уникальное название, чтобы избежать конфликтов в системе.',
   },
   // District page translations
   'districtDescription': {
