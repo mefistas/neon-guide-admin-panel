@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'ru';
@@ -11,6 +12,10 @@ type Translations = {
 
 const translations: Translations = {
   // Navigation items
+  'adminPanelTutorial': {
+    en: 'Admin Panel Tutorial',
+    ru: 'Руководство по админ-панели',
+  },
   'quickStart': {
     en: 'Quick Start',
     ru: 'Быстрый старт',
@@ -18,6 +23,46 @@ const translations: Translations = {
   'detailedGuide': {
     en: 'Close look to each part',
     ru: 'Детальный гайд по админке',
+  },
+  'languageSelector': {
+    en: 'Language',
+    ru: 'Язык',
+  },
+  'english': {
+    en: 'English',
+    ru: 'Английский',
+  },
+  'russian': {
+    en: 'Russian',
+    ru: 'Русский',
+  },
+  'howToAddCity': {
+    en: 'How to add city',
+    ru: 'Как добавить город',
+  },
+  'howToAddDistrict': {
+    en: 'How to add district',
+    ru: 'Как добавить район',
+  },
+  'howToAddCourier': {
+    en: 'How to add courier',
+    ru: 'Как добавить курьера',
+  },
+  'howToCreateProductGroup': {
+    en: 'How to create product group',
+    ru: 'Как создать группу товаров',
+  },
+  'howToCreateProductTypes': {
+    en: 'How to create product types',
+    ru: 'Как создать типы товаров',
+  },
+  'howToAddAddress': {
+    en: 'How to add address',
+    ru: 'Как добавить адрес',
+  },
+  'howToAddBots': {
+    en: 'How to add bots',
+    ru: 'Как добавить ботов',
   },
   // Quick Start translations
   'quickStartDescription': {
