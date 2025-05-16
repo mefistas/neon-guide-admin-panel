@@ -17,6 +17,8 @@ import HowToAddBots from "./pages/HowToAddBots";
 import CasinoSetup from "./pages/CasinoSetup";
 import CardsPayments from "./pages/CardsPayments";
 import AskQuestion from "./pages/AskQuestion";
+import QuickStart from "./pages/QuickStart";
+import BasicSetup from "./pages/BasicSetup";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +31,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/quick-start" element={<QuickStart />} />
             <Route path="/how-to-add-city" element={<HowToAddCity />} />
             <Route path="/how-to-add-district" element={<HowToAddDistrict />} />
             <Route path="/how-to-add-courier" element={<HowToAddCourier />} />

@@ -3,6 +3,8 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+// This file is maintained for reference but not currently used
+
 const QuickStartOverview = () => {
   const { t } = useLanguage();
 

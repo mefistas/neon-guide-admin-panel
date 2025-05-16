@@ -27,12 +27,6 @@ const Sidebar = () => {
     { key: 'howToAddBots', path: '/how-to-add-bots', icon: <Bot size={18} /> },
   ];
 
-  // Quick start items
-  const quickStartSubItems = [
-    { key: 'quickStartOverview', path: '/quick-start-overview', icon: <Building size={18} /> },
-    { key: 'basicSetup', path: '/basic-setup', icon: <Building size={18} /> },
-  ];
-
   return (
     <div className="h-screen w-64 bg-black border-r border-gray-800 flex flex-col">
       <div className="p-4 border-b border-gray-800">
@@ -41,39 +35,17 @@ const Sidebar = () => {
         </Link>
       </div>
       <div className="flex-1 overflow-y-auto py-2">
-        {/* Quick Start menu - New */}
-        <div>
-          <button
-            onClick={() => toggleMenu('quickStart')}
-            className={cn(
-              "w-full flex items-center justify-between px-4 py-3 text-left hover:bg-gray-800/50 transition-colors",
-              expandedMenu === 'quickStart' ? 'text-white font-medium' : 'text-gray-300'
-            )}
-          >
-            <span className="flex items-center gap-2">
-              <Bot size={20} />
-              {t('quickStart')}
-            </span>
-            {expandedMenu === 'quickStart' ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
-          </button>
-          {expandedMenu === 'quickStart' && (
-            <div className="pl-4 pr-2 py-2 space-y-1 bg-black/30">
-              {quickStartSubItems.map((item) => (
-                <Link
-                  key={item.key}
-                  to={item.path}
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded-md transition-colors",
-                    isActive(item.path) ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-400 hover:text-white'
-                  )}
-                >
-                  {item.icon}
-                  <span>{t(item.key)}</span>
-                </Link>
-              ))}
-            </div>
+        {/* Quick Start - Direct Link */}
+        <Link
+          to="/quick-start"
+          className={cn(
+            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
+            isActive('/quick-start') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300'
           )}
-        </div>
+        >
+          <Bot size={20} className="mr-3" />
+          {t('quickStart')}
+        </Link>
 
         {/* Detailed Guide menu (formerly First Steps) */}
         <div>
