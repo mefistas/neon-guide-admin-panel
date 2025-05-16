@@ -19,6 +19,19 @@ import CardsPayments from "./pages/CardsPayments";
 import AskQuestion from "./pages/AskQuestion";
 import QuickStart from "./pages/QuickStart";
 import BasicSetup from "./pages/BasicSetup";
+import Merchants from "./pages/Merchants";
+import MasterKlad from "./pages/MasterKlad";
+import CustomBot from "./pages/CustomBot";
+import Workers from "./pages/Workers";
+import Clients from "./pages/Clients";
+import Purchases from "./pages/Purchases";
+import BalanceTopUps from "./pages/BalanceTopUps";
+import Marketing from "./pages/Marketing";
+import Messages from "./pages/Messages";
+import Web from "./pages/Web";
+import CouriersSalary from "./pages/CouriersSalary";
+import Usdt from "./pages/Usdt";
+import PartnersExchangers from "./pages/PartnersExchangers";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +54,19 @@ const App = () => (
             <Route path="/how-to-add-bots" element={<HowToAddBots />} />
             <Route path="/casino-setup" element={<CasinoSetup />} />
             <Route path="/cards-payments" element={<CardsPayments />} />
+            <Route path="/merchants" element={<Merchants />} />
+            <Route path="/master-klad" element={<MasterKlad />} />
+            <Route path="/custom-bot" element={<CustomBot />} />
+            <Route path="/workers" element={<Workers />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/purchases" element={<Purchases />} />
+            <Route path="/balance-top-ups" element={<BalanceTopUps />} />
+            <Route path="/marketing" element={<Marketing />} />
+            <Route path="/messages" element={<Messages />} />
+            <Route path="/web" element={<Web />} />
+            <Route path="/couriers-salary" element={<CouriersSalary />} />
+            <Route path="/usdt" element={<Usdt />} />
+            <Route path="/partners-exchangers" element={<PartnersExchangers />} />
             <Route path="/ask-question" element={<AskQuestion />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -668,6 +668,918 @@ const translations: Translations = {
     en: 'Partners Exchangers',
     ru: 'Партнеры обменники',
   },
+
+  // Merchants page translations
+  'merchantsDescription': {
+    en: 'Managing merchants in your admin panel:',
+    ru: 'Управление магазинами в вашей админ панели:',
+  },
+  'merchantsStep1': {
+    en: 'Access the Merchants section from the main navigation',
+    ru: 'Перейдите в раздел Магазины в главной навигации',
+  },
+  'merchantsStep2': {
+    en: 'View the list of all registered merchants',
+    ru: 'Просмотрите список всех зарегистрированных магазинов',
+  },
+  'merchantsStep3': {
+    en: 'Click "Add New Merchant" to register a new store',
+    ru: 'Нажмите "Добавить новый магазин" для регистрации нового магазина',
+  },
+  'merchantsStep4': {
+    en: 'Fill in the required merchant information',
+    ru: 'Заполните необходимую информацию о магазине',
+  },
+  'merchantsStep5': {
+    en: 'Configure merchant settings:',
+    ru: 'Настройте параметры магазина:',
+  },
+  'merchantsField1': {
+    en: 'Commission rates and payment terms',
+    ru: 'Комиссионные ставки и условия оплаты',
+  },
+  'merchantsField2': {
+    en: 'Operating hours and service availability',
+    ru: 'Часы работы и доступность услуг',
+  },
+  'merchantsField3': {
+    en: 'Product categories the merchant can sell',
+    ru: 'Категории товаров, которые может продавать магазин',
+  },
+  'merchantsField4': {
+    en: 'Delivery zones and restrictions',
+    ru: 'Зоны доставки и ограничения',
+  },
+  'merchantsStep6': {
+    en: 'Save changes and activate the merchant account',
+    ru: 'Сохраните изменения и активируйте учетную запись магазина',
+  },
+  'merchantsNote': {
+    en: 'Important Note',
+    ru: 'Важное примечание',
+  },
+  'merchantsNoteText': {
+    en: 'Always verify merchant documentation before activation to ensure compliance with platform policies and local regulations.',
+    ru: 'Всегда проверяйте документацию магазина перед активацией, чтобы обеспечить соответствие политикам платформы и местным нормативам.',
+  },
+  'merchantsImage1': {
+    en: 'Merchant management dashboard',
+    ru: 'Панель управления магазинами',
+  },
+  'merchantsImage2': {
+    en: 'Adding a new merchant',
+    ru: 'Добавление нового магазина',
+  },
+  'merchantsImage3': {
+    en: 'Merchant profile settings',
+    ru: 'Настройки профиля магазина',
+  },
+  'merchantsImage4': {
+    en: 'Merchant analytics view',
+    ru: 'Просмотр аналитики магазина',
+  },
+
+  // Master Klad page translations
+  'masterKladDescription': {
+    en: 'Managing the Master Klad system:',
+    ru: 'Управление системой Мастер Клад:',
+  },
+  'masterKladStep1': {
+    en: 'Navigate to the Master Klad section in the admin panel',
+    ru: 'Перейдите в раздел Мастер Клад в панели администратора',
+  },
+  'masterKladStep2': {
+    en: 'View current Master Klad entries and statuses',
+    ru: 'Просмотрите текущие записи и статусы Мастер Клада',
+  },
+  'masterKladStep3': {
+    en: 'Create a new Master Klad entry when needed',
+    ru: 'Создайте новую запись Мастер Клада при необходимости',
+  },
+  'masterKladStep4': {
+    en: 'Assign appropriate staff to manage the entry',
+    ru: 'Назначьте соответствующий персонал для управления записью',
+  },
+  'masterKladStep5': {
+    en: 'Configure Master Klad settings:',
+    ru: 'Настройте параметры Мастер Клада:',
+  },
+  'masterKladField1': {
+    en: 'Location coordinates and description',
+    ru: 'Координаты местоположения и описание',
+  },
+  'masterKladField2': {
+    en: 'Access permissions and security levels',
+    ru: 'Разрешения доступа и уровни безопасности',
+  },
+  'masterKladField3': {
+    en: 'Inventory tracking and alerts',
+    ru: 'Отслеживание инвентаря и оповещения',
+  },
+  'masterKladField4': {
+    en: 'Schedule and rotation settings',
+    ru: 'Настройки расписания и ротации',
+  },
+  'masterKladStep6': {
+    en: 'Save changes and activate the Master Klad entry',
+    ru: 'Сохраните изменения и активируйте запись Мастер Клада',
+  },
+  'masterKladNote': {
+    en: 'Security Note',
+    ru: 'Примечание по безопасности',
+  },
+  'masterKladNoteText': {
+    en: 'Ensure that Master Klad information is shared only with authorized personnel and through secure channels.',
+    ru: 'Убедитесь, что информация о Мастер Кладе передается только авторизованному персоналу и по защищенным каналам.',
+  },
+  'masterKladImage1': {
+    en: 'Master Klad management interface',
+    ru: 'Интерфейс управления Мастер Кладом',
+  },
+  'masterKladImage2': {
+    en: 'Creating a new Master Klad entry',
+    ru: 'Создание новой записи Мастер Клада',
+  },
+  'masterKladImage3': {
+    en: 'Master Klad location management',
+    ru: 'Управление местоположением Мастер Клада',
+  },
+  'masterKladImage4': {
+    en: 'Master Klad security settings',
+    ru: 'Настройки безопасности Мастер Клада',
+  },
+
+  // Custom Bot page translations
+  'customBotDescription': {
+    en: 'Customizing and configuring your bot:',
+    ru: 'Настройка и конфигурация вашего бота:',
+  },
+  'customBotStep1': {
+    en: 'Navigate to the Custom Bot section in the admin panel',
+    ru: 'Перейдите в раздел Кастомизация бота в панели администратора',
+  },
+  'customBotStep2': {
+    en: 'View your current bot configuration and settings',
+    ru: 'Просмотрите текущую конфигурацию и настройки вашего бота',
+  },
+  'customBotStep3': {
+    en: 'Choose which platform to customize your bot for',
+    ru: 'Выберите, для какой платформы настроить вашего бота',
+  },
+  'customBotStep4': {
+    en: 'Select the bot features you want to enable',
+    ru: 'Выберите функции бота, которые вы хотите включить',
+  },
+  'customBotStep5': {
+    en: 'Configure bot behavior:',
+    ru: 'Настройте поведение бота:',
+  },
+  'customBotField1': {
+    en: 'Welcome messages and greetings',
+    ru: 'Приветственные сообщения и приветствия',
+  },
+  'customBotField2': {
+    en: 'Menu structure and command responses',
+    ru: 'Структура меню и ответы на команды',
+  },
+  'customBotField3': {
+    en: 'Automated workflows and actions',
+    ru: 'Автоматизированные рабочие процессы и действия',
+  },
+  'customBotField4': {
+    en: 'Integration with product catalog and orders',
+    ru: 'Интеграция с каталогом продукции и заказами',
+  },
+  'customBotStep6': {
+    en: 'Test the customized bot before deploying to production',
+    ru: 'Протестируйте настроенного бота перед развертыванием в рабочей среде',
+  },
+  'customBotNote': {
+    en: 'Performance Tip',
+    ru: 'Совет по производительности',
+  },
+  'customBotNoteText': {
+    en: 'Complex bot configurations may impact response times. Start with essential features and expand gradually as needed.',
+    ru: 'Сложные конфигурации бота могут повлиять на время отклика. Начните с основных функций и постепенно расширяйте по мере необходимости.',
+  },
+  'customBotImage1': {
+    en: 'Bot customization dashboard',
+    ru: 'Панель настройки бота',
+  },
+  'customBotImage2': {
+    en: 'Bot menu configuration',
+    ru: 'Конфигурация меню бота',
+  },
+  'customBotImage3': {
+    en: 'Bot response templates',
+    ru: 'Шаблоны ответов бота',
+  },
+  'customBotImage4': {
+    en: 'Bot testing interface',
+    ru: 'Интерфейс тестирования бота',
+  },
+
+  // Workers page translations
+  'workersDescription': {
+    en: 'Managing workers in your admin panel:',
+    ru: 'Управление сотрудниками в вашей админ панели:',
+  },
+  'workersStep1': {
+    en: 'Access the Workers section from the main navigation',
+    ru: 'Перейдите в раздел Сотрудники в главной навигации',
+  },
+  'workersStep2': {
+    en: 'View the list of all registered workers',
+    ru: 'Просмотрите список всех зарегистрированных сотрудников',
+  },
+  'workersStep3': {
+    en: 'Click "Add New Worker" to register a new employee',
+    ru: 'Нажмите "Добавить нового сотрудника" для регистрации нового работника',
+  },
+  'workersStep4': {
+    en: 'Fill in the required worker information',
+    ru: 'Заполните необходимую информацию о сотруднике',
+  },
+  'workersStep5': {
+    en: 'Configure worker settings:',
+    ru: 'Настройте параметры сотрудника:',
+  },
+  'workersField1': {
+    en: 'Role and access permissions',
+    ru: 'Роль и разрешения доступа',
+  },
+  'workersField2': {
+    en: 'Working hours and availability',
+    ru: 'Рабочие часы и доступность',
+  },
+  'workersField3': {
+    en: 'Salary and commission structure',
+    ru: 'Структура зарплаты и комиссий',
+  },
+  'workersField4': {
+    en: 'Task assignments and responsibilities',
+    ru: 'Назначение задач и обязанности',
+  },
+  'workersStep6': {
+    en: 'Save changes and activate the worker account',
+    ru: 'Сохраните изменения и активируйте учетную запись сотрудника',
+  },
+  'workersNote': {
+    en: 'Security Reminder',
+    ru: 'Напоминание о безопасности',
+  },
+  'workersNoteText': {
+    en: 'Regularly review worker access permissions and update them based on current roles and responsibilities.',
+    ru: 'Регулярно проверяйте разрешения доступа сотрудников и обновляйте их в соответствии с текущими ролями и обязанностями.',
+  },
+  'workersImage1': {
+    en: 'Workers management dashboard',
+    ru: 'Панель управления сотрудниками',
+  },
+  'workersImage2': {
+    en: 'Adding a new worker',
+    ru: 'Добавление нового сотрудника',
+  },
+  'workersImage3': {
+    en: 'Worker profile settings',
+    ru: 'Настройки профиля сотрудника',
+  },
+  'workersImage4': {
+    en: 'Worker performance analytics',
+    ru: 'Аналитика производительности сотрудников',
+  },
+
+  // Clients page translations
+  'clientsDescription': {
+    en: 'Managing clients in your admin panel:',
+    ru: 'Управление клиентами в вашей админ панели:',
+  },
+  'clientsStep1': {
+    en: 'Access the Clients section from the main navigation',
+    ru: 'Перейдите в раздел Клиенты в главной навигации',
+  },
+  'clientsStep2': {
+    en: 'View the list of all registered clients',
+    ru: 'Просмотрите список всех зарегистрированных клиентов',
+  },
+  'clientsStep3': {
+    en: 'Use filters to find specific clients by name, email, or other criteria',
+    ru: 'Используйте фильтры для поиска определенных клиентов по имени, электронной почте или другим критериям',
+  },
+  'clientsStep4': {
+    en: 'Click on a client to view their detailed profile',
+    ru: 'Нажмите на клиента, чтобы просмотреть их подробный профиль',
+  },
+  'clientsStep5': {
+    en: 'Manage client information:',
+    ru: 'Управление информацией о клиенте:',
+  },
+  'clientsField1': {
+    en: 'Contact details and preferences',
+    ru: 'Контактные данные и предпочтения',
+  },
+  'clientsField2': {
+    en: 'Order history and payment records',
+    ru: 'История заказов и записи платежей',
+  },
+  'clientsField3': {
+    en: 'Loyalty status and rewards',
+    ru: 'Статус лояльности и вознаграждения',
+  },
+  'clientsField4': {
+    en: 'Account status (active, blocked, etc.)',
+    ru: 'Статус учетной записи (активный, заблокированный и т.д.)',
+  },
+  'clientsStep6': {
+    en: 'Save changes made to client profiles',
+    ru: 'Сохраните изменения, внесенные в профили клиентов',
+  },
+  'clientsNote': {
+    en: 'Data Protection',
+    ru: 'Защита данных',
+  },
+  'clientsNoteText': {
+    en: 'Ensure all client data handling complies with applicable data protection regulations such as GDPR or local privacy laws.',
+    ru: 'Убедитесь, что обработка всех данных клиентов соответствует применимым нормам защиты данных, таким как GDPR или местные законы о конфиденциальности.',
+  },
+  'clientsImage1': {
+    en: 'Clients management dashboard',
+    ru: 'Панель управления клиентами',
+  },
+  'clientsImage2': {
+    en: 'Client profile view',
+    ru: 'Просмотр профиля клиента',
+  },
+  'clientsImage3': {
+    en: 'Client order history',
+    ru: 'История заказов клиента',
+  },
+  'clientsImage4': {
+    en: 'Client loyalty program settings',
+    ru: 'Настройки программы лояльности клиента',
+  },
+
+  // Add translations for Purchases page
+  'purchasesDescription': {
+    en: 'Managing purchases in your admin panel:',
+    ru: 'Управление покупками в вашей админ панели:',
+  },
+  'purchasesStep1': {
+    en: 'Access the Purchases section from the main navigation',
+    ru: 'Перейдите в раздел Покупки в главной навигации',
+  },
+  'purchasesStep2': {
+    en: 'View the list of all purchases made in the system',
+    ru: 'Просмотрите список всех покупок, сделанных в системе',
+  },
+  'purchasesStep3': {
+    en: 'Use filters to find specific purchases by date, client, or status',
+    ru: 'Используйте фильтры для поиска конкретных покупок по дате, клиенту или статусу',
+  },
+  'purchasesStep4': {
+    en: 'Click on a purchase to view detailed information',
+    ru: 'Нажмите на покупку для просмотра подробной информации',
+  },
+  'purchasesStep5': {
+    en: 'Manage purchase details:',
+    ru: 'Управление деталями покупки:',
+  },
+  'purchasesField1': {
+    en: 'Order items and quantities',
+    ru: 'Позиции заказа и количество',
+  },
+  'purchasesField2': {
+    en: 'Payment status and method',
+    ru: 'Статус оплаты и способ оплаты',
+  },
+  'purchasesField3': {
+    en: 'Shipping details and tracking',
+    ru: 'Детали доставки и отслеживание',
+  },
+  'purchasesField4': {
+    en: 'Customer information and notes',
+    ru: 'Информация о клиенте и примечания',
+  },
+  'purchasesStep6': {
+    en: 'Update purchase status or process refunds when necessary',
+    ru: 'Обновите статус покупки или обработайте возвраты при необходимости',
+  },
+  'purchasesNote': {
+    en: 'Order Tracking',
+    ru: 'Отслеживание заказов',
+  },
+  'purchasesNoteText': {
+    en: 'Keep customers informed about their purchase status by ensuring that tracking updates are promptly reflected in the system.',
+    ru: 'Информируйте клиентов о статусе их покупки, гарантируя, что обновления отслеживания оперативно отображаются в системе.',
+  },
+
+  // Add translations for Balance Top Ups page
+  'balanceTopUpsDescription': {
+    en: 'Managing balance top-ups in your admin panel:',
+    ru: 'Управление пополнениями баланса в вашей админ панели:',
+  },
+  'balanceTopUpsStep1': {
+    en: 'Access the Balance Top Ups section from the main navigation',
+    ru: 'Перейдите в раздел Пополнения балансов в главной навигации',
+  },
+  'balanceTopUpsStep2': {
+    en: 'View the list of all balance top-up transactions',
+    ru: 'Просмотрите список всех транзакций пополнения баланса',
+  },
+  'balanceTopUpsStep3': {
+    en: 'Use filters to find specific transactions by date, client, or amount',
+    ru: 'Используйте фильтры для поиска конкретных транзакций по дате, клиенту или сумме',
+  },
+  'balanceTopUpsStep4': {
+    en: 'Click on a transaction to view detailed information',
+    ru: 'Нажмите на транзакцию для просмотра подробной информации',
+  },
+  'balanceTopUpsStep5': {
+    en: 'Manage top-up details:',
+    ru: 'Управление деталями пополнения:',
+  },
+  'balanceTopUpsField1': {
+    en: 'Transaction amount and currency',
+    ru: 'Сумма транзакции и валюта',
+  },
+  'balanceTopUpsField2': {
+    en: 'Payment method and status',
+    ru: 'Способ оплаты и статус',
+  },
+  'balanceTopUpsField3': {
+    en: 'Client account information',
+    ru: 'Информация об учетной записи клиента',
+  },
+  'balanceTopUpsField4': {
+    en: 'Bonus or promotional credits applied',
+    ru: 'Примененные бонусы или промо-кредиты',
+  },
+  'balanceTopUpsStep6': {
+    en: 'Approve pending top-ups or process refunds when necessary',
+    ru: 'Одобряйте ожидающие пополнения или обрабатывайте возвраты при необходимости',
+  },
+  'balanceTopUpsNote': {
+    en: 'Transaction Security',
+    ru: 'Безопасность транзакций',
+  },
+  'balanceTopUpsNoteText': {
+    en: 'Review unusual or high-value transactions carefully to prevent fraud and ensure compliance with anti-money laundering regulations.',
+    ru: 'Тщательно проверяйте необычные или крупные транзакции для предотвращения мошенничества и обеспечения соблюдения правил борьбы с отмыванием денег.',
+  },
+
+  // Add translations for Marketing page
+  'marketingDescription': {
+    en: 'Managing marketing campaigns in your admin panel:',
+    ru: 'Управление маркетинговыми кампаниями в вашей админ панели:',
+  },
+  'marketingStep1': {
+    en: 'Access the Marketing section from the main navigation',
+    ru: 'Перейдите в раздел Рассылки в главной навигации',
+  },
+  'marketingStep2': {
+    en: 'View existing marketing campaigns and their performance metrics',
+    ru: 'Просмотрите существующие маркетинговые кампании и их показатели эффективности',
+  },
+  'marketingStep3': {
+    en: 'Click "Create New Campaign" to start a new marketing effort',
+    ru: 'Нажмите "Создать новую кампанию" для начала новой маркетинговой кампании',
+  },
+  'marketingStep4': {
+    en: 'Select campaign type: email, push notification, SMS, or in-app message',
+    ru: 'Выберите тип кампании: email, push-уведомление, SMS или сообщение в приложении',
+  },
+  'marketingStep5': {
+    en: 'Configure campaign settings:',
+    ru: 'Настройте параметры кампании:',
+  },
+  'marketingField1': {
+    en: 'Target audience and segmentation',
+    ru: 'Целевая аудитория и сегментация',
+  },
+  'marketingField2': {
+    en: 'Message content and design',
+    ru: 'Содержание и дизайн сообщения',
+  },
+  'marketingField3': {
+    en: 'Scheduling and frequency',
+    ru: 'Планирование и частота',
+  },
+  'marketingField4': {
+    en: 'A/B testing options',
+    ru: 'Варианты A/B тестирования',
+  },
+  'marketingStep6': {
+    en: 'Review, test, and launch your marketing campaign',
+    ru: 'Проверьте, протестируйте и запустите свою маркетинговую кампанию',
+  },
+  'marketingNote': {
+    en: 'Best Practice',
+    ru: 'Лучшая практика',
+  },
+  'marketingNoteText': {
+    en: 'Always obtain proper consent from recipients before sending marketing communications and include clear unsubscribe options in all messages.',
+    ru: 'Всегда получайте надлежащее согласие от получателей перед отправкой маркетинговых сообщений и включайте четкие варианты отписки во все сообщения.',
+  },
+
+  // Add translations for Messages page
+  'messagesDescription': {
+    en: 'Managing messages in your admin panel:',
+    ru: 'Управление сообщениями в вашей админ панели:',
+  },
+  'messagesStep1': {
+    en: 'Access the Messages section from the main navigation',
+    ru: 'Перейдите в раздел Сообщения в главной навигации',
+  },
+  'messagesStep2': {
+    en: 'View all messages organized by conversation or contact',
+    ru: 'Просмотрите все сообщения, организованные по беседам или контактам',
+  },
+  'messagesStep3': {
+    en: 'Use filters to find specific messages by date, sender, or content',
+    ru: 'Используйте фильтры для поиска конкретных сообщений по дате, отправителю или содержанию',
+  },
+  'messagesStep4': {
+    en: 'Click on a conversation to view message history',
+    ru: 'Нажмите на беседу для просмотра истории сообщений',
+  },
+  'messagesStep5': {
+    en: 'Message management features:',
+    ru: 'Функции управления сообщениями:',
+  },
+  'messagesField1': {
+    en: 'Send and receive messages in real-time',
+    ru: 'Отправляйте и получайте сообщения в реальном времени',
+  },
+  'messagesField2': {
+    en: 'Set up automated responses for common queries',
+    ru: 'Настройте автоматические ответы на часто задаваемые вопросы',
+  },
+  'messagesField3': {
+    en: 'Forward messages to appropriate departments',
+    ru: 'Перенаправляйте сообщения в соответствующие отделы',
+  },
+  'messagesField4': {
+    en: 'Archive or flag messages for follow-up',
+    ru: 'Архивируйте или отмечайте сообщения для последующего рассмотрения',
+  },
+  'messagesStep6': {
+    en: 'Ensure timely responses to all customer inquiries',
+    ru: 'Обеспечьте своевременные ответы на все запросы клиентов',
+  },
+  'messagesNote': {
+    en: 'Communication Tip',
+    ru: 'Совет по коммуникации',
+  },
+  'messagesNoteText': {
+    en: 'Maintain a professional tone in all customer communications and establish standard response times for different types of inquiries.',
+    ru: 'Поддерживайте профессиональный тон во всех коммуникациях с клиентами и устанавливайте стандартные время ответа для разных типов запросов.',
+  },
+
+  // Add translations for Web page
+  'webDescription': {
+    en: 'Managing web settings in your admin panel:',
+    ru: 'Управление настройками веб-сайта в вашей админ панели:',
+  },
+  'webStep1': {
+    en: 'Access the Web section from the main navigation',
+    ru: 'Перейдите в раздел Веб-сайты в главной навигации',
+  },
+  'webStep2': {
+    en: 'View your website settings and configurations',
+    ru: 'Просмотрите настройки и конфигурации вашего веб-сайта',
+  },
+  'webStep3': {
+    en: 'Click on different sections to manage specific web features',
+    ru: 'Нажимайте на разные разделы для управления конкретными веб-функциями',
+  },
+  'webStep4': {
+    en: 'Preview changes before publishing them to the live site',
+    ru: 'Предварительно просматривайте изменения перед публикацией на рабочем сайте',
+  },
+  'webStep5': {
+    en: 'Web management features:',
+    ru: 'Функции управления веб-сайтом:',
+  },
+  'webField1': {
+    en: 'Content management and page editing',
+    ru: 'Управление контентом и редактирование страниц',
+  },
+  'webField2': {
+    en: 'Theme and appearance settings',
+    ru: 'Настройки темы и внешнего вида',
+  },
+  'webField3': {
+    en: 'SEO optimization tools',
+    ru: 'Инструменты оптимизации SEO',
+  },
+  'webField4': {
+    en: 'Integration with other platform features',
+    ru: 'Интеграция с другими функциями платформы',
+  },
+  'webStep6': {
+    en: 'Publish changes to make them visible to users',
+    ru: 'Опубликуйте изменения, чтобы они стали видимыми для пользователей',
+  },
+  'webNote': {
+    en: 'Performance Consideration',
+    ru: 'Рекомендация по производительности',
+  },
+  'webNoteText': {
+    en: 'Regularly monitor your website loading speed and mobile responsiveness to ensure optimal user experience across all devices.',
+    ru: 'Регулярно контролируйте скорость загрузки вашего веб-сайта и адаптивность для мобильных устройств, чтобы обеспечить оптимальный пользовательский опыт на всех устройствах.',
+  },
+
+  // Add translations for Couriers Salary page
+  'couriersSalaryDescription': {
+    en: 'Managing courier salaries in your admin panel:',
+    ru: 'Управление зарплатами курьеров в вашей админ панели:',
+  },
+  'couriersSalaryStep1': {
+    en: 'Access the Couriers Salary section from the main navigation',
+    ru: 'Перейдите в раздел Начисления курьерам в главной навигации',
+  },
+  'couriersSalaryStep2': {
+    en: 'View salary records for all couriers in the system',
+    ru: 'Просмотрите записи о зарплате для всех курьеров в системе',
+  },
+  'couriersSalaryStep3': {
+    en: 'Filter salary data by courier, date range, or payment status',
+    ru: 'Фильтруйте данные о зарплате по курьеру, диапазону дат или статусу оплаты',
+  },
+  'couriersSalaryStep4': {
+    en: 'Generate detailed salary reports for accounting purposes',
+    ru: 'Создавайте подробные отчеты о зарплате для бухгалтерских целей',
+  },
+  'couriersSalaryStep5': {
+    en: 'Salary management features:',
+    ru: 'Функции управления зарплатой:',
+  },
+  'couriersSalaryField1': {
+    en: 'Base pay and commission calculations',
+    ru: 'Расчеты базовой оплаты и комиссий',
+  },
+  'couriersSalaryField2': {
+    en: 'Bonus and incentive tracking',
+    ru: 'Отслеживание бонусов и стимулов',
+  },
+  'couriersSalaryField3': {
+    en: 'Payment scheduling and processing',
+    ru: 'Планирование и обработка платежей',
+  },
+  'couriersSalaryField4': {
+    en: 'Tax withholding and deductions',
+    ru: 'Удержание налогов и вычеты',
+  },
+  'couriersSalaryStep6': {
+    en: 'Approve and mark payments as processed once completed',
+    ru: 'Одобряйте и отмечайте платежи как обработанные после завершения',
+  },
+  'couriersSalaryNote': {
+    en: 'Legal Compliance',
+    ru: 'Правовое соответствие',
+  },
+  'couriersSalaryNoteText': {
+    en: 'Ensure that all salary processing complies with local labor laws and tax regulations for independent contractors or employees.',
+    ru: 'Убедитесь, что вся обработка зарплаты соответствует местным трудовым законам и налоговым нормам для независимых подрядчиков или сотрудников.',
+  },
+
+  // Add translations for USDT page
+  'usdtDescription': {
+    en: 'Managing USDT transactions in your admin panel:',
+    ru: 'Управление транзакциями USDT в вашей админ панели:',
+  },
+  'usdtStep1': {
+    en: 'Access the USDT section from the main navigation',
+    ru: 'Перейдите в раздел USDT в главной навигации',
+  },
+  'usdtStep2': {
+    en: 'View all USDT transactions in the system',
+    ru: 'Просмотрите все транзакции USDT в системе',
+  },
+  'usdtStep3': {
+    en: 'Filter transactions by date, amount, or wallet address',
+    ru: 'Фильтруйте транзакции по дате, сумме или адресу кошелька',
+  },
+  'usdtStep4': {
+    en: 'Click on a transaction to view detailed information',
+    ru: 'Нажмите на транзакцию для просмотра подробной информации',
+  },
+  'usdtStep5': {
+    en: 'USDT management features:',
+    ru: 'Функции управления USDT:',
+  },
+  'usdtField1': {
+    en: 'Wallet balance monitoring',
+    ru: 'Мониторинг баланса кошелька',
+  },
+  'usdtField2': {
+    en: 'Transaction verification and confirmation',
+    ru: 'Проверка и подтверждение транзакций',
+  },
+  'usdtField3': {
+    en: 'Exchange rate settings and conversions',
+    ru: 'Настройки обменного курса и конверсии',
+  },
+  'usdtField4': {
+    en: 'Security controls and multi-signature options',
+    ru: 'Элементы управления безопасностью и варианты мульти-подписи',
+  },
+  'usdtStep6': {
+    en: 'Generate reports of USDT transaction activity',
+    ru: 'Создавайте отчеты о активности транзакций USDT',
+  },
+  'usdtNote': {
+    en: 'Security Alert',
+    ru: 'Предупреждение безопасности',
+  },
+  'usdtNoteText': {
+    en: 'Never share wallet private keys or seed phrases through the admin panel or any digital communication. Store backup information securely offline.',
+    ru: 'Никогда не делитесь приватными ключами кошелька или фразами-паролями через панель администратора или любую цифровую коммуникацию. Храните резервную информацию безопасно в автономном режиме.',
+  },
+
+  // Add translations for Partners Exchangers page
+  'partnersExchangersDescription': {
+    en: 'Managing partner exchangers in your admin panel:',
+    ru: 'Управление партнерами обменниками в вашей админ панели:',
+  },
+  'partnersExchangersStep1': {
+    en: 'Access the Partners Exchangers section from the main navigation',
+    ru: 'Перейдите в раздел Партнеры обменники в главной навигации',
+  },
+  'partnersExchangersStep2': {
+    en: 'View all registered exchange partners in the system',
+    ru: 'Просмотрите всех зарегистрированных партнеров-обменников в системе',
+  },
+  'partnersExchangersStep3': {
+    en: 'Click "Add New Partner" to register a new exchange service',
+    ru: 'Нажмите "Добавить нового партнера" для регистрации новой обменной службы',
+  },
+  'partnersExchangersStep4': {
+    en: 'Enter partner details and integration parameters',
+    ru: 'Введите данные партнера и параметры интеграции',
+  },
+  'partnersExchangersStep5': {
+    en: 'Configure partner exchanger settings:',
+    ru: 'Настройте параметры партнера-обменника:',
+  },
+  'partnersExchangersField1': {
+    en: 'Exchange rates and fee structure',
+    ru: 'Обменные курсы и структура комиссий',
+  },
+  'partnersExchangersField2': {
+    en: 'API integration credentials',
+    ru: 'Учетные данные интеграции API',
+  },
+  'partnersExchangersField3': {
+    en: 'Supported currencies and payment methods',
+    ru: 'Поддерживаемые валюты и способы оплаты',
+  },
+  'partnersExchangersField4': {
+    en: 'Transaction limits and restrictions',
+    ru: 'Лимиты транзакций и ограничения',
+  },
+  'partnersExchangersStep6': {
+    en: 'Test the integration before activating it for users',
+    ru: 'Протестируйте интеграцию перед активацией для пользователей',
+  },
+  'partnersExchangersNote': {
+    en: 'Verification Requirement',
+    ru: 'Требование верификации',
+  },
+  'partnersExchangersNoteText': {
+    en: 'Verify that all exchange partners comply with relevant financial regulations and KYC/AML requirements in their operating jurisdictions.',
+    ru: 'Убедитесь, что все партнеры-обменники соответствуют соответствующим финансовым нормам и требованиям KYC/AML в юрисдикциях, где они работают.',
+  },
+
+  // Image alt texts for all pages
+  'webImage1': {
+    en: 'Website management dashboard',
+    ru: 'Панель управления веб-сайтом',
+  },
+  'webImage2': {
+    en: 'Content editing interface',
+    ru: 'Интерфейс редактирования контента',
+  },
+  'webImage3': {
+    en: 'Website analytics view',
+    ru: 'Просмотр аналитики веб-сайта',
+  },
+  'webImage4': {
+    en: 'SEO settings interface',
+    ru: 'Интерфейс настроек SEO',
+  },
+  'couriersSalaryImage1': {
+    en: 'Courier salary dashboard',
+    ru: 'Панель зарплаты курьеров',
+  },
+  'couriersSalaryImage2': {
+    en: 'Payment processing interface',
+    ru: 'Интерфейс обработки платежей',
+  },
+  'couriersSalaryImage3': {
+    en: 'Salary report generation',
+    ru: 'Создание отчета о зарплате',
+  },
+  'couriersSalaryImage4': {
+    en: 'Courier performance metrics',
+    ru: 'Метрики производительности курьеров',
+  },
+  'usdtImage1': {
+    en: 'USDT transaction dashboard',
+    ru: 'Панель транзакций USDT',
+  },
+  'usdtImage2': {
+    en: 'Wallet management interface',
+    ru: 'Интерфейс управления кошельком',
+  },
+  'usdtImage3': {
+    en: 'Transaction verification process',
+    ru: 'Процесс проверки транзакций',
+  },
+  'usdtImage4': {
+    en: 'USDT exchange rate settings',
+    ru: 'Настройки обменного курса USDT',
+  },
+  'partnersExchangersImage1': {
+    en: 'Partners exchangers dashboard',
+    ru: 'Панель партнеров обменников',
+  },
+  'partnersExchangersImage2': {
+    en: 'Partner registration form',
+    ru: 'Форма регистрации партнера',
+  },
+  'partnersExchangersImage3': {
+    en: 'API integration settings',
+    ru: 'Настройки интеграции API',
+  },
+  'partnersExchangersImage4': {
+    en: 'Exchange rate configuration',
+    ru: 'Настройка обменного курса',
+  },
+  'purchasesImage1': {
+    en: 'Purchases management dashboard',
+    ru: 'Панель управления покупками',
+  },
+  'purchasesImage2': {
+    en: 'Order details view',
+    ru: 'Просмотр деталей заказа',
+  },
+  'purchasesImage3': {
+    en: 'Payment processing interface',
+    ru: 'Интерфейс обработки платежей',
+  },
+  'purchasesImage4': {
+    en: 'Shipping tracking system',
+    ru: 'Система отслеживания доставки',
+  },
+  'balanceTopUpsImage1': {
+    en: 'Balance top-ups dashboard',
+    ru: 'Панель пополнений баланса',
+  },
+  'balanceTopUpsImage2': {
+    en: 'Transaction details view',
+    ru: 'Просмотр деталей транзакции',
+  },
+  'balanceTopUpsImage3': {
+    en: 'Payment method selection',
+    ru: 'Выбор способа оплаты',
+  },
+  'balanceTopUpsImage4': {
+    en: 'Bonus application interface',
+    ru: 'Интерфейс применения бонусов',
+  },
+  'marketingImage1': {
+    en: 'Marketing campaigns dashboard',
+    ru: 'Панель маркетинговых кампаний',
+  },
+  'marketingImage2': {
+    en: 'Campaign creation interface',
+    ru: 'Интерфейс создания кампании',
+  },
+  'marketingImage3': {
+    en: 'Audience segmentation tool',
+    ru: 'Инструмент сегментации аудитории',
+  },
+  'marketingImage4': {
+    en: 'Campaign performance analytics',
+    ru: 'Аналитика эффективности кампании',
+  },
+  'messagesImage1': {
+    en: 'Messages management dashboard',
+    ru: 'Панель управления сообщениями',
+  },
+  'messagesImage2': {
+    en: 'Conversation thread view',
+    ru: 'Просмотр цепочки беседы',
+  },
+  'messagesImage3': {
+    en: 'Message composition interface',
+    ru: 'Интерфейс составления сообщения',
+  },
+  'messagesImage4': {
+    en: 'Automated responses configuration',
+    ru: 'Настройка автоматических ответов',
+  }
 };
 
 interface LanguageContextProps {
@@ -715,4 +1627,3 @@ const useLanguage = () => {
 };
 
 export { LanguageProvider, useLanguage };
-

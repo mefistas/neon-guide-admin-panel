@@ -25,13 +25,11 @@ const QuickStart = () => {
             
             <div className="pl-6 space-y-2">
               {item.notes.map((note, noteIndex) => (
-                <div key={noteIndex} className="bg-gray-800/50 p-4 rounded">
-                  <div className="flex items-start">
-                    <span className="bg-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-2 shrink-0">
-                      {noteIndex + 1}
-                    </span>
-                    <p className="text-gray-100">{t(note)}</p>
-                  </div>
+                <div key={noteIndex} className="flex items-start p-4 bg-gray-800/50 rounded">
+                  <span className="bg-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-2 shrink-0">
+                    {noteIndex + 1}
+                  </span>
+                  <p className="text-gray-100">{t(note)}</p>
                 </div>
               ))}
             </div>
