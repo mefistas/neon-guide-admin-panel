@@ -9,63 +9,63 @@ const CardsPayments = () => {
   return (
     <TutorialPage title={t('cardsPayments')}>
       <div className="space-y-4">
-        <p>Setting up card payments in your admin panel requires integration with payment processors:</p>
+        <p>{t('cardsPaymentsIntro')}</p>
         <ol className="list-decimal pl-6 space-y-2">
-          <li>Navigate to "PURCHASES" section in the main navigation</li>
-          <li>Select "Payment Methods" option</li>
-          <li>Click on "Add Payment Method" and select "Credit/Debit Cards"</li>
-          <li>Select a payment processor to integrate with:
+          <li>{t('cardsStep1')}</li>
+          <li>{t('cardsStep2')}</li>
+          <li>{t('cardsStep3')}</li>
+          <li>{t('cardsStep4')}
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Stripe</li>
-              <li>PayPal</li>
-              <li>Square</li>
-              <li>Authorize.net</li>
-              <li>Other payment gateways</li>
+              <li>{t('cardsProcessor1')}</li>
+              <li>{t('cardsProcessor2')}</li>
+              <li>{t('cardsProcessor3')}</li>
+              <li>{t('cardsProcessor4')}</li>
+              <li>{t('cardsProcessor5')}</li>
             </ul>
           </li>
-          <li>Enter the API credentials for the selected processor:
+          <li>{t('cardsStep5')}
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>API Key/Public Key</li>
-              <li>Secret Key</li>
-              <li>Merchant ID</li>
-              <li>Webhook URL (system will generate this)</li>
+              <li>{t('cardsCredential1')}</li>
+              <li>{t('cardsCredential2')}</li>
+              <li>{t('cardsCredential3')}</li>
+              <li>{t('cardsCredential4')}</li>
             </ul>
           </li>
-          <li>Configure payment settings:
+          <li>{t('cardsStep6')}
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Supported card types (Visa, Mastercard, Amex, etc.)</li>
-              <li>Default currency</li>
-              <li>Transaction types (one-time, subscription, etc.)</li>
-              <li>3D Secure settings</li>
+              <li>{t('cardsSettings1')}</li>
+              <li>{t('cardsSettings2')}</li>
+              <li>{t('cardsSettings3')}</li>
+              <li>{t('cardsSettings4')}</li>
             </ul>
           </li>
-          <li>Set up transaction fee structure:
+          <li>{t('cardsStep7')}
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Percentage fee</li>
-              <li>Fixed fee</li>
-              <li>Who absorbs the fees (merchant or customer)</li>
+              <li>{t('cardsFees1')}</li>
+              <li>{t('cardsFees2')}</li>
+              <li>{t('cardsFees3')}</li>
             </ul>
           </li>
-          <li>Configure security settings:
+          <li>{t('cardsStep8')}
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Fraud detection rules</li>
-              <li>Card verification requirements</li>
-              <li>Transaction limits</li>
+              <li>{t('cardsSecurity1')}</li>
+              <li>{t('cardsSecurity2')}</li>
+              <li>{t('cardsSecurity3')}</li>
             </ul>
           </li>
-          <li>Set up notification preferences:
+          <li>{t('cardsStep9')}
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Transaction success notifications</li>
-              <li>Failed transaction alerts</li>
-              <li>Chargeback notifications</li>
+              <li>{t('cardsNotification1')}</li>
+              <li>{t('cardsNotification2')}</li>
+              <li>{t('cardsNotification3')}</li>
             </ul>
           </li>
-          <li>Test the payment processing using sandbox mode</li>
-          <li>Activate the payment method when ready</li>
+          <li>{t('cardsStep10')}</li>
+          <li>{t('cardsStep11')}</li>
         </ol>
         <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-          <p className="font-semibold">Security Note:</p>
-          <p>Never store complete card details in your system. Always use tokenization provided by your payment processor to comply with PCI DSS requirements.</p>
+          <p className="font-semibold">{t('cardsSecurityNote')}:</p>
+          <p>{t('cardsSecurityNoteText')}</p>
         </div>
       </div>
     </TutorialPage>
