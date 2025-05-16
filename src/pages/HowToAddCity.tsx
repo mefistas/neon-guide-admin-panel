@@ -16,7 +16,7 @@ const HowToAddCity = () => {
 
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      src: "https://i.ibb.co/jkQ7NS5C/IMAGE-2025-05-16-15-43-34.jpg",
       alt: "Laptop computer showing admin interface"
     },
     {
