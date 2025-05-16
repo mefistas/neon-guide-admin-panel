@@ -2,32 +2,85 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const HowToAddCity = () => {
   const { t } = useLanguage();
 
+  const images = [
+    {
+      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      alt: "Laptop computer showing admin interface"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      alt: "Monitor showing programming code"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      alt: "Person using laptop computer"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      alt: "Code on computer screen"
+    }
+  ];
+
   return (
     <TutorialPage title={t('howToAddCity')}>
-      <div className="space-y-4">
-        <p>To add a new city to the admin panel, follow these steps:</p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>Navigate to the "MAIN" section in the top navigation bar</li>
-          <li>Click on "MERCHANTS" dropdown menu</li>
-          <li>Select "Cities" from the dropdown options</li>
-          <li>Click the "Add New City" button in the top right corner</li>
-          <li>Fill in the required fields:
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>City Name</li>
-              <li>Region/State</li>
-              <li>Country</li>
-              <li>Status (Active/Inactive)</li>
-            </ul>
-          </li>
-          <li>Click "Save" to add the new city to the system</li>
-        </ol>
-        <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-          <p className="font-semibold">Important Note:</p>
-          <p>Make sure that each city has a unique name within the same region to avoid conflicts in the system.</p>
+      <div className="space-y-6">
+        <div className="p-2">
+          <Carousel className="w-full max-w-3xl mx-auto">
+            <CarouselContent>
+              {images.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <AspectRatio ratio={16 / 9}>
+                      <img
+                        src={image.src}
+                        alt={t(image.alt)}
+                        className="rounded-xl object-cover w-full h-full"
+                      />
+                    </AspectRatio>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-4 space-x-4">
+              <CarouselPrevious className="relative static translate-y-0 left-0" />
+              <CarouselNext className="relative static translate-y-0 right-0" />
+            </div>
+          </Carousel>
+        </div>
+
+        <div className="space-y-4">
+          <p>{t('cityAddDescription')}</p>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>{t('cityStep1')}</li>
+            <li>{t('cityStep2')}</li>
+            <li>{t('cityStep3')}</li>
+            <li>{t('cityStep4')}</li>
+            <li>{t('cityStep5')}
+              <ul className="list-disc pl-6 mt-2 space-y-1">
+                <li>{t('cityField1')}</li>
+                <li>{t('cityField2')}</li>
+                <li>{t('cityField3')}</li>
+                <li>{t('cityField4')}</li>
+              </ul>
+            </li>
+            <li>{t('cityStep6')}</li>
+          </ol>
+          <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
+            <p className="font-semibold">{t('importantNote')}:</p>
+            <p>{t('cityImportantNote')}</p>
+          </div>
         </div>
       </div>
     </TutorialPage>

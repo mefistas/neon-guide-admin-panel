@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'ru';
@@ -80,7 +79,78 @@ const translations: Translations = {
   'selectTopic': {
     en: 'Select a topic from the sidebar to get started',
     ru: 'Выберите тему из бокового меню, чтобы начать',
-  }
+  },
+  // Image alt texts
+  'Laptop computer showing admin interface': {
+    en: 'Laptop computer showing admin interface',
+    ru: 'Ноутбук с интерфейсом админ-панели',
+  },
+  'Monitor showing programming code': {
+    en: 'Monitor showing programming code',
+    ru: 'Монитор с программным кодом',
+  },
+  'Person using laptop computer': {
+    en: 'Person using laptop computer',
+    ru: 'Человек использует ноутбук',
+  },
+  'Code on computer screen': {
+    en: 'Code on computer screen',
+    ru: 'Код на экране компьютера',
+  },
+  // How to Add City page
+  'cityAddDescription': {
+    en: 'To add a new city to the admin panel, follow these steps:',
+    ru: 'Чтобы добавить новый город в панель администратора, выполните следующие действия:',
+  },
+  'cityStep1': {
+    en: 'Navigate to the "MAIN" section in the top navigation bar',
+    ru: 'Перейдите в раздел "ГЛАВНАЯ" в верхней панели навигации',
+  },
+  'cityStep2': {
+    en: 'Click on "MERCHANTS" dropdown menu',
+    ru: 'Нажмите на выпадающее меню "ТОРГОВЦЫ"',
+  },
+  'cityStep3': {
+    en: 'Select "Cities" from the dropdown options',
+    ru: 'Выберите "Города" из выпадающего меню',
+  },
+  'cityStep4': {
+    en: 'Click the "Add New City" button in the top right corner',
+    ru: 'Нажмите кнопку "Добавить новый город" в правом верхнем углу',
+  },
+  'cityStep5': {
+    en: 'Fill in the required fields:',
+    ru: 'Заполните обязательные поля:',
+  },
+  'cityField1': {
+    en: 'City Name',
+    ru: 'Название города',
+  },
+  'cityField2': {
+    en: 'Region/State',
+    ru: 'Регион/Область',
+  },
+  'cityField3': {
+    en: 'Country',
+    ru: 'Страна',
+  },
+  'cityField4': {
+    en: 'Status (Active/Inactive)',
+    ru: 'Статус (Активен/Неактивен)',
+  },
+  'cityStep6': {
+    en: 'Click "Save" to add the new city to the system',
+    ru: 'Нажмите "Сохранить", чтобы добавить новый город в систему',
+  },
+  'importantNote': {
+    en: 'Important Note',
+    ru: 'Важное примечание',
+  },
+  'cityImportantNote': {
+    en: 'Make sure that each city has a unique name within the same region to avoid conflicts in the system.',
+    ru: 'Убедитесь, что каждый город имеет уникальное название в пределах одного региона, чтобы избежать конфликтов в системе.',
+  },
+  // Add more translation keys for other pages here
 };
 
 interface LanguageContextType {
