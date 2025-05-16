@@ -16,19 +16,19 @@ const HowToAddDistrict = () => {
 
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      src: "https://i.ibb.co/XkXCXFQQ/IMAGE-2025-05-16-16-47-23.jpg",
       alt: "Laptop computer showing admin interface"
     },
     {
-      src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      src: "https://i.ibb.co/Mkbv2t45/IMAGE-2025-05-16-16-47-25.jpg",
       alt: "Monitor showing programming code"
     },
     {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      src: "https://i.ibb.co/KxJ2fkQL/IMAGE-2025-05-16-16-47-26.jpg",
       alt: "Person using laptop computer"
     },
     {
-      src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      src: "https://i.ibb.co/VcwhrQqd/IMAGE-2025-05-16-16-47-28.jpg",
       alt: "Code on computer screen"
     }
   ];
