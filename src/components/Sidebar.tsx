@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Bot, City, HelpCircle, CreditCard, Casino } from 'lucide-react';
+import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 
@@ -17,12 +17,12 @@ const Sidebar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   const firstStepsSubItems = [
-    { key: 'howToAddCity', path: '/how-to-add-city', icon: <City size={18} /> },
-    { key: 'howToAddDistrict', path: '/how-to-add-district', icon: <City size={18} /> },
-    { key: 'howToAddCourier', path: '/how-to-add-courier', icon: <City size={18} /> },
-    { key: 'howToCreateProductGroup', path: '/how-to-create-product-group', icon: <City size={18} /> },
-    { key: 'howToCreateProductTypes', path: '/how-to-create-product-types', icon: <City size={18} /> },
-    { key: 'howToAddAddress', path: '/how-to-add-address', icon: <City size={18} /> },
+    { key: 'howToAddCity', path: '/how-to-add-city', icon: <Building size={18} /> },
+    { key: 'howToAddDistrict', path: '/how-to-add-district', icon: <Building size={18} /> },
+    { key: 'howToAddCourier', path: '/how-to-add-courier', icon: <Building size={18} /> },
+    { key: 'howToCreateProductGroup', path: '/how-to-create-product-group', icon: <Building size={18} /> },
+    { key: 'howToCreateProductTypes', path: '/how-to-create-product-types', icon: <Building size={18} /> },
+    { key: 'howToAddAddress', path: '/how-to-add-address', icon: <Building size={18} /> },
     { key: 'howToAddBots', path: '/how-to-add-bots', icon: <Bot size={18} /> },
   ];
 
@@ -74,7 +74,7 @@ const Sidebar = () => {
             isActive('/casino-setup') ? 'sidebar-active' : 'text-gray-300'
           )}
         >
-          <Casino size={20} className="mr-3" />
+          <Dices size={20} className="mr-3" />
           {t('casinoSetup')}
         </Link>
 
