@@ -78,7 +78,7 @@ const translations: Translations = {
     ru: 'Добро пожаловать в руководство по панели администратора',
   },
   'selectTopic': {
-    en: 'Select a topic from the sidebar to get started',
+    en: 'Take a deep breath — in front of you is a guide to operating this vehicle. All you need is one hour of your time and a bit of focus. On your left is a menu that contains the answer to every question you might have, complete with pictures and explanations. Remember the main rule: First, create the courier. Then, create the city. After that, go to the address section — and once you’re comfortable, you can connect the bot. I promise, it won’t be difficult.',
     ru: 'Выдохни, перед тобой путиводитель по управлению данным автомобилем. Все что тебе нужно это час времени и внимательность, слева от тебя меню в котором есть ответ на каждый твой вопрос с картиночками и пояснениями. Запомни главное правило - создаем сначла курьера, потом город, потом идем в раздел адреса и уже как освоились подключаем бота. Отвечаю сложно не будет.',
   },
   // Image alt texts
