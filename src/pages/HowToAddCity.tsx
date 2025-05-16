@@ -20,7 +20,7 @@ const HowToAddCity = () => {
       alt: "Laptop computer showing admin interface"
     },
     {
-      src: "https://i.ibb.co/gbh3p8F1/IMAGE-2025-05-16-15-46-23.jpg",
+      src: "https://i.ibb.co/20BhDsK2/photo-2025-05-16-15-49-30.jpg",
       alt: "Monitor showing programming code"
     },
     {
