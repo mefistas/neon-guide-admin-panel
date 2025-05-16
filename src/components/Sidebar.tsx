@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices, ExternalLink, Menu } from 'lucide-react';
+import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices, ExternalLink, Menu, Discount, Bitcoin, History, MessageSquare, Star, Marketing } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 
@@ -30,6 +29,12 @@ const Sidebar = () => {
     { key: 'howToCreateProductTypes', path: '/how-to-create-product-types', icon: <Building size={18} /> },
     { key: 'howToAddAddress', path: '/how-to-add-address', icon: <Building size={18} /> },
     { key: 'howToAddBots', path: '/how-to-add-bots', icon: <Bot size={18} /> },
+    { key: 'oneTimeDiscounts', path: '/one-time-discounts', icon: <Discount size={18} /> },
+    { key: 'btcCashout', path: '/btc-cashout', icon: <Bitcoin size={18} /> },
+    { key: 'balanceHistory', path: '/balance-history', icon: <History size={18} /> },
+    { key: 'internalChats', path: '/internal-chats', icon: <MessageSquare size={18} /> },
+    { key: 'reviews', path: '/reviews', icon: <Star size={18} /> },
+    { key: 'marketing', path: '/marketing', icon: <Marketing size={18} /> },
     { key: 'merchants', path: '/merchants', icon: <Building size={18} /> },
     { key: 'masterKlad', path: '/master-klad', icon: <Building size={18} /> },
     { key: 'customBot', path: '/custom-bot', icon: <Bot size={18} /> },
@@ -37,7 +42,6 @@ const Sidebar = () => {
     { key: 'clients', path: '/clients', icon: <Building size={18} /> },
     { key: 'purchases', path: '/purchases', icon: <Building size={18} /> },
     { key: 'balanceTopUps', path: '/balance-top-ups', icon: <Building size={18} /> },
-    { key: 'marketing', path: '/marketing', icon: <Building size={18} /> },
     { key: 'messages', path: '/messages', icon: <Building size={18} /> },
     { key: 'web', path: '/web', icon: <Building size={18} /> },
     { key: 'couriersSalary', path: '/couriers-salary', icon: <Building size={18} /> },
