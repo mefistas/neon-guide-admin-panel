@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'ru';
@@ -149,6 +150,492 @@ const translations: Translations = {
   'cityImportantNote': {
     en: 'Make sure that each city has a unique name within the same region to avoid conflicts in the system.',
     ru: 'Убедитесь, что каждый город имеет уникальное название в пределах одного региона, чтобы избежать конфликтов в системе.',
+  },
+  // District page translations
+  'districtDescription': {
+    en: 'To add a new district to a city in the admin panel, follow these steps:',
+    ru: 'Для добавления нового района в город выполните следующие шаги:',
+  },
+  'districtStep1': {
+    en: 'Navigate to the "MAIN" section in the top navigation bar',
+    ru: 'Перейдите в раздел "ГЛАВНАЯ" в верхней панели навигации',
+  },
+  'districtStep2': {
+    en: 'Click on "MERCHANTS" dropdown menu',
+    ru: 'Нажмите на выпадающее меню "ТОРГОВЦЫ"',
+  },
+  'districtStep3': {
+    en: 'Select "Districts" from the dropdown options',
+    ru: 'Выберите "Районы" из выпадающего меню',
+  },
+  'districtStep4': {
+    en: 'Click the "Add New District" button in the top right corner',
+    ru: 'Нажмите кнопку "Добавить новый район" в правом верхнем углу',
+  },
+  'districtStep5': {
+    en: 'Fill in the required fields:',
+    ru: 'Заполните необходимые поля:',
+  },
+  'districtField1': {
+    en: 'District Name',
+    ru: 'Название района',
+  },
+  'districtField2': {
+    en: 'Select the City (this district belongs to)',
+    ru: 'Выберите город (к которому принадлежит этот район)',
+  },
+  'districtField3': {
+    en: 'Set boundaries (optional)',
+    ru: 'Установить границы (необязательно)',
+  },
+  'districtField4': {
+    en: 'Status (Active/Inactive)',
+    ru: 'Статус (Активен/Неактивен)',
+  },
+  'districtStep6': {
+    en: 'Click "Save" to add the new district to the system',
+    ru: 'Нажмите "Сохранить" чтобы добавить новый район в систему',
+  },
+  'districtProTip': {
+    en: 'Pro Tip',
+    ru: 'Совет профессионала',
+  },
+  'districtProTipText': {
+    en: 'You can import district boundaries from a GeoJSON file by clicking the "Import Boundaries" button on the district creation form.',
+    ru: 'Вы можете импортировать границы района из файла GeoJSON, нажав кнопку "Импортировать границы" в форме создания района.',
+  },
+  // Courier page translations
+  'courierDescription': {
+    en: 'Adding a new courier to the system is essential for delivery operations. Follow these steps:',
+    ru: 'Добавление нового курьера в систему необходимо для осуществления доставки. Следуйте этим шагам:',
+  },
+  'courierStep1': {
+    en: 'Navigate to the "STAFF" section in the main navigation bar',
+    ru: 'Перейдите в раздел "ПЕРСОНАЛ" в главной панели навигации',
+  },
+  'courierStep2': {
+    en: 'Click on the "Couriers" tab',
+    ru: 'Нажмите на вкладку "Курьеры"',
+  },
+  'courierStep3': {
+    en: 'Click the "Add New Courier" button',
+    ru: 'Нажмите кнопку "Добавить нового курьера"',
+  },
+  'courierStep4': {
+    en: 'Fill in the required courier information:',
+    ru: 'Заполните необходимую информацию о курьере:',
+  },
+  'courierField1': {
+    en: 'Full Name',
+    ru: 'Полное имя',
+  },
+  'courierField2': {
+    en: 'Contact Number',
+    ru: 'Контактный номер',
+  },
+  'courierField3': {
+    en: 'Email Address',
+    ru: 'Адрес электронной почты',
+  },
+  'courierField4': {
+    en: 'Assigned City/District',
+    ru: 'Назначенный город/район',
+  },
+  'courierField5': {
+    en: 'Working Hours',
+    ru: 'Рабочие часы',
+  },
+  'courierField6': {
+    en: 'Transportation Type',
+    ru: 'Тип транспорта',
+  },
+  'courierField7': {
+    en: 'Upload ID Document (passport/driver\'s license)',
+    ru: 'Загрузить документ, удостоверяющий личность (паспорт/водительские права)',
+  },
+  'courierStep5': {
+    en: 'Set courier status (Active/Inactive)',
+    ru: 'Установите статус курьера (Активен/Неактивен)',
+  },
+  'courierStep6': {
+    en: 'Generate login credentials for the courier app',
+    ru: 'Создайте учетные данные для входа в приложение курьера',
+  },
+  'courierStep7': {
+    en: 'Click "Save" to add the new courier',
+    ru: 'Нажмите "Сохранить", чтобы добавить нового курьера',
+  },
+  'courierNote': {
+    en: 'Important Security Note',
+    ru: 'Важное примечание по безопасности',
+  },
+  'courierNoteText': {
+    en: 'Always verify the identity documents of each courier before activating their account. All document uploads are encrypted and stored securely.',
+    ru: 'Всегда проверяйте документы, удостоверяющие личность каждого курьера, прежде чем активировать его учетную запись. Все загруженные документы шифруются и хранятся в безопасности.',
+  },
+  // Product Group translations
+  'productGroupDescription': {
+    en: 'Product groups help you organize your catalog efficiently. Here\'s how to create a new product group:',
+    ru: 'Группы продуктов помогают вам эффективно организовать ваш каталог. Вот как создать новую группу продуктов:',
+  },
+  'productGroupStep1': {
+    en: 'Navigate to the "СКЛАД" (Inventory) section in the main navigation',
+    ru: 'Перейдите в раздел "СКЛАД" в главной навигации',
+  },
+  'productGroupStep2': {
+    en: 'Select "Product Groups" from the submenu',
+    ru: 'Выберите "Группы продуктов" из подменю',
+  },
+  'productGroupStep3': {
+    en: 'Click on the "Create New Group" button',
+    ru: 'Нажмите на кнопку "Создать новую группу"',
+  },
+  'productGroupStep4': {
+    en: 'Fill in the group details:',
+    ru: 'Заполните детали группы:',
+  },
+  'productGroupField1': {
+    en: 'Group Name (will be visible to customers)',
+    ru: 'Название группы (будет видно клиентам)',
+  },
+  'productGroupField2': {
+    en: 'Group Description',
+    ru: 'Описание группы',
+  },
+  'productGroupField3': {
+    en: 'Select Parent Group (if it\'s a subgroup)',
+    ru: 'Выберите родительскую группу (если это подгруппа)',
+  },
+  'productGroupField4': {
+    en: 'Upload Group Image (optional)',
+    ru: 'Загрузите изображение группы (необязательно)',
+  },
+  'productGroupField5': {
+    en: 'Set Group Priority (for display order)',
+    ru: 'Установите приоритет группы (для порядка отображения)',
+  },
+  'productGroupStep5': {
+    en: 'Configure visibility settings:',
+    ru: 'Настройте параметры видимости:',
+  },
+  'productGroupVisibility1': {
+    en: 'Visible in store (yes/no)',
+    ru: 'Видимость в магазине (да/нет)',
+  },
+  'productGroupVisibility2': {
+    en: 'Visible in app (yes/no)',
+    ru: 'Видимость в приложении (да/нет)',
+  },
+  'productGroupVisibility3': {
+    en: 'Visible in website (yes/no)',
+    ru: 'Видимость на веб-сайте (да/нет)',
+  },
+  'productGroupStep6': {
+    en: 'Click "Save" to create the product group',
+    ru: 'Нажмите "Сохранить", чтобы создать группу продуктов',
+  },
+  'productGroupTip': {
+    en: 'Organization Tip',
+    ru: 'Совет по организации',
+  },
+  'productGroupTipText': {
+    en: 'Create a logical hierarchical structure for your product groups. This helps both in inventory management and improves customer navigation experience.',
+    ru: 'Создавайте логическую иерархическую структуру для ваших групп продуктов. Это помогает как в управлении запасами, так и улучшает опыт навигации клиентов.',
+  },
+  // Product Types translations
+  'productTypeDescription': {
+    en: 'Product types define the attributes and behavior of products. Here\'s how to create them:',
+    ru: 'Типы продуктов определяют атрибуты и поведение продуктов. Вот как их создавать:',
+  },
+  'productTypeStep1': {
+    en: 'Navigate to the "СКЛАД" (Inventory) section in the main navigation',
+    ru: 'Перейдите в раздел "СКЛАД" в главной навигации',
+  },
+  'productTypeStep2': {
+    en: 'Select "Product Types" from the submenu',
+    ru: 'Выберите "Типы продуктов" из подменю',
+  },
+  'productTypeStep3': {
+    en: 'Click the "Create New Product Type" button',
+    ru: 'Нажмите кнопку "Создать новый тип продукта"',
+  },
+  'productTypeStep4': {
+    en: 'Enter the basic information:',
+    ru: 'Введите основную информацию:',
+  },
+  'productTypeField1': {
+    en: 'Type Name (e.g., Digital, Physical, Service)',
+    ru: 'Название типа (например, Цифровой, Физический, Услуга)',
+  },
+  'productTypeField2': {
+    en: 'Type Description',
+    ru: 'Описание типа',
+  },
+  'productTypeStep5': {
+    en: 'Configure the attributes for this product type:',
+    ru: 'Настройте атрибуты для этого типа продукта:',
+  },
+  'productTypeAttr1': {
+    en: 'Add custom fields (size, color, weight, etc.)',
+    ru: 'Добавьте настраиваемые поля (размер, цвет, вес и т.д.)',
+  },
+  'productTypeAttr2': {
+    en: 'Specify which fields are required',
+    ru: 'Укажите, какие поля являются обязательными',
+  },
+  'productTypeAttr3': {
+    en: 'Set field validation rules',
+    ru: 'Установите правила проверки полей',
+  },
+  'productTypeStep6': {
+    en: 'Configure inventory tracking settings:',
+    ru: 'Настройте параметры отслеживания запасов:',
+  },
+  'productTypeInv1': {
+    en: 'Track inventory (yes/no)',
+    ru: 'Отслеживать запасы (да/нет)',
+  },
+  'productTypeInv2': {
+    en: 'Allow backorders (yes/no)',
+    ru: 'Разрешить отложенные заказы (да/нет)',
+  },
+  'productTypeInv3': {
+    en: 'Low stock threshold',
+    ru: 'Порог низкого запаса',
+  },
+  'productTypeStep7': {
+    en: 'Set shipping and tax properties:',
+    ru: 'Установите свойства доставки и налогов:',
+  },
+  'productTypeShip1': {
+    en: 'Requires shipping (yes/no)',
+    ru: 'Требует доставки (да/нет)',
+  },
+  'productTypeShip2': {
+    en: 'Tax category',
+    ru: 'Налоговая категория',
+  },
+  'productTypeStep8': {
+    en: 'Click "Save" to create the product type',
+    ru: 'Нажмите "Сохранить" для создания типа продукта',
+  },
+  'productTypeTip': {
+    en: 'Advanced Tip',
+    ru: 'Расширенный совет',
+  },
+  'productTypeTipText': {
+    en: 'Product types can inherit attributes from other types. Use this feature to create specialized subtypes without duplicating configuration work.',
+    ru: 'Типы продуктов могут наследовать атрибуты от других типов. Используйте эту функцию для создания специализированных подтипов без дублирования работы по настройке.',
+  },
+  // Address translations
+  'addressDescription': {
+    en: 'Adding addresses is essential for delivery operations. Follow these steps to add a new address:',
+    ru: 'Добавление адресов необходимо для операций доставки. Следуйте этим шагам, чтобы добавить новый адрес:',
+  },
+  'addressStep1': {
+    en: 'Click on "ДОБАВИТЬ АДРЕСА" in the main navigation bar',
+    ru: 'Нажмите на "ДОБАВИТЬ АДРЕСА" в главной панели навигации',
+  },
+  'addressStep2': {
+    en: 'In the address management screen, click "Add New Address"',
+    ru: 'На экране управления адресами нажмите "Добавить новый адрес"',
+  },
+  'addressStep3': {
+    en: 'Enter the address details:',
+    ru: 'Введите данные адреса:',
+  },
+  'addressField1': {
+    en: 'Building Number and Street Name',
+    ru: 'Номер здания и название улицы',
+  },
+  'addressField2': {
+    en: 'Apartment/Suite/Unit (if applicable)',
+    ru: 'Квартира/Офис (если применимо)',
+  },
+  'addressField3': {
+    en: 'Select City (from previously added cities)',
+    ru: 'Выберите город (из ранее добавленных городов)',
+  },
+  'addressField4': {
+    en: 'Select District (from previously added districts)',
+    ru: 'Выберите район (из ранее добавленных районов)',
+  },
+  'addressField5': {
+    en: 'Postal/ZIP Code',
+    ru: 'Почтовый индекс',
+  },
+  'addressField6': {
+    en: 'Additional Instructions (entry codes, landmarks, etc.)',
+    ru: 'Дополнительные инструкции (коды входа, ориентиры и т.д.)',
+  },
+  'addressStep4': {
+    en: 'Verify the address on the map:',
+    ru: 'Проверьте адрес на карте:',
+  },
+  'addressMap1': {
+    en: 'The system will automatically geocode the address',
+    ru: 'Система автоматически геокодирует адрес',
+  },
+  'addressMap2': {
+    en: 'Adjust the pin location manually if needed',
+    ru: 'При необходимости отрегулируйте местоположение метки вручную',
+  },
+  'addressMap3': {
+    en: 'Confirm the location is accurate',
+    ru: 'Подтвердите, что местоположение точное',
+  },
+  'addressStep5': {
+    en: 'Assign the address (optional):',
+    ru: 'Назначьте адрес (необязательно):',
+  },
+  'addressAssign1': {
+    en: 'Associate with a customer',
+    ru: 'Связать с клиентом',
+  },
+  'addressAssign2': {
+    en: 'Associate with a merchant',
+    ru: 'Связать с продавцом',
+  },
+  'addressAssign3': {
+    en: 'Mark as warehouse/distribution point',
+    ru: 'Отметить как склад/пункт распределения',
+  },
+  'addressStep6': {
+    en: 'Set address status (Active/Inactive)',
+    ru: 'Установите статус адреса (Активен/Неактивен)',
+  },
+  'addressStep7': {
+    en: 'Click "Save" to add the address to the system',
+    ru: 'Нажмите "Сохранить", чтобы добавить адрес в систему',
+  },
+  'addressBulk': {
+    en: 'Bulk Import',
+    ru: 'Массовый импорт',
+  },
+  'addressBulkText': {
+    en: 'Need to add multiple addresses? Use the "Bulk Import" feature with a CSV file containing all address details in the specified format.',
+    ru: 'Нужно добавить несколько адресов? Используйте функцию "Массовый импорт" с файлом CSV, содержащим все данные адресов в указанном формате.',
+  },
+  // Bot translations
+  'botDescription': {
+    en: 'Messaging bots can automate customer interactions. Here\'s how to set up a new bot:',
+    ru: 'Боты для обмена сообщениями могут автоматизировать взаимодействие с клиентами. Вот как настроить нового бота:',
+  },
+  'botStep1': {
+    en: 'Navigate to the "БОТЫ/КАНАЛЫ" section in the main navigation',
+    ru: 'Перейдите в раздел "БОТЫ/КАНАЛЫ" в главной навигации',
+  },
+  'botStep2': {
+    en: 'Click on "Add New Bot"',
+    ru: 'Нажмите на "Добавить нового бота"',
+  },
+  'botStep3': {
+    en: 'Select the bot platform:',
+    ru: 'Выберите платформу бота:',
+  },
+  'botPlatform1': {
+    en: 'Telegram',
+    ru: 'Telegram',
+  },
+  'botPlatform2': {
+    en: 'WhatsApp',
+    ru: 'WhatsApp',
+  },
+  'botPlatform3': {
+    en: 'Facebook Messenger',
+    ru: 'Facebook Messenger',
+  },
+  'botPlatform4': {
+    en: 'Custom API',
+    ru: 'Пользовательский API',
+  },
+  'botStep4': {
+    en: 'Configure bot credentials:',
+    ru: 'Настройте учетные данные бота:',
+  },
+  'botCred1': {
+    en: 'Bot Name',
+    ru: 'Имя бота',
+  },
+  'botCred2': {
+    en: 'API Token/Key',
+    ru: 'API Токен/Ключ',
+  },
+  'botCred3': {
+    en: 'Bot Username (if applicable)',
+    ru: 'Имя пользователя бота (если применимо)',
+  },
+  'botCred4': {
+    en: 'Webhook URL (system will generate this)',
+    ru: 'URL вебхука (система сгенерирует его)',
+  },
+  'botStep5': {
+    en: 'Configure bot behavior:',
+    ru: 'Настройте поведение бота:',
+  },
+  'botBehavior1': {
+    en: 'Welcome Message',
+    ru: 'Приветственное сообщение',
+  },
+  'botBehavior2': {
+    en: 'Menu Structure',
+    ru: 'Структура меню',
+  },
+  'botBehavior3': {
+    en: 'Response Templates',
+    ru: 'Шаблоны ответов',
+  },
+  'botBehavior4': {
+    en: 'Error Messages',
+    ru: 'Сообщения об ошибках',
+  },
+  'botStep6': {
+    en: 'Set up integrations:',
+    ru: 'Настройте интеграции:',
+  },
+  'botInt1': {
+    en: 'Connect to product catalog',
+    ru: 'Подключение к каталогу продуктов',
+  },
+  'botInt2': {
+    en: 'Connect to order system',
+    ru: 'Подключение к системе заказов',
+  },
+  'botInt3': {
+    en: 'Set up payment methods',
+    ru: 'Настройка способов оплаты',
+  },
+  'botStep7': {
+    en: 'Create conversation flows:',
+    ru: 'Создайте потоки разговоров:',
+  },
+  'botFlow1': {
+    en: 'Define chat scenarios',
+    ru: 'Определите сценарии чата',
+  },
+  'botFlow2': {
+    en: 'Set up automated responses',
+    ru: 'Настройте автоматические ответы',
+  },
+  'botFlow3': {
+    en: 'Configure when to transfer to human support',
+    ru: 'Настройте, когда передавать на поддержку человеком',
+  },
+  'botStep8': {
+    en: 'Test the bot in sandbox mode',
+    ru: 'Протестируйте бота в режиме песочницы',
+  },
+  'botStep9': {
+    en: 'Activate the bot when ready',
+    ru: 'Активируйте бота, когда он будет готов',
+  },
+  'botNote': {
+    en: 'Monitoring Note',
+    ru: 'Примечание по мониторингу',
+  },
+  'botNoteText': {
+    en: 'After activating a bot, monitor its performance in the "Bot Analytics" section to track user engagement, common queries, and success rates.',
+    ru: 'После активации бота следите за его производительностью в разделе "Аналитика бота", чтобы отслеживать вовлеченность пользователей, распространенные запросы и показатели успеха.',
   },
   // Add more translation keys for other pages here
 };

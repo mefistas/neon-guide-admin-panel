@@ -2,61 +2,114 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const HowToAddBots = () => {
   const { t } = useLanguage();
 
+  const images = [
+    {
+      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      alt: "Laptop computer showing admin interface"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      alt: "Monitor showing programming code"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      alt: "Person using laptop computer"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      alt: "Code on computer screen"
+    }
+  ];
+
   return (
     <TutorialPage title={t('howToAddBots')}>
-      <div className="space-y-4">
-        <p>Messaging bots can automate customer interactions. Here's how to set up a new bot:</p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>Navigate to the "БОТЫ/КАНАЛЫ" section in the main navigation</li>
-          <li>Click on "Add New Bot"</li>
-          <li>Select the bot platform:
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Telegram</li>
-              <li>WhatsApp</li>
-              <li>Facebook Messenger</li>
-              <li>Custom API</li>
-            </ul>
-          </li>
-          <li>Configure bot credentials:
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Bot Name</li>
-              <li>API Token/Key</li>
-              <li>Bot Username (if applicable)</li>
-              <li>Webhook URL (system will generate this)</li>
-            </ul>
-          </li>
-          <li>Configure bot behavior:
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Welcome Message</li>
-              <li>Menu Structure</li>
-              <li>Response Templates</li>
-              <li>Error Messages</li>
-            </ul>
-          </li>
-          <li>Set up integrations:
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Connect to product catalog</li>
-              <li>Connect to order system</li>
-              <li>Set up payment methods</li>
-            </ul>
-          </li>
-          <li>Create conversation flows:
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>Define chat scenarios</li>
-              <li>Set up automated responses</li>
-              <li>Configure when to transfer to human support</li>
-            </ul>
-          </li>
-          <li>Test the bot in sandbox mode</li>
-          <li>Activate the bot when ready</li>
-        </ol>
-        <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-          <p className="font-semibold">Monitoring Note:</p>
-          <p>After activating a bot, monitor its performance in the "Bot Analytics" section to track user engagement, common queries, and success rates.</p>
+      <div className="space-y-6">
+        <div className="p-2">
+          <Carousel className="w-full max-w-3xl mx-auto">
+            <CarouselContent>
+              {images.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <AspectRatio ratio={16 / 9}>
+                      <img
+                        src={image.src}
+                        alt={t(image.alt)}
+                        className="rounded-xl object-cover w-full h-full"
+                      />
+                    </AspectRatio>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-4 space-x-4">
+              <CarouselPrevious className="relative static translate-y-0 left-0" />
+              <CarouselNext className="relative static translate-y-0 right-0" />
+            </div>
+          </Carousel>
+        </div>
+
+        <div className="space-y-4">
+          <p>{t('botDescription')}</p>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>{t('botStep1')}</li>
+            <li>{t('botStep2')}</li>
+            <li>{t('botStep3')}
+              <ul className="list-disc pl-6 mt-2 space-y-1">
+                <li>{t('botPlatform1')}</li>
+                <li>{t('botPlatform2')}</li>
+                <li>{t('botPlatform3')}</li>
+                <li>{t('botPlatform4')}</li>
+              </ul>
+            </li>
+            <li>{t('botStep4')}
+              <ul className="list-disc pl-6 mt-2 space-y-1">
+                <li>{t('botCred1')}</li>
+                <li>{t('botCred2')}</li>
+                <li>{t('botCred3')}</li>
+                <li>{t('botCred4')}</li>
+              </ul>
+            </li>
+            <li>{t('botStep5')}
+              <ul className="list-disc pl-6 mt-2 space-y-1">
+                <li>{t('botBehavior1')}</li>
+                <li>{t('botBehavior2')}</li>
+                <li>{t('botBehavior3')}</li>
+                <li>{t('botBehavior4')}</li>
+              </ul>
+            </li>
+            <li>{t('botStep6')}
+              <ul className="list-disc pl-6 mt-2 space-y-1">
+                <li>{t('botInt1')}</li>
+                <li>{t('botInt2')}</li>
+                <li>{t('botInt3')}</li>
+              </ul>
+            </li>
+            <li>{t('botStep7')}
+              <ul className="list-disc pl-6 mt-2 space-y-1">
+                <li>{t('botFlow1')}</li>
+                <li>{t('botFlow2')}</li>
+                <li>{t('botFlow3')}</li>
+              </ul>
+            </li>
+            <li>{t('botStep8')}</li>
+            <li>{t('botStep9')}</li>
+          </ol>
+          <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
+            <p className="font-semibold">{t('botNote')}:</p>
+            <p>{t('botNoteText')}</p>
+          </div>
         </div>
       </div>
     </TutorialPage>
