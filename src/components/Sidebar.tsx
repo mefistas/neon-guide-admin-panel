@@ -29,7 +29,9 @@ const Sidebar = () => {
   return (
     <div className="h-screen w-64 bg-black/50 border-r border-gray-800 flex flex-col">
       <div className="p-4 border-b border-gray-800">
-        <h1 className="text-xl font-semibold neon-text">{t('adminPanelTutorial')}</h1>
+        <Link to="/" className="block">
+          <h1 className="text-xl font-semibold neon-text">{t('adminPanelTutorial')}</h1>
+        </Link>
       </div>
       <div className="flex-1 overflow-y-auto py-2">
         {/* First Steps menu with dropdown */}
