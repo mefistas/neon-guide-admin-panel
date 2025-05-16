@@ -2,6 +2,8 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const QuickStart = () => {
   const { t } = useLanguage();
@@ -17,24 +19,82 @@ const QuickStart = () => {
       <div className="space-y-8">
         <p className="text-lg mb-4">{t('quickStartDescription')}</p>
 
-        {quickStartPoints.map((item, index) => (
-          <div key={index} className="mb-10">
-            <h2 className="text-xl font-semibold mb-3 text-white">
-              {index + 1}. {t(item.point)}
-            </h2>
-            
-            <div className="pl-6 space-y-2">
-              {item.notes.map((note, noteIndex) => (
-                <div key={noteIndex} className="flex items-start p-4 bg-gray-800/50 rounded">
-                  <span className="bg-gray-700 rounded-full w-6 h-6 flex items-center justify-center mr-2 shrink-0">
-                    {noteIndex + 1}
-                  </span>
-                  <p className="text-gray-100">{t(note)}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+        <Tabs defaultValue="all" className="w-full">
+          <TabsList className="grid grid-cols-3 mb-4">
+            <TabsTrigger value="all">All Steps</TabsTrigger>
+            <TabsTrigger value="essential">Essential Setup</TabsTrigger>
+            <TabsTrigger value="advanced">Advanced Setup</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="all" className="space-y-6">
+            {quickStartPoints.map((item, index) => (
+              <Card key={index} className="bg-gray-800/50 border-gray-700">
+                <CardContent className="pt-6">
+                  <h2 className="text-xl font-semibold mb-3 text-white">
+                    {index + 1}. {t(item.point)}
+                  </h2>
+                  
+                  <div className="pl-6 space-y-2">
+                    {item.notes.map((note, noteIndex) => (
+                      <div key={noteIndex} className="flex items-start p-4 bg-gray-700/50 rounded">
+                        <span className="bg-gray-600 rounded-full w-6 h-6 flex items-center justify-center mr-2 shrink-0">
+                          {noteIndex + 1}
+                        </span>
+                        <p className="text-gray-100">{t(note)}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </TabsContent>
+          
+          <TabsContent value="essential" className="space-y-6">
+            {quickStartPoints.slice(0, 5).map((item, index) => (
+              <Card key={index} className="bg-gray-800/50 border-gray-700">
+                <CardContent className="pt-6">
+                  <h2 className="text-xl font-semibold mb-3 text-white">
+                    {index + 1}. {t(item.point)}
+                  </h2>
+                  
+                  <div className="pl-6 space-y-2">
+                    {item.notes.map((note, noteIndex) => (
+                      <div key={noteIndex} className="flex items-start p-4 bg-gray-700/50 rounded">
+                        <span className="bg-gray-600 rounded-full w-6 h-6 flex items-center justify-center mr-2 shrink-0">
+                          {noteIndex + 1}
+                        </span>
+                        <p className="text-gray-100">{t(note)}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </TabsContent>
+          
+          <TabsContent value="advanced" className="space-y-6">
+            {quickStartPoints.slice(5).map((item, index) => (
+              <Card key={index} className="bg-gray-800/50 border-gray-700">
+                <CardContent className="pt-6">
+                  <h2 className="text-xl font-semibold mb-3 text-white">
+                    {index + 6}. {t(item.point)}
+                  </h2>
+                  
+                  <div className="pl-6 space-y-2">
+                    {item.notes.map((note, noteIndex) => (
+                      <div key={noteIndex} className="flex items-start p-4 bg-gray-700/50 rounded">
+                        <span className="bg-gray-600 rounded-full w-6 h-6 flex items-center justify-center mr-2 shrink-0">
+                          {noteIndex + 1}
+                        </span>
+                        <p className="text-gray-100">{t(note)}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </TabsContent>
+        </Tabs>
       </div>
     </TutorialPage>
   );
