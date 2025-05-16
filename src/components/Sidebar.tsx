@@ -1,14 +1,14 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices } from 'lucide-react';
+import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 
 const Sidebar = () => {
   const { t } = useLanguage();
   const location = useLocation();
-  const [expandedMenu, setExpandedMenu] = useState<string | null>('firstSteps');
+  const [expandedMenu, setExpandedMenu] = useState<string | null>('detailedGuide');
 
   const toggleMenu = (menu: string) => {
     setExpandedMenu(expandedMenu === menu ? null : menu);
@@ -16,7 +16,8 @@ const Sidebar = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const firstStepsSubItems = [
+  // Items for the detailed guide section (previously firstSteps)
+  const detailedGuideSubItems = [
     { key: 'howToAddCity', path: '/how-to-add-city', icon: <Building size={18} /> },
     { key: 'howToAddDistrict', path: '/how-to-add-district', icon: <Building size={18} /> },
     { key: 'howToAddCourier', path: '/how-to-add-courier', icon: <Building size={18} /> },
@@ -26,38 +27,78 @@ const Sidebar = () => {
     { key: 'howToAddBots', path: '/how-to-add-bots', icon: <Bot size={18} /> },
   ];
 
+  // Quick start items
+  const quickStartSubItems = [
+    { key: 'quickStartOverview', path: '/quick-start-overview', icon: <Building size={18} /> },
+    { key: 'basicSetup', path: '/basic-setup', icon: <Building size={18} /> },
+  ];
+
   return (
-    <div className="h-screen w-64 bg-black/50 border-r border-gray-800 flex flex-col">
+    <div className="h-screen w-64 bg-black border-r border-gray-800 flex flex-col">
       <div className="p-4 border-b border-gray-800">
         <Link to="/" className="block">
-          <h1 className="text-xl font-semibold neon-text">{t('adminPanelTutorial')}</h1>
+          <h1 className="text-xl font-semibold text-white">{t('adminPanelTutorial')}</h1>
         </Link>
       </div>
       <div className="flex-1 overflow-y-auto py-2">
-        {/* First Steps menu with dropdown */}
+        {/* Quick Start menu - New */}
         <div>
           <button
-            onClick={() => toggleMenu('firstSteps')}
+            onClick={() => toggleMenu('quickStart')}
             className={cn(
               "w-full flex items-center justify-between px-4 py-3 text-left hover:bg-gray-800/50 transition-colors",
-              expandedMenu === 'firstSteps' ? 'text-neonBlue' : 'text-gray-300'
+              expandedMenu === 'quickStart' ? 'text-white font-medium' : 'text-gray-300'
             )}
           >
             <span className="flex items-center gap-2">
               <Bot size={20} />
-              {t('firstSteps')}
+              {t('quickStart')}
             </span>
-            {expandedMenu === 'firstSteps' ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+            {expandedMenu === 'quickStart' ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
           </button>
-          {expandedMenu === 'firstSteps' && (
+          {expandedMenu === 'quickStart' && (
             <div className="pl-4 pr-2 py-2 space-y-1 bg-black/30">
-              {firstStepsSubItems.map((item) => (
+              {quickStartSubItems.map((item) => (
                 <Link
                   key={item.key}
                   to={item.path}
                   className={cn(
                     "flex items-center gap-2 px-4 py-2 text-sm rounded-md transition-colors",
-                    isActive(item.path) ? 'sidebar-active' : 'text-gray-400 hover:text-white'
+                    isActive(item.path) ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-400 hover:text-white'
+                  )}
+                >
+                  {item.icon}
+                  <span>{t(item.key)}</span>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Detailed Guide menu (formerly First Steps) */}
+        <div>
+          <button
+            onClick={() => toggleMenu('detailedGuide')}
+            className={cn(
+              "w-full flex items-center justify-between px-4 py-3 text-left hover:bg-gray-800/50 transition-colors",
+              expandedMenu === 'detailedGuide' ? 'text-white font-medium' : 'text-gray-300'
+            )}
+          >
+            <span className="flex items-center gap-2">
+              <Bot size={20} />
+              {t('detailedGuide')}
+            </span>
+            {expandedMenu === 'detailedGuide' ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+          </button>
+          {expandedMenu === 'detailedGuide' && (
+            <div className="pl-4 pr-2 py-2 space-y-1 bg-black/30">
+              {detailedGuideSubItems.map((item) => (
+                <Link
+                  key={item.key}
+                  to={item.path}
+                  className={cn(
+                    "flex items-center gap-2 px-4 py-2 text-sm rounded-md transition-colors",
+                    isActive(item.path) ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-400 hover:text-white'
                   )}
                 >
                   {item.icon}
@@ -73,7 +114,7 @@ const Sidebar = () => {
           to="/casino-setup"
           className={cn(
             "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/casino-setup') ? 'sidebar-active' : 'text-gray-300'
+            isActive('/casino-setup') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300'
           )}
         >
           <Dices size={20} className="mr-3" />
@@ -85,24 +126,24 @@ const Sidebar = () => {
           to="/cards-payments"
           className={cn(
             "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/cards-payments') ? 'sidebar-active' : 'text-gray-300'
+            isActive('/cards-payments') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300'
           )}
         >
           <CreditCard size={20} className="mr-3" />
           {t('cardsPayments')}
         </Link>
 
-        {/* Ask a Question */}
-        <Link
-          to="/ask-question"
-          className={cn(
-            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/ask-question') ? 'sidebar-active' : 'text-gray-300'
-          )}
+        {/* Ask a Question - External Link */}
+        <a
+          href="https://example.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/50 transition-colors"
         >
           <HelpCircle size={20} className="mr-3" />
           {t('askQuestion')}
-        </Link>
+          <ExternalLink size={16} className="ml-2" />
+        </a>
       </div>
     </div>
   );
