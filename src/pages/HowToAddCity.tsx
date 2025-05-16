@@ -20,15 +20,15 @@ const HowToAddCity = () => {
       alt: "Laptop computer showing admin interface"
     },
     {
-      src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      src: "https://i.ibb.co/gbh3p8F1/IMAGE-2025-05-16-15-46-23.jpg",
       alt: "Monitor showing programming code"
     },
     {
-      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      src: "https://i.ibb.co/DHBdsLTs/IMAGE-2025-05-16-15-47-02.jpg",
       alt: "Person using laptop computer"
     },
     {
-      src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      src: "https://i.ibb.co/CsnDWcWX/IMAGE-2025-05-16-15-47-32.jpg",
       alt: "Code on computer screen"
     }
   ];
