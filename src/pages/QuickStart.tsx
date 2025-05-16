@@ -15,7 +15,7 @@ const QuickStart = () => {
   return (
     <TutorialPage title={t('quickStart')}>
       <div className="space-y-8">
-        <div className="bg-gray-900/70 p-6 rounded-lg formal-border">
+        <div>
           <p className="text-lg mb-4">{t('quickStartDescription')}</p>
 
           {quickStartPoints.map((item, index) => (

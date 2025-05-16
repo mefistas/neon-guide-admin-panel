@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices, ExternalLink } from 'lucide-react';
+import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices, ExternalLink, Menu } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 
@@ -9,14 +9,19 @@ const Sidebar = () => {
   const { t } = useLanguage();
   const location = useLocation();
   const [expandedMenu, setExpandedMenu] = useState<string | null>('detailedGuide');
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const toggleMenu = (menu: string) => {
     setExpandedMenu(expandedMenu === menu ? null : menu);
   };
 
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
   const isActive = (path: string) => location.pathname === path;
 
-  // Items for the detailed guide section (previously firstSteps)
+  // Items for the detailed guide section
   const detailedGuideSubItems = [
     { key: 'howToAddCity', path: '/how-to-add-city', icon: <Building size={18} /> },
     { key: 'howToAddDistrict', path: '/how-to-add-district', icon: <Building size={18} /> },
@@ -25,14 +30,44 @@ const Sidebar = () => {
     { key: 'howToCreateProductTypes', path: '/how-to-create-product-types', icon: <Building size={18} /> },
     { key: 'howToAddAddress', path: '/how-to-add-address', icon: <Building size={18} /> },
     { key: 'howToAddBots', path: '/how-to-add-bots', icon: <Bot size={18} /> },
+    { key: 'merchants', path: '/merchants', icon: <Building size={18} /> },
+    { key: 'masterKlad', path: '/master-klad', icon: <Building size={18} /> },
+    { key: 'customBot', path: '/custom-bot', icon: <Bot size={18} /> },
+    { key: 'workers', path: '/workers', icon: <Building size={18} /> },
+    { key: 'clients', path: '/clients', icon: <Building size={18} /> },
+    { key: 'purchases', path: '/purchases', icon: <Building size={18} /> },
+    { key: 'balanceTopUps', path: '/balance-top-ups', icon: <Building size={18} /> },
+    { key: 'marketing', path: '/marketing', icon: <Building size={18} /> },
+    { key: 'messages', path: '/messages', icon: <Building size={18} /> },
+    { key: 'web', path: '/web', icon: <Building size={18} /> },
+    { key: 'couriersSalary', path: '/couriers-salary', icon: <Building size={18} /> },
+    { key: 'usdt', path: '/usdt', icon: <Building size={18} /> },
+    { key: 'partnersExchangers', path: '/partners-exchangers', icon: <Building size={18} /> },
   ];
 
   return (
-    <div className="h-screen w-64 bg-black border-r border-gray-800 flex flex-col">
-      <div className="p-4 border-b border-gray-800">
-        <Link to="/" className="block">
-          <h1 className="text-xl font-semibold text-white">{t('adminPanelTutorial')}</h1>
-        </Link>
+    <div className={cn(
+      "relative h-screen border-r border-gray-800 flex flex-col transition-all duration-300",
+      sidebarOpen ? "w-64" : "w-16"
+    )}>
+      {/* Toggle button for sidebar */}
+      <button 
+        onClick={toggleSidebar} 
+        className="absolute -right-3 top-4 bg-gray-800 rounded-full p-1 text-white shadow-lg z-10"
+      >
+        <Menu size={16} />
+      </button>
+
+      <div className="p-4 border-b border-gray-800 flex items-center justify-between">
+        {sidebarOpen ? (
+          <Link to="/" className="block">
+            <h1 className="text-xl font-semibold text-white">{t('adminPanelTutorial')}</h1>
+          </Link>
+        ) : (
+          <Link to="/" className="block mx-auto">
+            <Bot size={24} className="text-white" />
+          </Link>
+        )}
       </div>
       <div className="flex-1 overflow-y-auto py-2">
         {/* Quick Start - Direct Link */}
@@ -40,29 +75,31 @@ const Sidebar = () => {
           to="/quick-start"
           className={cn(
             "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/quick-start') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300'
+            isActive('/quick-start') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
           )}
         >
-          <Bot size={20} className="mr-3" />
-          {t('quickStart')}
+          <Bot size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && t('quickStart')}
         </Link>
 
-        {/* Detailed Guide menu (formerly First Steps) */}
+        {/* Detailed Guide menu */}
         <div>
           <button
             onClick={() => toggleMenu('detailedGuide')}
             className={cn(
               "w-full flex items-center justify-between px-4 py-3 text-left hover:bg-gray-800/50 transition-colors",
-              expandedMenu === 'detailedGuide' ? 'text-white font-medium' : 'text-gray-300'
+              expandedMenu === 'detailedGuide' ? 'text-white font-medium' : 'text-gray-300',
+              !sidebarOpen && "justify-center"
             )}
           >
             <span className="flex items-center gap-2">
               <Bot size={20} />
-              {t('detailedGuide')}
+              {sidebarOpen && t('detailedGuide')}
             </span>
-            {expandedMenu === 'detailedGuide' ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+            {sidebarOpen && (expandedMenu === 'detailedGuide' ? <ChevronUp size={18} /> : <ChevronDown size={18} />)}
           </button>
-          {expandedMenu === 'detailedGuide' && (
+          {expandedMenu === 'detailedGuide' && sidebarOpen && (
             <div className="pl-4 pr-2 py-2 space-y-1 bg-black/30">
               {detailedGuideSubItems.map((item) => (
                 <Link
@@ -86,11 +123,12 @@ const Sidebar = () => {
           to="/casino-setup"
           className={cn(
             "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/casino-setup') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300'
+            isActive('/casino-setup') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
           )}
         >
-          <Dices size={20} className="mr-3" />
-          {t('casinoSetup')}
+          <Dices size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && t('casinoSetup')}
         </Link>
 
         {/* Cards Payment */}
@@ -98,11 +136,12 @@ const Sidebar = () => {
           to="/cards-payments"
           className={cn(
             "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/cards-payments') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300'
+            isActive('/cards-payments') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
           )}
         >
-          <CreditCard size={20} className="mr-3" />
-          {t('cardsPayments')}
+          <CreditCard size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && t('cardsPayments')}
         </Link>
 
         {/* Ask a Question - External Link */}
@@ -110,11 +149,18 @@ const Sidebar = () => {
           href="https://example.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/50 transition-colors"
+          className={cn(
+            "flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800/50 transition-colors",
+            !sidebarOpen && "justify-center"
+          )}
         >
-          <HelpCircle size={20} className="mr-3" />
-          {t('askQuestion')}
-          <ExternalLink size={16} className="ml-2" />
+          <HelpCircle size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && (
+            <>
+              {t('askQuestion')}
+              <ExternalLink size={16} className="ml-2" />
+            </>
+          )}
         </a>
       </div>
     </div>
