@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslations } from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
 import { Bot, Dices, CreditCard, TrendingUp, Wallet } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -13,42 +14,42 @@ const Index = () => {
   const mainSections = [
     {
       title: 'quickStart',
-      icon: <Bot size={24} className="mb-2" />,
+      icon: <Bot size={24} />,
       description: 'quickStartShortDesc',
       link: '/quick-start',
       isCustom: false
     },
     {
       title: 'customBotHomeTitle',
-      icon: <Bot size={24} className="mb-2" />,
+      icon: <Bot size={24} />,
       description: 'customBotHomeDesc',
       link: '/custom-bot',
       isCustom: true
     },
     {
       title: 'operatorWorkTitle',
-      icon: <CreditCard size={24} className="mb-2" />,
+      icon: <CreditCard size={24} />,
       description: 'operatorWorkShortDesc',
       link: '/cards-payments',
       isCustom: true
     },
     {
       title: 'casinoSetup',
-      icon: <Dices size={24} className="mb-2" />,
+      icon: <Dices size={24} />,
       description: 'casinoSetupShortDesc',
       link: '/casino-setup',
       isCustom: false
     },
     {
       title: 'financeTitle',
-      icon: <Wallet size={24} className="mb-2" />,
+      icon: <Wallet size={24} />,
       description: 'financeShortDesc',
       link: '/finance',
       isCustom: true
     },
     {
       title: 'marketingTitle',
-      icon: <TrendingUp size={24} className="mb-2" />,
+      icon: <TrendingUp size={24} />,
       description: 'marketingShortDesc',
       link: '/marketing',
       isCustom: true
@@ -68,15 +69,20 @@ const Index = () => {
               <Link 
                 key={index} 
                 to={section.link}
-                className="bg-black/50 p-6 rounded-lg formal-border hover:bg-gray-800/50 transition-colors flex flex-col items-center text-center"
+                className="block"
               >
-                {section.icon}
-                <h2 className="text-xl font-medium mb-2">
-                  {section.isCustom ? tNew(section.title) : t(section.title)}
-                </h2>
-                <p className="text-gray-300">
-                  {section.isCustom ? tNew(section.description) : t(section.description)}
-                </p>
+                <Button 
+                  variant="outline"
+                  className="w-full h-auto py-6 flex flex-col items-center text-center gap-3 bg-black/50 hover:bg-gray-800/70 border-gray-700 hover:border-neonBlue transition-all duration-200"
+                >
+                  <div className="text-neonBlue">{section.icon}</div>
+                  <h2 className="text-xl font-medium">
+                    {section.isCustom ? tNew(section.title) : t(section.title)}
+                  </h2>
+                  <p className="text-gray-300 font-normal normal-case">
+                    {section.isCustom ? tNew(section.description) : t(section.description)}
+                  </p>
+                </Button>
               </Link>
             ))}
           </div>

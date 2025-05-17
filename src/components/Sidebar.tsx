@@ -1,10 +1,10 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices, ExternalLink, Menu, Tag, Bitcoin, History, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import useTranslations from '@/hooks/useTranslations';
+import { Button } from '@/components/ui/button';
 
 const Sidebar = () => {
   const { t } = useLanguage();
@@ -64,12 +64,20 @@ const Sidebar = () => {
 
       <div className="p-4 border-b border-gray-800 flex items-center justify-between">
         {sidebarOpen ? (
-          <Link to="/" className="block">
-            <h1 className="text-xl font-semibold text-white">{t('adminPanelTutorial')}</h1>
+          <Link to="/" className="block w-full">
+            <Button 
+              variant="outline" 
+              className="w-full justify-start gap-2 bg-neonBlue/20 hover:bg-neonBlue/30 border-neonBlue text-white"
+            >
+              <Bot size={18} />
+              <span className="font-semibold">{t('adminPanelTutorial')}</span>
+            </Button>
           </Link>
         ) : (
           <Link to="/" className="block mx-auto">
-            <Bot size={24} className="text-white" />
+            <Button variant="outline" className="p-2 bg-neonBlue/20 hover:bg-neonBlue/30 border-neonBlue">
+              <Bot size={20} className="text-white" />
+            </Button>
           </Link>
         )}
       </div>
