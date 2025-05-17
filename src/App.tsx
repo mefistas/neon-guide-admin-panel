@@ -40,7 +40,7 @@ import CumulativeDiscounts from "./pages/CumulativeDiscounts";
 import PromoCodes from "./pages/PromoCodes";
 import OneTimeDiscounts from "./pages/OneTimeDiscounts";
 import HappyHours from "./pages/HappyHours";
-import BtcCashout from "./pages/BtcCashout";
+import WithdrawFunds from "./pages/WithdrawFunds";
 import BalanceHistory from "./pages/BalanceHistory";
 import Feedback from "./pages/Feedback";
 import HelpBots from "./pages/HelpBots";
@@ -89,7 +89,7 @@ const App = () => (
             <Route path="/couriers-salary" element={<CouriersSalary />} />
             <Route path="/usdt" element={<Usdt />} />
             <Route path="/partners-exchangers" element={<PartnersExchangers />} />
-            <Route path="/btc-cashout" element={<BtcCashout />} />
+            <Route path="/withdraw-funds" element={<WithdrawFunds />} />
             <Route path="/balance-history" element={<BalanceHistory />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/help-bots" element={<HelpBots />} />

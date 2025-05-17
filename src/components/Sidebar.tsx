@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, Headset, Dices, ExternalLink, Menu, Tag, Bitcoin, History, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
+import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, Headset, Dices, ExternalLink, Menu, Tag, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import useTranslations from '@/hooks/useTranslations';
@@ -34,8 +33,7 @@ const Sidebar = () => {
     { key: 'howToAddAddress', path: '/how-to-add-address', icon: <Building size={18} /> },
     { key: 'howToAddBots', path: '/how-to-add-bots', icon: <Bot size={18} /> },
     { key: 'oneTimeDiscounts', path: '/one-time-discounts', icon: <Tag size={18} /> },
-    { key: 'btcCashout', path: '/btc-cashout', icon: <Bitcoin size={18} /> },
-    { key: 'balanceHistory', path: '/balance-history', icon: <History size={18} /> },
+    { key: 'balanceHistory', path: '/balance-history', icon: <Wallet size={18} /> },
     { key: 'internalChats', path: '/internal-chats', icon: <MessageSquare size={18} /> },
     { key: 'reviews', path: '/reviews', icon: <Star size={18} /> },
     { key: 'masterKlad', path: '/master-klad', icon: <Building size={18} /> },
@@ -48,6 +46,7 @@ const Sidebar = () => {
     { key: 'couriersSalary', path: '/couriers-salary', icon: <Building size={18} /> },
     { key: 'usdt', path: '/usdt', icon: <Building size={18} /> },
     { key: 'partnersExchangers', path: '/partners-exchangers', icon: <Building size={18} /> },
+    { key: 'withdrawFunds', path: '/withdraw-funds', icon: <Wallet size={18} /> },
   ];
 
   return (

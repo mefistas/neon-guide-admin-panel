@@ -2,7 +2,7 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
-import { Wallet, Bitcoin, History, CreditCard, ArrowDownToLine } from 'lucide-react';
+import { Wallet, History, CreditCard, ArrowDownToLine } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BackButton from '@/components/BackButton';
 
@@ -13,7 +13,7 @@ const Finance = () => {
     {
       title: 'withdrawFunds',
       icon: <ArrowDownToLine size={20} className="mr-2" />,
-      path: '/partners-exchangers',
+      path: '/withdraw-funds',
       description: 'withdrawFundsDesc'
     },
     {
@@ -27,12 +27,6 @@ const Finance = () => {
       icon: <Wallet size={20} className="mr-2" />,
       path: '/balance-top-ups',
       description: 'balanceTopUpsDesc'
-    },
-    {
-      title: 'btcCashout',
-      icon: <Bitcoin size={20} className="mr-2" />,
-      path: '/btc-cashout',
-      description: 'btcCashoutDesc'
     },
     {
       title: 'usdt',
