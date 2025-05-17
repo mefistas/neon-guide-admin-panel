@@ -1,87 +1,110 @@
 
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
-import { useLanguage } from '@/contexts/LanguageContext';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import useTranslations from '@/hooks/useTranslations';
+import { Link } from 'react-router-dom';
+import { TrendingUp, Tag, Clock, Mail, MessageSquare, Percent, Gift } from 'lucide-react';
 
 const Marketing = () => {
-  const { t } = useLanguage();
+  const { tNew } = useTranslations();
 
-  const images = [
+  const marketingSubsections = [
     {
-      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      alt: "marketingImage1"
+      title: 'mailouts',
+      icon: <Mail size={20} className="mr-2" />,
+      path: '/mailouts',
+      description: 'mailoutsDesc'
     },
     {
-      src: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07",
-      alt: "marketingImage2"
+      title: 'autoForwarding',
+      icon: <MessageSquare size={20} className="mr-2" />,
+      path: '/auto-forwarding',
+      description: 'autoForwardingDesc'
     },
     {
-      src: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
-      alt: "marketingImage3"
+      title: 'promotions',
+      icon: <Gift size={20} className="mr-2" />,
+      path: '/promotions',
+      description: 'promotionsDesc'
     },
     {
-      src: "https://images.unsplash.com/photo-1533750349088-cd871a92f312",
-      alt: "marketingImage4"
+      title: 'cumulativeDiscounts',
+      icon: <Percent size={20} className="mr-2" />,
+      path: '/cumulative-discounts',
+      description: 'cumulativeDiscountsDesc'
+    },
+    {
+      title: 'promoCodes',
+      icon: <Tag size={20} className="mr-2" />,
+      path: '/promo-codes',
+      description: 'promoCodesDesc'
+    },
+    {
+      title: 'oneTimeDiscounts',
+      icon: <Tag size={20} className="mr-2" />,
+      path: '/one-time-discounts',
+      description: 'oneTimeDiscountsDesc'
+    },
+    {
+      title: 'happyHours',
+      icon: <Clock size={20} className="mr-2" />,
+      path: '/happy-hours',
+      description: 'happyHoursDesc'
     }
   ];
 
   return (
-    <TutorialPage title={t('marketing')}>
-      <div className="space-y-6">
-        <div className="p-2">
-          <Carousel className="w-full max-w-3xl mx-auto">
-            <CarouselContent>
-              {images.map((image, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <AspectRatio ratio={16 / 9}>
-                      <img
-                        src={image.src}
-                        alt={t(image.alt)}
-                        className="rounded-xl object-cover w-full h-full"
-                      />
-                    </AspectRatio>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-4 space-x-4">
-              <CarouselPrevious className="relative static translate-y-0 left-0" />
-              <CarouselNext className="relative static translate-y-0 right-0" />
-            </div>
-          </Carousel>
-        </div>
-
-        <div className="space-y-4">
-          <p>{t('marketingDescription')}</p>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li>{t('marketingStep1')}</li>
-            <li>{t('marketingStep2')}</li>
-            <li>{t('marketingStep3')}</li>
-            <li>{t('marketingStep4')}</li>
-            <li>{t('marketingStep5')}
-              <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li>{t('marketingField1')}</li>
-                <li>{t('marketingField2')}</li>
-                <li>{t('marketingField3')}</li>
-                <li>{t('marketingField4')}</li>
-              </ul>
-            </li>
-            <li>{t('marketingStep6')}</li>
-          </ol>
-          <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-            <p className="font-semibold">{t('marketingNote')}:</p>
-            <p>{t('marketingNoteText')}</p>
+    <TutorialPage title={tNew('marketingTitle')}>
+      <div className="space-y-8 max-w-4xl mx-auto">
+        <section>
+          <div className="flex items-center gap-4 mb-6">
+            <TrendingUp size={32} className="text-neonBlue" />
+            <h2 className="text-2xl font-semibold">{tNew('marketingTitle')}</h2>
           </div>
-        </div>
+          
+          <p className="text-lg mb-6">
+            {tNew('marketingShortDesc')}
+          </p>
+        </section>
+
+        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
+          <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
+            {tNew('marketingSections')}
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {marketingSubsections.map((section, index) => (
+              <Link 
+                key={index} 
+                to={section.path}
+                className="bg-gray-800/50 p-4 rounded-lg hover:bg-gray-700/50 transition-colors flex items-center"
+              >
+                {section.icon}
+                <div>
+                  <h4 className="font-medium">{tNew(section.title)}</h4>
+                  <p className="text-sm text-gray-400">{tNew(section.description)}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+            {tNew('marketingTips')}
+          </h3>
+          
+          <div className="space-y-4">
+            <div className="p-4 bg-neonBlue/10 rounded-md border border-neonBlue">
+              <p className="font-semibold">{tNew('tip')}:</p>
+              <p>{tNew('marketingTip1')}</p>
+            </div>
+            <div className="p-4 bg-neonBlue/10 rounded-md border border-neonBlue">
+              <p className="font-semibold">{tNew('important')}:</p>
+              <p>{tNew('marketingTip2')}</p>
+            </div>
+          </div>
+        </section>
       </div>
     </TutorialPage>
   );

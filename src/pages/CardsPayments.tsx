@@ -1,72 +1,98 @@
 
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
-import { useLanguage } from '@/contexts/LanguageContext';
+import useTranslations from '@/hooks/useTranslations';
+import { Link } from 'react-router-dom';
+import { Users, MessageSquare, CreditCard, Bot } from 'lucide-react';
 
 const CardsPayments = () => {
-  const { t } = useLanguage();
+  const { tNew } = useTranslations();
+
+  const operatorSubsections = [
+    {
+      title: 'clients',
+      icon: <Users size={20} className="mr-2" />,
+      path: '/clients',
+      description: 'clientsDesc'
+    },
+    {
+      title: 'feedback',
+      icon: <MessageSquare size={20} className="mr-2" />,
+      path: '/feedback',
+      description: 'feedbackDesc'
+    },
+    {
+      title: 'purchasesProcessing',
+      icon: <CreditCard size={20} className="mr-2" />,
+      path: '/purchases',
+      description: 'purchasesProcessingDesc'
+    },
+    {
+      title: 'helpBots',
+      icon: <Bot size={20} className="mr-2" />,
+      path: '/help-bots',
+      description: 'helpBotsDesc'
+    },
+    {
+      title: 'internalChats',
+      icon: <MessageSquare size={20} className="mr-2" />,
+      path: '/internal-chats',
+      description: 'internalChatsDesc'
+    }
+  ];
 
   return (
-    <TutorialPage title={t('cardsPayments')}>
-      <div className="space-y-4">
-        <p>{t('cardsPaymentsIntro')}</p>
-        <ol className="list-decimal pl-6 space-y-2">
-          <li>{t('cardsStep1')}</li>
-          <li>{t('cardsStep2')}</li>
-          <li>{t('cardsStep3')}</li>
-          <li>{t('cardsStep4')}
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>{t('cardsProcessor1')}</li>
-              <li>{t('cardsProcessor2')}</li>
-              <li>{t('cardsProcessor3')}</li>
-              <li>{t('cardsProcessor4')}</li>
-              <li>{t('cardsProcessor5')}</li>
-            </ul>
-          </li>
-          <li>{t('cardsStep5')}
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>{t('cardsCredential1')}</li>
-              <li>{t('cardsCredential2')}</li>
-              <li>{t('cardsCredential3')}</li>
-              <li>{t('cardsCredential4')}</li>
-            </ul>
-          </li>
-          <li>{t('cardsStep6')}
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>{t('cardsSettings1')}</li>
-              <li>{t('cardsSettings2')}</li>
-              <li>{t('cardsSettings3')}</li>
-              <li>{t('cardsSettings4')}</li>
-            </ul>
-          </li>
-          <li>{t('cardsStep7')}
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>{t('cardsFees1')}</li>
-              <li>{t('cardsFees2')}</li>
-              <li>{t('cardsFees3')}</li>
-            </ul>
-          </li>
-          <li>{t('cardsStep8')}
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>{t('cardsSecurity1')}</li>
-              <li>{t('cardsSecurity2')}</li>
-              <li>{t('cardsSecurity3')}</li>
-            </ul>
-          </li>
-          <li>{t('cardsStep9')}
-            <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li>{t('cardsNotification1')}</li>
-              <li>{t('cardsNotification2')}</li>
-              <li>{t('cardsNotification3')}</li>
-            </ul>
-          </li>
-          <li>{t('cardsStep10')}</li>
-          <li>{t('cardsStep11')}</li>
-        </ol>
-        <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-          <p className="font-semibold">{t('cardsSecurityNote')}:</p>
-          <p>{t('cardsSecurityNoteText')}</p>
-        </div>
+    <TutorialPage title={tNew('operatorWorkTitle')}>
+      <div className="space-y-8 max-w-4xl mx-auto">
+        <section>
+          <div className="flex items-center gap-4 mb-6">
+            <CreditCard size={32} className="text-neonBlue" />
+            <h2 className="text-2xl font-semibold">{tNew('operatorWorkTitle')}</h2>
+          </div>
+          
+          <p className="text-lg mb-6">
+            {tNew('operatorWorkShortDesc')}
+          </p>
+        </section>
+
+        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
+          <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
+            {tNew('operatorWorkSections')}
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {operatorSubsections.map((section, index) => (
+              <Link 
+                key={index} 
+                to={section.path}
+                className="bg-gray-800/50 p-4 rounded-lg hover:bg-gray-700/50 transition-colors flex items-center"
+              >
+                {section.icon}
+                <div>
+                  <h4 className="font-medium">{tNew(section.title)}</h4>
+                  <p className="text-sm text-gray-400">{tNew(section.description)}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+            {tNew('operatorTips')}
+          </h3>
+          
+          <div className="space-y-4">
+            <div className="p-4 bg-neonBlue/10 rounded-md border border-neonBlue">
+              <p className="font-semibold">{tNew('tip')}:</p>
+              <p>{tNew('operatorTip1')}</p>
+            </div>
+            <div className="p-4 bg-neonBlue/10 rounded-md border border-neonBlue">
+              <p className="font-semibold">{tNew('important')}:</p>
+              <p>{tNew('operatorTip2')}</p>
+            </div>
+          </div>
+        </section>
       </div>
     </TutorialPage>
   );

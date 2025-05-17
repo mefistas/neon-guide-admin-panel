@@ -265,6 +265,215 @@ const additionalTranslations: TranslationsStore = {
   marketingTitle: {
     en: 'Marketing',
     ru: 'Маркетинг'
+  },
+  // Finance Page Translations
+  financeSections: {
+    en: "Finance Sections",
+    ru: "Разделы финансов"
+  },
+  withdrawFunds: {
+    en: "Withdraw Funds",
+    ru: "Вывод средств"
+  },
+  withdrawFundsDesc: {
+    en: "Withdraw your funds to different payment methods",
+    ru: "Вывод ваших средств на различные платежные методы"
+  },
+  courierSalary: {
+    en: "Courier Salary and Penalties",
+    ru: "Начисления/штрафы курьерам"
+  },
+  courierSalaryDesc: {
+    en: "Manage courier payments and penalties",
+    ru: "Управление выплатами и штрафами для курьеров"
+  },
+  balanceTopUps: {
+    en: "Balance Top Ups/Disputes",
+    ru: "Пополнения балансов/споры"
+  },
+  balanceTopUpsDesc: {
+    en: "Manage balance top ups and resolve payment disputes",
+    ru: "Управление пополнениями балансов и решение споров по оплатам"
+  },
+  btcCashout: {
+    en: "BTC Cashout",
+    ru: "Обнал BTC"
+  },
+  btcCashoutDesc: {
+    en: "Manage Bitcoin cashout operations",
+    ru: "Управление операциями по обналичиванию Bitcoin"
+  },
+  usdt: {
+    en: "USDT",
+    ru: "USDT"
+  },
+  usdtDesc: {
+    en: "Manage USDT transactions and payments",
+    ru: "Управление транзакциями и платежами в USDT"
+  },
+  partnersExchangers: {
+    en: "Partners and Exchangers",
+    ru: "Партнеры обменники"
+  },
+  partnersExchangersDesc: {
+    en: "Manage your exchange partners",
+    ru: "Управление вашими партнерами по обмену"
+  },
+  balanceHistory: {
+    en: "Balance History",
+    ru: "История изменения балансов"
+  },
+  balanceHistoryDesc: {
+    en: "View history of all balance changes",
+    ru: "Просмотр истории всех изменений баланса"
+  },
+  quickAccess: {
+    en: "Quick Access",
+    ru: "Быстрый доступ"
+  },
+  paymentMethods: {
+    en: "Payment Methods",
+    ru: "Способы оплаты"
+  },
+  reports: {
+    en: "Reports",
+    ru: "Отчеты"
+  },
+  
+  // Marketing page translations
+  marketingShortDesc: {
+    en: "Boost your sales with effective marketing strategies",
+    ru: "Увеличьте продажи с помощью эффективных маркетинговых стратегий"
+  },
+  marketingSections: {
+    en: "Marketing Tools",
+    ru: "Маркетинговые инструменты"
+  },
+  mailouts: {
+    en: "Mailouts",
+    ru: "Рассылки"
+  },
+  mailoutsDesc: {
+    en: "Create and manage message campaigns to your customers",
+    ru: "Создание и управление кампаниями сообщений для ваших клиентов"
+  },
+  autoForwarding: {
+    en: "Auto-Forwarding",
+    ru: "Авто-пересылки"
+  },
+  autoForwardingDesc: {
+    en: "Set up automatic message forwarding",
+    ru: "Настройка автоматической пересылки сообщений"
+  },
+  promotions: {
+    en: "Promotions",
+    ru: "Промо-акции"
+  },
+  promotionsDesc: {
+    en: "Create and manage special promotions",
+    ru: "Создание и управление специальными акциями"
+  },
+  cumulativeDiscounts: {
+    en: "Cumulative Discounts",
+    ru: "Накопительные скидки"
+  },
+  cumulativeDiscountsDesc: {
+    en: "Set up loyalty programs with cumulative discounts",
+    ru: "Настройка программ лояльности с накопительными скидками"
+  },
+  promoCodes: {
+    en: "Promo Codes",
+    ru: "Промокоды"
+  },
+  promoCodesDesc: {
+    en: "Generate and manage promotional codes",
+    ru: "Создание и управление промокодами"
+  },
+  oneTimeDiscounts: {
+    en: "One-Time Product Discounts",
+    ru: "Разовые скидки на товары"
+  },
+  oneTimeDiscountsDesc: {
+    en: "Create special one-time discounts for products",
+    ru: "Создание специальных разовых скидок на товары"
+  },
+  happyHours: {
+    en: "Happy Hours",
+    ru: "Счастливые часы"
+  },
+  happyHoursDesc: {
+    en: "Set up time-limited special offers",
+    ru: "Настройка ограниченных по времени специальных предложений"
+  },
+  marketingTips: {
+    en: "Marketing Tips",
+    ru: "Советы по маркетингу"
+  },
+  marketingTip1: {
+    en: "Regular promotions can increase customer retention by up to 25%",
+    ru: "Регулярные акции могут увеличить удержание клиентов до 25%"
+  },
+  marketingTip2: {
+    en: "Always analyze the results of your marketing campaigns to improve future strategies",
+    ru: "Всегда анализируйте результаты ваших маркетинговых кампаний для улучшения будущих стратегий"
+  },
+  
+  // Operator work translations
+  operatorWorkSections: {
+    en: "Operator Responsibilities",
+    ru: "Обязанности оператора"
+  },
+  clients: {
+    en: "Clients",
+    ru: "Клиенты"
+  },
+  clientsDesc: {
+    en: "Manage client information and interactions",
+    ru: "Управление информацией и взаимодействием с клиентами"
+  },
+  feedback: {
+    en: "Feedback",
+    ru: "Обратная связь"
+  },
+  feedbackDesc: {
+    en: "Handle customer feedback and support requests",
+    ru: "Обработка обратной связи и запросов поддержки от клиентов"
+  },
+  purchasesProcessing: {
+    en: "Purchases and Orders Processing",
+    ru: "Обработка заявок и покупок"
+  },
+  purchasesProcessingDesc: {
+    en: "Process and manage customer orders and purchases",
+    ru: "Обработка и управление заказами и покупками клиентов"
+  },
+  helpBots: {
+    en: "Helper Bots",
+    ru: "Боты помощники"
+  },
+  helpBotsDesc: {
+    en: "Configure and manage automated help assistants",
+    ru: "Настройка и управление автоматизированными помощниками"
+  },
+  internalChats: {
+    en: "Internal Chats",
+    ru: "Внутренние чаты"
+  },
+  internalChatsDesc: {
+    en: "Communicate with team members through internal chat system",
+    ru: "Общение с членами команды через систему внутренних чатов"
+  },
+  operatorTips: {
+    en: "Operator Tips",
+    ru: "Советы оператору"
+  },
+  operatorTip1: {
+    en: "Always respond to client queries within 15 minutes for best customer satisfaction",
+    ru: "Всегда отвечайте на запросы клиентов в течение 15 минут для наилучшего удовлетворения клиентов"
+  },
+  operatorTip2: {
+    en: "Use templates for common responses to save time and maintain consistency",
+    ru: "Используйте шаблоны для общих ответов, чтобы сэкономить время и сохранить последовательность"
   }
 };
 
