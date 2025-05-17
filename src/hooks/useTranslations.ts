@@ -1,4 +1,3 @@
-
 import { useLanguage } from '@/contexts/LanguageContext';
 import { createTranslator } from '@/utils/translations';
 
@@ -79,6 +78,38 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
+  clientsDescription: {
+    en: string;
+    ru: string;
+  };
+  clientsSearch: {
+    en: string;
+    ru: string;
+  };
+  clientsCardTitle: {
+    en: string;
+    ru: string;
+  };
+  clientsCardDescription: {
+    en: string;
+    ru: string;
+  };
+  clientsImage1: {
+    en: string;
+    ru: string;
+  };
+  clientsImage2: {
+    en: string;
+    ru: string;
+  };
+  clientsImage3: {
+    en: string;
+    ru: string;
+  };
+  clientsImage4: {
+    en: string;
+    ru: string;
+  };
 };
 
 // Local translations that don't require modifying the language files
@@ -129,7 +160,7 @@ const localTranslations: LocalTranslations = {
   },
   casinoSteps: {
     en: "- Go to STORES -> ALL STORES -> select your store\n- In the Language/Menu section, add a new item, set the line number, name it CASINO and select the casino button action accordingly\n- After creating the button, go to the Casino section and check the games you would like to see in your bot\nIMPORTANT: If at least one game is not selected, the casino will disappear from your bot's menu. You also need to set the minimum and maximum bets.",
-    ru: "- Переходим в раздел МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ -> выбираем наш магазин\n- В разделе Язык/Меню добавляем новый пункт, проставляем номер строки, называем КАЗИНО и выбираем действие кнопки казино соответственно\n- Когда кнопка создана идем в раздел Казино и ставим галочки напротив игр которые мы бы хотели видеть в нашем боте\nВАЖНО: если галочка не будет стоять хотя бы около одной игры, казино пропадает из меню вашего бота так же необходимо настроить минимальную и максимальную ставку"
+    ru: "- Переходим в раздел МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ -> выбираем наш магазин\n- В разделе Язык/Меню добавляем новый пункт, проставляем номер строки, называем КАЗИНО и выбираем действие кнопки казино соответственно\n- Когда кнопка создана идем в раздел Казино и ставим галочки напро��ив игр которые мы бы хотели видеть в нашем боте\nВАЖНО: если галочка не будет стоять хотя бы около одной игры, казино пропадает из меню вашего бота так же необходимо настроить минимальную и максимальную ставку"
   },
   availableGames: {
     en: "Available Games:",
@@ -158,6 +189,38 @@ const localTranslations: LocalTranslations = {
   casinoHistoryInfo: {
     en: "To view the history of your clients' Casino games, go to the ADDITIONAL -> CASINO GAME HISTORY menu",
     ru: "Что бы просмотреть историю игр в Казино ваших клиентов перейдите в меню ДОПОЛНИТЕЛЬНО -> ИСТОРИЯ ИГР В КАЗИНО"
+  },
+  clientsDescription: {
+    en: "Client cards and their editing. Go to the CLIENTS section to see a summary of brief information about each client, as well as the ability to export your client database in one of two formats: CSV or XLS.",
+    ru: "Карточки клиентов и их редактирование. Переходим в раздел КЛИЕНТЫ и видим сводку короткой информации о каждом, а так же возможность экспорта базы данных ваших клиентов в одном из двух форматов csv или xls."
+  },
+  clientsSearch: {
+    en: "You can also use the search bar to find the client you need. The search works by the client's name in the Telegram account, not by username!",
+    ru: "Так же можно воспользоваться поисковой строкой для того что бы найти нужного нам клиента, поиск работает по имени клиента в телеграмм аккаунте, а не по username!"
+  },
+  clientsCardTitle: {
+    en: "Open any client card by clicking on their ID",
+    ru: "Открываем любую карточку клиента нажатием на его ID"
+  },
+  clientsCardDescription: {
+    en: "Here you can edit each client's access, as well as change their discounts and balances. The most convenient way to refund or quickly credit a client if you don't have an open dispute is in this section (Balance/Discount - Change)",
+    ru: "Здесь можно редактировать доступы каждого клиента, а так же менять их скидки и балансы, самый удобный способ возврата или же быстрого начисления клиенту средств в случае если у вас нет открытого диспута происходит как раз в данном разделе (Баланс/Скидка - Изменить)"
+  },
+  clientsImage1: {
+    en: "Business woman with laptop",
+    ru: "Деловая женщина с ноутбуком"
+  },
+  clientsImage2: {
+    en: "Business man with laptop",
+    ru: "Деловой мужчина с ноутбуком"
+  },
+  clientsImage3: {
+    en: "Business woman on phone",
+    ru: "Деловая женщина с телефоном"
+  },
+  clientsImage4: {
+    en: "Business man on phone",
+    ru: "Деловой мужчина с телефоном"
   },
 };
 

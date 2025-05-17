@@ -2,9 +2,7 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import BackButton from '@/components/BackButton';
 import useTranslations from '@/hooks/useTranslations';
 import {
   Carousel,
@@ -14,6 +12,15 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Search, FileDown, Users } from "lucide-react";
+import { 
+  Table, 
+  TableHeader, 
+  TableRow, 
+  TableHead, 
+  TableBody, 
+  TableCell 
+} from '@/components/ui/table';
 
 const Clients = () => {
   const { t } = useLanguage();
@@ -21,7 +28,7 @@ const Clients = () => {
 
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1573496358961-3c82861ab8f4",
+      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
       alt: "clientsImage1"
     },
     {
@@ -40,13 +47,22 @@ const Clients = () => {
 
   return (
     <TutorialPage title={t('clients')}>
-      <div className="space-y-6">
+      <div className="space-y-8">
         <div className="mb-4">
-          <Button variant="outline" asChild className="gap-2">
-            <Link to="/cards-payments">
-              <ArrowLeft size={16} /> {tLocal('back')}
-            </Link>
-          </Button>
+          <BackButton to="/cards-payments" />
+        </div>
+        
+        <div className="space-y-4">
+          <p className="text-lg text-gray-300">{tLocal('clientsDescription')}</p>
+          
+          {/* Search section */}
+          <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mt-6">
+            <div className="flex items-center gap-2 mb-3">
+              <Search size={20} className="text-neonBlue" />
+              <h3 className="text-lg font-medium">{t('search')}</h3>
+            </div>
+            <p className="text-gray-300">{tLocal('clientsSearch')}</p>
+          </div>
         </div>
         
         <div className="p-2">
@@ -58,7 +74,7 @@ const Clients = () => {
                     <AspectRatio ratio={16 / 9}>
                       <img
                         src={image.src}
-                        alt={t(image.alt)}
+                        alt={tLocal(image.alt)}
                         className="rounded-xl object-cover w-full h-full"
                       />
                     </AspectRatio>
@@ -73,27 +89,70 @@ const Clients = () => {
           </Carousel>
         </div>
 
-        <div className="space-y-4">
-          <p>{t('clientsDescription')}</p>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li>{t('clientsStep1')}</li>
-            <li>{t('clientsStep2')}</li>
-            <li>{t('clientsStep3')}</li>
-            <li>{t('clientsStep4')}</li>
-            <li>{t('clientsStep5')}
-              <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li>{t('clientsField1')}</li>
-                <li>{t('clientsField2')}</li>
-                <li>{t('clientsField3')}</li>
-                <li>{t('clientsField4')}</li>
-              </ul>
-            </li>
-            <li>{t('clientsStep6')}</li>
-          </ol>
-          <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-            <p className="font-semibold">{t('clientsNote')}:</p>
-            <p>{t('clientsNoteText')}</p>
+        {/* Client management section */}
+        <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
+          <div className="flex items-center gap-2 mb-4">
+            <Users size={20} className="text-neonBlue" />
+            <h2 className="text-xl font-semibold">{tLocal('clientsCardTitle')}</h2>
           </div>
+          
+          <p className="text-gray-300 mb-6">{tLocal('clientsCardDescription')}</p>
+          
+          {/* Client management image */}
+          <div className="flex justify-center mb-6">
+            <img 
+              src="https://i.ibb.co/nMrGQNWf/Screenshot-2025-05-17-at-11-19-23-PM.png" 
+              alt="Client management interface"
+              className="rounded-lg shadow-lg max-w-full"
+            />
+          </div>
+          
+          {/* Export options */}
+          <div className="mt-8 pt-4 border-t border-gray-700">
+            <div className="flex items-center gap-2 mb-3">
+              <FileDown size={20} className="text-neonBlue" />
+              <h3 className="text-lg font-medium">{t('export')}</h3>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="bg-gray-700/30 p-4 rounded-lg border border-gray-600 flex items-center justify-between">
+                <span>CSV Format</span>
+                <span className="text-neonBlue">.csv</span>
+              </div>
+              <div className="bg-gray-700/30 p-4 rounded-lg border border-gray-600 flex items-center justify-between">
+                <span>Excel Format</span>
+                <span className="text-neonBlue">.xls</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Example client table */}
+        <div className="overflow-x-auto">
+          <Table className="border-collapse border border-gray-800">
+            <TableHeader>
+              <TableRow>
+                <TableHead className="bg-gray-800">ID</TableHead>
+                <TableHead className="bg-gray-800">{t('name')}</TableHead>
+                <TableHead className="bg-gray-800">{t('balance')}</TableHead>
+                <TableHead className="bg-gray-800">{t('discount')}</TableHead>
+                <TableHead className="bg-gray-800">{t('actions')}</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {[1, 2, 3].map((item) => (
+                <TableRow key={item} className="hover:bg-gray-800/50">
+                  <TableCell className="font-medium">#{item}00{item}</TableCell>
+                  <TableCell>User{item}</TableCell>
+                  <TableCell>${Math.floor(Math.random() * 1000)}</TableCell>
+                  <TableCell>{Math.floor(Math.random() * 30)}%</TableCell>
+                  <TableCell className="text-neonBlue hover:underline cursor-pointer">
+                    {t('view')}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         </div>
       </div>
     </TutorialPage>
