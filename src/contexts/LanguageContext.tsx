@@ -165,10 +165,7 @@ const translations: Translations = {
     quickStartPoint11Note2: 'All subsequent steps for more precise work and answers to all your questions are in the menu on the left',
     quickStartPoint11Note3: 'We recommend starting with CUSTOM BOT to tailor the bot to your needs and set up a menu that suits you',
     quickStartPoint11Note4: 'Great sales!',
-    quickStartPoint11Note5: '',
-    quickStartPoint11Note6: '',
-    quickStartPoint11Note7: '',
-    quickStartPoint11Note8: '',
+  
     
     quickStartPoint12: 'Security Configuration',
     quickStartPoint12Note1: 'Review and strengthen all default security settings.',
