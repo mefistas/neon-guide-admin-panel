@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, HeadsetHelp, Dices, ExternalLink, Menu, Tag, Bitcoin, History, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
+import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, Headset, Dices, ExternalLink, Menu, Tag, Bitcoin, History, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import useTranslations from '@/hooks/useTranslations';
@@ -135,7 +134,7 @@ const Sidebar = () => {
             !sidebarOpen && "justify-center"
           )}
         >
-          <HeadsetHelp size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          <Headset size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
           {sidebarOpen && tNew('operatorWorkTitle')}
         </Link>
 

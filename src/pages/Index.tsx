@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslations } from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
-import { Bot, Dices, HeadsetHelp, TrendingUp, Wallet } from 'lucide-react';
+import { Bot, Dices, Headset, TrendingUp, Wallet } from 'lucide-react';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -41,7 +40,7 @@ const Index = () => {
     },
     {
       title: 'operatorWorkTitle',
-      icon: <HeadsetHelp size={24} className="mb-2" />,
+      icon: <Headset size={24} className="mb-2" />,
       description: 'operatorWorkShortDesc',
       link: '/cards-payments',
       isCustom: true
