@@ -2,6 +2,7 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
+import BackButton from '@/components/BackButton';
 import {
   Carousel,
   CarouselContent,
@@ -36,6 +37,8 @@ const CouriersSalary = () => {
   return (
     <TutorialPage title={t('couriersSalary')}>
       <div className="space-y-6">
+        <BackButton to="/finance" />
+        
         <div className="p-2">
           <Carousel className="w-full max-w-3xl mx-auto">
             <CarouselContent>
