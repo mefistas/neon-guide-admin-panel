@@ -127,80 +127,80 @@ const additionalTranslations: TranslationsStore = {
     ru: '2. Кастомизация сообщений вашего бота'
   },
   customBotAppearance: {
-    en: 'Customization of the appearance of menu buttons, languages, and content',
-    ru: 'Кастомизация внешнего вида кнопок меню языков и наполнений'
+    en: '1.Customization of the appearance of menu buttons, languages, and content',
+    ru: '1.Кастомизация внешнего вида кнопок меню языков и наполнений'
   },
   gotoStores: {
-    en: '- Go to STORES -> ALL STORES',
-    ru: '- Переходим в раздел МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ'
+    en: ' Go to STORES -> ALL STORES',
+    ru: ' Переходим в раздел МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ'
   },
   clickStoreName: {
-    en: '- Click on your store name',
-    ru: '- Нажимаем на название своего магазина'
+    en: ' Click on your store name',
+    ru: ' Нажимаем на название своего магазина'
   },
   twoMainMenus: {
-    en: '- There are two main menus to edit: Language/Menu and Bot Customization. Let\'s start with the Language/Menu section',
-    ru: '- Тут есть два основных меню что бы редачить это Язык/Меню и Кастомизацию бота   Начнем с раздела Язык/меню'
+    en: ' There are two main menus to edit: Language/Menu and Bot Customization. Let\'s start with the Language/Menu section',
+    ru: ' Тут есть два основных меню что бы редачить это Язык/Меню и Кастомизацию бота   Начнем с раздела Язык/меню'
   },
   addNewLanguage: {
-    en: '- If we want to customize the menu completely, click on the ADD ANOTHER LANGUAGE item in the menu and give this language the name of our new menu, then click save',
-    ru: '- если мы хотим сделать меню полностью под себя нажимаем на пункт в меню ДОБАВИТЬ ЕШЕ ОДИН ЯЗЫК и даем этому языку название нашего нового меню, нажимаем сохранить'
+    en: ' If we want to customize the menu completely, click on the ADD ANOTHER LANGUAGE item in the menu and give this language the name of our new menu, then click save',
+    ru: ' если мы хотим сделать меню полностью под себя нажимаем на пункт в меню ДОБАВИТЬ ЕШЕ ОДИН ЯЗЫК и даем этому языку название нашего нового меню, нажимаем сохранить'
   },
   deleteMenuItems: {
-    en: '- If we have menu items below, it\'s easier to delete them and fill them again by clicking the button (add another main menu item)',
-    ru: '- Если снизу у нас есть пункты меню проще всего их удалить и заполнить заново нажимая на кнопку (добавить еще пункт главного меню)'
+    en: ' If we have menu items below, it\'s easier to delete them and fill them again by clicking the button (add another main menu item)',
+    ru: ' Если снизу у нас есть пункты меню проще всего их удалить и заполнить заново нажимая на кнопку (добавить еще пункт главного меню)'
   },
   sortingNote: {
-    en: '- The sorting number in this case can be repeated',
-    ru: '- номер сортировки в данном случае может повторяться'
+    en: ' The sorting number in this case can be repeated',
+    ru: ' номер сортировки в данном случае может повторяться'
   },
   addTwoItems: {
-    en: '- Add two main menu items with sorting 1 for both, now you will have two buttons in a row, not one',
-    ru: '- добавляем два пункта главного меню с сортировкой 1 у обоих, теперь у вас будет две кнопки вряд, а не одна'
+    en:  'Add two main menu items with sorting 1 for both, now you will have two buttons in a row, not one',
+    ru: ' добавляем два пункта главного меню с сортировкой 1 у обоих, теперь у вас будет две кнопки вряд, а не одна'
   },
   chooseLanguage: {
-    en: '- In the language, choose the name of our menu',
-    ru: '- В языке выбираем название нашего меню'
+    en: ' In the language, choose the name of our menu',
+    ru: ' В языке выбираем название нашего меню'
   },
   writeButton: {
-    en: '- Write the button text, for example (Buy) and choose from the actions what this button should do based on logic',
-    ru: '- Пишем текст кнопки например (Купить) и выбираем из действий что должна делать эта кнопка исходя из логики'
+    en: ' Write the button text, for example (Buy) and choose from the actions what this button should do based on logic',
+    ru: ' Пишем текст кнопки например (Купить) и выбираем из действий что должна делать эта кнопка исходя из логики'
   },
   externalSite: {
-    en: '- When using the button (external site) - you must specify a link to it, otherwise you will get an error',
-    ru: '- При использовании кнопки (сторонний сайт) - вы обязательно должны указать ссылку на него иначе вам вернется ошибка'
+    en: ' When using the button (external site) - you must specify a link to it, otherwise you will get an error',
+    ru: ' При использовании кнопки (сторонний сайт) - вы обязательно должны указать ссылку на него иначе вам вернется ошибка'
   },
   saveAndContinue: {
-    en: '- We recommend using the save and continue editing button to see the changes happening in your bot',
-    ru: '- Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно изменения которые происходят в вашем боте'
+    en: ' We recommend using the save and continue editing button to see the changes happening in your bot',
+    ru: ' Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно изменения которые происходят в вашем боте'
   },
   activateCasino: {
-    en: '- To activate the casino button, go to the casino menu and check at least one game, otherwise the casino WILL NOT be displayed in your menu, don\'t forget to save',
-    ru: '- Для активации кнопки казино пройдите в меню казино и поставьте галочку хотя бы около одной игры иначе казино НЕ БУДЕТ отображаться в вашем меню, не забывайте сохранять'
+    en: ' To activate the casino button, go to the casino menu and check at least one game, otherwise the casino WILL NOT be displayed in your menu, don\'t forget to save',
+    ru: ' Для активации кнопки казино пройдите в меню казино и поставьте галочку хотя бы около одной игры иначе казино НЕ БУДЕТ отображаться в вашем меню, не забывайте сохранять'
   },
   exampleSettings: {
-    en: '- Example menu settings and results in the bot can be seen below:',
-    ru: '- Пример настроек меню и результат в боте можно увидеть ниже:'
+    en: ' Example menu settings and results in the bot can be seen below:',
+    ru: ' Пример настроек меню и результат в боте можно увидеть ниже:'
   },
   supportItem: {
-    en: '- Important item Support, submit a request - if your client interacts with this menu item, you will be able to communicate with them directly through the bot in the FEEDBACK section. If you don\'t want to communicate with clients through your Telegram account, we recommend adding this section to your menu.',
-    ru: '- Важный пункт Поддержка, оставить заявку - в случае если ваш клиент будет взаимодействовать с пунктом этого меню вы сможете связываться с ним напрямую через бот в разделе ОБРАТНАЯ СВЯЗЬ если вы не хотите общаться с клиентами через свой телеграмм аккаунт рекомендуем добавить этот раздел в ваше меню.'
+    en: ' Important item Support, submit a request - if your client interacts with this menu item, you will be able to communicate with them directly through the bot in the FEEDBACK section. If you don\'t want to communicate with clients through your Telegram account, we recommend adding this section to your menu.',
+    ru: ' Важный пункт Поддержка, оставить заявку - в случае если ваш клиент будет взаимодействовать с пунктом этого меню вы сможете связываться с ним напрямую через бот в разделе ОБРАТНАЯ СВЯЗЬ если вы не хотите общаться с клиентами через свой телеграмм аккаунт рекомендуем добавить этот раздел в ваше меню.'
   },
   citySelection: {
-    en: '- It\'s best to name the button (city selection = buy) in this case your clients will immediately go to the menu of choosing their city and then to the available products in it, much more convenient than using the showcase button.',
-    ru: '- Лучше всего назвать кнопку (выбор города = купить) в этом случае ваши клиенты сразу будут переходить в меню выбора своего города и после к доступным товарам в нем, намного удобней чем использовать кнопку витрина.'
+    en: ' It\'s best to name the button (city selection = buy) in this case your clients will immediately go to the menu of choosing their city and then to the available products in it, much more convenient than using the showcase button.',
+    ru: ' Лучше всего назвать кнопку (выбор города = купить) в этом случае ваши клиенты сразу будут переходить в меню выбора своего города и после к доступным товарам в нем, намного удобней чем использовать кнопку витрина.'
   },
   personalBots: {
-    en: '- The button for connecting your bot is edited in the (Personal Bots) section - check the enable box, and also specify the number of bots that each client can create for themselves (minimum 1). Also specify the minimum number of purchases needed to create a personal bot - if you set the number 1, then this menu item will not be shown to clients who do not have at least one purchase',
-    ru: '- Кнопка подключение своего бота редактируется в разделе (Личные боты) - поставьте галочку у пункта включить, а так же укажите количество ботов которые может создавать каждый клиент для себя (минимум 1). Так же укажите минимальное количество покупок нужное для создания личного бота - если вы установите число 1, то этот пункт меню не будет показываться клиентам у которых нет хотя бы одной покупки'
+    en: 'The button for connecting your bot is edited in the (Personal Bots) section - check the enable box, and also specify the number of bots that each client can create for themselves (minimum 1). Also specify the minimum number of purchases needed to create a personal bot - if you set the number 1, then this menu item will not be shown to clients who do not have at least one purchase',
+    ru: 'Кнопка подключение своего бота редактируется в разделе (Личные боты) - поставьте галочку у пункта включить, а так же укажите количество ботов которые может создавать каждый клиент для себя (минимум 1). Так же укажите минимальное количество покупок нужное для создания личного бота - если вы установите число 1, то этот пункт меню не будет показываться клиентам у которых нет хотя бы одной покупки'
   },
   preorderButton: {
-    en: '- If you add a pre-order button, familiarize yourself with its settings in the (Pre-orders) section',
-    ru: '- Если вы добавляете кнопку предзаказ ознакомьтесь с ее настройками в разделе (Предзаказы)'
+    en: ' If you add a pre-order button, familiarize yourself with its settings in the (Pre-orders) section',
+    ru: ' Если вы добавляете кнопку предзаказ ознакомьтесь с ее настройками в разделе (Предзаказы)'
   },
   bonusButton: {
-    en: '- In the Bonuses button section, you can see the conditions regarding the referral system in your store, to change the referral % use the Channel/Referral menu',
-    ru: '- В разделе кнопки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
+    en: ' In the Bonuses button section, you can see the conditions regarding the referral system in your store, to change the referral % use the Channel/Referral menu',
+    ru: ' В разделе кнопки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
   },
   customizationSection: {
     en: 'Bot Customization Section',
@@ -211,28 +211,28 @@ const additionalTranslations: TranslationsStore = {
     ru: 'Тут внизу есть все кнопки которые бот будет присылать клиентам для выбора действия их можно оставить без изменений либо редактировать под себя'
   },
   oneColumnMenu: {
-    en: '- If you check "All menu in one column", then the entire main menu in the bot will be in 1 column. This is useful if you have long button names, then the client will be able to fully read the text on the buttons.',
-    ru: '- Если вы установите галочку "Все меню в одну колонку", тогда все главное меню в боте будет в 1 колонку. Это полезно, если у вас длинные названия кнопок, тогда клиент сможет полностью прочитать текст на кнопках.'
+    en: ' If you check "All menu in one column", then the entire main menu in the bot will be in 1 column. This is useful if you have long button names, then the client will be able to fully read the text on the buttons.',
+    ru: ' Если вы установите галочку "Все меню в одну колонку", тогда все главное меню в боте будет в 1 колонку. Это полезно, если у вас длинные названия кнопок, тогда клиент сможет полностью прочитать текст на кнопках.'
   },
   supportLink: {
-    en: '- If you fill in the "Support operator link" field in the format "https://t.me/OperatorSupport", then instead of the "Support" button - there will be a link to your operator. You can also change the text of the button itself, put the name of the operator as shown in the photo below, however, we recommend simply adding a button (external site) with a link to the Telegram account of your operator and the corresponding name.',
-    ru: '- Если вы заполните поле "Ссылка на оператора поддержки" в формате "https://t.me/OperatorSupport", тогда вместо кнопки "Поддержка" - будет ссылка на вашего оператора. Также можете поменять текст самой кнопки, поставить имя оператора как показано на фото ниже, однако мы рекомендуем просто добавлять кнопку (сторонний сайт) с ссылкой на телеграмм аккаунт вашего оператора и соответствующим названием.'
+    en: ' If you fill in the "Support operator link" field in the format "https://t.me/OperatorSupport", then instead of the "Support" button - there will be a link to your operator. You can also change the text of the button itself, put the name of the operator as shown in the photo below, however, we recommend simply adding a button (external site) with a link to the Telegram account of your operator and the corresponding name.',
+    ru: ' Если вы заполните поле "Ссылка на оператора поддержки" в формате "https://t.me/OperatorSupport", тогда вместо кнопки "Поддержка" - будет ссылка на вашего оператора. Также можете поменять текст самой кнопки, поставить имя оператора как показано на фото ниже, однако мы рекомендуем просто добавлять кнопку (сторонний сайт) с ссылкой на телеграмм аккаунт вашего оператора и соответствующим названием.'
   },
   editButtons: {
-    en: '- The buttons - information about the store/work/bonuses are edited in the same section, as in the photo below by clicking the (change) button. If you leave these fields empty, these menu items will disappear from the bot\'s main menu.',
-    ru: '-Кнопки - информация о магазине/работа/бонусы редактируется в этом же разделе, как на фото ниже при нажатии кнопки (изменить). Если вы оставите эти поля пустыми, эти пункты меню пропадут из главного меню бота.'
+    en: ' The buttons - information about the store/work/bonuses are edited in the same section, as in the photo below by clicking the (change) button. If you leave these fields empty, these menu items will disappear from the bot\'s main menu.',
+    ru: 'Кнопки - информация о магазине/работа/бонусы редактируется в этом же разделе, как на фото ниже при нажатии кнопки (изменить). Если вы оставите эти поля пустыми, эти пункты меню пропадут из главного меню бота.'
   },
   messageCustomization: {
-    en: 'Customization of messages from your bot',
-    ru: 'Кастомизация сообщений от вашего бота'
+    en: '2.Customization of messages from your bot',
+    ru: '2.Кастомизация сообщений от вашего бота'
   },
   messageBotSection: {
-    en: '- Go to Bots/Channels -> Bot Messages',
-    ru: '- Заходим в раздел Боты/Каналы -> Сообщения бота'
+    en: 'Go to Bots/Channels -> Bot Messages',
+    ru: ' Заходим в раздел Боты/Каналы -> Сообщения бота'
   },
   allMessagesHere: {
-    en: '- All messages that the bot sends to your clients are right here, here you can change absolutely everything, just don\'t break the logic and don\'t forget to use html where it exists',
-    ru: '- Все сообщения которые бот отправляет вашим клиентам находятся именно тут, здесь вы можете менять вообще все только не нарушайте логику и не забывайте использовать html где он есть'
+    en: ' All messages that the bot sends to your clients are right here, here you can change absolutely everything, just don\'t break the logic and don\'t forget to use html where it exists',
+    ru: ' Все сообщения которые бот отправляет вашим клиентам находятся именно тут, здесь вы можете менять вообще все только не нарушайте логику и не забывайте использовать html где он есть'
   },
   htmlGuide: {
     en: '{{ variable }} - variables used in the text are inserted here.\nHTML tags:\n<b>Bold text</b>\n<i>Italic</i>\n<code>Text for copying</code>\nTags must be opened and closed. If an error is made, then an error will be returned to you. You can contact support with this error and they will help you solve it.\nIt is important to understand that tags have a beginning and an end - the difference between them is in one slash - /\nBeginning - <b>\nEnd - </b>',
@@ -243,24 +243,24 @@ const additionalTranslations: TranslationsStore = {
     ru: 'Рекомендации по настройкам'
   },
   searchTip: {
-    en: '- The easiest way to find the right message is to use the search and copy there part of the message that the bot sends you and that you want to edit',
-    ru: '- Проще всего искать нужное сообщение пользуясь поиском и копируя туда часть сообщения которую вам присылает бот и которую вы хотите редактировать'
+    en: ' The easiest way to find the right message is to use the search and copy there part of the message that the bot sends you and that you want to edit',
+    ru: ' Проще всего искать нужное сообщение пользуясь поиском и копируя туда часть сообщения которую вам присылает бот и которую вы хотите редактировать'
   },
   addVariant: {
-    en: '- If you select some message and click (add another response variant) - ahead you will have 2 variants that the bot will send to clients, an item for those who want the bot to be more diverse and be able to improvise',
-    ru: '- Если выделить какое то сообщение и нажать (добавить еще один вариант ответа) - вперед у вас будет соответственно 2 варианта которые бот будет присылать клиентам, пункт для тех кто хочет что бы бот был более разнообразным и мог импровизировать'
+    en: ' If you select some message and click (add another response variant) - ahead you will have 2 variants that the bot will send to clients, an item for those who want the bot to be more diverse and be able to improvise',
+    ru: ' Если выделить какое то сообщение и нажать (добавить еще один вариант ответа) - вперед у вас будет соответственно 2 варианта которые бот будет присылать клиентам, пункт для тех кто хочет что бы бот был более разнообразным и мог импровизировать'
   },
   notVisibleMessage: {
-    en: '- If you do not see some message or button for editing, it means they are in the customization of appearance',
-    ru: '- Если вы не видите какое либо сообщение или кнопку для редактирования значит они находятся в кастомизаии внешнего вида'
+    en: ' If you do not see some message or button for editing, it means they are in the customization of appearance',
+    ru: ' Если вы не видите какое либо сообщение или кнопку для редактирования значит они находятся в кастомизаии внешнего вида'
   },
   messageCount: {
-    en: '- On average, there are 300 messages in the bot that can be styled for yourself',
-    ru: '- В среднем в боте присутствует 300 сообщений которые можно стилизовать под себя'
+    en: ' On average, there are 300 messages in the bot that can be styled for yourself',
+    ru: ' В среднем в боте присутствует 300 сообщений которые можно стилизовать под себя'
   },
   translationTip: {
-    en: '- When translating the bot into another language, it is fastest to use AI https://chat.deepseek.com/sign_in',
-    ru: '- При переводе бота на другой язык быстрее всего использовать ии https://chat.deepseek.com/sign_in'
+    en: ' When translating the bot into another language, it is fastest to use AI https://chat.deepseek.com/sign_in',
+    ru: ' При переводе бота на другой язык быстрее всего использовать ии https://chat.deepseek.com/sign_in'
   },
   marketingTitle: {
     en: 'Marketing',
