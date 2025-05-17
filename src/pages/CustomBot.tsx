@@ -21,11 +21,11 @@ const CustomBot = () => {
       alt: "Bot menu customization example"
     },
     {
-      src: "https://i.ibb.co/zq3mr6X/Screenshot-2025-05-17-at-8-12-22-PM.png",
+      src: "https://i.ibb.co/rNM8HxL/transparent-Screenshot-2025-05-17-at-3-26-35-PM.png",
       alt: "Bot support settings example"
     },
     {
-      src: "https://i.ibb.co/FLBsT1B4/white-Screenshot-2025-05-17-at-8-16-19-PM.png",
+      src: "https://i.ibb.co/0jndZDTJ/transparent-Screenshot-2025-05-17-at-8-20-33-PM.png",
       alt: "Bot language customization"
     }
   ];
