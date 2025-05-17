@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -33,6 +34,14 @@ import CouriersSalary from "./pages/CouriersSalary";
 import Usdt from "./pages/Usdt";
 import PartnersExchangers from "./pages/PartnersExchangers";
 import Mailouts from "./pages/Mailouts";
+import AutoForwarding from "./pages/AutoForwarding";
+import Promotions from "./pages/Promotions";
+import CumulativeDiscounts from "./pages/CumulativeDiscounts";
+import PromoCodes from "./pages/PromoCodes";
+import OneTimeDiscounts from "./pages/OneTimeDiscounts";
+import HappyHours from "./pages/HappyHours";
+import BtcCashout from "./pages/BtcCashout";
+import BalanceHistory from "./pages/BalanceHistory";
 
 const queryClient = new QueryClient();
 
@@ -64,12 +73,20 @@ const App = () => (
             <Route path="/balance-top-ups" element={<BalanceTopUps />} />
             <Route path="/marketing" element={<Marketing />} />
             <Route path="/mailouts" element={<Mailouts />} />
+            <Route path="/auto-forwarding" element={<AutoForwarding />} />
+            <Route path="/promotions" element={<Promotions />} />
+            <Route path="/cumulative-discounts" element={<CumulativeDiscounts />} />
+            <Route path="/promo-codes" element={<PromoCodes />} />
+            <Route path="/one-time-discounts" element={<OneTimeDiscounts />} />
+            <Route path="/happy-hours" element={<HappyHours />} />
             <Route path="/messages" element={<Messages />} />
             <Route path="/web" element={<Web />} />
             <Route path="/finance" element={<Finance />} />
             <Route path="/couriers-salary" element={<CouriersSalary />} />
             <Route path="/usdt" element={<Usdt />} />
             <Route path="/partners-exchangers" element={<PartnersExchangers />} />
+            <Route path="/btc-cashout" element={<BtcCashout />} />
+            <Route path="/balance-history" element={<BalanceHistory />} />
             <Route path="/ask-question" element={<AskQuestion />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
