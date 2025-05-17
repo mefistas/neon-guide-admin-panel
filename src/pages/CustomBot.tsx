@@ -110,26 +110,27 @@ const CustomBot = () => {
             
             <p className="font-medium">{tNew('exampleSettings')}</p>
             
-            {/* Carousel for the first three images */}
+            {/* Updated Carousel to show one image at a time */}
             <div className="relative py-6">
-              <Carousel className="w-full">
+              <Carousel className="w-full max-w-md mx-auto">
                 <CarouselContent>
                   {carouselImages.map((image, index) => (
-                    <CarouselItem key={index} className="md:basis-2/3 lg:basis-1/2">
+                    <CarouselItem key={index} className="basis-full">
                       <div className="p-1">
                         <div className="rounded-lg overflow-hidden border border-gray-700">
                           <img 
                             src={image.src} 
                             alt={image.alt} 
-                            className="w-full h-64 object-cover"
+                            className="w-full h-64 object-contain"
                           />
                         </div>
+                        <p className="text-center text-sm text-gray-400 mt-2">{image.alt}</p>
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="left-2" />
-                <CarouselNext className="right-2" />
+                <CarouselPrevious className="left-0" />
+                <CarouselNext className="right-0" />
               </Carousel>
             </div>
             
