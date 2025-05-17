@@ -3,7 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
-import { AlertCircle, Clock, Exchange, Link } from 'lucide-react';
+import { AlertCircle, Clock, ArrowLeftRight, Link } from 'lucide-react';
 
 const WithdrawFunds = () => {
   const { tNew, language } = useTranslations();
@@ -57,7 +57,7 @@ const WithdrawFunds = () => {
           {/* Exchanger withdrawal section */}
           <div className="mt-6 border-t border-gray-700 pt-6">
             <h3 className="flex items-center gap-2 text-xl font-semibold mb-4 text-white">
-              <Exchange className="text-neonBlue" /> {tNew('exchangerWithdrawal')}
+              <ArrowLeftRight className="text-neonBlue" /> {tNew('exchangerWithdrawal')}
             </h3>
             
             <div className="whitespace-pre-line text-gray-300">
