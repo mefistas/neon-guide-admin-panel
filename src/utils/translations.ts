@@ -171,7 +171,7 @@ const additionalTranslations: TranslationsStore = {
   },
   saveAndContinue: {
     en: ' We recommend using the save and continue editing button to see the changes happening in your bot',
-    ru: ' Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно изменения которые происходят в вашем боте'
+    ru: ' Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно изменения кото��ые происходят в вашем боте'
   },
   activateCasino: {
     en: ' To activate the casino button, go to the casino menu and check at least one game, otherwise the casino WILL NOT be displayed in your menu, don\'t forget to save',
@@ -231,7 +231,7 @@ const additionalTranslations: TranslationsStore = {
   },
   allMessagesHere: {
     en: ' All messages that the bot sends to your clients are right here, here you can change absolutely everything, just don\'t break the logic and don\'t forget to use html where it exists',
-    ru: ' Все сообщения которые бот отправляет вашим клиентам находятся именно тут, здесь вы можете менять вообще все только не нарушайте логику и не забывайте использовать html где он есть'
+    ru: ' Все сообщения которые бот отправляет вашим клиентам находятся именно тут, здесь вы можете менят�� вообще все только не нарушайте логику и не забывайте использовать html где он есть'
   },
   htmlGuide: {
     en: '{{ variable }} - variables used in the text are inserted here.\nHTML tags:\n<b>Bold text</b>\n<i>Italic</i>\n<code>Text for copying</code>\nTags must be opened and closed. If an error is made, then an error will be returned to you. You can contact support with this error and they will help you solve it.\nIt is important to understand that tags have a beginning and an end - the difference between them is in one slash - /\nBeginning - <b>\nEnd - </b>',
@@ -390,7 +390,7 @@ const additionalTranslations: TranslationsStore = {
   },
   oneTimeDiscounts: {
     en: "One-Time Product Discounts",
-    ru: "Разовые ск��дки на товары"
+    ru: "Разовые ск��дки на тов��ры"
   },
   oneTimeDiscountsDesc: {
     en: "Create special one-time discounts for products",
@@ -499,7 +499,37 @@ const additionalTranslations: TranslationsStore = {
   withdrawalAdvice: {
     en: "Advice - never use exchanges with your personal data for withdrawing cryptocurrency from the admin panel if you want to operate for a long time and properly!",
     ru: "Совет - никогда не используйте биржи со своими данными для вывода крипты с админки если хотите двигаться долго и порядочно!"
-  }
+  },
+  // New translations for auto-withdrawal and exchanger withdrawal
+  autoWithdrawal: {
+    en: "Auto-withdrawal",
+    ru: "Автовывод"
+  },
+  autoWithdrawalSteps: {
+    en: "There's also an option to use auto-withdrawal if you don't want to do it manually all the time.\n- Simply specify your permanent addresses for LTC and BTC as well as the desired time for auto-withdrawal (Moscow time), and the system will daily withdraw everything from your balances to the specified addresses.",
+    ru: "Так же есть возможность использовать автовывод в том случае если вы не хотите постоянно делать это вручную.\n- Просто укажите свои постоянные адреса для LTC и BTC а так же желаемое время для автовывода (по московскому времени) и система будет ежедневно выводить все с ваших балансов на указанные адреса."
+  },
+  exchangerWithdrawal: {
+    en: "Withdrawal Through an Exchanger",
+    ru: "Вывод через обменник"
+  },
+  exchangerWithdrawalSteps: {
+    en: "Another useful option - WITHDRAWAL THROUGH AN EXCHANGER\n- For cases when you need a specific cryptocurrency and don't want to spend time on exchanging it yourself through an exchange",
+    ru: "Еще одна полезная опция - ВЫВОД ЧЕРЕЗ ОБМЕННИК\n- На тот случай если вам нужна определенная криптовалюта и не хочется тратить время на собственноручный обмен через биржу"
+  },
+  termsOfService: {
+    en: "We recommend reviewing this exchanger's terms of service in advance",
+    ru: "Рекомендуем ознакомиться с условиями данного обменника заранее"
+  },
+  // Casino Game History translations
+  casinoHistory: {
+    en: "Casino Game History",
+    ru: "История игр в Казино"
+  },
+  casinoHistoryInfo: {
+    en: "To view the history of your clients' Casino games, go to the ADDITIONAL -> CASINO GAME HISTORY menu",
+    ru: "Что бы просмотреть историю игр в Казино ваших клиентов перейдите в меню ДОПОЛНИТЕЛЬНО -> ИСТОРИЯ ИГР В КАЗИНО"
+  },
 };
 
 /**

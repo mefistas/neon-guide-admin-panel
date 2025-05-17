@@ -3,7 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, Clock, Exchange, Link } from 'lucide-react';
 
 const WithdrawFunds = () => {
   const { tNew, language } = useTranslations();
@@ -25,14 +25,54 @@ const WithdrawFunds = () => {
           
           <div className="mb-6">
             <img 
-              src="https://i.ibb.co/yn4Bn0Zg/Screenshot-2025-05-17-at-10-34-35-PM.png" 
+              src="https://i.ibb.co/ZRn1djKX/Screenshot-2025-05-17-at-9-30-04-PM.png" 
               alt={language === 'en' ? "Crypto withdrawal interface" : "Интерфейс вывода криптовалюты"}
               className="w-full rounded-lg shadow-lg"
             />
           </div>
           
-          <div className="whitespace-pre-line text-gray-300">
+          <div className="whitespace-pre-line text-gray-300 mb-8">
             {tNew('cryptoWithdrawalSteps')}
+          </div>
+          
+          {/* Auto-withdrawal section */}
+          <div className="mt-6 mb-8 border-t border-gray-700 pt-6">
+            <h3 className="flex items-center gap-2 text-xl font-semibold mb-4 text-white">
+              <Clock className="text-neonBlue" /> {tNew('autoWithdrawal')}
+            </h3>
+            
+            <div className="mb-6">
+              <img 
+                src="https://i.ibb.co/Q3Bvjq83/Screenshot-2025-05-17-at-10-41-21-PM.png" 
+                alt={language === 'en' ? "Auto-withdrawal settings" : "Настройки автовывода"}
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            
+            <div className="whitespace-pre-line text-gray-300">
+              {tNew('autoWithdrawalSteps')}
+            </div>
+          </div>
+          
+          {/* Exchanger withdrawal section */}
+          <div className="mt-6 border-t border-gray-700 pt-6">
+            <h3 className="flex items-center gap-2 text-xl font-semibold mb-4 text-white">
+              <Exchange className="text-neonBlue" /> {tNew('exchangerWithdrawal')}
+            </h3>
+            
+            <div className="whitespace-pre-line text-gray-300">
+              {tNew('exchangerWithdrawalSteps')}
+              <div className="mt-4">
+                <a 
+                  href="https://ff.io/terms-of-service" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-neonBlue hover:underline"
+                >
+                  <Link size={16} /> {tNew('termsOfService')}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -44,7 +84,7 @@ const WithdrawFunds = () => {
           
           <div className="mb-6 flex justify-center">
             <img 
-              src="https://i.ibb.co/JWSGmF8m/Screenshot-2025-05-17-at-10-06-15-PM.png" 
+              src="https://i.ibb.co/r20rsYqq/image.png" 
               alt={language === 'en' ? "Fiat withdrawal interface" : "Интерфейс вывода фиата"}
               className="rounded-lg shadow-lg max-h-[500px]"
             />
