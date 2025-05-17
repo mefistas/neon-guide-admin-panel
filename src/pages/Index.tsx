@@ -2,11 +2,13 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslations } from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
-import { Bot, Building, Dices, CreditCard } from 'lucide-react';
+import { Bot, Dices, CreditCard } from 'lucide-react';
 
 const Index = () => {
   const { t } = useLanguage();
+  const { tNew } = useTranslations();
 
   const mainSections = [
     {
@@ -16,9 +18,9 @@ const Index = () => {
       link: '/quick-start'
     },
     {
-      title: 'customBotTitle',
+      title: 'customBotHomeTitle',
       icon: <Bot size={24} className="mb-2" />,
-      description: 'customBotShortDesc',
+      description: 'customBotHomeDesc',
       link: '/custom-bot'
     },
     {
@@ -51,8 +53,12 @@ const Index = () => {
                 className="bg-black/50 p-6 rounded-lg formal-border hover:bg-gray-800/50 transition-colors flex flex-col items-center text-center"
               >
                 {section.icon}
-                <h2 className="text-xl font-medium mb-2">{t(section.title)}</h2>
-                <p className="text-gray-300">{t(section.description)}</p>
+                <h2 className="text-xl font-medium mb-2">
+                  {section.title === 'customBotHomeTitle' ? tNew(section.title) : t(section.title)}
+                </h2>
+                <p className="text-gray-300">
+                  {section.description === 'customBotHomeDesc' ? tNew(section.description) : t(section.description)}
+                </p>
               </Link>
             ))}
           </div>

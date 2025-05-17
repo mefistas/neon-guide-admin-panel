@@ -1,24 +1,23 @@
 
 /**
- * Additional translations utility for new pages and components.
- * This file is used to store translations for new content without modifying 
- * the original LanguageContext.tsx file.
+ * Custom translations system that works alongside the original
+ * translations from LanguageContext.
  * 
- * Import this file to use translations in new components:
- * import { getTranslation } from '@/utils/translations';
- * 
- * Usage:
- * const translatedText = getTranslation(key, language);
+ * This system allows adding new translations without modifying
+ * the protected LanguageContext.tsx file.
  */
 
-type Language = 'en' | 'ru';
+// Types from the original system
+export type Language = 'en' | 'ru';
 
-interface TranslationsStore {
+type TranslationRecord = {
   [key: string]: {
     en: string;
     ru: string;
-  };
-}
+  }
+};
+
+type TranslationsStore = TranslationRecord;
 
 // Add new translations here
 const additionalTranslations: TranslationsStore = {
@@ -30,36 +29,41 @@ const additionalTranslations: TranslationsStore = {
   customBotShortDesc: {
     en: 'In this section, you can fully adapt the bot to your needs and customize all necessary menu items for yourself',
     ru: 'В этом разделе ты сможешь полностью адаптировать бот под свои нужды настроить все необходимые пункты меню под себя'
+  },
+  // New translations for the home page Custom Bot section
+  customBotHomeTitle: {
+    en: 'Bot Customization',
+    ru: 'Кастомизация Бота'
+  },
+  customBotHomeDesc: {
+    en: 'Complete guide to setting up the bot\'s menu and languages for your store',
+    ru: 'Полный гайд по настройке меню и языков бота под свой магазин'
   }
 };
 
 /**
- * Get translation for a specific key and language
+ * Get a translation from the additional translations store
  * @param key Translation key
  * @param language Current language
- * @returns Translated text or key if translation not found
+ * @returns Translated text or the key itself if not found
  */
 export const getTranslation = (key: string, language: Language): string => {
+  if (!key) return '';
+  
+  // Check if the key exists in our additional translations
   if (additionalTranslations[key] && additionalTranslations[key][language]) {
     return additionalTranslations[key][language];
   }
+  
+  // Return the key itself if no translation found
+  // This allows the original system to handle it if available
   return key;
-};
+}
 
 /**
- * Add new translations to the store
- * @param key Translation key
- * @param en English translation
- * @param ru Russian translation
- */
-export const addTranslation = (key: string, en: string, ru: string): void => {
-  additionalTranslations[key] = { en, ru };
-};
-
-/**
- * Create a translation utility function with current language
- * @param language Current language
- * @returns Translation function
+ * Create a translator function for the specified language
+ * @param language Language to use for translations
+ * @returns A function that translates keys to the specified language
  */
 export const createTranslator = (language: Language) => 
   (key: string): string => getTranslation(key, language);

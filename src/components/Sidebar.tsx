@@ -38,7 +38,7 @@ const Sidebar = () => {
     { key: 'marketing', path: '/marketing', icon: <TrendingUp size={18} /> },
     { key: 'merchants', path: '/merchants', icon: <Building size={18} /> },
     { key: 'masterKlad', path: '/master-klad', icon: <Building size={18} /> },
-    { key: 'customBot', path: '/custom-bot', icon: <Bot size={18} /> },
+    // Removed custom bot from here
     { key: 'workers', path: '/workers', icon: <Building size={18} /> },
     { key: 'clients', path: '/clients', icon: <Building size={18} /> },
     { key: 'purchases', path: '/purchases', icon: <Building size={18} /> },
@@ -88,6 +88,45 @@ const Sidebar = () => {
           {sidebarOpen && t('quickStart')}
         </Link>
 
+        {/* Custom Bot - Moved to main menu */}
+        <Link
+          to="/custom-bot"
+          className={cn(
+            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
+            isActive('/custom-bot') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
+          )}
+        >
+          <Bot size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && t('customBotTitle')}
+        </Link>
+
+        {/* Casino Setup */}
+        <Link
+          to="/casino-setup"
+          className={cn(
+            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
+            isActive('/casino-setup') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
+          )}
+        >
+          <Dices size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && t('casinoSetup')}
+        </Link>
+
+        {/* Cards Payment */}
+        <Link
+          to="/cards-payments"
+          className={cn(
+            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
+            isActive('/cards-payments') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
+          )}
+        >
+          <CreditCard size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && t('cardsPayments')}
+        </Link>
+
         {/* Detailed Guide menu */}
         <div>
           <button
@@ -122,32 +161,6 @@ const Sidebar = () => {
             </div>
           )}
         </div>
-
-        {/* Casino Setup */}
-        <Link
-          to="/casino-setup"
-          className={cn(
-            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/casino-setup') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
-            !sidebarOpen && "justify-center"
-          )}
-        >
-          <Dices size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
-          {sidebarOpen && t('casinoSetup')}
-        </Link>
-
-        {/* Cards Payment */}
-        <Link
-          to="/cards-payments"
-          className={cn(
-            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/cards-payments') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
-            !sidebarOpen && "justify-center"
-          )}
-        >
-          <CreditCard size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
-          {sidebarOpen && t('cardsPayments')}
-        </Link>
 
         {/* Ask a Question - External Link */}
         <a
