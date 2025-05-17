@@ -490,7 +490,7 @@ const additionalTranslations: TranslationsStore = {
   },
   fiatWithdrawal: {
     en: "Fiat Withdrawal",
-    ru: "Вывод фиа��а"
+    ru: "Вывод фиата"
   },
   fiatWithdrawalSteps: {
     en: "- Go to the HOME section\n- Fill in the menu items for P2P exchange\n- Carefully check all requisites\n- Click the request button\n- You can track the withdrawal by going to the ADDITIONAL - BTC CASHOUT menu",
