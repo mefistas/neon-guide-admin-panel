@@ -177,9 +177,6 @@ const QuickStart = () => {
           </div>
           
           <div className="mt-4 space-y-2">
-            <div className="text-gray-200">
-              <p className="leading-relaxed">Итого теперь бот видит что ты загрузил три адреса для данного района. Нажимаем сохранить если на этом районе больше нет других грамовок, либо нажимаем сохранить и добавить еще если в этом районе есть еще какие то другие адреса. Поздравляю ты великолепен что там с вариантами оплат</p>
-            </div>
             <div className="relative pl-5 text-gray-200">
               <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
               <p className="leading-relaxed">{t('quickStartPoint9Note8')}</p>
