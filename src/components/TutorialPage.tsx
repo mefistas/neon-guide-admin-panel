@@ -11,7 +11,7 @@ const TutorialPage: React.FC<TutorialPageProps> = ({ title, children }) => {
   return (
     <Layout>
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-3xl text-white font-bold mb-6 pl-4 border-l-4 border-[#5eaaa8]">{title}</h1>
+        <h1 className="text-3xl text-white font-bold mb-8 pl-4 border-l-4 border-[#7E69AB]">{title}</h1>
         {children}
       </div>
     </Layout>
