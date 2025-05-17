@@ -54,13 +54,13 @@ const CustomBot = () => {
         <BackButton to="/" />
       </div>
       
-      <div className="space-y-8 max-w-4xl mx-auto">
+      <div className="space-y-6 max-w-4xl mx-auto">
         <section>
-          <h2 className="text-2xl font-semibold mb-4">{tNew('customBotIntro')}</h2>
+          <h2 className="text-2xl font-semibold mb-3">{tNew('customBotIntro')}</h2>
         </section>
 
         <section>
-          <h3 className="text-xl font-medium mb-4">{tNew('customBotTypes')}</h3>
+          <h3 className="text-xl font-medium mb-3">{tNew('customBotTypes')}</h3>
           <ul className="space-y-2 text-lg">
             <li className="flex items-center gap-2">
               <Bot size={20} className="flex-shrink-0 text-neonBlue" />
@@ -75,14 +75,14 @@ const CustomBot = () => {
 
         {/* Section 1: Customization of appearance */}
         <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
             {tNew('customBotAppearance')}
           </h3>
           
-          <div className="space-y-4">
+          <div className="space-y-3">
             <p>{tNew('gotoStores')}</p>
             <p>{tNew('clickStoreName')}</p>
-            <p>{tNew('twoMainMenus')}</p>
+            <p className="mb-2">{tNew('twoMainMenus')}</p>
             
             <Collapsible className="w-full">
               <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-gray-800 p-4 text-left font-medium">
@@ -101,18 +101,17 @@ const CustomBot = () => {
               </CollapsibleContent>
             </Collapsible>
             
-            <div className="bg-neonBlue/10 border border-neonBlue/30 rounded-md p-4">
+            <div className="bg-neonBlue/10 border border-neonBlue/30 rounded-md p-4 mb-2">
               <p className="font-medium text-neonBlue">{tNew('tip')}:</p>
               <p>{tNew('saveAndContinue')}</p>
             </div>
             
             <p>{tNew('activateCasino')}</p>
-            
             <p className="font-medium">{tNew('exampleSettings')}</p>
             
-            {/* Updated Carousel to show one image at a time */}
-            <div className="relative py-6">
-              <Carousel className="w-full max-w-md mx-auto">
+            {/* Updated Carousel with larger images */}
+            <div className="relative py-4">
+              <Carousel className="w-full max-w-xl mx-auto">
                 <CarouselContent>
                   {carouselImages.map((image, index) => (
                     <CarouselItem key={index} className="basis-full">
@@ -121,7 +120,7 @@ const CustomBot = () => {
                           <img 
                             src={image.src} 
                             alt={image.alt} 
-                            className="w-full h-64 object-contain"
+                            className="w-full h-80 object-contain bg-gray-800/60" 
                           />
                         </div>
                         <p className="text-center text-sm text-gray-400 mt-2">{image.alt}</p>
@@ -134,13 +133,13 @@ const CustomBot = () => {
               </Carousel>
             </div>
             
-            <div className="space-y-4 mt-6">
+            <div className="space-y-3 mt-4">
               <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-md p-4">
                 <p className="font-medium text-yellow-500">{tNew('important')}:</p>
                 <p>{tNew('supportItem')}</p>
               </div>
               
-              <ul className="space-y-3 pl-5">
+              <ul className="space-y-2 pl-5">
                 <li className={cn("flex gap-2")}>
                   <span className="text-neonBlue">•</span>
                   <span>{tNew('citySelection')}</span>
@@ -164,14 +163,14 @@ const CustomBot = () => {
 
         {/* Section 2: Bot Customization Section */}
         <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
             {tNew('customizationSection')}
           </h3>
           
-          <div className="space-y-4">
+          <div className="space-y-3">
             <p>{tNew('buttonOptions')}</p>
             
-            <ul className="space-y-3 pl-5">
+            <ul className="space-y-2 pl-5">
               <li className={cn("flex gap-2")}>
                 <span className="text-neonBlue">•</span>
                 <span>{tNew('oneColumnMenu')}</span>
@@ -182,21 +181,21 @@ const CustomBot = () => {
               </li>
             </ul>
             
-            <div className="rounded-lg overflow-hidden border border-gray-700 mt-4">
+            <div className="rounded-lg overflow-hidden border border-gray-700 mt-3">
               <img 
                 src={supportSectionImage.src}
                 alt={supportSectionImage.alt}
-                className="w-full h-48 object-cover" 
+                className="w-full h-56 object-cover" 
               />
             </div>
             
             <p>{tNew('editButtons')}</p>
             
-            <div className="rounded-lg overflow-hidden border border-gray-700 mt-4">
+            <div className="rounded-lg overflow-hidden border border-gray-700 mt-3">
               <img 
                 src={messagesSectionImage.src}
                 alt={messagesSectionImage.alt}
-                className="w-full h-48 object-cover" 
+                className="w-full h-56 object-cover" 
               />
             </div>
           </div>
@@ -204,11 +203,11 @@ const CustomBot = () => {
 
         {/* Section 3: Message Customization */}
         <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
             {tNew('messageCustomization')}
           </h3>
           
-          <div className="space-y-4">
+          <div className="space-y-3">
             <p>{tNew('messageBotSection')}</p>
             <p>{tNew('allMessagesHere')}</p>
             
@@ -216,9 +215,9 @@ const CustomBot = () => {
               {tNew('htmlGuide')}
             </div>
             
-            <h4 className="text-lg font-medium mt-6">{tNew('settingsRecommendations')}</h4>
+            <h4 className="text-lg font-medium mt-4">{tNew('settingsRecommendations')}</h4>
             
-            <ul className="space-y-3 pl-5">
+            <ul className="space-y-2 pl-5">
               <li className={cn("flex gap-2")}>
                 <span className="text-neonBlue">•</span>
                 <span>{tNew('searchTip')}</span>
@@ -237,7 +236,7 @@ const CustomBot = () => {
               </li>
             </ul>
             
-            <div className="flex items-center gap-2 mt-4 bg-gray-800/60 p-3 rounded-md">
+            <div className="flex items-center gap-2 mt-3 bg-gray-800/60 p-3 rounded-md">
               <p>{tNew('translationTip')}</p>
               <a 
                 href="https://chat.deepseek.com/sign_in" 
