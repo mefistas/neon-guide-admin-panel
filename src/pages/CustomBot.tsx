@@ -28,8 +28,8 @@ const CustomBot = () => {
       alt: "Bot menu customization example"
     },
     {
-      src: "https://i.ibb.co/rNM8HxL/transparent-Screenshot-2025-05-17-at-3-26-35-PM.png",
-      alt: "Bot support settings example"
+      src: "https://i.ibb.co/jk2cf6z8/Screenshot-2025-05-17-at-3-26-35-PM.png",
+      alt: "tut bila FOX"
     },
     {
       src: "https://i.ibb.co/0jndZDTJ/transparent-Screenshot-2025-05-17-at-8-20-33-PM.png",
