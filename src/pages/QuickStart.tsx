@@ -134,55 +134,64 @@ const QuickStart = () => {
       ],
       customContent: (
         <div className="mt-4">
-          <div className="rounded-lg overflow-hidden border border-[#7E69AB]/30">
-            <div className="bg-[#1A1F2C] px-4 py-2 border-b border-[#7E69AB]/20">
-              <h3 className="font-medium text-white">Text Field Example</h3>
+          <div className="space-y-3 text-gray-200">
+            <p>{t('quickStartPoint9Note3')}</p>
+            <p>{t('quickStartPoint9Note4')}</p>
+            <p>{t('quickStartPoint9Note5')}</p>
+            <p>{t('quickStartPoint9Note6')}</p>
+            <p>{t('quickStartPoint9Note7')}</p>
+          </div>
+          
+          <div className="mt-4 rounded-lg overflow-hidden">
+            <div className="bg-[#1A1F2C] px-4 py-2">
+              <h3 className="font-medium text-white">{t('addressExample')}</h3>
             </div>
             <div className="bg-[#111827] p-4">
               <div className="mb-6 text-gray-300">
-                <p className="mb-1 text-sm text-gray-400">Enter multiple addresses with double line breaks between each:</p>
+                <p className="mb-2 text-gray-400">{t('addAddressInstructions')}</p>
                 <div className="border border-[#7E69AB]/30 rounded bg-[#0C111D] p-3 font-mono text-sm">
                   <div>
                     <span className="text-[#D6BCFA]">https://imgbb.com</span>
                     <br />
-                    <span className="text-gray-300">в указанной точке по кордам</span>
+                    <span className="text-gray-300">{t('atSpecifiedCoordinates')}</span>
                   </div>
                   <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
-                    Double line break
+                    {t('doubleLine')}
                   </div>
                   <div>
                     <span className="text-[#D6BCFA]">https://imgbb.com</span>
                     <br />
-                    <span className="text-gray-300">в указанной точке по кордам</span>
+                    <span className="text-gray-300">{t('atSpecifiedCoordinates')}</span>
                   </div>
                   <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
-                    Double line break
+                    {t('doubleLine')}
                   </div>
                   <div>
                     <span className="text-[#D6BCFA]">https://imgbb.com</span>
                     <br />
-                    <span className="text-gray-300">в указанной точке по кордам</span>
+                    <span className="text-gray-300">{t('atSpecifiedCoordinates')}</span>
                   </div>
                 </div>
               </div>
               <div className="rounded-lg bg-[#1A1F2C]/60 p-3 border border-[#7E69AB]/30">
                 <div className="flex items-center mb-2">
                   <div className="w-3 h-3 rounded-full bg-[#D6BCFA] mr-2"></div>
-                  <p className="text-white">Result: 3 addresses added to this district</p>
+                  <p className="text-white">{t('resultAddresses')}</p>
                 </div>
                 <div className="flex space-x-2 mt-3">
                   <button className="px-4 py-1.5 bg-[#7E69AB] text-white text-sm rounded-md hover:bg-[#7E69AB]/80 transition">
-                    Save
+                    {t('save')}
                   </button>
                   <button className="px-4 py-1.5 bg-[#111827] border border-[#7E69AB]/50 text-gray-300 text-sm rounded-md hover:bg-[#1A1F2C] transition">
-                    Save & Add More
+                    {t('saveAndAddMore')}
                   </button>
                 </div>
               </div>
             </div>
           </div>
+          
           <div className="mt-4 space-y-2">
-            {['quickStartPoint9Note3', 'quickStartPoint9Note4', 'quickStartPoint9Note5'].map((noteKey, idx) => (
+            {['quickStartPoint9Note8', 'quickStartPoint9Note9'].map((noteKey, idx) => (
               <div key={idx} className="relative pl-5 text-gray-200">
                 <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
                 <p className="leading-relaxed">{t(noteKey)}</p>
