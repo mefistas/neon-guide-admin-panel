@@ -17,7 +17,7 @@ const CustomBot = () => {
   // Images for our page
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      src: "https://i.ibb.co/6RsXsmVw/Screenshot-2025-05-17-at-8-08-55-PM.png",
       alt: "Bot menu customization example"
     },
     {
@@ -25,7 +25,7 @@ const CustomBot = () => {
       alt: "Bot support settings example"
     },
     {
-      src: "https://i.ibb.co/bYkqCLK/Screenshot-2025-05-17-at-8-06-55-PM.png",
+      src: "https://i.ibb.co/vxC9Nqp7/Screenshot-2025-05-17-at-8-10-00-PM.png",
       alt: "Bot language customization"
     }
   ];
