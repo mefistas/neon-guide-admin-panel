@@ -232,7 +232,7 @@ const translations: Translations = {
     // Quick Start page content
     quickStartDescription: 'Это руководство по быстрому старту поможет тебе настроить и сконфигурировать админ-панель всего за 11 шагов. Следуйте этим инструкциям, чтобы быстро запустить свои продажи.',
     
-    quickStartPoint1: 'Создание городов',
+    quickStartPoint1: 'Создай город',
     quickStartPoint1Note1: 'Для создания городов необходимо зайти в раздел Склад -> Города',
     quickStartPoint1Note2: 'Нажимаем кнопку +ДОБАВИТЬ ГОРОД ПОСТАВКИ в верхнем правом углу',
     quickStartPoint1Note3: 'В поле Название города пишем город, в окне Магазин выбираем свой магазин.',
@@ -242,7 +242,7 @@ const translations: Translations = {
     quickStartPoint1Note7: '',
     quickStartPoint1Note8: '',
     
-    quickStartPoint2: 'Создание районов',
+    quickStartPoint2: 'Создай район',
     quickStartPoint2Note1: 'Для создания районов необходимо зайти в раздел с Район',
     quickStartPoint2Note2: 'В правом верхнем углу жмем кнопку +ДОБАВИТЬ РАЙОН',
     quickStartPoint2Note3: 'Заполняем название района',
