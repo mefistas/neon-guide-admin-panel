@@ -25,7 +25,7 @@ const WithdrawFunds = () => {
           
           <div className="mb-6">
             <img 
-              src="https://i.ibb.co/ZRn1djKX/Screenshot-2025-05-17-at-9-30-04-PM.png" 
+              src="https://i.ibb.co/5xLtXcgR/Screenshot-2025-05-17-at-10-57-28-PM.png" 
               alt={language === 'en' ? "Crypto withdrawal interface" : "Интерфейс вывода криптовалюты"}
               className="w-full rounded-lg shadow-lg"
             />
