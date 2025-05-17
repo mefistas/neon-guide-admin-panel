@@ -1,3 +1,4 @@
+
 /**
  * Custom translations system that works alongside the original
  * translations from LanguageContext.
@@ -171,7 +172,7 @@ const additionalTranslations: TranslationsStore = {
   },
   saveAndContinue: {
     en: ' We recommend using the save and continue editing button to see the changes happening in your bot',
-    ru: ' Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядн�� изменения которые происходят в вашем боте'
+    ru: ' Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно изменения которые происходят в вашем боте'
   },
   activateCasino: {
     en: ' To activate the casino button, go to the casino menu and check at least one game, otherwise the casino WILL NOT be displayed in your menu, don\'t forget to save',
@@ -199,7 +200,7 @@ const additionalTranslations: TranslationsStore = {
   },
   bonusButton: {
     en: ' In the Bonuses button section, you can see the conditions regarding the referral system in your store, to change the referral % use the Channel/Referral menu',
-    ru: ' В разделе кн��пки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
+    ru: ' В разделе кнопки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
   },
   customizationSection: {
     en: 'Bot Customization Section',
@@ -231,7 +232,7 @@ const additionalTranslations: TranslationsStore = {
   },
   allMessagesHere: {
     en: ' All messages that the bot sends to your clients are right here, here you can change absolutely everything, just don\'t break the logic and don\'t forget to use html where it exists',
-    ru: ' Все сообщения которые бот отправляет вашим клиентам находятся именно тут, здесь в�� можете менять вообще все только не нарушайте логику и не забывайте использовать html где он есть'
+    ru: ' Все сообщения которые бот отправляет вашим клиентам находятся именно тут, здесь вы можете менять вообще все только не нарушайте логику и не забывайте использовать html где он есть'
   },
   htmlGuide: {
     en: '{{ variable }} - variables used in the text are inserted here.\nHTML tags:\n<b>Bold text</b>\n<i>Italic</i>\n<code>Text for copying</code>\nTags must be opened and closed. If an error is made, then an error will be returned to you. You can contact support with this error and they will help you solve it.\nIt is important to understand that tags have a beginning and an end - the difference between them is in one slash - /\nBeginning - <b>\nEnd - </b>',
@@ -274,73 +275,69 @@ const additionalTranslations: TranslationsStore = {
     en: "Withdraw Funds",
     ru: "Вывод средств"
   },
-  withdrawFundsIntro: {
-    en: "In this section I will tell you how to withdraw cryptocurrency or fiat from the bot",
-    ru: "В этом разделе я расскажу тебе как выводить крипту или фиат с бота"
+  withdrawFundsDesc: {
+    en: "Withdraw your funds to different payment methods",
+    ru: "Вывод ваших средств на различные платежные методы"
   },
-  cryptoWithdrawal: {
-    en: "Cryptocurrency Withdrawal",
-    ru: "Вывод крипты"
+  courierSalary: {
+    en: "Courier Salary and Penalties",
+    ru: "Начисления/штрафы курьерам"
   },
-  goToStores: {
-    en: "Go to STORES -> WITHDRAW FUNDS (your store name)",
-    ru: "Идем в раздел МАГАЗИНЫ -> ВЫВОД СРЕДСТВ (название вашего магазина)"
+  courierSalaryDesc: {
+    en: "Manage courier payments and penalties",
+    ru: "Управление выплатами и штрафами для курьеров"
   },
-  cryptoWithdrawalOptions: {
-    en: "In this section you can see options for withdrawing cryptocurrency from the admin panel",
-    ru: "В данном разделе вы можете видеть варианты вывода крипты с админки"
+  balanceTopUps: {
+    en: "Balance Top Ups/Disputes",
+    ru: "Пополнения балансов/споры"
   },
-  ignoreUsdt: {
-    en: "Ignore the USDT option as all transactions in this cryptocurrency go directly to your wallets",
-    ru: "Игнорируйте пункт USDT так как все транзакции в данной крипте идут непосредственно на ваши кошельки"
+  balanceTopUpsDesc: {
+    en: "Manage balance top ups and resolve payment disputes",
+    ru: "Управление пополнениями балансов и решение споров по оплатам"
   },
-  selectLtcBtc: {
-    en: "Choose LTC or BTC",
-    ru: "Выбираем LTC либо BTC"
+  btcCashout: {
+    en: "BTC Cashout",
+    ru: "Обнал BTC"
   },
-  enterWalletDetails: {
-    en: "In the window that appears, carefully enter the wallet address and verify it. Also specify the withdrawal amount, remember that it's best to set the withdrawal amount slightly less than what's available on the balance to avoid errors due to floating exchange rates",
-    ru: "В появившемся окне внимательно вводим кошелек и проверяем его, так же указываем сумму вывода, помните что лучше всего ставить на вывод чуть меньше чем доступно на балансе что бы избежать ошибки из за плавающего курса"
+  btcCashoutDesc: {
+    en: "Manage Bitcoin cashout operations",
+    ru: "Управление операциями по обналичиванию Bitcoin"
   },
-  courierSection: {
-    en: "In the courier section, specify under which data you are making the withdrawal",
-    ru: "В разделе курьер указываем под какими данными делаем вывод"
+  usdt: {
+    en: "USDT",
+    ru: "USDT"
   },
-  courierBalanceNote: {
-    en: "It's important to understand that if the withdrawal amount exceeds the available courier balance, you will need to go to the WAREHOUSE - COURIER section and add the missing amount to their balance by clicking the (Add) button. Otherwise, the bot will return an error due to insufficient courier balance. You can specify withdrawal details in the notes",
-    ru: "Тут важно понимать что если сумма вывода превышает доступный баланс курьера вам нужно будет зайти в раздел СКЛАД - КУРЬЕР и зачислить на его баланс нажав кнопку (Зачислить) недостающую сумму. В противном случае бот вернет ошибку из за недостаточного баланса курьера. В заметках можно указать детали вывода"
+  usdtDesc: {
+    en: "Manage USDT transactions and payments",
+    ru: "Управление транзакциями и платежами в USDT"
   },
-  fiatWithdrawal: {
-    en: "Fiat Withdrawal",
-    ru: "Вывод фиата"
+  partnersExchangers: {
+    en: "Partners and Exchangers",
+    ru: "Партнеры обменники"
   },
-  goToMain: {
-    en: "Go to the MAIN section",
-    ru: "Идем в раздел ГЛАВНАЯ"
+  partnersExchangersDesc: {
+    en: "Manage your exchange partners",
+    ru: "Управление вашими партнерами по обмену"
   },
-  fillP2PMenu: {
-    en: "Fill in the menu items for P2P exchange",
-    ru: "Заполняем пункты меню для P2P обмена"
+  balanceHistory: {
+    en: "Balance History",
+    ru: "История изменения балансов"
   },
-  checkCredentials: {
-    en: "Carefully check all credentials",
-    ru: "Тщательно проверяем все реквизиты"
+  balanceHistoryDesc: {
+    en: "View history of all balance changes",
+    ru: "Просмотр истории всех изменений баланса"
   },
-  pressRequest: {
-    en: "Press the request button",
-    ru: "Нажимаем кнопку запросить"
+  quickAccess: {
+    en: "Quick Access",
+    ru: "Быстрый доступ"
   },
-  trackWithdrawal: {
-    en: "You can track the withdrawal by going to the ADDITIONAL - BTC CASHOUT menu",
-    ru: "Отслеживать вывод можно зайдя в меню ДОПОЛНИТЕЛЬНО - ОБНАЛ BTC"
+  paymentMethods: {
+    en: "Payment Methods",
+    ru: "Способы оплаты"
   },
-  advice: {
-    en: "Advice",
-    ru: "Совет"
-  },
-  exchangeAdvice: {
-    en: "Never use exchanges with your personal data for withdrawing cryptocurrency from the admin panel if you want to operate for a long time and properly!",
-    ru: "Никогда не используйте биржи со своими данными для вывода крипты с админки если хотите двигаться долго и порядочно!"
+  reports: {
+    en: "Reports",
+    ru: "Отчеты"
   },
   
   // Marketing page translations
@@ -394,7 +391,7 @@ const additionalTranslations: TranslationsStore = {
   },
   oneTimeDiscounts: {
     en: "One-Time Product Discounts",
-    ru: "Разовые с��идки на товары"
+    ru: "Разовые скидки на товары"
   },
   oneTimeDiscountsDesc: {
     en: "Create special one-time discounts for products",
