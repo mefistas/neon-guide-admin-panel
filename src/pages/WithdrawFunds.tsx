@@ -24,10 +24,11 @@ const WithdrawFunds = () => {
           </h2>
           
           <div className="mb-6">
-            {/* Placeholder for horizontal image */}
-            <div className="bg-gray-700/50 h-48 rounded-lg flex items-center justify-center mb-4">
-              <p className="text-gray-400">{language === 'en' ? 'Horizontal image placeholder' : 'Заглушка для горизонтального изображения'}</p>
-            </div>
+            <img 
+              src="https://i.ibb.co/ZRn1djK/Screenshot-2025-05-17-at-9-30-04-PM.png" 
+              alt={language === 'en' ? "Crypto withdrawal interface" : "Интерфейс вывода криптовалюты"}
+              className="w-full rounded-lg shadow-lg"
+            />
           </div>
           
           <div className="whitespace-pre-line text-gray-300">
@@ -41,11 +42,12 @@ const WithdrawFunds = () => {
             2. {tNew('fiatWithdrawal')}
           </h2>
           
-          <div className="mb-6">
-            {/* Placeholder for vertical image */}
-            <div className="bg-gray-700/50 h-64 w-48 mx-auto rounded-lg flex items-center justify-center mb-4">
-              <p className="text-gray-400">{language === 'en' ? 'Vertical image placeholder' : 'Заглушка для вертикального изображения'}</p>
-            </div>
+          <div className="mb-6 flex justify-center">
+            <img 
+              src="https://i.ibb.co/r20rsYq/image.png" 
+              alt={language === 'en' ? "Fiat withdrawal interface" : "Интерфейс вывода фиата"}
+              className="rounded-lg shadow-lg max-h-[500px]"
+            />
           </div>
           
           <div className="whitespace-pre-line text-gray-300">
