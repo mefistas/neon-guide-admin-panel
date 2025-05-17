@@ -175,8 +175,8 @@ const additionalTranslations: TranslationsStore = {
     ru: ' Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно изменения которые происходят в вашем боте'
   },
   activateCasino: {
-    en: ' -To activate the casino button, go to the casino menu and check at least one game, otherwise the casino WILL NOT be displayed in your menu, don\'t forget to save',
-    ru: ' -Для активации кнопки казино пройдите в меню казино и поставьте галочку хотя бы около одной игры иначе казино НЕ БУДЕТ отображаться в вашем меню, не забывайте сохранять'
+    en: ' To activate the casino button, go to the casino menu and check at least one game, otherwise the casino WILL NOT be displayed in your menu, don\'t forget to save',
+    ru: ' Для активации кнопки казино пройдите в меню казино и поставьте галочку хотя бы около одной игры иначе казино НЕ БУДЕТ отображаться в вашем меню, не забывайте сохранять'
   },
   exampleSettings: {
     en: ' Example menu settings and results in the bot can be seen below:',
