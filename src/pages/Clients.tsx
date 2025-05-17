@@ -5,14 +5,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import BackButton from '@/components/BackButton';
 import useTranslations from '@/hooks/useTranslations';
 import { Search, FileDown, Users } from "lucide-react";
-import { 
-  Table, 
-  TableHeader, 
-  TableRow, 
-  TableHead, 
-  TableBody, 
-  TableCell 
-} from '@/components/ui/table';
 
 const Clients = () => {
   const { t } = useLanguage();
@@ -74,34 +66,6 @@ const Clients = () => {
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* Example client table */}
-        <div className="overflow-x-auto">
-          <Table className="border-collapse border border-gray-800">
-            <TableHeader>
-              <TableRow>
-                <TableHead className="bg-gray-800">ID</TableHead>
-                <TableHead className="bg-gray-800">{t('name')}</TableHead>
-                <TableHead className="bg-gray-800">{t('balance')}</TableHead>
-                <TableHead className="bg-gray-800">{t('discount')}</TableHead>
-                <TableHead className="bg-gray-800">{t('actions')}</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {[1, 2, 3].map((item) => (
-                <TableRow key={item} className="hover:bg-gray-800/50">
-                  <TableCell className="font-medium">#{item}00{item}</TableCell>
-                  <TableCell>User{item}</TableCell>
-                  <TableCell>${Math.floor(Math.random() * 1000)}</TableCell>
-                  <TableCell>{Math.floor(Math.random() * 30)}%</TableCell>
-                  <TableCell className="text-neonBlue hover:underline cursor-pointer">
-                    {t('view')}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
         </div>
       </div>
     </TutorialPage>
