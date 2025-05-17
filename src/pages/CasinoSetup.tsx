@@ -3,7 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
-import { Dice1, Dice6, Target, Slot } from 'lucide-react';
+import { Dice1, Dice6, Target, Sparkles } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const CasinoSetup = () => {
@@ -56,7 +56,7 @@ const CasinoSetup = () => {
               
               <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-md col-span-1 md:col-span-2">
                 <div className="flex items-center gap-3 mb-2">
-                  <Slot size={24} className="text-neonBlue" />
+                  <Sparkles size={24} className="text-neonBlue" />
                   <h3 className="text-lg font-medium">{tLocal('slotGame')}</h3>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 whitespace-pre-line">
