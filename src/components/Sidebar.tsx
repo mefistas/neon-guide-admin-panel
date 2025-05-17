@@ -10,10 +10,10 @@ const Sidebar = () => {
   const { t } = useLanguage();
   const { tNew } = useTranslations();
   const location = useLocation();
-  const [expandedMenu, setExpandedMenu] = useState<string | null>('detailedGuide');
+  const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
-  // Modified toggle function to only toggle the clicked menu
+  // Toggle function that only affects the clicked menu
   const toggleMenu = (menu: string) => {
     setExpandedMenu(prevMenu => prevMenu === menu ? null : menu);
   };
