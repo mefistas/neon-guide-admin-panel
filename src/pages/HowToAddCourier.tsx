@@ -2,6 +2,7 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslations } from '@/hooks/useTranslations';
 import {
   Carousel,
   CarouselContent,
@@ -10,9 +11,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown, ChevronUp, User } from 'lucide-react';
 
 const HowToAddCourier = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const { tNew } = useTranslations();
+  const [expanded, setExpanded] = React.useState(true);
 
   const images = [
     {
@@ -36,7 +41,7 @@ const HowToAddCourier = () => {
   return (
     <TutorialPage title={t('howToAddCourier')}>
       <div className="space-y-6">
-        <div className="p-2">
+        <div className="p-2 mb-6">
           <Carousel className="w-full max-w-3xl mx-auto">
             <CarouselContent>
               {images.map((image, index) => (
@@ -60,32 +65,110 @@ const HowToAddCourier = () => {
           </Carousel>
         </div>
 
-        <div className="space-y-4">
-          <p>{t('courierDescription')}</p>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li>{t('courierStep1')}</li>
-            <li>{t('courierStep2')}</li>
-            <li>{t('courierStep3')}</li>
-            <li>{t('courierStep4')}
-              <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li>{t('courierField1')}</li>
-                <li>{t('courierField2')}</li>
-                <li>{t('courierField3')}</li>
-                <li>{t('courierField4')}</li>
-                <li>{t('courierField5')}</li>
-                <li>{t('courierField6')}</li>
-                <li>{t('courierField7')}</li>
-              </ul>
-            </li>
-            <li>{t('courierStep5')}</li>
-            <li>{t('courierStep6')}</li>
-            <li>{t('courierStep7')}</li>
-          </ol>
-          <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-            <p className="font-semibold">{t('courierNote')}:</p>
-            <p>{t('courierNoteText')}</p>
-          </div>
-        </div>
+        <Collapsible 
+          open={expanded} 
+          onOpenChange={setExpanded}
+          className={`backdrop-blur-sm transition-all duration-300 overflow-hidden rounded-lg ${
+            expanded 
+              ? 'bg-[#1A1F2C]' 
+              : 'bg-[#111827] hover:bg-[#1A1F2C]/80'
+          }`}
+        >
+          <CollapsibleTrigger className="flex items-center justify-between w-full p-5 cursor-pointer">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center min-w-8 h-8 rounded-full bg-[#7E69AB]/40 text-white font-medium">
+                <User size={16} />
+              </div>
+              <h2 className="text-xl font-medium text-gray-100">{t('howToAddCourier')}</h2>
+            </div>
+            <div className="text-[#D6BCFA]">
+              {expanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </div>
+          </CollapsibleTrigger>
+          
+          <CollapsibleContent className="overflow-hidden">
+            <div className="px-6 pb-6 space-y-4">
+              <p className="text-gray-200">{language === 'ru' ? 
+                'Для добавления курьера перейдем в раздел курьеры и добавим необходимые данные.' : 
+                'To add a courier, we\'ll go to the couriers section and add the necessary data.'}</p>
+              
+              <div className="space-y-3 pl-5">
+                {language === 'ru' ? (
+                  <>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Идем в раздел КУРЬЕРЫ</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Нажимаем на кнопку "ДОБАВИТЬ КУРЬЕРА"</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Заполняем необходимые поля в форме:</p>
+                      <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-300">
+                        <li>Имя курьера (видимое только в админке)</li>
+                        <li>Telegram ID курьера (для связи через бота)</li>
+                        <li>Номер телефона (для экстренной связи)</li>
+                        <li>Выбираем город, в котором работает курьер</li>
+                        <li>Устанавливаем максимальную сумму выдачи</li>
+                        <li>Выбираем статус "Активен" для возможности работы</li>
+                        <li>Задаем зарплату для автоматического расчета</li>
+                      </ul>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>При необходимости можно добавить фото курьера</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Нажимаем кнопку "Сохранить"</p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Go to the COURIERS section</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Click on the "ADD COURIER" button</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Fill in the required fields in the form:</p>
+                      <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-300">
+                        <li>Courier name (visible only in admin panel)</li>
+                        <li>Telegram ID of the courier (for communication through the bot)</li>
+                        <li>Phone number (for emergency contact)</li>
+                        <li>Select the city where the courier works</li>
+                        <li>Set the maximum distribution amount</li>
+                        <li>Select "Active" status to enable work</li>
+                        <li>Set salary for automatic calculation</li>
+                      </ul>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>If needed, you can add a photo of the courier</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Click the "Save" button</p>
+                    </div>
+                  </>
+                )}
+              </div>
+              
+              <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
+                <p className="font-semibold">{language === 'ru' ? 'Важно:' : 'Important:'}</p>
+                <p className="text-gray-200">{language === 'ru' ? 
+                  'Обязательно правильно указывайте Telegram ID курьера, иначе он не сможет получать уведомления о новых заданиях через бота. Для получения Telegram ID можно использовать бота @userinfobot.' : 
+                  'Be sure to correctly specify the courier\'s Telegram ID, otherwise they won\'t be able to receive notifications about new tasks through the bot. You can use @userinfobot to get the Telegram ID.'}</p>
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
       </div>
     </TutorialPage>
   );

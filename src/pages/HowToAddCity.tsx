@@ -2,6 +2,7 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslations } from '@/hooks/useTranslations';
 import {
   Carousel,
   CarouselContent,
@@ -10,9 +11,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown, ChevronUp, MapPin } from 'lucide-react';
 
 const HowToAddCity = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const { tNew } = useTranslations();
+  const [expanded, setExpanded] = React.useState(true);
 
   const images = [
     {
@@ -36,7 +41,7 @@ const HowToAddCity = () => {
   return (
     <TutorialPage title={t('howToAddCity')}>
       <div className="space-y-6">
-        <div className="p-2">
+        <div className="p-2 mb-6">
           <Carousel className="w-full max-w-3xl mx-auto">
             <CarouselContent>
               {images.map((image, index) => (
@@ -60,28 +65,96 @@ const HowToAddCity = () => {
           </Carousel>
         </div>
 
-        <div className="space-y-4">
-          <p>{t('cityAddDescription')}</p>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li>{t('cityStep1')}</li>
-            <li>{t('cityStep2')}</li>
-            <li>{t('cityStep3')}</li>
-            <li>{t('cityStep4')}</li>
-            <li>{t('cityStep5')}
-              <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li>{t('cityField1')}</li>
-                <li>{t('cityField2')}</li>
-                <li>{t('cityField3')}</li>
-                <li>{t('cityField4')}</li>
-              </ul>
-            </li>
-            <li>{t('cityStep6')}</li>
-          </ol>
-          <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-            <p className="font-semibold">{t('importantNote')}:</p>
-            <p>{t('cityImportantNote')}</p>
-          </div>
-        </div>
+        <Collapsible 
+          open={expanded} 
+          onOpenChange={setExpanded}
+          className={`backdrop-blur-sm transition-all duration-300 overflow-hidden rounded-lg ${
+            expanded 
+              ? 'bg-[#1A1F2C]' 
+              : 'bg-[#111827] hover:bg-[#1A1F2C]/80'
+          }`}
+        >
+          <CollapsibleTrigger className="flex items-center justify-between w-full p-5 cursor-pointer">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center justify-center min-w-8 h-8 rounded-full bg-[#7E69AB]/40 text-white font-medium">
+                <MapPin size={16} />
+              </div>
+              <h2 className="text-xl font-medium text-gray-100">{t('howToAddCity')}</h2>
+            </div>
+            <div className="text-[#D6BCFA]">
+              {expanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+            </div>
+          </CollapsibleTrigger>
+          
+          <CollapsibleContent className="overflow-hidden">
+            <div className="px-6 pb-6 space-y-4">
+              <p className="text-gray-200">{language === 'ru' ? 
+                'Для добавления города тебе нужно перейти в раздел города и нажать кнопку добавить город.' : 
+                'To add a city, you need to go to the cities section and click the add city button.'}</p>
+              
+              <div className="space-y-3 pl-5">
+                {language === 'ru' ? (
+                  <>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Идем в раздел ГОРОДА</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Нажимаем на кнопку "ДОБАВИТЬ ГОРОД"</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Заполняем необходимые поля в форме:</p>
+                      <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-300">
+                        <li>Название города на русском и английском</li>
+                        <li>Название для вывода в боте</li>
+                        <li>Выбираем статус "Активен" для отображения в боте</li>
+                        <li>Задаем положение города для сортировки в списке</li>
+                      </ul>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Нажимаем кнопку "Сохранить"</p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Go to the CITIES section</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Click on the "ADD CITY" button</p>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Fill in the required fields in the form:</p>
+                      <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-300">
+                        <li>City name in Russian and English</li>
+                        <li>Name to display in the bot</li>
+                        <li>Set status to "Active" to display in the bot</li>
+                        <li>Set city position for sorting in the list</li>
+                      </ul>
+                    </div>
+                    <div className="relative pl-5 text-gray-200">
+                      <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                      <p>Click the "Save" button</p>
+                    </div>
+                  </>
+                )}
+              </div>
+              
+              <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
+                <p className="font-semibold">{language === 'ru' ? 'Важно:' : 'Important:'}</p>
+                <p className="text-gray-200">{language === 'ru' ? 
+                  'После добавления городов не забудь добавить для них районы, иначе пользователи не смогут делать заказы в этих городах.' : 
+                  'After adding cities, don\'t forget to add districts for them, otherwise users won\'t be able to place orders in these cities.'}</p>
+              </div>
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
       </div>
     </TutorialPage>
   );

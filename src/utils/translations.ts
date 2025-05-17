@@ -38,6 +38,56 @@ const additionalTranslations: TranslationsStore = {
   customBotHomeDesc: {
     en: 'Complete guide to setting up the bot\'s menu and languages for your store',
     ru: 'Полный гайд по настройке меню и языков бота под свой магазин'
+  },
+  // Section titles
+  sectionCity: {
+    en: 'Adding a City',
+    ru: 'Добавление города'
+  },
+  sectionDistrict: {
+    en: 'Adding a District',
+    ru: 'Добавление района'
+  },
+  sectionCourier: {
+    en: 'Adding a Courier',
+    ru: 'Добавление курьера'
+  },
+  sectionProductGroup: {
+    en: 'Creating Product Groups',
+    ru: 'Создание групп товаров'
+  },
+  sectionProductType: {
+    en: 'Creating Product Types',
+    ru: 'Создание типов продуктов'
+  },
+  sectionAddress: {
+    en: 'Adding Addresses',
+    ru: 'Добавление адресов'
+  },
+  sectionBot: {
+    en: 'Setting Up Bots',
+    ru: 'Настройка ботов'
+  },
+  // Common UI elements
+  tip: {
+    en: 'Tip',
+    ru: 'Совет'
+  },
+  important: {
+    en: 'Important',
+    ru: 'Важно'
+  },
+  note: {
+    en: 'Note',
+    ru: 'Примечание'
+  },
+  save: {
+    en: 'Save',
+    ru: 'Сохранить'
+  },
+  bulkUploadFormat: {
+    en: 'Bulk Upload Format',
+    ru: 'Формат массовой загрузки'
   }
 };
 
