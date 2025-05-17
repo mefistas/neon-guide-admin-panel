@@ -3,7 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
-import { Dice1, Dice6, Target, Sparkles } from 'lucide-react';
+import { Dice1, Dice6, Target, Sparkles, History } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 const CasinoSetup = () => {
@@ -51,6 +51,17 @@ const CasinoSetup = () => {
             </h2>
             <div className="space-y-2 whitespace-pre-line">
               {tLocal('slotMachineInfo')}
+            </div>
+          </div>
+          
+          <Separator className="my-4" />
+          
+          <div>
+            <h2 className="flex items-center gap-2 text-xl font-semibold mb-4">
+              <History size={24} className="text-neonBlue" /> {tLocal('casinoHistory')}
+            </h2>
+            <div className="space-y-2 whitespace-pre-line">
+              {tLocal('casinoHistoryInfo')}
             </div>
           </div>
         </div>

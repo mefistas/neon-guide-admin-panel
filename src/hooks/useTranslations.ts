@@ -71,6 +71,14 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
+  casinoHistory: {
+    en: string;
+    ru: string;
+  };
+  casinoHistoryInfo: {
+    en: string;
+    ru: string;
+  };
 };
 
 // Local translations that don't require modifying the language files
@@ -142,6 +150,14 @@ const localTranslations: LocalTranslations = {
   slotMachineInfo: {
     en: "🎰 Here is the SLOT machine - with a combination of 3 pictures - BAR, LEMON, GRAPE, SEVEN. 🔢 There are 64 different variations in total - you can assign a multiplier, a fixed prize, and also add an Address as a super prize for any of them. 🏆 For example, you can make a JACKPOT - for the 777 combination - and give a person a prize of x10 of the bet and a prize - Address for some product in the city.\n🎰 To play SLOT - you need to configure the winning combinations.",
     ru: "🎰 Тут машина SLOT - с комбинацией из 3х картинок - BAR, LEMON, GRAPE, SEVEN 🔢 Тут всего 64 различных вариации - на любую из них можно назначить множитель, фиксированный приз а также добавить Адрес как супер приз. 🏆 \nНапример, вы можете сделать ДЖЕК-ПОТ - на комбинацию 777 - и дать приз человеку х10 от ставки и приз - Адрес на какой-нибудь товар в городе.\n🎰 Для игры в SLOT - необходимо настроить выигрышные комбинации."
+  },
+  casinoHistory: {
+    en: "Casino Game History",
+    ru: "История игр в Казино"
+  },
+  casinoHistoryInfo: {
+    en: "To view the history of your clients' Casino games, go to the ADDITIONAL -> CASINO GAME HISTORY menu",
+    ru: "Что бы просмотреть историю игр в Казино ваших клиентов перейдите в меню ДОПОЛНИТЕЛЬНО -> ИСТОРИЯ ИГР В КАЗИНО"
   },
 };
 
