@@ -7,8 +7,8 @@ import { Card, CardContent } from "@/components/ui/card";
 const QuickStart = () => {
   const { t } = useLanguage();
   
-  // Define the 13 main points, each with 8 notes
-  const quickStartPoints = Array.from({ length: 13 }, (_, i) => ({
+  // Define the main quick start points (sections 1-11)
+  const quickStartPoints = Array.from({ length: 11 }, (_, i) => ({
     point: `quickStartPoint${i + 1}`,
     notes: Array.from({ length: 8 }, (_, j) => `quickStartPoint${i + 1}Note${j + 1}`)
   }));
@@ -27,14 +27,20 @@ const QuickStart = () => {
                 </h2>
                 
                 <div className="pl-6 space-y-2">
-                  {item.notes.map((note, noteIndex) => (
-                    <div key={noteIndex} className="flex items-start p-4 bg-gray-700/50 rounded">
-                      <span className="bg-gray-600 rounded-full w-6 h-6 flex items-center justify-center mr-2 shrink-0">
-                        {noteIndex + 1}
-                      </span>
-                      <p className="text-gray-100">{t(note)}</p>
-                    </div>
-                  ))}
+                  {item.notes.map((note, noteIndex) => {
+                    // Only render notes that have content
+                    const noteText = t(note);
+                    if (!noteText) return null;
+                    
+                    return (
+                      <div key={noteIndex} className="flex items-start p-4 bg-gray-700/50 rounded">
+                        <span className="bg-gray-600 rounded-full w-6 h-6 flex items-center justify-center mr-2 shrink-0">
+                          {noteIndex + 1}
+                        </span>
+                        <p className="text-gray-100">{noteText}</p>
+                      </div>
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>
