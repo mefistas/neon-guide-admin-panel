@@ -47,15 +47,23 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
-  storeSetupDescription: {
+  casinoSteps: {
     en: string;
     ru: string;
   };
-  configurationSteps: {
+  availableGames: {
+    en: string;
+    ru: string;
+  };
+  gamesList: {
     en: string;
     ru: string;
   };
   gameChanceInfo: {
+    en: string;
+    ru: string;
+  };
+  slotMachines: {
     en: string;
     ru: string;
   };
@@ -109,24 +117,32 @@ const localTranslations: LocalTranslations = {
   },
   storeSetupTitle: {
     en: "Setting up Casino in your store",
-    ru: "Настройка Казино в вашем магазине"
+    ru: "Настройка казино в вашем магазине"
   },
-  storeSetupDescription: {
-    en: "To add a Casino section to your bot menu:",
-    ru: "Чтобы добавить раздел Казино в меню вашего бота:"
+  casinoSteps: {
+    en: "- Go to STORES -> ALL STORES -> select your store\n- In the Language/Menu section, add a new item, set the line number, name it CASINO and select the casino button action accordingly\n- After creating the button, go to the Casino section and check the games you would like to see in your bot\nIMPORTANT: If at least one game is not selected, the casino will disappear from your bot's menu. You also need to set the minimum and maximum bets.",
+    ru: "- Переходим в раздел МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ -> выбираем наш магазин\n- В разделе Язык/Меню добавляем новый пункт, проставляем номер строки, называем КАЗИНО и выбираем действие кнопки казино соответственно\n- Когда кнопка создана идем в раздел Казино и ставим галочки напротив игр которые мы бы хотели видеть в нашем боте\nВАЖНО: если галочка не будет стоять хотя бы около одной игры, казино пропадает из меню вашего бота так же необходимо настроить минимальную и максимальную ставку"
   },
-  configurationSteps: {
-    en: "Go to STORES -> ALL STORES -> select a store\nIn the Language/Menu section, add a new item, set the line number, name it CASINO and select casino from the action menu\nAfter creating the button, go to the Casino section and check the games you would like to see in your bot\nIMPORTANT: If at least one game is not selected, the casino will disappear from your bot's menu. You also need to set the minimum and maximum bets.",
-    ru: "Переходим в раздел МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ -> выбираем магазин\nВ разделе Язык/Меню добавляем новый пункт, проставляем номер строки, называем КАЗИНО и выбираем из пункта действия казино соответственно\nКогда кнопка создана идем в раздел Казино и ставим галочки напротив игр которые мы бы хотели видеть в нашем боте\nВАЖНО: если галочка не будет стоять хотя бы около одной игры, казино пропадает из меню вашего бота, так же необходимо настроить минимальную и максимальную ставку"
+  availableGames: {
+    en: "Available Games:",
+    ru: "Игры на выбор:"
+  },
+  gamesList: {
+    en: "🎲 Dice - 'Guess the number'. The client chooses a number from 1 to 6 and rolls the dice. If the client guesses the number, they receive a bonus.\n🎯 Darts - 'Hit the bullseye'. Throws a dart and if it hits the center of the target, receives a bonus.\n🎳 Bowling - 'Get a strike'. The client rolls the ball and if they get a strike, they receive a bonus.",
+    ru: "🎲 Кости - \"угадай число\". Клиент выбирает от 1 до 6 и бросает кубик. Если клиент угадал число, то он получает бонус.\n🎯 Дартс - \"Попади в яблочко\". Кидает дротик и если попал в центр мишени - то получает бонус.\n🎳 Боулинг - \"Выбей страйк\". Клиент катит шар и если выбивает страйк, то получает бонус."
   },
   gameChanceInfo: {
-    en: "These games have a 1 in 6 chance of winning. I recommend setting the bonus for winning at x3 - and you will always be in profit.",
-    ru: "У этих игр - шанс на победу 1 к 6. Бонус за победу рекомендую ставить х3 - и вы в любом случае будете в плюсе."
+    en: "🍀 These games have a 1 in 6 chance of winning. I recommend setting the bonus for winning at x3 - and you will always be in profit.",
+    ru: "🍀 У этих игр - шанс на победу 1 к 6. Бонус за победу рекомендую ставить х3 - и вы в любом случае будете в плюсе."
+  },
+  slotMachines: {
+    en: "Slot Machines!",
+    ru: "Игровые автоматы!"
   },
   slotMachineInfo: {
-    en: "Slot Machines! - Here is the SLOT machine - with a combination of 3 pictures - BAR, LEMON, GRAPE, SEVEN. There are 64 different variations in total - you can assign a multiplier, a fixed prize, and also add an Address as a super prize for any of them. For example, you can make a JACKPOT - for the 777 combination - and give a person a prize of x10 of the bet and a prize - Address for some product in the city. To play SLOT - you need to configure the winning combinations.",
-    ru: "Игровые автоматы! - Тут машина SLOT - с комбинацией из 3х картинок - BAR, LEMON, GRAPE, SEVEN. Тут всего 64 различных вариации - на любую из них можно назначить множитель, фиксированный приз а также добавить Адрес как супер приз. Например, вы можете сделать ДЖЕК-ПОТ - на комбинацию 777 - и дать приз человеку х10 от ставки и приз - Адрес на какой-нибудь товар в городе. Для игры в SLOT - необходимо настроить выигрышные комбинации."
-  }
+    en: "🎰 Here is the SLOT machine - with a combination of 3 pictures - BAR, LEMON, GRAPE, SEVEN. 🔢 There are 64 different variations in total - you can assign a multiplier, a fixed prize, and also add an Address as a super prize for any of them. 🏆 For example, you can make a JACKPOT - for the 777 combination - and give a person a prize of x10 of the bet and a prize - Address for some product in the city.\n🎰 To play SLOT - you need to configure the winning combinations.",
+    ru: "🎰 Тут машина SLOT - с комбинацией из 3х картинок - BAR, LEMON, GRAPE, SEVEN 🔢 Тут всего 64 различных вариации - на любую из них можно назначить множитель, фиксированный приз а также добавить Адрес как супер приз. 🏆 \nНапример, вы можете сделать ДЖЕК-ПОТ - на комбинацию 777 - и дать приз человеку х10 от ставки и приз - Адрес на какой-нибудь товар в городе.\n🎰 Для игры в SLOT - необходимо настроить выигрышные комбинации."
+  },
 };
 
 /**
