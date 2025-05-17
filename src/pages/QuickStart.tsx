@@ -3,7 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const QuickStart = () => {
   const { t } = useLanguage();
@@ -24,7 +24,8 @@ const QuickStart = () => {
   }));
 
   return (
-    <TutorialPage title={t('quickStart')}>
+    <div className="max-w-5xl mx-auto">
+      <h1 className="text-3xl text-white font-bold mb-6 pl-4 border-l-4 border-emerald-400">{t('quickStart')}</h1>
       <div className="space-y-6">
         <p className="text-lg mb-6">{t('quickStartDescription')}</p>
 
@@ -48,13 +49,13 @@ const QuickStart = () => {
                   onClick={() => toggleExpand(index + 1)}
                 >
                   <div className="flex items-center">
-                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-700 mr-3 text-white">
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-700/50 mr-3 text-white">
                       {index + 1}
                     </div>
                     <h2 className="text-xl font-semibold text-white">{t(item.point)}</h2>
                   </div>
                   <div>
-                    {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                    {isExpanded ? <ChevronUp size={20} className="text-emerald-400" /> : <ChevronDown size={20} className="text-emerald-400" />}
                   </div>
                 </div>
                 
@@ -67,10 +68,7 @@ const QuickStart = () => {
                         if (!noteText) return null;
                         
                         return (
-                          <div key={noteIndex} className="flex items-start p-3 bg-gray-700/30 rounded">
-                            <span className="text-emerald-400 mt-0.5 mr-2">
-                              <Check size={16} />
-                            </span>
+                          <div key={noteIndex} className="p-3 bg-gray-700/30 rounded">
                             <p className="text-gray-100">{noteText}</p>
                           </div>
                         );
@@ -83,7 +81,7 @@ const QuickStart = () => {
           })}
         </div>
       </div>
-    </TutorialPage>
+    </div>
   );
 };
 
