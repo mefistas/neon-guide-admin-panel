@@ -1,5 +1,5 @@
 
-import { useLanguage, Language } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { createTranslator } from '@/utils/translations';
 
 /**
@@ -26,3 +26,4 @@ export const useTranslations = () => {
 };
 
 export default useTranslations;
+

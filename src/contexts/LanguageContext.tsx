@@ -1,8 +1,6 @@
-
 import React, { createContext, useContext, useState } from 'react';
 
-// Export the Language type so it can be imported elsewhere
-export type Language = 'en' | 'ru';
+type Language = 'en' | 'ru';
 
 interface Translations {
   [key: string]: {
