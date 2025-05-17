@@ -1,87 +1,221 @@
 
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
-import { useLanguage } from '@/contexts/LanguageContext';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import useTranslations from '@/hooks/useTranslations';
+import { 
+  Collapsible, 
+  CollapsibleContent, 
+  CollapsibleTrigger 
+} from "@/components/ui/collapsible";
+import { Bot, ChevronDown, ExternalLink } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const CustomBot = () => {
-  const { t } = useLanguage();
+  const { tNew } = useTranslations();
 
+  // Images for our page
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a",
-      alt: "customBotImage1"
+      src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+      alt: "Bot menu customization example"
     },
     {
-      src: "https://images.unsplash.com/photo-1535378620166-273708d44e4c",
-      alt: "customBotImage2"
+      src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      alt: "Bot support settings example"
     },
     {
-      src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
-      alt: "customBotImage3"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1596609548086-85bbf8ddb6b9",
-      alt: "customBotImage4"
+      src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      alt: "Bot language customization"
     }
   ];
 
   return (
-    <TutorialPage title={t('customBot')}>
-      <div className="space-y-6">
-        <div className="p-2">
-          <Carousel className="w-full max-w-3xl mx-auto">
-            <CarouselContent>
-              {images.map((image, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <AspectRatio ratio={16 / 9}>
-                      <img
-                        src={image.src}
-                        alt={t(image.alt)}
-                        className="rounded-xl object-cover w-full h-full"
-                      />
-                    </AspectRatio>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-4 space-x-4">
-              <CarouselPrevious className="relative static translate-y-0 left-0" />
-              <CarouselNext className="relative static translate-y-0 right-0" />
-            </div>
-          </Carousel>
-        </div>
+    <TutorialPage title={tNew('customBotPageTitle')}>
+      <div className="space-y-8 max-w-4xl mx-auto">
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">{tNew('customBotIntro')}</h2>
+        </section>
 
-        <div className="space-y-4">
-          <p>{t('customBotDescription')}</p>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li>{t('customBotStep1')}</li>
-            <li>{t('customBotStep2')}</li>
-            <li>{t('customBotStep3')}</li>
-            <li>{t('customBotStep4')}</li>
-            <li>{t('customBotStep5')}
-              <ul className="list-disc pl-6 mt-2 space-y-1">
-                <li>{t('customBotField1')}</li>
-                <li>{t('customBotField2')}</li>
-                <li>{t('customBotField3')}</li>
-                <li>{t('customBotField4')}</li>
-              </ul>
+        <section>
+          <h3 className="text-xl font-medium mb-4">{tNew('customBotTypes')}</h3>
+          <ul className="space-y-2 text-lg">
+            <li className="flex items-center gap-2">
+              <Bot size={20} className="flex-shrink-0 text-neonBlue" />
+              {tNew('customBotType1')}
             </li>
-            <li>{t('customBotStep6')}</li>
-          </ol>
-          <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-            <p className="font-semibold">{t('customBotNote')}:</p>
-            <p>{t('customBotNoteText')}</p>
+            <li className="flex items-center gap-2">
+              <Bot size={20} className="flex-shrink-0 text-neonBlue" />
+              {tNew('customBotType2')}
+            </li>
+          </ul>
+        </section>
+
+        {/* Section 1: Customization of appearance */}
+        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
+          <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
+            {tNew('customBotAppearance')}
+          </h3>
+          
+          <div className="space-y-4">
+            <p>{tNew('gotoStores')}</p>
+            <p>{tNew('clickStoreName')}</p>
+            <p>{tNew('twoMainMenus')}</p>
+            
+            <Collapsible className="w-full">
+              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-gray-800 p-4 text-left font-medium">
+                <span>{tNew('addNewLanguage')}</span>
+                <ChevronDown className="h-5 w-5" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="p-4 pt-2 text-sm">
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>{tNew('deleteMenuItems')}</li>
+                  <li>{tNew('sortingNote')}</li>
+                  <li>{tNew('addTwoItems')}</li>
+                  <li>{tNew('chooseLanguage')}</li>
+                  <li>{tNew('writeButton')}</li>
+                  <li>{tNew('externalSite')}</li>
+                </ul>
+              </CollapsibleContent>
+            </Collapsible>
+            
+            <div className="bg-neonBlue/10 border border-neonBlue/30 rounded-md p-4">
+              <p className="font-medium text-neonBlue">{tNew('tip')}:</p>
+              <p>{tNew('saveAndContinue')}</p>
+            </div>
+            
+            <p>{tNew('activateCasino')}</p>
+            
+            <p className="font-medium">{tNew('exampleSettings')}</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+              {images.map((image, index) => (
+                <div key={index} className="rounded-lg overflow-hidden border border-gray-700">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt} 
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+            
+            <div className="space-y-4 mt-6">
+              <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-md p-4">
+                <p className="font-medium text-yellow-500">{tNew('important')}:</p>
+                <p>{tNew('supportItem')}</p>
+              </div>
+              
+              <ul className="space-y-3 pl-5">
+                <li className={cn("flex gap-2")}>
+                  <span className="text-neonBlue">•</span>
+                  <span>{tNew('citySelection')}</span>
+                </li>
+                <li className={cn("flex gap-2")}>
+                  <span className="text-neonBlue">•</span>
+                  <span>{tNew('personalBots')}</span>
+                </li>
+                <li className={cn("flex gap-2")}>
+                  <span className="text-neonBlue">•</span>
+                  <span>{tNew('preorderButton')}</span>
+                </li>
+                <li className={cn("flex gap-2")}>
+                  <span className="text-neonBlue">•</span>
+                  <span>{tNew('bonusButton')}</span>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Section 2: Bot Customization Section */}
+        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
+          <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
+            {tNew('customizationSection')}
+          </h3>
+          
+          <div className="space-y-4">
+            <p>{tNew('buttonOptions')}</p>
+            
+            <ul className="space-y-3 pl-5">
+              <li className={cn("flex gap-2")}>
+                <span className="text-neonBlue">•</span>
+                <span>{tNew('oneColumnMenu')}</span>
+              </li>
+              <li className={cn("flex gap-2")}>
+                <span className="text-neonBlue">•</span>
+                <span>{tNew('supportLink')}</span>
+              </li>
+            </ul>
+            
+            <div className="rounded-lg overflow-hidden border border-gray-700 mt-4">
+              <img 
+                src={images[1].src}
+                alt="Support operator settings"
+                className="w-full h-48 object-cover" 
+              />
+            </div>
+            
+            <p>{tNew('editButtons')}</p>
+            
+            <div className="rounded-lg overflow-hidden border border-gray-700 mt-4">
+              <img 
+                src={images[2].src}
+                alt="Edit buttons example"
+                className="w-full h-48 object-cover" 
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3: Message Customization */}
+        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
+          <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
+            {tNew('messageCustomization')}
+          </h3>
+          
+          <div className="space-y-4">
+            <p>{tNew('messageBotSection')}</p>
+            <p>{tNew('allMessagesHere')}</p>
+            
+            <div className="bg-gray-800 rounded-md p-4 font-mono text-sm whitespace-pre-wrap">
+              {tNew('htmlGuide')}
+            </div>
+            
+            <h4 className="text-lg font-medium mt-6">{tNew('settingsRecommendations')}</h4>
+            
+            <ul className="space-y-3 pl-5">
+              <li className={cn("flex gap-2")}>
+                <span className="text-neonBlue">•</span>
+                <span>{tNew('searchTip')}</span>
+              </li>
+              <li className={cn("flex gap-2")}>
+                <span className="text-neonBlue">•</span>
+                <span>{tNew('addVariant')}</span>
+              </li>
+              <li className={cn("flex gap-2")}>
+                <span className="text-neonBlue">•</span>
+                <span>{tNew('notVisibleMessage')}</span>
+              </li>
+              <li className={cn("flex gap-2")}>
+                <span className="text-neonBlue">•</span>
+                <span>{tNew('messageCount')}</span>
+              </li>
+            </ul>
+            
+            <div className="flex items-center gap-2 mt-4 bg-gray-800/60 p-3 rounded-md">
+              <p>{tNew('translationTip')}</p>
+              <a 
+                href="https://chat.deepseek.com/sign_in" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-neonBlue hover:text-neonBlue/80 inline-flex items-center gap-1"
+              >
+                <span>DeepSeek Chat</span>
+                <ExternalLink size={14} />
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </TutorialPage>
   );
