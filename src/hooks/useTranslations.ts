@@ -111,6 +111,18 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
+  feedbackTitle: {
+    en: string;
+    ru: string;
+  };
+  feedbackDescription: {
+    en: string;
+    ru: string;
+  };
+  feedbackInstruction: {
+    en: string;
+    ru: string;
+  };
 };
 
 // Local translations that don't require modifying the language files
@@ -223,6 +235,18 @@ const localTranslations: LocalTranslations = {
     en: "Business man on phone",
     ru: "Деловой мужчина с телефоном"
   },
+  feedbackTitle: {
+    en: "Feedback",
+    ru: "Обратная связь"
+  },
+  feedbackDescription: {
+    en: "Communication with clients through the bot admin panel",
+    ru: "Связь с клиентами через админ-панель бота"
+  },
+  feedbackInstruction: {
+    en: "To set up communication with your clients, add a Support or Submit Request button to one of your menu items. If you're not sure how to do this, re-read the Bot Customization section. If you have connected this button to your menu, clients will be able to leave you messages which will be displayed in the FEEDBACK section.",
+    ru: "Для того что бы настроить связь и комуникации с вашими клиентами добавьте в одно из пунктов меню кнопку Поддержка, оставить заявку, если вы не уверены как это сделать перечитайте раздел Кастомизация Бота. Если же вы подключили данную кнопку для вашего меню, клиенты смогут оставлять вам сообщения которые будут показываться у вас в разделе ОБРАТНАЯ СВЯЗЬ"
+  }
 };
 
 /**
