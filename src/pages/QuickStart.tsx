@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -6,7 +5,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const QuickStart = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [expandedPoints, setExpandedPoints] = React.useState<number[]>([1]);
   
   const toggleExpand = (index: number) => {
@@ -128,77 +127,75 @@ const QuickStart = () => {
     {
       id: 9,
       title: 'quickStartPoint9',
-      notes: [
-        'quickStartPoint9Note1',
-        'quickStartPoint9Note2',
-      ],
       customContent: (
         <div className="mt-4">
           <div className="space-y-3 text-gray-200">
             {/* Bilingual section */}
-            {t('language') === 'ru' ? (
+            {language === 'ru' ? (
               <>
                 <p>- Идем в раздел ДОБАВИТЬ АДРЕСА</p>
                 <p>- Тут мы видим уже списки районов которые есть воспользуйся поисковом если их много, находим нужный район для загрузки адресов и нажимаем ДОБАВИТЬ АДРЕСА</p>
-                <p>Выбираем нужного курьера обязательно поэтому мы его и добавили</p>
+                <p>- Выбираем нужного курьера обязательно поэтому мы его и добавляли</p>
+                <p>- Выбираем нужный МК если проставляли если нет оставляем как есть</p>
+                <p>- Выбираем тип продукта (название и грамовка) например у нас 5 кладов меф единички на данном районе</p>
+                <p>- Игнорируем пункт изображения это для геев</p>
+                <p>- Идем сразу в пункт text и вот тут начинается магия большой загрузки представь если у тебя 100 едиков на данном районе, это будет ужасно грузить каждый клад отдельно, вместо этого загрузи все свои фотки кладов на какой нибудь хост по типу https://imgbb.com напиши к ним описание и используй двойной пробел между строками что бы панель поняла что ты грузишь не один адрес а много</p>
               </>
             ) : (
               <>
                 <p>- Go to the ADD ADDRESSES section</p>
                 <p>- Here we see lists of districts that exist. Use the search if there are many. Find the right district to upload addresses and click ADD ADDRESSES</p>
-                <p>Be sure to select the courier you need - this is why we added one</p>
+                <p>- Be sure to select the courier you need - this is why we added one</p>
+                <p>- Select the MK if you set them up, if not leave as is</p>
+                <p>- Select the product type (name and gram size), for example if we have 5 stashes of meph singles in this district</p>
+                <p>- Ignore the images section, that's for advanced users</p>
+                <p>- Go straight to the text section, and here's where the bulk upload magic happens. Imagine if you have 100 singles in this district, it would be terrible to load each stash separately. Instead, upload all your stash photos to a host like https://imgbb.com, write descriptions for them and use double spaces between lines so the panel understands you're not loading one address but many</p>
               </>
             )}
-            
-            <p>{t('quickStartPoint9Note3')}</p>
-            <p>{t('quickStartPoint9Note4')}</p>
-            <p>{t('quickStartPoint9Note5')}</p>
-            <p>{t('quickStartPoint9Note6')}</p>
-            <p>{t('quickStartPoint9Note7')}</p>
           </div>
           
           <div className="mt-4 rounded-lg overflow-hidden">
             <div className="bg-[#1A1F2C] px-4 py-2">
-              <h3 className="font-medium text-white">{t('language') === 'ru' ? 'Пример:' : 'Example:'}</h3>
+              <h3 className="font-medium text-white">{language === 'ru' ? 'Пример:' : 'Example:'}</h3>
             </div>
             <div className="bg-[#111827] p-4">
               <div className="border border-[#7E69AB]/30 rounded bg-[#0C111D] p-3 font-mono text-sm">
                 <div>
                   <span className="text-[#D6BCFA]">https://imgbb.com</span>
                   <br />
-                  <span className="text-gray-300">{t('language') === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
+                  <span className="text-gray-300">{language === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
                 </div>
                 <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
-                  {t('language') === 'ru' ? '[пустая строка]' : '[empty line]'}
+                  {language === 'ru' ? '[пустая строка]' : '[empty line]'}
                   <br />
-                  {t('language') === 'ru' ? '[пустая строка]' : '[empty line]'}
+                  {language === 'ru' ? '[пустая строка]' : '[empty line]'}
                 </div>
                 <div>
                   <span className="text-[#D6BCFA]">https://imgbb.com</span>
                   <br />
-                  <span className="text-gray-300">{t('language') === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
+                  <span className="text-gray-300">{language === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
                 </div>
                 <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
-                  {t('language') === 'ru' ? '[пустая строка]' : '[empty line]'}
+                  {language === 'ru' ? '[пустая строка]' : '[empty line]'}
                   <br />
-                  {t('language') === 'ru' ? '[пустая строка]' : '[empty line]'}
+                  {language === 'ru' ? '[пустая строка]' : '[empty line]'}
                 </div>
                 <div>
                   <span className="text-[#D6BCFA]">https://imgbb.com</span>
                   <br />
-                  <span className="text-gray-300">{t('language') === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
+                  <span className="text-gray-300">{language === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
                 </div>
               </div>
             </div>
           </div>
           
           <div className="mt-4 space-y-2 text-gray-200">
-            {t('language') === 'ru' ? (
+            {language === 'ru' ? (
               <>
                 <p>Итого теперь бот видит что ты загрузил три адреса для данного района</p>
                 <p>Нажимаем сохранить если на этом районе больше нет других грамовок</p>
                 <p>Либо нажимаем сохранить и добавить еще если в этом районе есть еще какие то другие адреса</p>
-                <p>Поздравляю ты великолепен, давай посмотрим что там с вариантами оплат !</p>
+                <p>Поздравляю ты великолепен, что там с вариантами оплат!</p>
               </>
             ) : (
               <>
