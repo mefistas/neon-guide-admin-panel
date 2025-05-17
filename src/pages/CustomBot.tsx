@@ -39,12 +39,12 @@ const CustomBot = () => {
   
   // New images for the separate sections
   const supportSectionImage = {
-    src: "https://i.ibb.co/Y7QnXxg/image.png",
+    src: "https://i.ibb.co/0Vd5kWRL/Screenshot-2025-05-17-at-8-41-43-PM.png",
     alt: "Bot support operator interface"
   };
   
   const messagesSectionImage = {
-    src: "https://i.ibb.co/VWg9chg/image.png",
+    src: "https://i.ibb.co/dsWkKv5k/Screenshot-2025-05-17-at-3-57-11-PM.png",
     alt: "Bot message customization interface"
   };
 
