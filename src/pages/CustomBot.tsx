@@ -25,7 +25,7 @@ const CustomBot = () => {
   const carouselImages = [
     {
       src: "https://i.ibb.co/6RsXsmVw/Screenshot-2025-05-17-at-8-08-55-PM.png",
-      alt: "Bot menu customization example"
+      alt: "loveyou"
     },
     {
       src: "https://i.ibb.co/jk2cf6z8/Screenshot-2025-05-17-at-3-26-35-PM.png",
@@ -33,7 +33,7 @@ const CustomBot = () => {
     },
     {
       src: "https://i.ibb.co/0jndZDTJ/transparent-Screenshot-2025-05-17-at-8-20-33-PM.png",
-      alt: "Bot language customization"
+      alt: "loveyou"
     }
   ];
   
