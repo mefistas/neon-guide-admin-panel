@@ -32,7 +32,7 @@ const CustomBot = () => {
       alt: " FOX"
     },
     {
-      src: "hhttps://i.ibb.co/4R4t9sh2/Screenshot-2025-05-17-at-8-15-13-PM.png",
+      src: "https://i.ibb.co/4R4t9sh2/Screenshot-2025-05-17-at-8-15-13-PM.png",
       alt: "iexisted"
     }
   ];
