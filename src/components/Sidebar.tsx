@@ -1,12 +1,14 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices, ExternalLink, Menu, Tag, Bitcoin, History, MessageSquare, Star, TrendingUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices, ExternalLink, Menu, Tag, Bitcoin, History, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
+import useTranslations from '@/hooks/useTranslations';
 
 const Sidebar = () => {
   const { t } = useLanguage();
+  const { tNew } = useTranslations();
   const location = useLocation();
   const [expandedMenu, setExpandedMenu] = useState<string | null>('detailedGuide');
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -35,10 +37,7 @@ const Sidebar = () => {
     { key: 'balanceHistory', path: '/balance-history', icon: <History size={18} /> },
     { key: 'internalChats', path: '/internal-chats', icon: <MessageSquare size={18} /> },
     { key: 'reviews', path: '/reviews', icon: <Star size={18} /> },
-    { key: 'marketing', path: '/marketing', icon: <TrendingUp size={18} /> },
-    { key: 'merchants', path: '/merchants', icon: <Building size={18} /> },
     { key: 'masterKlad', path: '/master-klad', icon: <Building size={18} /> },
-    // Removed custom bot from here
     { key: 'workers', path: '/workers', icon: <Building size={18} /> },
     { key: 'clients', path: '/clients', icon: <Building size={18} /> },
     { key: 'purchases', path: '/purchases', icon: <Building size={18} /> },
@@ -88,7 +87,7 @@ const Sidebar = () => {
           {sidebarOpen && t('quickStart')}
         </Link>
 
-        {/* Custom Bot - Moved to main menu */}
+        {/* Custom Bot - Direct link */}
         <Link
           to="/custom-bot"
           className={cn(
@@ -98,7 +97,20 @@ const Sidebar = () => {
           )}
         >
           <Bot size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
-          {sidebarOpen && t('customBotTitle')}
+          {sidebarOpen && tNew('customBotTitle')}
+        </Link>
+
+        {/* Operator Work - Replaced Cards Payment */}
+        <Link
+          to="/cards-payments"
+          className={cn(
+            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
+            isActive('/cards-payments') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
+          )}
+        >
+          <CreditCard size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && tNew('operatorWorkTitle')}
         </Link>
 
         {/* Casino Setup */}
@@ -114,17 +126,30 @@ const Sidebar = () => {
           {sidebarOpen && t('casinoSetup')}
         </Link>
 
-        {/* Cards Payment */}
+        {/* Finance - New item */}
         <Link
-          to="/cards-payments"
+          to="/finance"
           className={cn(
             "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/cards-payments') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            isActive('/finance') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
             !sidebarOpen && "justify-center"
           )}
         >
-          <CreditCard size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
-          {sidebarOpen && t('cardsPayments')}
+          <Wallet size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && tNew('financeTitle')}
+        </Link>
+
+        {/* Marketing - Moved from detailed guide */}
+        <Link
+          to="/marketing"
+          className={cn(
+            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
+            isActive('/marketing') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
+          )}
+        >
+          <TrendingUp size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && tNew('marketingTitle')}
         </Link>
 
         {/* Detailed Guide menu */}

@@ -29,6 +29,7 @@ import BalanceTopUps from "./pages/BalanceTopUps";
 import Marketing from "./pages/Marketing";
 import Messages from "./pages/Messages";
 import Web from "./pages/Web";
+import Finance from "./pages/Finance";
 import CouriersSalary from "./pages/CouriersSalary";
 import Usdt from "./pages/Usdt";
 import PartnersExchangers from "./pages/PartnersExchangers";
@@ -64,6 +65,7 @@ const App = () => (
             <Route path="/marketing" element={<Marketing />} />
             <Route path="/messages" element={<Messages />} />
             <Route path="/web" element={<Web />} />
+            <Route path="/finance" element={<Finance />} />
             <Route path="/couriers-salary" element={<CouriersSalary />} />
             <Route path="/usdt" element={<Usdt />} />
             <Route path="/partners-exchangers" element={<PartnersExchangers />} />

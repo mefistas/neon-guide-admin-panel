@@ -23,8 +23,24 @@ type TranslationsStore = TranslationRecord;
 const additionalTranslations: TranslationsStore = {
   // Custom Bot translations
   customBotTitle: {
-    en: 'Custom Bot',
-    ru: 'Кастомный Бот'
+    en: 'Bot Customization',
+    ru: 'Кастомизация Бота'
+  },
+  operatorWorkTitle: {
+    en: 'Operator Work',
+    ru: 'Работа Оператора'
+  },
+  operatorWorkShortDesc: {
+    en: 'Learn how to effectively manage operator work and support in your store',
+    ru: 'Узнайте, как эффективно управлять работой операторов и поддержкой в вашем магазине'
+  },
+  financeTitle: {
+    en: 'Finance',
+    ru: 'Финансы'
+  },
+  financeShortDesc: {
+    en: 'Manage all financial aspects of your store',
+    ru: 'Управление всеми финансовыми аспектами вашего магазина'
   },
   customBotShortDesc: {
     en: 'In this section, you can fully adapt the bot to your needs and customize all necessary menu items for yourself',
@@ -245,6 +261,10 @@ const additionalTranslations: TranslationsStore = {
   translationTip: {
     en: '- When translating the bot into another language, it is fastest to use AI https://chat.deepseek.com/sign_in',
     ru: '- При переводе бота на другой язык быстрее всего использовать ии https://chat.deepseek.com/sign_in'
+  },
+  marketingTitle: {
+    en: 'Marketing',
+    ru: 'Маркетинг'
   }
 };
 

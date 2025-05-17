@@ -4,7 +4,7 @@ import Layout from '@/components/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslations } from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
-import { Bot, Dices, CreditCard } from 'lucide-react';
+import { Bot, Dices, CreditCard, TrendingUp, Wallet } from 'lucide-react';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -15,25 +15,43 @@ const Index = () => {
       title: 'quickStart',
       icon: <Bot size={24} className="mb-2" />,
       description: 'quickStartShortDesc',
-      link: '/quick-start'
+      link: '/quick-start',
+      isCustom: false
     },
     {
       title: 'customBotHomeTitle',
       icon: <Bot size={24} className="mb-2" />,
       description: 'customBotHomeDesc',
-      link: '/custom-bot'
+      link: '/custom-bot',
+      isCustom: true
+    },
+    {
+      title: 'operatorWorkTitle',
+      icon: <CreditCard size={24} className="mb-2" />,
+      description: 'operatorWorkShortDesc',
+      link: '/cards-payments',
+      isCustom: true
     },
     {
       title: 'casinoSetup',
       icon: <Dices size={24} className="mb-2" />,
       description: 'casinoSetupShortDesc',
-      link: '/casino-setup'
+      link: '/casino-setup',
+      isCustom: false
     },
     {
-      title: 'cardsPayments',
-      icon: <CreditCard size={24} className="mb-2" />,
-      description: 'cardsPaymentsShortDesc',
-      link: '/cards-payments'
+      title: 'financeTitle',
+      icon: <Wallet size={24} className="mb-2" />,
+      description: 'financeShortDesc',
+      link: '/finance',
+      isCustom: true
+    },
+    {
+      title: 'marketingTitle',
+      icon: <TrendingUp size={24} className="mb-2" />,
+      description: 'marketingShortDesc',
+      link: '/marketing',
+      isCustom: true
     }
   ];
 
@@ -54,10 +72,10 @@ const Index = () => {
               >
                 {section.icon}
                 <h2 className="text-xl font-medium mb-2">
-                  {section.title === 'customBotHomeTitle' ? tNew(section.title) : t(section.title)}
+                  {section.isCustom ? tNew(section.title) : t(section.title)}
                 </h2>
                 <p className="text-gray-300">
-                  {section.description === 'customBotHomeDesc' ? tNew(section.description) : t(section.description)}
+                  {section.isCustom ? tNew(section.description) : t(section.description)}
                 </p>
               </Link>
             ))}
