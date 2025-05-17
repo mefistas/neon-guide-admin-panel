@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { TrendingUp, Tag, Clock, Mail, MessageSquare, Percent, Gift } from 'lucide-react';
 
 const Marketing = () => {
-  const { tNew } = useTranslations();
+  const { tNew, tLocal } = useTranslations();
 
   const marketingSubsections = [
     {

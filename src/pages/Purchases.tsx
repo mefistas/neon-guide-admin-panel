@@ -2,6 +2,10 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import useTranslations from '@/hooks/useTranslations';
 import {
   Carousel,
   CarouselContent,
@@ -13,6 +17,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Purchases = () => {
   const { t } = useLanguage();
+  const { tLocal } = useTranslations();
 
   const images = [
     {
@@ -36,6 +41,14 @@ const Purchases = () => {
   return (
     <TutorialPage title={t('purchases')}>
       <div className="space-y-6">
+        <div className="mb-4">
+          <Button variant="outline" asChild className="gap-2">
+            <Link to="/cards-payments">
+              <ArrowLeft size={16} /> {tLocal('back')}
+            </Link>
+          </Button>
+        </div>
+        
         <div className="p-2">
           <Carousel className="w-full max-w-3xl mx-auto">
             <CarouselContent>
