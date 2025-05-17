@@ -1,3 +1,4 @@
+
 import { useLanguage } from '@/contexts/LanguageContext';
 import { createTranslator } from '@/utils/translations';
 
@@ -195,8 +196,8 @@ const localTranslations: LocalTranslations = {
     ru: "Карточки клиентов и их редактирование. Переходим в раздел КЛИЕНТЫ и видим сводку короткой информации о каждом, а так же возможность экспорта базы данных ваших клиентов в одном из двух форматов csv или xls."
   },
   clientsSearch: {
-    en: "You can also use the search bar to find the client you need. The search works by the client's name in the Telegram account, not by username!",
-    ru: "Так же можно воспользоваться поисковой строкой для того что бы найти нужного нам клиента, поиск работает по имени клиента в телеграмм аккаунте, а не по username!"
+    en: "You can use the search bar to quickly find a client. The search works by the client's Telegram account name, do not confuse it with the username!",
+    ru: "Можно воспользоваться поисковой строкой для быстрого поиска клиента, поиск работает по имени телеграмм акаунта, не путайте с username!"
   },
   clientsCardTitle: {
     en: "Open any client card by clicking on their ID",

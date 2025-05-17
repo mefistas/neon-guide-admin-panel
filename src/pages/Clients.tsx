@@ -4,14 +4,6 @@ import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BackButton from '@/components/BackButton';
 import useTranslations from '@/hooks/useTranslations';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Search, FileDown, Users } from "lucide-react";
 import { 
   Table, 
@@ -25,25 +17,6 @@ import {
 const Clients = () => {
   const { t } = useLanguage();
   const { tLocal } = useTranslations();
-
-  const images = [
-    {
-      src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
-      alt: "clientsImage1"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1560250097-0b93528c311a",
-      alt: "clientsImage2"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98",
-      alt: "clientsImage3"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e",
-      alt: "clientsImage4"
-    }
-  ];
 
   return (
     <TutorialPage title={t('clients')}>
@@ -63,30 +36,6 @@ const Clients = () => {
             </div>
             <p className="text-gray-300">{tLocal('clientsSearch')}</p>
           </div>
-        </div>
-        
-        <div className="p-2">
-          <Carousel className="w-full max-w-3xl mx-auto">
-            <CarouselContent>
-              {images.map((image, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <AspectRatio ratio={16 / 9}>
-                      <img
-                        src={image.src}
-                        alt={tLocal(image.alt)}
-                        className="rounded-xl object-cover w-full h-full"
-                      />
-                    </AspectRatio>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <div className="flex justify-center mt-4 space-x-4">
-              <CarouselPrevious className="relative static translate-y-0 left-0" />
-              <CarouselNext className="relative static translate-y-0 right-0" />
-            </div>
-          </Carousel>
         </div>
 
         {/* Client management section */}
