@@ -4,7 +4,7 @@ import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BackButton from '@/components/BackButton';
 import useTranslations from '@/hooks/useTranslations';
-import { Search, FileDown, Users } from "lucide-react";
+import { Search, Users } from "lucide-react";
 
 const Clients = () => {
   const { t } = useLanguage();
@@ -46,25 +46,6 @@ const Clients = () => {
               alt="Client management interface"
               className="rounded-lg shadow-lg max-w-full"
             />
-          </div>
-          
-          {/* Export options */}
-          <div className="mt-8 pt-4 border-t border-gray-700">
-            <div className="flex items-center gap-2 mb-3">
-              <FileDown size={20} className="text-neonBlue" />
-              <h3 className="text-lg font-medium">{t('export')}</h3>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-              <div className="bg-gray-700/30 p-4 rounded-lg border border-gray-600 flex items-center justify-between">
-                <span>CSV Format</span>
-                <span className="text-neonBlue">.csv</span>
-              </div>
-              <div className="bg-gray-700/30 p-4 rounded-lg border border-gray-600 flex items-center justify-between">
-                <span>Excel Format</span>
-                <span className="text-neonBlue">.xls</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
