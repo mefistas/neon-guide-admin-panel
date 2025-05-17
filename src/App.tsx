@@ -42,6 +42,10 @@ import OneTimeDiscounts from "./pages/OneTimeDiscounts";
 import HappyHours from "./pages/HappyHours";
 import BtcCashout from "./pages/BtcCashout";
 import BalanceHistory from "./pages/BalanceHistory";
+import Feedback from "./pages/Feedback";
+import HelpBots from "./pages/HelpBots";
+import InternalChats from "./pages/InternalChats";
+import Reviews from "./pages/Reviews";
 
 const queryClient = new QueryClient();
 
@@ -87,6 +91,10 @@ const App = () => (
             <Route path="/partners-exchangers" element={<PartnersExchangers />} />
             <Route path="/btc-cashout" element={<BtcCashout />} />
             <Route path="/balance-history" element={<BalanceHistory />} />
+            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/help-bots" element={<HelpBots />} />
+            <Route path="/internal-chats" element={<InternalChats />} />
+            <Route path="/reviews" element={<Reviews />} />
             <Route path="/ask-question" element={<AskQuestion />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
