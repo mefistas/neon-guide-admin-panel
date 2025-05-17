@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import BackButton from '@/components/BackButton';
 
 const Merchants = () => {
   const { t } = useLanguage();
@@ -36,6 +37,10 @@ const Merchants = () => {
   return (
     <TutorialPage title={t('merchants')}>
       <div className="space-y-6">
+        <div className="mb-4">
+          <BackButton to="/" />
+        </div>
+        
         <div className="p-2">
           <Carousel className="w-full max-w-3xl mx-auto">
             <CarouselContent>
