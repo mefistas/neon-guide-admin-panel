@@ -10,12 +10,19 @@ import {
 import { Bot, ChevronDown, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import BackButton from '@/components/BackButton';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const CustomBot = () => {
   const { tNew } = useTranslations();
 
-  // Images for our page
-  const images = [
+  // Images for our carousel
+  const carouselImages = [
     {
       src: "https://i.ibb.co/6RsXsmVw/Screenshot-2025-05-17-at-8-08-55-PM.png",
       alt: "Bot menu customization example"
@@ -29,6 +36,17 @@ const CustomBot = () => {
       alt: "Bot language customization"
     }
   ];
+  
+  // New images for the separate sections
+  const supportSectionImage = {
+    src: "https://i.ibb.co/Y7QnXxg/image.png",
+    alt: "Bot support operator interface"
+  };
+  
+  const messagesSectionImage = {
+    src: "https://i.ibb.co/VWg9chg/image.png",
+    alt: "Bot message customization interface"
+  };
 
   return (
     <TutorialPage title={tNew('customBotPageTitle')}>
@@ -92,16 +110,27 @@ const CustomBot = () => {
             
             <p className="font-medium">{tNew('exampleSettings')}</p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-              {images.map((image, index) => (
-                <div key={index} className="rounded-lg overflow-hidden border border-gray-700">
-                  <img 
-                    src={image.src} 
-                    alt={image.alt} 
-                    className="w-full h-48 object-cover"
-                  />
-                </div>
-              ))}
+            {/* Carousel for the first three images */}
+            <div className="relative py-6">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {carouselImages.map((image, index) => (
+                    <CarouselItem key={index} className="md:basis-2/3 lg:basis-1/2">
+                      <div className="p-1">
+                        <div className="rounded-lg overflow-hidden border border-gray-700">
+                          <img 
+                            src={image.src} 
+                            alt={image.alt} 
+                            className="w-full h-64 object-cover"
+                          />
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </Carousel>
             </div>
             
             <div className="space-y-4 mt-6">
@@ -154,8 +183,8 @@ const CustomBot = () => {
             
             <div className="rounded-lg overflow-hidden border border-gray-700 mt-4">
               <img 
-                src={images[1].src}
-                alt="Support operator settings"
+                src={supportSectionImage.src}
+                alt={supportSectionImage.alt}
                 className="w-full h-48 object-cover" 
               />
             </div>
@@ -164,8 +193,8 @@ const CustomBot = () => {
             
             <div className="rounded-lg overflow-hidden border border-gray-700 mt-4">
               <img 
-                src={images[2].src}
-                alt="Edit buttons example"
+                src={messagesSectionImage.src}
+                alt={messagesSectionImage.alt}
                 className="w-full h-48 object-cover" 
               />
             </div>
