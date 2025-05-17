@@ -1,3 +1,4 @@
+
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -134,9 +135,20 @@ const QuickStart = () => {
       customContent: (
         <div className="mt-4">
           <div className="space-y-3 text-gray-200">
-            <p>- Идем в раздел ДОБАВИТЬ АДРЕСА</p>
-            <p>- Тут мы видим уже списки районов которые есть воспользуйся поисковом если их много, находим нужный район для загрузки адресов и нажимаем ДОБАВИТЬ АДРЕСА</p>
-            <p>Выбираем нужного курьера обязательно поэтому мы его и добавили</p>
+            {/* Bilingual section */}
+            {t('language') === 'ru' ? (
+              <>
+                <p>- Идем в раздел ДОБАВИТЬ АДРЕСА</p>
+                <p>- Тут мы видим уже списки районов которые есть воспользуйся поисковом если их много, находим нужный район для загрузки адресов и нажимаем ДОБАВИТЬ АДРЕСА</p>
+                <p>Выбираем нужного курьера обязательно поэтому мы его и добавили</p>
+              </>
+            ) : (
+              <>
+                <p>- Go to the ADD ADDRESSES section</p>
+                <p>- Here we see lists of districts that exist. Use the search if there are many. Find the right district to upload addresses and click ADD ADDRESSES</p>
+                <p>Be sure to select the courier you need - this is why we added one</p>
+              </>
+            )}
             
             <p>{t('quickStartPoint9Note3')}</p>
             <p>{t('quickStartPoint9Note4')}</p>
@@ -147,44 +159,55 @@ const QuickStart = () => {
           
           <div className="mt-4 rounded-lg overflow-hidden">
             <div className="bg-[#1A1F2C] px-4 py-2">
-              <h3 className="font-medium text-white">Пример:</h3>
+              <h3 className="font-medium text-white">{t('language') === 'ru' ? 'Пример:' : 'Example:'}</h3>
             </div>
             <div className="bg-[#111827] p-4">
               <div className="border border-[#7E69AB]/30 rounded bg-[#0C111D] p-3 font-mono text-sm">
                 <div>
                   <span className="text-[#D6BCFA]">https://imgbb.com</span>
                   <br />
-                  <span className="text-gray-300">в указанной точке по кордам</span>
+                  <span className="text-gray-300">{t('language') === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
                 </div>
                 <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
-                  [пустая строка]
+                  {t('language') === 'ru' ? '[пустая строка]' : '[empty line]'}
                   <br />
-                  [пустая строка]
+                  {t('language') === 'ru' ? '[пустая строка]' : '[empty line]'}
                 </div>
                 <div>
                   <span className="text-[#D6BCFA]">https://imgbb.com</span>
                   <br />
-                  <span className="text-gray-300">в указанной точке по кордам</span>
+                  <span className="text-gray-300">{t('language') === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
                 </div>
                 <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
-                  [пустая строка]
+                  {t('language') === 'ru' ? '[пустая строка]' : '[empty line]'}
                   <br />
-                  [пустая строка]
+                  {t('language') === 'ru' ? '[пустая строка]' : '[empty line]'}
                 </div>
                 <div>
                   <span className="text-[#D6BCFA]">https://imgbb.com</span>
                   <br />
-                  <span className="text-gray-300">в указанной точке по кордам</span>
+                  <span className="text-gray-300">{t('language') === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
                 </div>
               </div>
             </div>
           </div>
           
           <div className="mt-4 space-y-2 text-gray-200">
-            <p>Итого теперь бот видит что ты загрузил три адреса для данного района</p>
-            <p>Нажимаем сохранить если на этом районе больше нет других грамовок</p>
-            <p>Либо нажимаем сохранить и добавить еще если в этом районе есть еще какие то другие адреса</p>
-            <p>Поздравляю ты великолепен, давай посмотрим что там с вариантами оплат !</p>
+            {t('language') === 'ru' ? (
+              <>
+                <p>Итого теперь бот видит что ты загрузил три адреса для данного района</p>
+                <p>Нажимаем сохранить если на этом районе больше нет других грамовок</p>
+                <p>Либо нажимаем сохранить и добавить еще если в этом районе есть еще какие то другие адреса</p>
+                <p>Поздравляю ты великолепен, давай посмотрим что там с вариантами оплат !</p>
+              </>
+            ) : (
+              <>
+                <p>Now the bot sees that you've uploaded three addresses for this district</p>
+                <p>Click save if there are no other gram sizes in this district</p>
+                <p>Or click save and add more if there are other addresses in this district</p>
+                <p>Congratulations, you're excellent! Let's take a look at the payment options!</p>
+              </>
+            )}
           </div>
         </div>
       )
