@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/collapsible";
 import { Bot, ChevronDown, ExternalLink } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import BackButton from '@/components/BackButton';
 
 const CustomBot = () => {
   const { tNew } = useTranslations();
@@ -31,6 +32,10 @@ const CustomBot = () => {
 
   return (
     <TutorialPage title={tNew('customBotPageTitle')}>
+      <div className="flex items-center justify-between mb-4">
+        <BackButton to="/" />
+      </div>
+      
       <div className="space-y-8 max-w-4xl mx-auto">
         <section>
           <h2 className="text-2xl font-semibold mb-4">{tNew('customBotIntro')}</h2>

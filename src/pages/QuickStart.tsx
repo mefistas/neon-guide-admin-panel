@@ -1,8 +1,10 @@
+
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 const QuickStart = () => {
   const { t, language } = useLanguage();
@@ -237,6 +239,10 @@ const QuickStart = () => {
 
   return (
     <TutorialPage title={t('quickStart')}>
+      <div className="flex items-center justify-between mb-4">
+        <BackButton to="/" />
+      </div>
+      
       <div className="space-y-8">
         <p className="text-lg text-gray-200">{t('quickStartDescription')}</p>
 
