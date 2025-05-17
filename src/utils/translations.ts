@@ -143,8 +143,8 @@ const additionalTranslations: TranslationsStore = {
     ru: ' -Тут есть два основных меню что бы редачить это Язык/Меню и Кастомизацию бота   Начнем с раздела Язык/меню'
   },
   addNewLanguage: {
-    en: ' -If we want to customize the menu completely, click on the ADD ANOTHER LANGUAGE item in the menu and give this language the name of our new menu, then click save',
-    ru: ' -если мы хотим сделать меню полностью под себя нажимаем на пункт в меню ДОБАВИТЬ ЕШЕ ОДИН ЯЗЫК и даем этому языку название нашего нового меню, нажимаем сохранить'
+    en: ' If we want to customize the menu completely, click on the ADD ANOTHER LANGUAGE item in the menu and give this language the name of our new menu, then click save',
+    ru: ' если мы хотим сделать меню полностью под себя нажимаем на пункт в меню ДОБАВИТЬ ЕШЕ ОДИН ЯЗЫК и даем этому языку название нашего нового меню, нажимаем сохранить'
   },
   deleteMenuItems: {
     en: ' -If we have menu items below, it\'s easier to delete them and fill them again by clicking the button (add another main menu item)',
@@ -171,16 +171,16 @@ const additionalTranslations: TranslationsStore = {
     ru: ' -При использовании кнопки (сторонний сайт) - вы обязательно должны указать ссылку на него иначе вам вернется ошибка'
   },
   saveAndContinue: {
-    en: ' -We recommend using the save and continue editing button to see the changes happening in your bot',
-    ru: ' -Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно изменения которые происходят в вашем боте'
+    en: ' We recommend using the save and continue editing button to see the changes happening in your bot',
+    ru: ' Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно изменения которые происходят в вашем боте'
   },
   activateCasino: {
     en: ' -To activate the casino button, go to the casino menu and check at least one game, otherwise the casino WILL NOT be displayed in your menu, don\'t forget to save',
     ru: ' -Для активации кнопки казино пройдите в меню казино и поставьте галочку хотя бы около одной игры иначе казино НЕ БУДЕТ отображаться в вашем меню, не забывайте сохранять'
   },
   exampleSettings: {
-    en: ' -Example menu settings and results in the bot can be seen below:',
-    ru: ' -Пример настроек меню и результат в боте можно увидеть ниже:'
+    en: ' Example menu settings and results in the bot can be seen below:',
+    ru: ' Пример настроек меню и результат в боте можно увидеть ниже:'
   },
   supportItem: {
     en: ' Important item Support, submit a request - if your client interacts with this menu item, you will be able to communicate with them directly through the bot in the FEEDBACK section. If you don\'t want to communicate with clients through your Telegram account, we recommend adding this section to your menu.',
