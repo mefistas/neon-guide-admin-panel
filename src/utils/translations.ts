@@ -1,4 +1,3 @@
-
 /**
  * Custom translations system that works alongside the original
  * translations from LanguageContext.
@@ -200,7 +199,7 @@ const additionalTranslations: TranslationsStore = {
   },
   bonusButton: {
     en: ' In the Bonuses button section, you can see the conditions regarding the referral system in your store, to change the referral % use the Channel/Referral menu',
-    ru: ' В разделе кнопки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
+    ru: ' В разделе кно��ки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
   },
   customizationSection: {
     en: 'Bot Customization Section',
@@ -391,7 +390,7 @@ const additionalTranslations: TranslationsStore = {
   },
   oneTimeDiscounts: {
     en: "One-Time Product Discounts",
-    ru: "Разовые скидки на товары"
+    ru: "Разовые ск��дки на товары"
   },
   oneTimeDiscountsDesc: {
     en: "Create special one-time discounts for products",
@@ -474,6 +473,32 @@ const additionalTranslations: TranslationsStore = {
   operatorTip2: {
     en: "Use templates for common responses to save time and maintain consistency",
     ru: "Используйте шаблоны для общих ответов, чтобы сэкономить время и сохранить последовательность"
+  },
+  
+  // Withdraw Funds page translations
+  withdrawFundsIntro: {
+    en: "In this section I will show you how to withdraw cryptocurrency or fiat from the bot",
+    ru: "В этом разделе я покажу как выводить крипту или фиат с бота"
+  },
+  cryptoWithdrawal: {
+    en: "Cryptocurrency Withdrawal",
+    ru: "Вывод крипты"
+  },
+  cryptoWithdrawalSteps: {
+    en: "- Go to STORES -> WITHDRAW FUNDS (your store name)\n- In this section you can see options for withdrawing cryptocurrency from the admin panel.\nIgnore the USDT item as all transactions in this cryptocurrency go directly to your wallets\n- Choose LTC or BTC\n- In the window that appears, carefully enter the wallet and check it, also specify the withdrawal amount, remember that it's best to set slightly less for withdrawal than is available on the balance to avoid errors due to floating exchange rates\n- In the courier section, indicate whose data you are making the withdrawal under.\nIt's important to understand that if the withdrawal amount exceeds the courier's available balance, you will need to go to the WAREHOUSE - COURIER section and credit the missing amount to his balance by clicking the (Credit) button. Otherwise, the bot will return an error due to insufficient courier balance\n- In the notes you can specify withdrawal details",
+    ru: "- Идем в раздел МАГАЗИНЫ -> ВЫВОД СРЕДСТВ (название вашего магазига)\n- В данном разделе вы можете видеть варианты вывода крипты с админки.\nИгнорируйте пункт USDT так как все транзакции в данной крипте идут непосредственно на ваши кошельки\n- Выбираем LTC либо BTC\n- В появившемся окне внимательно вводим кошелек и проверяем его, так же указываем сумму вывода, помните что лучше всего ставить на вывод чуть меньше чем доступно на балансе что бы избежать ошибки из за плавающего курса\n- В разделе курьер указываем под какими данными делаем вывод.\nТут важно понимать что если сумма вывода превышает доступный баланс курьера вам нужно будет зайти в раздел СКЛАД - КУРЬЕР и зачислить на его баланс нажав кнопку (Зачислить) недостающую сумму. В противном случае бот вернет ошибку из за недостаточного баланса курьера\n- В заметках можно указать детали вывода"
+  },
+  fiatWithdrawal: {
+    en: "Fiat Withdrawal",
+    ru: "Вывод фиа��а"
+  },
+  fiatWithdrawalSteps: {
+    en: "- Go to the HOME section\n- Fill in the menu items for P2P exchange\n- Carefully check all requisites\n- Click the request button\n- You can track the withdrawal by going to the ADDITIONAL - BTC CASHOUT menu",
+    ru: "- Идем в раздел ГЛАВНАЯ\n- Заполняем пункты меню для P2P обмена\n- Тщательно проверяем все реквизиты\n- Нажимаем кнопку запросить\n- Отслеживать вывод можно зайдя в меню ДОПОЛНИТЕЛЬНО - ОБНАЛ BTC"
+  },
+  withdrawalAdvice: {
+    en: "Advice - never use exchanges with your personal data for withdrawing cryptocurrency from the admin panel if you want to operate for a long time and properly!",
+    ru: "Совет - никогда не используйте биржи со своими данными для вывода крипты с админки если хотите двигаться долго и порядочно!"
   }
 };
 
