@@ -2,7 +2,7 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 const QuickStart = () => {
@@ -37,29 +37,32 @@ const QuickStart = () => {
             const isExpanded = expandedPoints.includes(index + 1);
             
             return (
-              <Card 
+              <div 
                 key={index} 
-                className={`border-gray-700 transition-all duration-300 ${
-                  isExpanded ? 'bg-gray-800/50' : 'bg-gray-900/80 hover:bg-gray-800/30'
+                className={`rounded-lg bg-opacity-20 transition-all duration-300 ${
+                  isExpanded ? 'bg-[#1e293b]' : 'bg-[#111827] hover:bg-[#1e293b]/70'
                 }`}
               >
                 <div 
-                  className="flex items-center justify-between p-6 cursor-pointer"
+                  className="flex items-center justify-between p-5 cursor-pointer"
                   onClick={() => toggleExpand(index + 1)}
                 >
                   <div className="flex items-center">
-                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-emerald-700/50 mr-3 text-white">
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#3c6e71]/40 mr-3 text-white">
                       {index + 1}
                     </div>
                     <h2 className="text-xl font-semibold text-white">{t(item.point)}</h2>
                   </div>
                   <div>
-                    {isExpanded ? <ChevronUp size={20} className="text-emerald-400" /> : <ChevronDown size={20} className="text-emerald-400" />}
+                    {isExpanded ? 
+                      <ChevronUp size={20} className="text-[#5eaaa8]" /> : 
+                      <ChevronDown size={20} className="text-[#5eaaa8]" />
+                    }
                   </div>
                 </div>
                 
                 {isExpanded && (
-                  <CardContent className="pt-0 pb-6">
+                  <div className="px-6 pt-0 pb-5">
                     <div className="pl-11 space-y-3">
                       {item.notes.map((note, noteIndex) => {
                         // Only render notes that have content
@@ -67,15 +70,15 @@ const QuickStart = () => {
                         if (!noteText) return null;
                         
                         return (
-                          <div key={noteIndex} className="p-3 bg-gray-700/30 rounded">
-                            <p className="text-gray-100">{noteText}</p>
+                          <div key={noteIndex} className="p-3 bg-[#252d3f] bg-opacity-30 rounded">
+                            <p className="text-gray-200">{noteText}</p>
                           </div>
                         );
                       })}
                     </div>
-                  </CardContent>
+                  </div>
                 )}
-              </Card>
+              </div>
             );
           })}
         </div>
