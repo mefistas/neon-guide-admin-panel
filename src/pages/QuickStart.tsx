@@ -130,60 +130,16 @@ const QuickStart = () => {
       notes: [
         'quickStartPoint9Note1',
         'quickStartPoint9Note2',
+        'quickStartPoint9Note3',
+        'quickStartPoint9Note4',
+        'quickStartPoint9Note5',
+        'quickStartPoint9Note6',
+        'quickStartPoint9Note7',
       ],
       customContent: (
         <div className="mt-4">
           <div className="space-y-3 text-gray-200">
-            <p>{t('quickStartPoint9Note3')}</p>
-            <p>{t('quickStartPoint9Note4')}</p>
-            <p>{t('quickStartPoint9Note5')}</p>
-            <p>{t('quickStartPoint9Note6')}</p>
-            <p>{t('quickStartPoint9Note7')}</p>
-          </div>
-          
-          <div className="mt-4 rounded-lg overflow-hidden">
-            <div className="bg-[#1A1F2C] px-4 py-2">
-              <h3 className="font-medium text-white">Пример:</h3>
-            </div>
-            <div className="bg-[#111827] p-4">
-              <div className="border border-[#7E69AB]/30 rounded bg-[#0C111D] p-3 font-mono text-sm">
-                <div>
-                  <span className="text-[#D6BCFA]">https://imgbb.com</span>
-                  <br />
-                  <span className="text-gray-300">в указанной точке по кордам</span>
-                </div>
-                <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
-                  [пустая строка]
-                  <br />
-                  [пустая строка]
-                </div>
-                <div>
-                  <span className="text-[#D6BCFA]">https://imgbb.com</span>
-                  <br />
-                  <span className="text-gray-300">в указанной точке по кордам</span>
-                </div>
-                <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
-                  [пустая строка]
-                  <br />
-                  [пустая строка]
-                </div>
-                <div>
-                  <span className="text-[#D6BCFA]">https://imgbb.com</span>
-                  <br />
-                  <span className="text-gray-300">в указанной точке по кордам</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-4 space-y-2">
-            <div className="text-gray-200">
-              <p className="leading-relaxed">Итого теперь бот видит что ты загрузил три адреса для данного района. Нажимаем сохранить если на этом районе больше нет других грамовок, либо нажимаем сохранить и добавить еще если в этом районе есть еще какие то другие адреса. Поздравляю ты великолепен что там с вариантами оплат</p>
-            </div>
-            <div className="relative pl-5 text-gray-200">
-              <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
-              <p className="leading-relaxed">{t('quickStartPoint9Note8')}</p>
-            </div>
+            <p>{t('quickStartPoint9Note8')}</p>
           </div>
         </div>
       )
