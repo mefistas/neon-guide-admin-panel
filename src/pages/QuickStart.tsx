@@ -24,8 +24,7 @@ const QuickStart = () => {
   }));
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <h1 className="text-3xl text-white font-bold mb-6 pl-4 border-l-4 border-emerald-400">{t('quickStart')}</h1>
+    <TutorialPage title={t('quickStart')}>
       <div className="space-y-6">
         <p className="text-lg mb-6">{t('quickStartDescription')}</p>
 
@@ -81,7 +80,7 @@ const QuickStart = () => {
           })}
         </div>
       </div>
-    </div>
+    </TutorialPage>
   );
 };
 
