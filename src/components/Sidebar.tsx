@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, CreditCard, Dices, ExternalLink, Menu, Tag, Bitcoin, History, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
+import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, HeadsetHelp, Dices, ExternalLink, Menu, Tag, Bitcoin, History, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import useTranslations from '@/hooks/useTranslations';
@@ -100,33 +100,7 @@ const Sidebar = () => {
           {sidebarOpen && tNew('customBotTitle')}
         </Link>
 
-        {/* Operator Work - Replaced Cards Payment */}
-        <Link
-          to="/cards-payments"
-          className={cn(
-            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/cards-payments') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
-            !sidebarOpen && "justify-center"
-          )}
-        >
-          <CreditCard size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
-          {sidebarOpen && tNew('operatorWorkTitle')}
-        </Link>
-
-        {/* Casino Setup */}
-        <Link
-          to="/casino-setup"
-          className={cn(
-            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
-            isActive('/casino-setup') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
-            !sidebarOpen && "justify-center"
-          )}
-        >
-          <Dices size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
-          {sidebarOpen && t('casinoSetup')}
-        </Link>
-
-        {/* Finance - New item */}
+        {/* Finance - Moved up in the order */}
         <Link
           to="/finance"
           className={cn(
@@ -139,7 +113,7 @@ const Sidebar = () => {
           {sidebarOpen && tNew('financeTitle')}
         </Link>
 
-        {/* Marketing - Moved from detailed guide */}
+        {/* Marketing - Moved up in the order */}
         <Link
           to="/marketing"
           className={cn(
@@ -150,6 +124,32 @@ const Sidebar = () => {
         >
           <TrendingUp size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
           {sidebarOpen && tNew('marketingTitle')}
+        </Link>
+
+        {/* Operator Work - Changed icon to HeadsetHelp */}
+        <Link
+          to="/cards-payments"
+          className={cn(
+            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
+            isActive('/cards-payments') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
+          )}
+        >
+          <HeadsetHelp size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && tNew('operatorWorkTitle')}
+        </Link>
+
+        {/* Casino Setup - Moved down in the order */}
+        <Link
+          to="/casino-setup"
+          className={cn(
+            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
+            isActive('/casino-setup') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
+          )}
+        >
+          <Dices size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && t('casinoSetup')}
         </Link>
 
         {/* Detailed Guide menu */}

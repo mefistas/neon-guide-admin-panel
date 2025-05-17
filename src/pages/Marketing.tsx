@@ -4,6 +4,7 @@ import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
 import { TrendingUp, Tag, Clock, Mail, MessageSquare, Percent, Gift } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 const Marketing = () => {
   const { tNew, tLocal } = useTranslations();
@@ -56,17 +57,8 @@ const Marketing = () => {
   return (
     <TutorialPage title={tNew('marketingTitle')}>
       <div className="space-y-8 max-w-4xl mx-auto">
-        <section>
-          <div className="flex items-center gap-4 mb-6">
-            <TrendingUp size={32} className="text-neonBlue" />
-            <h2 className="text-2xl font-semibold">{tNew('marketingTitle')}</h2>
-          </div>
-          
-          <p className="text-lg mb-6">
-            {tNew('marketingShortDesc')}
-          </p>
-        </section>
-
+        <BackButton to="/" className="mb-6" />
+        
         <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
           <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
             {tNew('marketingSections')}

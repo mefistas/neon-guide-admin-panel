@@ -4,15 +4,7 @@ import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import { Wallet, Bitcoin, History, CreditCard, ArrowDownToLine } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import BackButton from '@/components/BackButton';
 
 const Finance = () => {
   const { tNew } = useTranslations();
@@ -65,17 +57,8 @@ const Finance = () => {
   return (
     <TutorialPage title={tNew('financeTitle')}>
       <div className="space-y-8 max-w-4xl mx-auto">
-        <section>
-          <div className="flex items-center gap-4 mb-6">
-            <Wallet size={32} className="text-neonBlue" />
-            <h2 className="text-2xl font-semibold">{tNew('financeTitle')}</h2>
-          </div>
-          
-          <p className="text-lg mb-6">
-            {tNew('financeShortDesc')}
-          </p>
-        </section>
-
+        <BackButton to="/" className="mb-6" />
+        
         <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
           <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
             {tNew('financeSections')}
@@ -96,52 +79,6 @@ const Finance = () => {
               </Link>
             ))}
           </div>
-        </section>
-
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
-            {tNew('quickAccess')}
-          </h3>
-          
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>{tNew('paymentMethods')}</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[400px] gap-3 p-4">
-                    <Link to="/btc-cashout" className={navigationMenuTriggerStyle()}>
-                      <Bitcoin className="mr-2" size={18} />
-                      <div>
-                        <div className="font-medium">{tNew('btcCashout')}</div>
-                        <p className="text-sm text-muted-foreground">{tNew('btcCashoutDesc')}</p>
-                      </div>
-                    </Link>
-                    <Link to="/usdt" className={navigationMenuTriggerStyle()}>
-                      <CreditCard className="mr-2" size={18} />
-                      <div>
-                        <div className="font-medium">{tNew('usdt')}</div>
-                        <p className="text-sm text-muted-foreground">{tNew('usdtDesc')}</p>
-                      </div>
-                    </Link>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>{tNew('reports')}</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[400px] gap-3 p-4">
-                    <Link to="/balance-history" className={navigationMenuTriggerStyle()}>
-                      <History className="mr-2" size={18} />
-                      <div>
-                        <div className="font-medium">{tNew('balanceHistory')}</div>
-                        <p className="text-sm text-muted-foreground">{tNew('balanceHistoryDesc')}</p>
-                      </div>
-                    </Link>
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
         </section>
       </div>
     </TutorialPage>

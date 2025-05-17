@@ -3,7 +3,8 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
-import { Users, MessageSquare, CreditCard, Bot } from 'lucide-react';
+import { Users, MessageSquare, HeadsetHelp, Bot } from 'lucide-react';
+import BackButton from '@/components/BackButton';
 
 const CardsPayments = () => {
   const { tNew } = useTranslations();
@@ -23,7 +24,7 @@ const CardsPayments = () => {
     },
     {
       title: 'purchasesProcessing',
-      icon: <CreditCard size={20} className="mr-2" />,
+      icon: <HeadsetHelp size={20} className="mr-2" />,
       path: '/purchases',
       description: 'purchasesProcessingDesc'
     },
@@ -44,17 +45,8 @@ const CardsPayments = () => {
   return (
     <TutorialPage title={tNew('operatorWorkTitle')}>
       <div className="space-y-8 max-w-4xl mx-auto">
-        <section>
-          <div className="flex items-center gap-4 mb-6">
-            <CreditCard size={32} className="text-neonBlue" />
-            <h2 className="text-2xl font-semibold">{tNew('operatorWorkTitle')}</h2>
-          </div>
-          
-          <p className="text-lg mb-6">
-            {tNew('operatorWorkShortDesc')}
-          </p>
-        </section>
-
+        <BackButton to="/" className="mb-6" />
+        
         <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
           <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
             {tNew('operatorWorkSections')}

@@ -4,7 +4,7 @@ import Layout from '@/components/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslations } from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
-import { Bot, Dices, CreditCard, TrendingUp, Wallet } from 'lucide-react';
+import { Bot, Dices, HeadsetHelp, TrendingUp, Wallet } from 'lucide-react';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -26,20 +26,6 @@ const Index = () => {
       isCustom: true
     },
     {
-      title: 'operatorWorkTitle',
-      icon: <CreditCard size={24} className="mb-2" />,
-      description: 'operatorWorkShortDesc',
-      link: '/cards-payments',
-      isCustom: true
-    },
-    {
-      title: 'casinoSetup',
-      icon: <Dices size={24} className="mb-2" />,
-      description: 'casinoSetupShortDesc',
-      link: '/casino-setup',
-      isCustom: false
-    },
-    {
       title: 'financeTitle',
       icon: <Wallet size={24} className="mb-2" />,
       description: 'financeShortDesc',
@@ -52,6 +38,20 @@ const Index = () => {
       description: 'marketingShortDesc',
       link: '/marketing',
       isCustom: true
+    },
+    {
+      title: 'operatorWorkTitle',
+      icon: <HeadsetHelp size={24} className="mb-2" />,
+      description: 'operatorWorkShortDesc',
+      link: '/cards-payments',
+      isCustom: true
+    },
+    {
+      title: 'casinoSetup',
+      icon: <Dices size={24} className="mb-2" />,
+      description: 'casinoSetupShortDesc',
+      link: '/casino-setup',
+      isCustom: false
     }
   ];
 
