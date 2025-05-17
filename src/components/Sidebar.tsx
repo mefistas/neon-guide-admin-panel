@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, Headset, Dices, ExternalLink, Menu, Tag, Bitcoin, History, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
@@ -12,8 +13,9 @@ const Sidebar = () => {
   const [expandedMenu, setExpandedMenu] = useState<string | null>('detailedGuide');
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
+  // Modified toggle function to only toggle the clicked menu
   const toggleMenu = (menu: string) => {
-    setExpandedMenu(expandedMenu === menu ? null : menu);
+    setExpandedMenu(prevMenu => prevMenu === menu ? null : menu);
   };
 
   const toggleSidebar = () => {
