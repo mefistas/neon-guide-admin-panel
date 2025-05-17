@@ -3,7 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare, Send } from 'lucide-react';
 
 const Feedback = () => {
   const { tLocal } = useTranslations();
@@ -25,6 +25,24 @@ const Feedback = () => {
             </div>
             
             <p className="text-gray-300 whitespace-pre-line">{tLocal('feedbackInstruction')}</p>
+          </div>
+          
+          {/* New section for sending message to client */}
+          <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mt-6">
+            <div className="flex items-center gap-2 mb-4">
+              <Send size={20} className="text-neonBlue" />
+              <h2 className="text-lg font-medium">{tLocal('sendingMessageTitle')}</h2>
+            </div>
+            
+            <p className="text-gray-300 whitespace-pre-line mb-6">{tLocal('sendingMessageInstruction')}</p>
+            
+            <div className="flex justify-center">
+              <img 
+                src="https://i.ibb.co/QvXp5cQZ/Screenshot-2025-05-17-at-11-49-39-PM.png" 
+                alt="Client messaging interface" 
+                className="rounded-lg shadow-lg max-w-full" 
+              />
+            </div>
           </div>
         </div>
       </div>

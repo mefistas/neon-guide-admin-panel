@@ -123,6 +123,14 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
+  sendingMessageTitle: {
+    en: string;
+    ru: string;
+  };
+  sendingMessageInstruction: {
+    en: string;
+    ru: string;
+  };
 };
 
 // Local translations that don't require modifying the language files
@@ -246,6 +254,14 @@ const localTranslations: LocalTranslations = {
   feedbackInstruction: {
     en: "To set up communication with your clients, add a Support or Submit Request button to one of your menu items. If you're not sure how to do this, re-read the Bot Customization section. If you have connected this button to your menu, clients will be able to leave you messages which will be displayed in the FEEDBACK section.",
     ru: "Для того что бы настроить связь и комуникации с вашими клиентами добавьте в одно из пунктов меню кнопку Поддержка, оставить заявку, если вы не уверены как это сделать перечитайте раздел Кастомизация Бота. Если же вы подключили данную кнопку для вашего меню, клиенты смогут оставлять вам сообщения которые будут показываться у вас в разделе ОБРАТНАЯ СВЯЗЬ"
+  },
+  sendingMessageTitle: {
+    en: "Sending a message to a client",
+    ru: "Отправка сообщения клиенту"
+  },
+  sendingMessageInstruction: {
+    en: "- If you don't have a message history with the client you want to message, find them in the CLIENTS menu and click the blue \"Write Message\" button.\n- Use the \"Send\" and \"Write More\" buttons if you don't want to close the dialog window with the client.",
+    ru: "- Если у вас еще нет сообщений с клиентом которому вы хотите написать просто найдите его в меню КЛИЕНТЫ и нажмите на синюю кнопку (Написать Сообщение)\n- Используйте кнопку отправить и написать еще если не хотите закрывать окно диалога с клиентом"
   }
 };
 
