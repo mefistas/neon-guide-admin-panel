@@ -22,11 +22,15 @@ interface TranslationsStore {
 
 // Add new translations here
 const additionalTranslations: TranslationsStore = {
-  // Example
-  // newPageTitle: {
-  //   en: 'New Page',
-  //   ru: 'Новая страница'
-  // }
+  // Custom Bot translations
+  customBotTitle: {
+    en: 'Custom Bot',
+    ru: 'Кастомный Бот'
+  },
+  customBotShortDesc: {
+    en: 'In this section, you can fully adapt the bot to your needs and customize all necessary menu items for yourself',
+    ru: 'В этом разделе ты сможешь полностью адаптировать бот под свои нужды настроить все необходимые пункты меню под себя'
+  }
 };
 
 /**
@@ -59,4 +63,3 @@ export const addTranslation = (key: string, en: string, ru: string): void => {
  */
 export const createTranslator = (language: Language) => 
   (key: string): string => getTranslation(key, language);
-

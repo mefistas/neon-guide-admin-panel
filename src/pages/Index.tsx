@@ -16,10 +16,10 @@ const Index = () => {
       link: '/quick-start'
     },
     {
-      title: 'detailedGuide',
-      icon: <Building size={24} className="mb-2" />,
-      description: 'detailedGuideShortDesc',
-      link: '/how-to-add-city'
+      title: 'customBotTitle',
+      icon: <Bot size={24} className="mb-2" />,
+      description: 'customBotShortDesc',
+      link: '/custom-bot'
     },
     {
       title: 'casinoSetup',
@@ -38,7 +38,7 @@ const Index = () => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6 text-white">{t('welcome')}</h1>
+        <h1 className="text-4xl font-bold mb-6 text-white text-center">{t('welcome')}</h1>
         
         <div className="bg-gray-900/70 p-8 rounded-lg formal-border mb-8">
           <p className="text-xl mb-6">{t('selectTopic')}</p>
