@@ -25,7 +25,7 @@ const WithdrawFunds = () => {
           
           <div className="mb-6">
             <img 
-              src="https://i.ibb.co/ZRn1djK/Screenshot-2025-05-17-at-9-30-04-PM.png" 
+              src="https://i.ibb.co/ZRn1djKX/Screenshot-2025-05-17-at-9-30-04-PM.png" 
               alt={language === 'en' ? "Crypto withdrawal interface" : "Интерфейс вывода криптовалюты"}
               className="w-full rounded-lg shadow-lg"
             />
@@ -44,7 +44,7 @@ const WithdrawFunds = () => {
           
           <div className="mb-6 flex justify-center">
             <img 
-              src="https://i.ibb.co/r20rsYq/image.png" 
+              src="https://i.ibb.co/JWSGmF8m/Screenshot-2025-05-17-at-10-06-15-PM.png" 
               alt={language === 'en' ? "Fiat withdrawal interface" : "Интерфейс вывода фиата"}
               className="rounded-lg shadow-lg max-h-[500px]"
             />
