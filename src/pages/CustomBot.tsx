@@ -25,7 +25,7 @@ const CustomBot = () => {
       alt: "Bot support settings example"
     },
     {
-      src: "https://i.ibb.co/vxC9Nqp7/Screenshot-2025-05-17-at-8-10-00-PM.png",
+      src: "https://i.ibb.co/FLBsT1B4/white-Screenshot-2025-05-17-at-8-16-19-PM.png",
       alt: "Bot language customization"
     }
   ];
