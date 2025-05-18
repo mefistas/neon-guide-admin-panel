@@ -83,7 +83,7 @@ const Usdt = () => {
                     <div className="p-1">
                       <AspectRatio ratio={16 / 9}>
                         <img
-                          src="https://i.ibb.co/YBC2BMfZ/Screenshot-2025-05-18-at-2-11-40-PM.png"
+                          src="https://i.ibb.co/7xGjWWr3/Screenshot-2025-05-18-at-2-20-08-PM.png"
                           alt="USDT wallet list"
                           className="rounded-xl object-cover w-full h-full"
                         />
