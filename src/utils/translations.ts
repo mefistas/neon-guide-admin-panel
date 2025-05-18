@@ -199,7 +199,7 @@ const additionalTranslations: TranslationsStore = {
   },
   bonusButton: {
     en: ' In the Bonuses button section, you can see the conditions regarding the referral system in your store, to change the referral % use the Channel/Referral menu',
-    ru: ' В разделе кно��ки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
+    ru: ' В разделе кн����ки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
   },
   customizationSection: {
     en: 'Bot Customization Section',
@@ -448,7 +448,7 @@ const additionalTranslations: TranslationsStore = {
   },
   helpBots: {
     en: "Helper Bots",
-    ru: "Боты помощники"
+    ru: "Боты-Помощники"
   },
   helpBotsDesc: {
     en: "Configure and manage automated help assistants",
@@ -529,6 +529,104 @@ const additionalTranslations: TranslationsStore = {
   casinoHistoryInfo: {
     en: "To view the history of your clients' Casino games, go to the ADDITIONAL -> CASINO GAME HISTORY menu",
     ru: "Что бы просмотреть историю игр в Казино ваших клиентов перейдите в меню ДОПОЛНИТЕЛЬНО -> ИСТОРИЯ ИГР В КАЗИНО"
+  },
+  
+  // Operator work page translations
+  operatorWorkIntro: {
+    en: "In this section, we will set up helper bots for ourselves and other store employees!",
+    ru: "В этом разделе мы подключим ботов помощников себе и остальным сотрудникам магазина!"
+  },
+  mainBotConnection: {
+    en: "Connecting Main Notification Bot for Store Owners",
+    ru: "Подключение главного бота с уведомлениями для владельцев магазина"
+  },
+  mainBotConnectionSteps: {
+    en: "Go to STORES -> ALL STORES and select your store\n- Then go to the NOTIFICATIONS section, check the boxes and click CONNECT. After that, you'll be automatically redirected to a Telegram bot that will be linked to the account you use to log in.\n- If you want to connect it from another account, COPY THE LINK IN THE BROWSER and paste it into the saved messages of the account you want to link it to.\n- Then just enter the bot. Now you will receive all notifications about events!",
+    ru: "Идем в меню МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ - выбираем свой магазин\n- Далее заходим в раздел ОПОВЕЩЕНИЯ, проставляем галочки и нажимаем ПОДКЛЮЧИТЬ. После этого вас автоматически перекинет на телеграмм бот который привяжется к аккаунту с которого вы в него зайдете.\n- В случае если вы хотите подключить его с другого аккаунта СКОПИРУЙТЕ ССЫЛКУ В БРАУЗЕРЕ и вставьте ее в сохраненные сообщения с того акаунта к которому его привязываете.\n- После этого просто зайдите в бот. Теперь вы будете получать все уведомления о происходящих событиях!"
+  },
+  employeeNotificationBot: {
+    en: "Notification Bots for Employees",
+    ru: "Боты с уведомлениями для сотрудников"
+  },
+  employeeNotificationSteps: {
+    en: "Similarly, there is an option to connect notification bots for all employees. To do this, go to the EMPLOYEES section, copy the link as shown in the screenshot and send it to the employee.",
+    ru: "Аналогично для всех сотрудников есть возможность подключения бота с уведомлениями - Для этого переходим в раздел СОТРУДНИКИ, копируем ссылку как показано на скриншоте и отправляем сотруднику."
+  },
+  disputeOperatorBot: {
+    en: "Dispute System Integration via Telegram",
+    ru: "Интеграция системы диспутов через Телеграм"
+  },
+  disputeOperatorDescription: {
+    en: "Another useful feature in helper bots is working with the dispute system for operators and couriers directly through a Telegram account. When connecting a TG Bot for a \"Dispute Operator\" employee - the bot will send notifications about opening disputes, closing disputes, and messages related to disputes. Under each message, there will be a menu for actions. You can view information about the client such as: number of purchases, returns, invited clients. You can also request correspondence for this purchase and make a decision on the dispute:",
+    ru: "Еще одна полезная опция в ботах-помощниках это работа с системой диспутов для операторов и курьеров непосредственно через телеграмм аккаунт. При подключении ТГ-Бота для сотрудника \"Оператор диспута\" - бот будет присылать уведомления на открытие спора, закрытие спора и сообщениям по спорам. Под каждым сообщением будет меню для выполнения действий. Вы сможете просмотреть информацию о клиенте такую как: кол-во покупок, возвратов, приглашенных клиентов. Также сможете запросить переписку по данной покупке и принять решение по спору:"
+  },
+  disputeOptions: {
+    en: "Dispute Resolution Options",
+    ru: "Варианты решения споров"
+  },
+  disputeOption1: {
+    en: "Close the dispute without refunding the client",
+    ru: "Закрыть спор без возврата средств клиенту"
+  },
+  disputeOption2: {
+    en: "Close the dispute with a full refund to the client, and you can fine the courier",
+    ru: "Закрыть спор с полным возвратом средств клиенту, при этом можно оштрафовать курьера"
+  },
+  disputeOption3: {
+    en: "Close the dispute without a refund, but give them a promo code for the amount you choose",
+    ru: "Закрыть спор без возврата средств, но при этом подарить ему промокод на выбранную вами сумму"
+  },
+  botSetupInstructions: {
+    en: "For connecting this option, the courier or operator must create their own bot in Telegram, see the ",
+    ru: "Для подключения данной опции курьер или же оператор должны создать своего бота в телеграмме, о том как это сделать смотрите раздел "
+  },
+  howToAddBots: {
+    en: "HOW TO ADD BOTS",
+    ru: "КАК ДОБАВИТЬ БОТЫ"
+  },
+  botSetupInstructionsContinued: {
+    en: " section and send you their token which you can connect for them in the WAREHOUSE - COURIERS - COURIER CARD section by inserting their TOKEN.",
+    ru: " и прислать вам свой токен который вы сможете подключить для них в разделе СКЛАД - КУРЬЕРЫ - КАРТОЧКА КУРЬЕРА вставив свой ТОКЕН."
+  },
+  botCustomization: {
+    en: "Helper Bot Customization",
+    ru: "Кастомизация Ботов-помощников"
+  },
+  botCustomizationDescription: {
+    en: "To customize Helper Bots, go to the BOTS/CHANNELS - HELPER BOT MESSAGES section",
+    ru: "Для кастомизации Ботов помощников перейдите в раздел БОТЫ/КАНАЛЫ - СООБЩЕНИЯ БОТОВ-ПОМОЩНИКОВ"
+  },
+  back: {
+    en: "Back",
+    ru: "Назад"
+  },
+  telegramOperatorTitle: {
+    en: "Telegram Operator Button",
+    ru: "Кнопка оператора в Телеграм"
+  },
+  telegramOperatorInstruction: {
+    en: "You also have the ability to add a button in the bot that links to a Telegram operator account, so you can have direct communication with your clients outside the admin panel",
+    ru: "Так же у вас есть возможность добавить кнопку в боте ведущую на телеграмм аккаунт оператора что бы иметь связь со своими клиентами вне панели администратора"
+  },
+  feedbackTitle: {
+    en: "Feedback",
+    ru: "Обратная связь"
+  },
+  feedbackDescription: {
+    en: "Handle customer feedback and support requests",
+    ru: "Обработка обратной связи и запросов поддержки"
+  },
+  feedbackInstruction: {
+    en: "Learn how to handle customer feedback and support requests through the admin panel and connect with your clients directly.",
+    ru: "Узнайте, как обрабатывать обратную связь и запросы поддержки через панель администратора и напрямую связываться с клиентами."
+  },
+  sendingMessageTitle: {
+    en: "Sending Messages to Clients",
+    ru: "Отправка сообщений клиентам"
+  },
+  sendingMessageInstruction: {
+    en: "Send direct messages to your clients through the admin panel. You can respond to their inquiries and provide support without leaving the system.",
+    ru: "Отправляйте прямые сообщения своим клиентам через панель администратора. Вы можете отвечать на их запросы и оказывать поддержку, не выходя из системы."
   },
 };
 
