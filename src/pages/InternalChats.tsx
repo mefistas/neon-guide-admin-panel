@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
@@ -30,7 +29,7 @@ const InternalChats = () => {
     <TutorialPage title={tLocal('internalChatsTitle')}>
       <div className="space-y-6">
         <div className="mb-4">
-          <BackButton to="/feedback" />
+          <BackButton to="/cards-payments" />
         </div>
 
         <p className="text-gray-300">{tLocal('internalChatsMenuPath')}</p>
