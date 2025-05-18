@@ -383,6 +383,51 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
+  // New translations for Couriers Salary page
+  couriersSalaryTitle: {
+    en: string;
+    ru: string;
+  };
+  couriersSalaryDescription1: {
+    en: string;
+    ru: string;
+  };
+  couriersSalaryDescription2: {
+    en: string;
+    ru: string;
+  };
+  couriersSalaryDescription3: {
+    en: string;
+    ru: string;
+  };
+  couriersSalaryDescription4: {
+    en: string;
+    ru: string;
+  };
+  couriersSalaryDescription5: {
+    en: string;
+    ru: string;
+  };
+  couriersSalaryDescription6: {
+    en: string;
+    ru: string;
+  };
+  couriersSalaryProductTypeAlt: {
+    en: string;
+    ru: string;
+  };
+  couriersSalarySettingsAlt: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryBalanceAlt: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryLogsAlt: {
+    en: string;
+    ru: string;
+  };
 };
 
 // Local translations that don't require modifying the language files
@@ -767,6 +812,51 @@ const localTranslations: LocalTranslations = {
   balanceTopUpsBalanceHistory: {
     en: "There is also a convenient section where information about any changes in client balances is logged. The section is located in ADDITIONAL - BALANCE CHANGE HISTORY.",
     ru: "Так же существует удобный раздел в который логируется информация о любых изменениях в балансах клиентов раздел находится в ДОПОЛНИТЕЛЬНО - ИСТОРИЯ ИЗМЕНЕНИЯ БАЛАНСОВ."
+  },
+  // New translations for Couriers Salary page
+  couriersSalaryTitle: {
+    en: "Salary/Penalties",
+    ru: "Начисления/Штрафы"
+  },
+  couriersSalaryDescription1: {
+    en: "For each courier, you can create an employee with access to the panel and/or to the TG helper bot. Also, for each product type, you can configure the Salary and Penalty for the courier by default. WAREHOUSE - PRODUCT TYPES - open any and go to the Courier/Profit section",
+    ru: "Для каждого курьера вы можете создать сотрудника с доступом в панель и/или к ТГ-боту помощнику. Так же для каждого вида товаров вы можете настроить Зарплату и Штраф для курьера по умолчанию. СКЛАД - ВИДЫ ТОВАРОВ - открываем любой и идем в раздел Курьер/Прибыль"
+  },
+  couriersSalaryDescription2: {
+    en: "Also in the Couriers section, within each courier, you can configure specific Salary/Penalty settings for the desired product type for this courier.",
+    ru: "Также в разделе Курьеры, внутри каждого курьера вы можете настроить для нужного вида товаров свои определенные настройки Зарплаты/Штрафа для данного курьера."
+  },
+  couriersSalaryDescription3: {
+    en: "For each completed purchase, the courier will be credited to their account. If operators resolve a dispute in favor of the client and choose to penalize the courier, then this amount will be deducted from the account.",
+    ru: "За каждую выполненную покупку курьеру будет производится начисление на его счет. Если операторы решают спор в пользу клиента и выбирают штраф курьеру - тогда эта сумма будет списана со счета."
+  },
+  couriersSalaryDescription4: {
+    en: "In the Couriers section, you can view the current balances of couriers and also withdraw or credit funds to their account with a comment.",
+    ru: "В разделе Курьеры можно посмотреть текущие балансы курьеров а также произвести списание или начисление средств на его счет с указанием комментария."
+  },
+  couriersSalaryDescription5: {
+    en: "When withdrawing funds from a courier's account, you need to send the funds to the courier yourself. This accounting system only calculates the profit - you will have to make the payment yourself in any convenient currency.",
+    ru: "При списании средств со счета курьера, сами средства вам необходимо самостоятельно отправить курьеру. Данная система учета лишь считает прибыль - отправку производить вам придется самим любой удобной валютой."
+  },
+  couriersSalaryDescription6: {
+    en: "To pay salaries to couriers in RUB, you can use our \"Withdraw in RUB\" module on the main page of the panel.",
+    ru: "Для выплаты курьерам зарплаты в РУБ вы можете воспользоваться нашим модулем \"Вывод в RUB\" на главной странице панели."
+  },
+  couriersSalaryProductTypeAlt: {
+    en: "Courier profit settings in product types",
+    ru: "Настройки прибыли курьера в видах товаров"
+  },
+  couriersSalarySettingsAlt: {
+    en: "Courier specific salary and penalty settings",
+    ru: "Специфические настройки зарплаты и штрафа курьера"
+  },
+  courierSalaryBalanceAlt: {
+    en: "Courier balance management interface",
+    ru: "Интерфейс управления балансом курьера"
+  },
+  courierSalaryLogsAlt: {
+    en: "Courier payment logs",
+    ru: "Логи платежей курьера"
   }
 };
 
