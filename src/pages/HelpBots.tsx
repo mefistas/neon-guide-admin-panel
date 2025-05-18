@@ -41,7 +41,7 @@ const HelpBots = () => {
                   <CarouselItem>
                     <div className="flex justify-center p-1">
                       <img 
-                        src="https://i.ibb.co/pBDsMBx/Screenshot-2025-05-18-at-1-07-00-PM.png" 
+                        src="https://i.ibb.co/pBDsMBxC/Screenshot-2025-05-18-at-1-07-00-PM.png" 
                         alt="Bot connection step 1" 
                         className="rounded-lg shadow-lg max-w-full"
                       />
@@ -50,7 +50,7 @@ const HelpBots = () => {
                   <CarouselItem>
                     <div className="flex justify-center p-1">
                       <img 
-                        src="https://i.ibb.co/6JwysSr/Screenshot-2025-05-18-at-1-08-20-PM.png" 
+                        src="https://i.ibb.co/6JwysSrt/Screenshot-2025-05-18-at-1-08-20-PM.png" 
                         alt="Bot connection step 2" 
                         className="rounded-lg shadow-lg max-w-full"
                       />
@@ -77,7 +77,7 @@ const HelpBots = () => {
               <p className="text-gray-300 whitespace-pre-line">{tNew('employeeNotificationSteps')}</p>
               <div className="flex justify-center">
                 <img 
-                  src="https://i.ibb.co/ZRWv6Zt/IMAGE-2025-05-18-13-13-36.jpg" 
+                  src="https://i.ibb.co/ZRWv6Ztw/IMAGE-2025-05-18-13-13-36.jpg" 
                   alt="Employee notification bot setup" 
                   className="rounded-lg shadow-lg max-w-full"
                 />
@@ -119,7 +119,7 @@ const HelpBots = () => {
             
             <div className="flex justify-center mt-4">
               <img 
-                src="https://i.ibb.co/qMw8JJD/IMAGE-2025-05-18-13-23-20.jpg" 
+                src="https://i.ibb.co/qMw8JJDV/IMAGE-2025-05-18-13-23-20.jpg" 
                 alt="Dispute operator bot setup" 
                 className="rounded-lg shadow-lg max-w-full"
               />
@@ -143,7 +143,7 @@ const HelpBots = () => {
               </p>
               <div className="flex justify-center">
                 <img 
-                  src="https://i.ibb.co/605ssN5/IMAGE-2025-05-18-13-24-52.jpg" 
+                  src="https://i.ibb.co/605ssN5v/IMAGE-2025-05-18-13-24-52.jpg" 
                   alt="Bot customization interface" 
                   className="rounded-lg shadow-lg max-w-full"
                 />
