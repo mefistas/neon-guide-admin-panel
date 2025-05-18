@@ -39,7 +39,7 @@ const Feedback = () => {
             
             <div className="flex justify-center">
               <img 
-                src="https://i.ibb.co/67ChdPn/Screenshot-2025-05-18-at-12-33-42-PM.png" 
+                src="https://i.ibb.co/67ChdPnq/Screenshot-2025-05-18-at-12-33-42-PM.png" 
                 alt="Client messaging interface" 
                 className="rounded-lg shadow-lg max-w-full" 
               />
@@ -57,7 +57,7 @@ const Feedback = () => {
             
             <div className="flex justify-center">
               <img 
-                src="https://i.ibb.co/k681DgW/Screenshot-2025-05-18-at-12-21-41-PM.png" 
+                src="https://i.ibb.co/Zpjrtjn0/Screenshot-2025-05-18-at-12-40-11-PM.png" 
                 alt="Telegram operator button setup" 
                 className="rounded-lg shadow-lg max-w-full" 
               />
