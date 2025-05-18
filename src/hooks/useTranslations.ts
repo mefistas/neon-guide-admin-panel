@@ -1,4 +1,3 @@
-
 import { useLanguage } from '@/contexts/LanguageContext';
 import { createTranslator } from '@/utils/translations';
 
@@ -131,6 +130,62 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
+  internalChatsTitle: {
+    en: string;
+    ru: string;
+  };
+  internalChatsMenuPath: {
+    en: string;
+    ru: string;
+  };
+  internalChatsAddBranch: {
+    en: string;
+    ru: string;
+  };
+  internalChatsDescription: {
+    en: string;
+    ru: string;
+  };
+  internalChatsInviteButton: {
+    en: string;
+    ru: string;
+  };
+  internalChatsOwnerCapabilities: {
+    en: string;
+    ru: string;
+  };
+  internalChatsDescription2: {
+    en: string;
+    ru: string;
+  };
+  internalChatsChannelOption: {
+    en: string;
+    ru: string;
+  };
+  internalChatsGroupOption: {
+    en: string;
+    ru: string;
+  };
+  internalChatsEncryption: {
+    en: string;
+    ru: string;
+  };
+  internalChatsEncryptionDetails: {
+    en: string;
+    ru: string;
+  };
+  internalChatsServerStorage: {
+    en: string;
+    ru: string;
+  };
+  internalChatsPasswordSharing: {
+    en: string;
+    ru: string;
+  };
+  internalChatsAutoDeletion: {
+    en: string;
+    ru: string;
+  };
 };
 
 // Local translations that don't require modifying the language files
@@ -205,7 +260,7 @@ const localTranslations: LocalTranslations = {
   },
   casinoHistory: {
     en: "Casino Game History",
-    ru: "История игр в Казино"
+    ru: "Ис��ория игр в Казино"
   },
   casinoHistoryInfo: {
     en: "To view the history of your clients' Casino games, go to the ADDITIONAL -> CASINO GAME HISTORY menu",
@@ -262,7 +317,63 @@ const localTranslations: LocalTranslations = {
   sendingMessageInstruction: {
     en: "- If you don't have a message history with the client you want to message, find them in the CLIENTS menu and click the blue \"Write Message\" button.\n- Use the \"Send\" and \"Write More\" buttons if you don't want to close the dialog window with the client.",
     ru: "- Если у вас еще нет сообщений с клиентом которому вы хотите написать просто найдите его в меню КЛИЕНТЫ и нажмите на синюю кнопку (Написать Сообщение)\n- Используйте кнопку отправить и написать еще если не хотите закрывать окно диалога с клиентом"
-  }
+  },
+  internalChatsTitle: {
+    en: "New Feature - Internal Encrypted Chats!",
+    ru: "Появилась функция - Внутренние зашифрованные чаты!"
+  },
+  internalChatsMenuPath: {
+    en: "In the menu under ADDITIONAL section, there is now an INTERNAL CHATS option.",
+    ru: "В меню в разделе ДОПОЛНИТЕЛЬНО - появился пункт ВНУТРЕННИЕ ЧАТЫ"
+  },
+  internalChatsAddBranch: {
+    en: "Click on ADD MY BRANCH on the right",
+    ru: "нажимаем на ДОБАВИТЬ МОЯ ВЕТКА СПРАВА"
+  },
+  internalChatsDescription: {
+    en: "In these chats, you can create a conversation and add your employees to communicate within the panel. While it's not Telegram, you can still communicate effectively. Currently, text messages and images are supported.",
+    ru: "в них вы можете создать чат и добавить туда своих сотрудников, с которыми сможете общаться внутри панели. Конечно, это не телеграм, но все таки общаться можно. на данный момент поддерживаются текстовые сообщения и изображения"
+  },
+  internalChatsInviteButton: {
+    en: "You'll also see an \"Invite\" button - this allows you to get an invitation link for any authorized user in the service. For example, this way you can communicate between different stores, not just among your own employees.",
+    ru: "Также, там увидите кнопку \"Пригласить\" - по ней вы сможете получить ссылку-приглашение в чат для любого авторизованного пользователя в сервисе. Например, таким образом, вы можете общаться между магазинами, а не только внутри своих сотрудников."
+  },
+  internalChatsOwnerCapabilities: {
+    en: "The chat creator can always delete it, clear history, or change the name/description.",
+    ru: "Создатель чата может всегда удалить его, очистить историю или изменить название/описание."
+  },
+  internalChatsDescription2: {
+    en: "The chat includes a \"Description\" field where you can upload information, similar to a \"Thread in a forum\".",
+    ru: "В чате предусмотрено поле с \"Описанием\" - туда вы можете залить какую-то информацию как \"Ветка в форуме\""
+  },
+  internalChatsChannelOption: {
+    en: "You can create such a thread and prohibit communication in it, thus creating a \"Channel\" like in Telegram with news. The creator of such a channel will be able to write comments there. At the same time, you can set the \"send notifications\" checkbox, and when sending a message to the channel, all participants who have a Telegram account connected will receive a notification.",
+    ru: "Вы можете создать такую ветку - и запретить в ней общение - таким образом, создав \"Канал\" как в ТГ с новостями. Создатель такого канала сможет писать туда коментарии. При этом, можно установить галочку \"отправлять уведомления\" и при отправке сообщения в канал всем участникам, если у них подключен ТГ-аккаунт будет отправлено уведомление."
+  },
+  internalChatsGroupOption: {
+    en: "In a \"regular group\" where all participants can communicate, the channel creator can notify everyone via Telegram so they read the messages in the chat.",
+    ru: "В \"обычной группе\", с возможностью общения всем участникам - создатель канала может уведомить всех по ТГ, для того чтобы они прочитали сообщения в чате."
+  },
+  internalChatsEncryption: {
+    en: "And also, a unique feature - message encryption. The chat/channel creator can encrypt it with their password (I recommend creating long passwords that are impossible to guess).",
+    ru: "А также, уникальный функционал - шифрование сообщений. Создатель чата/канала может зашифровать его своим паролем (рекомендую создавать длинные пароли, чтобы их невозможно было подобрать)"
+  },
+  internalChatsEncryptionDetails: {
+    en: "At the same time, your password is not sent to the server but is only used to encrypt messages before sending and decrypt after receiving.",
+    ru: "При этом - ваш пароль не отправляется на сервер, а используется лишь для зашифровки сообщений перед отправкой и расшифровки после получения."
+  },
+  internalChatsServerStorage: {
+    en: "All messages are stored on the server in encrypted form! No one, not even the service administrator, can read them.",
+    ru: "Все сообщения хранятся на сервере в зашифрованном виде! Никто, даже администратор сервиса, не может прочитать их."
+  },
+  internalChatsPasswordSharing: {
+    en: "After encryption, you need to share your password with other chat participants so they can decrypt and read messages, as well as send them.",
+    ru: "После шифрования - вам необходимо передать свой пароль другим участникам чата, для того чтобы они смогли расшифровать его и прочитать сообщения, а также отправлять."
+  },
+  internalChatsAutoDeletion: {
+    en: "The chat has an auto-deletion feature for messages after a certain number of days. I do not recommend using these chats for storing important data, although in the case of encrypted messages, you can store them for as long as you want. The maximum number of days can be set to 300.",
+    ru: "В чате предусмотрена функция автоудаления сообщений через определенное кол-во дней. Рекомендую не использовать эти чаты для хранения каких-то важных данных, хотя в случае с зашифрованными сообщениями - можно и хранить сколько угодно. Максимальное кол-во дней можно установить 300."
+  },
 };
 
 /**
