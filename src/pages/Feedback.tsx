@@ -57,7 +57,7 @@ const Feedback = () => {
             
             <div className="flex justify-center">
               <img 
-                src="https://i.ibb.co/k681DgW/Screenshot-2025-05-18-at-12-21-41-PM.png" 
+                src="https://i.ibb.co/k681DgWg/Screenshot-2025-05-18-at-12-21-41-PM.png" 
                 alt="Telegram operator button setup" 
                 className="rounded-lg shadow-lg max-w-full" 
               />
