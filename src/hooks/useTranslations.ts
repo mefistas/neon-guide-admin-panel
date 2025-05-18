@@ -290,6 +290,26 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
+  usdtTitle: {
+    en: string;
+    ru: string;
+  };
+  usdtPayments: {
+    en: string;
+    ru: string;
+  };
+  usdtSetupInstructions: {
+    en: string;
+    ru: string;
+  };
+  usdtAdditionalMenu: {
+    en: string;
+    ru: string;
+  };
+  usdtAddWallet: {
+    en: string;
+    ru: string;
+  };
 };
 
 // Local translations that don't require modifying the language files
@@ -424,7 +444,7 @@ const localTranslations: LocalTranslations = {
   },
   internalChatsTitle: {
     en: "New Feature - Internal Encrypted Chats!",
-    ru: "Появилась функция - Внутренние зашифрованные чаты!"
+    ru: "Появилась функция - Внутренние зашифрованные ч��ты!"
   },
   internalChatsMenuPath: {
     en: "In the menu under ADDITIONAL section, there is now an INTERNAL CHATS option.",
@@ -512,7 +532,7 @@ const localTranslations: LocalTranslations = {
   },
   purchasesFilters: {
     en: "There is a filter block in the Purchases section. You can filter purchases by courier, thus viewing their work statistics, as well as client reviews of their work. There are filters by districts, cities, and product types. An important filter is 'operator response required' - this will only show purchases where the client is waiting for a decision from the operator.",
-    ru: "В разделе Покупки есть блок фильтров. Вы можете отфильтровать покупки по курьеру, тем самым посмотреть статистику его работы, а так же отзывы от клиентов на ему работу. Есть фильтр по районам, городам, по видам товаров. Важный фильтр \"требуется ответ оператора\" - при этом будут показаны только те покупки, по которым клиент ожидает решения от оператора."
+    ru: "В разделе Покупки есть блок фильтров. Вы можете отфильтровать покупки по курьеру, тем самым посмотреть статистику его работы, а так же отзывы от клиентов на ему работу. Есть фильтр по районам, городам, по видам товаров. Важный фильтр \"требуется ответ оператора\" - при э��ом будут показаны только те покупки, по которым клиент ожидает решения от оператора."
   },
   purchasesDisputeOperator: {
     en: "To process purchase disputes, there is an employee access type called 'Dispute Operator'. You can create this in the Employees section of the main menu panel. You need to select the employee type, specify the login and password. You also need to select a city or multiple cities for which the operator will work. Purchase disputes will only come to the operator from the cities that are selected for the operator.",
@@ -581,6 +601,26 @@ const localTranslations: LocalTranslations = {
   telegramOperatorInstruction: {
     en: "You can also add a button in your bot that links to your operator's Telegram account to maintain communication with your clients outside of the admin panel.",
     ru: "Так же у вас есть возможность добавить кнопку в боте ведущую на телеграмм аккаунт оператора что бы иметь связь со своими клиентами вне панели администратора"
+  },
+  usdtTitle: {
+    en: "USDT",
+    ru: "USDT"
+  },
+  usdtPayments: {
+    en: "USDT Payments",
+    ru: "Оплаты в USDT"
+  },
+  usdtSetupInstructions: {
+    en: "To enable USDT payments in your store, you need to go to the STORES-ALL STORES section, select your store, go to the EXCHANGER SETTINGS menu and check the box next to USDT as a payment method.",
+    ru: "Чо бы в вашем магазине работала оплата в USDT необходимо зайти в раздел МАГАЗИНЫ-ВСЕ МАГАЗИНЫ, выбрать, перейти в меню НАСТРОЙКИ ОБМЕННИКА и поставить галочку около USDT как способа оплаты"
+  },
+  usdtAdditionalMenu: {
+    en: "After that, go to the ADDITIONAL - USDT TRC20 menu as shown in the photo.",
+    ru: "После этого чпереходим в меню ДОПОЛНИТЕЛЬНО - USDT TRC20 как на фото"
+  },
+  usdtAddWallet: {
+    en: "In this section, click ADD in the upper right corner of the page and fill in all the information as shown in the photos. After that, all your USDT wallets will be displayed in this section:",
+    ru: "В данном разделе нажимаем ДОБАВИТЬ сверху справа страницы и заполняем все данные как показано на фото после чего все ваши USDT кошельки будут отображаться в данном разделе:"
   }
 };
 
