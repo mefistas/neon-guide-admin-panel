@@ -1,4 +1,4 @@
-import { en } from 'date-fns/locale';
+import { enUS, ru } from 'date-fns/locale'; // Corrected import
 
 export const translations = {
   adminPanelTutorial: {
@@ -480,6 +480,22 @@ export const additionalTranslations = {
     en: "Remember that incomplete translations can lead to poor user experience. Ensure all messages are properly translated before adding a new language.",
     ru: "Помните, что неполные переводы могут привести к плохому пользовательскому опыту. Убедитесь, что все сообщения правильно переведены, прежде чем добавлять новый язык."
   },
+};
+
+// Add the createTranslator function that was missing
+export const createTranslator = (language: string) => {
+  return (key: keyof typeof translations | keyof typeof additionalTranslations) => {
+    // Check in translations first
+    if (key in translations) {
+      return translations[key as keyof typeof translations][language as 'en' | 'ru'] || key;
+    }
+    // Then check in additionalTranslations
+    if (key in additionalTranslations) {
+      return additionalTranslations[key as keyof typeof additionalTranslations][language as 'en' | 'ru'] || key;
+    }
+    // Return the key if not found
+    return key;
+  };
 };
 
 export default translations;

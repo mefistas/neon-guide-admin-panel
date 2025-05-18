@@ -1,6 +1,6 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
-import { createTranslator } from '@/utils/translations';
+import { createTranslator } from '@/utils/translations'; // Now this import should work
 
 type LocalTranslations = {
   back: {
@@ -789,7 +789,7 @@ export const useTranslations = () => {
   
   // Local translation function
   const tLocal = (key: keyof LocalTranslations) => {
-    return localTranslations[key][language] || key;
+    return localTranslations[key][language as 'en' | 'ru'] || key;
   };
   
   return {
