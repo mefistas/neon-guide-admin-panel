@@ -528,7 +528,7 @@ const localTranslations: LocalTranslations = {
   },
   purchasesBalanceRecommendation: {
     en: "We also recommend familiarizing yourself with the section if you are an administrator",
-    ru: "Так же рекомендуем ознакомиться с разделом ПОПОЛНЕНИЯ БАЛАНСОВ если вы администратор"
+    ru: "Так же рекомендуем ознакомиться с обработкой заявок на пополнение если вы администратор в"
   },
   helpBotsLink: {
     en: "HELPER BOTS",
