@@ -186,6 +186,102 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
+  purchasesTitle: {
+    en: string;
+    ru: string;
+  };
+  purchasesSubtitle: {
+    en: string;
+    ru: string;
+  };
+  purchasesClientOptions: {
+    en: string;
+    ru: string;
+  };
+  purchasesSection: {
+    en: string;
+    ru: string;
+  };
+  purchasesFlowDescription: {
+    en: string;
+    ru: string;
+  };
+  purchasesDisputeInfo: {
+    en: string;
+    ru: string;
+  };
+  purchasesStatistics: {
+    en: string;
+    ru: string;
+  };
+  purchasesStatusColumn: {
+    en: string;
+    ru: string;
+  };
+  purchasesFilters: {
+    en: string;
+    ru: string;
+  };
+  purchasesDisputeOperator: {
+    en: string;
+    ru: string;
+  };
+  purchasesOperatorActions: {
+    en: string;
+    ru: string;
+  };
+  purchasesFullRefund: {
+    en: string;
+    ru: string;
+  };
+  purchasesCloseForStore: {
+    en: string;
+    ru: string;
+  };
+  purchasesHelpBots: {
+    en: string;
+    ru: string;
+  };
+  purchasesBalanceRecommendation: {
+    en: string;
+    ru: string;
+  };
+  helpBotsLink: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsLink: {
+    en: string;
+    ru: string;
+  };
+  "Disputes in the Purchases section": {
+    en: string;
+    ru: string;
+  };
+  "Purchase status with reviews": {
+    en: string;
+    ru: string;
+  };
+  "Filters in purchases section": {
+    en: string;
+    ru: string;
+  };
+  "Creating dispute operator": {
+    en: string;
+    ru: string;
+  };
+  "Dispute resolution options": {
+    en: string;
+    ru: string;
+  };
+  "Full refund interface": {
+    en: string;
+    ru: string;
+  };
+  "Close in favor of store interface": {
+    en: string;
+    ru: string;
+  };
 };
 
 // Local translations that don't require modifying the language files
@@ -336,7 +432,7 @@ const localTranslations: LocalTranslations = {
   },
   internalChatsInviteButton: {
     en: "You'll also see an \"Invite\" button - this allows you to get an invitation link for any authorized user in the service. For example, this way you can communicate between different stores, not just among your own employees.",
-    ru: "Также, там увидите кнопку \"Пригласить\" - по ней вы сможете получить ссылку-приглашение в чат для любого авторизованного пользователя в сервисе. Например, таким образом, вы можете общаться между магазинами, а не только внутри своих сотрудников."
+    ru: "Также, там увидите кнопку \"Пригласить\" - по ней вы сможете получить ссылку-приглашение в чат для любого авторизованного пользователя в сервисе. Например, таким образом, вы можете общаться между магазинами, �� не только внутри своих сотрудников."
   },
   internalChatsOwnerCapabilities: {
     en: "The chat creator can always delete it, clear history, or change the name/description.",
@@ -374,6 +470,102 @@ const localTranslations: LocalTranslations = {
     en: "The chat has an auto-deletion feature for messages after a certain number of days. I do not recommend using these chats for storing important data, although in the case of encrypted messages, you can store them for as long as you want. The maximum number of days can be set to 300.",
     ru: "В чате предусмотрена функция автоудаления сообщений через определенное кол-во дней. Рекомендую не использовать эти чаты для хранения каких-то важных данных, хотя в случае с зашифрованными сообщениями - можно и хранить сколько угодно. Максимальное кол-во дней можно установить 300."
   },
+  purchasesTitle: {
+    en: "Processing Orders and Purchases",
+    ru: "Обработка заявок и покупок"
+  },
+  purchasesSubtitle: {
+    en: "In this section we will discuss how to work with the PURCHASES section and how to process disputes",
+    ru: "В этом разделе поговорим о том как работать в разделе ПОКУПКИ и как обрабатывать диспуты"
+  },
+  purchasesClientOptions: {
+    en: "When a client wants to buy something in your store, they can either top up their balance (in which case the funds will be credited to their internal bot account which they can subsequently spend on your products and casino), or they can select the product they need and pay for it directly.",
+    ru: "Когда клиент хочет что то купить в вашем магазине он может либо пополнить баланс и в этом случае средства будут начислены на его внутренний счет бота которые он в последствии сможет тратить на ваши товары и казино, либо он может выбрать нужный ему товар и оплатить его напрямую"
+  },
+  purchasesSection: {
+    en: "PURCHASES:",
+    ru: "ПОКУПКИ:"
+  },
+  purchasesFlowDescription: {
+    en: "After topping up the balance, the client makes purchases in your store and the bot accordingly sends them the products. Store employees have access to process only client purchases. Employees can read messages from the client and respond to them through the administrative panel, or through a connected Telegram bot, for employees with the access level 'Dispute Operator'.",
+    ru: "После пополнения баланса клиент совершает покупки в вашем магазине и бот соответственно присылает ему продукцию. У сотрудников магазина есть доступ обрабатывать только покупки клиентов. Сотрудники могут читать сообщения от клиента и отвечать ему через административную панель, либо через подключенного тг-бота, для сотрудника с уровнем доступа \"Оператор диспутов\"."
+  },
+  purchasesDisputeInfo: {
+    en: "The client can open a dispute regarding a purchase and provide information about their problem: Disputes are displayed in the 'Purchases' section of the panel's main menu as 'DISPUTE OPENED'.",
+    ru: "Клиент может открыть спор по покупке и предоставить информацию по своей проблеме: Споры отображаются в разделе \"Покупки\" главного меню панели. ОТКРЫТ СПОР."
+  },
+  purchasesStatistics: {
+    en: "The statistics show the number of requests, as well as returned requests and rejected disputes. Disputes rejected means that the client opened a dispute, but the operators refused to give them a refund. Returns are disputes that were resolved in the client's favor, with the balance returned to the client's account allowing them to make another purchase with it.",
+    ru: "В статистике указано кол-во заявок, а также возвращенные заявки и отклоненные споры. Споров отклонено - это значит, что клиент открыл спор, но операторы отказали ему в возврате. Возвраты - это споры, которые решились в пользу клиента, клиенту вер��улся баланс на счет и он может совершить на него покупку."
+  },
+  purchasesStatusColumn: {
+    en: "In the STATUS column of a purchase, you can immediately see the review and rating that the client left for the purchase.",
+    ru: "В колонке СТАТУС покупки можно сразу увидеть отзыв и рейтинг, который оставил клиент за покупку."
+  },
+  purchasesFilters: {
+    en: "There is a filter block in the Purchases section. You can filter purchases by courier, thus viewing their work statistics, as well as client reviews of their work. There are filters by districts, cities, and product types. An important filter is 'operator response required' - this will only show purchases where the client is waiting for a decision from the operator.",
+    ru: "В разделе Покупки есть блок фильтров. Вы можете отфильтровать покупки по курьеру, тем самым посмотреть статистику его работы, а также отзывы от клиентов на ему работу. Есть фильтр по районам, городам, по видам товаров. Важный фильтр \"требуется ответ оператора\" - при этом будут показаны только те покупки, по которым клиент ожидает решения от оператора."
+  },
+  purchasesDisputeOperator: {
+    en: "To process purchase disputes, there is an employee access type called 'Dispute Operator'. You can create this in the Employees section of the main menu panel. You need to select the employee type, specify the login and password. You also need to select a city or multiple cities for which the operator will work. Purchase disputes will only come to the operator from the cities that are selected for the operator.",
+    ru: "Для обработки споров по покупкам существует вид доступа для сотрудника \"Оператор диспутов\". Создать его можно в разделе Сотрудники, главного меню панели. Необходимо выбрать тип сотрудника, указать логин и пароль. Также необходимо выбрать город или несколько городов, по которым оператор будет работать. Споры по покупкам будут приходить оператору только из тех городов, которые выбраны у оператора."
+  },
+  purchasesOperatorActions: {
+    en: "In the 'dispute opened' section, the operator can interact with the client and also make decisions regarding disputes as shown in the image below.\nArrow 1 - chat\nArrow 2 - full refund\nArrow 3 - close the dispute in favor of the store",
+    ru: "В разделе открыт спор оператор может взаимодействовать с клиентом а так же выносить решения касательно диспутов как на фото ниже\nСтрелка 1 - чат\nСтрелка 2 - полный возврат \nСтрелка 3 - закрыть спор в пользу магазина"
+  },
+  purchasesFullRefund: {
+    en: "FULL REFUND - if you have previously filled in penalties and weights in PRODUCT TYPES; the system will automatically apply the penalty you previously set to the courier and return the full cost of the order to the client. The courier's penalty can be changed.",
+    ru: "ПОЛНЫЙ ВОЗВРАТ - в случае если вы заранее заполнили штрафы и веса в ВИДЫ ТОВАРОВ; система автоматически выдаст проставленный вами заранее штраф курьеру и вернет полную стоимость заказа клиенту. Штраф курьера можно менять."
+  },
+  purchasesCloseForStore: {
+    en: "CLOSE IN FAVOR OF THE STORE - if you choose this option, you close the dispute in your favor but can also issue a promo code to the client or impose a penalty on your courier, after closing in this way the client can still leave a review.",
+    ru: "ЗАКРЫТЬ В ПОЛЬЗУ МАГАЗИНА - в случае выбора данной опции вы закрываете диспут в вашу пользу но так же можете выдать промокод клиенту или же наложить штраф на вашего курьера, после закрытия таким образом клиент все еще может оставить отзыв"
+  },
+  purchasesHelpBots: {
+    en: "To process disputes directly from the Telegram bot, see the section",
+    ru: "Для обработки диспутов прямо из телеграмм бота смотри раздел"
+  },
+  purchasesBalanceRecommendation: {
+    en: "We also recommend familiarizing yourself with the section if you are an administrator",
+    ru: "Так же рекомендуем ознакомиться с разделом ПОПОЛНЕНИЯ БАЛАНСОВ если вы администратор"
+  },
+  helpBotsLink: {
+    en: "HELPER BOTS",
+    ru: "БОТЫ ПОМОЩНИКИ"
+  },
+  balanceTopUpsLink: {
+    en: "BALANCE TOP-UPS",
+    ru: "ПОПОЛНЕНИЯ БАЛАНСОВ"
+  },
+  "Disputes in the Purchases section": {
+    en: "Disputes in the Purchases section",
+    ru: "Споры в разделе Покупки"
+  },
+  "Purchase status with reviews": {
+    en: "Purchase status with reviews",
+    ru: "Статус покупки с отзывами"
+  },
+  "Filters in purchases section": {
+    en: "Filters in purchases section",
+    ru: "Фильтры в разделе покупок"
+  },
+  "Creating dispute operator": {
+    en: "Creating dispute operator",
+    ru: "Создание оператора диспутов"
+  },
+  "Dispute resolution options": {
+    en: "Dispute resolution options",
+    ru: "Варианты решения спора"
+  },
+  "Full refund interface": {
+    en: "Full refund interface",
+    ru: "Интерфейс полного возврата"
+  },
+  "Close in favor of store interface": {
+    en: "Close in favor of store interface",
+    ru: "Интерфейс закрытия в пользу магазина"
+  }
 };
 
 /**
