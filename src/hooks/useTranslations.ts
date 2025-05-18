@@ -1,3 +1,4 @@
+
 import { useLanguage } from '@/contexts/LanguageContext';
 import { createTranslator } from '@/utils/translations';
 
@@ -307,6 +308,78 @@ type LocalTranslations = {
     ru: string;
   };
   usdtAddWallet: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsTitle: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsSubtitle: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsDescription: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsImage: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsMostCommonIssue: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsServicePayment: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsCheckTransaction: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsOpenDispute: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsDisputeImage: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsUsdtPayment: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsCheckUsdtTransaction: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsProcessApplication: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsCarouselImage1: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsCarouselImage2: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsRecommendation: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsFilters: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsFiltersImage: {
+    en: string;
+    ru: string;
+  };
+  balanceTopUpsBalanceHistory: {
     en: string;
     ru: string;
   };
@@ -621,6 +694,79 @@ const localTranslations: LocalTranslations = {
   usdtAddWallet: {
     en: "In this section, click ADD in the upper right corner of the page and fill in all the information as shown in the photos. After that, all your USDT wallets will be displayed in this section:",
     ru: "В данном разделе нажимаем ДОБАВИТЬ сверху справа страницы и заполняем все данные как показано на фото после чего все ваши USDT кошельки будут отображаться в данном разделе:"
+  },
+  // New translations for the Balance Top-Ups page
+  balanceTopUpsTitle: {
+    en: "Balance Top-Ups",
+    ru: "Пополнения Баланса"
+  },
+  balanceTopUpsSubtitle: {
+    en: "In this section, you will receive notifications about all top-ups from your clients",
+    ru: "В данный раздел будут приходить уведомления о всех пополнениях от ваших клиентов"
+  },
+  balanceTopUpsDescription: {
+    en: "On the left side, you will see all the information about the client who creates a top-up request, and on the right side of the screen, you will see the status and possible dispute for this request.",
+    ru: "Слева вы будете видеть всю информацию о клиенте который создает заявку на пополнение, а в правой части экрана будет как раз статус и возможный диспут по данной заявке"
+  },
+  balanceTopUpsImage: {
+    en: "Balance top-up interface",
+    ru: "Интерфейс пополнения баланса"
+  },
+  balanceTopUpsMostCommonIssue: {
+    en: "The most common problem in the BALANCE TOP-UPS section is requests that were paid with an incorrect amount. If this happens, the request will not be completed, and the client will likely notify you through feedback. In this case, you need to follow a few simple steps:",
+    ru: "Самая частая проблема в разделе ПОПОЛНЕНИЯ БАЛАНСОВ это заявки которые были оплачены неверной суммой, если такое происходит заявка не выполнится и клиент скорее всего оповестит вас через обратную связь В данном случае нужно выполнить несколько простых шагов:"
+  },
+  balanceTopUpsServicePayment: {
+    en: "If the client made a top-up using the service details - LTC, BTC / some cards, you need to:",
+    ru: "Если клиент совершал пополнение используя реквизиты сервиса - LTC BTC / некоторые карты вам необходимо"
+  },
+  balanceTopUpsCheckTransaction: {
+    en: "Check that the client is not lying and their transaction is visible in the blockchain network with the incorrect amount. For this, you can click directly in the bot on the details the client paid with.",
+    ru: "Проверить что клиент не врет и его транзакция видна в сети blockchain с неверной суммой для этого вы можете нажать прямо в боте на реквизиты по которым оплачивал клиент"
+  },
+  balanceTopUpsOpenDispute: {
+    en: "Open a dispute for this request",
+    ru: "Открыть диспут по данной заявке"
+  },
+  balanceTopUpsDisputeImage: {
+    en: "Open dispute interface",
+    ru: "Интерфейс открытия диспута"
+  },
+  balanceTopUpsUsdtPayment: {
+    en: "If the client paid for the request using USDT, you must:",
+    ru: "Если же клиент оплачивал заявку используя USDT вы должны"
+  },
+  balanceTopUpsCheckUsdtTransaction: {
+    en: "Check the receipt on your wallet and make sure that the client sent the incorrect amount, and is not trying to deceive you.",
+    ru: "Проверить поступление на свой кошелек и убедиться что клиент отправил неверную сумму, а не хочет вас наебать"
+  },
+  balanceTopUpsProcessApplication: {
+    en: "In the balance top-up section, find the needed request and either process it manually if the difference in amounts is minimal and acceptable to you (green arrow), or open the request (red arrow) and change the amount inside as shown in the second screenshot, then process it manually.",
+    ru: "В разделе пополнения баланса найти нужную заявку и либо провести руками если разница в суммах минимальная и вас все устраивает - зеленая стрелка либо открыть заявку - красная стрелка и поменять внутри сумму как показано на втором скриншоте после чего провести руками"
+  },
+  balanceTopUpsCarouselImage1: {
+    en: "Process request interface",
+    ru: "Интерфейс обработки заявки"
+  },
+  balanceTopUpsCarouselImage2: {
+    en: "Change amount interface",
+    ru: "Интерфейс изменения суммы"
+  },
+  balanceTopUpsRecommendation: {
+    en: "We recommend familiarizing yourself with the following section for connecting USDT payments:",
+    ru: "Советуем ознакомиться со следующим разделом для подключения оплат в USDT"
+  },
+  balanceTopUpsFilters: {
+    en: "To search for the request you need, you can use convenient filters",
+    ru: "Для поиска нужной вам заявки можно воспользоваться удобными фильтрами"
+  },
+  balanceTopUpsFiltersImage: {
+    en: "Request filters interface",
+    ru: "Интерфейс фильтров заявок"
+  },
+  balanceTopUpsBalanceHistory: {
+    en: "There is also a convenient section where information about any changes in client balances is logged. The section is located in ADDITIONAL - BALANCE CHANGE HISTORY.",
+    ru: "Так же существует удобный раздел в который логируется информация о любых изменениях в балансах клиентов раздел находится в ДОПОЛНИТЕЛЬНО - ИСТОРИЯ ИЗМЕНЕНИЯ БАЛАНСОВ."
   }
 };
 
