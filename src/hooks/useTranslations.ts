@@ -1,6 +1,4 @@
-
 import { useLanguage } from '@/contexts/LanguageContext';
-import { createTranslator } from '@/utils/translations';
 
 type LocalTranslations = {
   back: {
@@ -380,6 +378,75 @@ type LocalTranslations = {
     ru: string;
   };
   balanceTopUpsBalanceHistory: {
+    en: string;
+    ru: string;
+  };
+  // Add courier salary translations
+  courierSalaryTitle: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryIntro: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryProductSetupAlt: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryProductSetupCaption: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryCustomSettings: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryCustomSettingsAlt: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryCustomSettingsCaption: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryPaymentSystem: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryBalanceCaption: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryLogsCaption: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryBalanceAlt: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryLogsAlt: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryPaymentNote: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryRubPayments: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryBalance: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryLogs: {
+    en: string;
+    ru: string;
+  };
+  courierSalaryDescription: {
     en: string;
     ru: string;
   };
@@ -766,7 +833,68 @@ const localTranslations: LocalTranslations = {
   },
   balanceTopUpsBalanceHistory: {
     en: "There is also a convenient section where information about any changes in client balances is logged. The section is located in ADDITIONAL - BALANCE CHANGE HISTORY.",
-    ru: "Так же существует удобный раздел в который логируется информация о любых изменениях в балансах клиентов раздел находится в ДОПОЛНИТЕЛЬНО - ИСТОРИЯ ИЗМЕНЕНИЯ БАЛАНСОВ."
+    ru: "Так же существует удобный раздел в который логируется информация о любых изменениях в балансах клиентов раздел находитс�� в ДОПОЛНИТЕЛЬНО - ИСТОРИЯ ИЗМЕНЕНИЯ БАЛАНСОВ."
+  },
+  // Add courier salary translations values
+  courierSalaryTitle: {
+    en: "Salary and Fines",
+    ru: "Начисления/штрафы"
+  },
+  courierSalaryIntro: {
+    en: "For each courier, you can create an employee with access to the admin panel and/or the Telegram helper bot. You can also configure the default salary and fine for a courier for each product type. WAREHOUSE - PRODUCT TYPES - open any type and go to the Courier/Profit section.",
+    ru: "Для каждого курьера вы можете создать сотрудника с доступом в панель и/или к ТГ-боту помощнику. Так же для каждого вида товаров вы можете настроить Зарплату и Штраф для курьера по умолчанию. СКЛАД - ВИДЫ ТОВАРОВ - открываем любой и идем в раздел Курьер/Прибыль"
+  },
+  courierSalaryProductSetupAlt: {
+    en: "Product type courier settings",
+    ru: "Настройки курьера для типа товара"
+  },
+  courierSalaryProductSetupCaption: {
+    en: "Default courier salary settings for a product type",
+    ru: "Настройки зарплаты курьера по умолчанию для типа товара"
+  },
+  courierSalaryCustomSettings: {
+    en: "Also, in the Couriers section, within each courier's profile, you can configure specific Salary/Fine settings for specific product types for that courier.",
+    ru: "Также в разделе Курьеры, внутри каждого курьера вы можете настроить для нужного вида товаров свои определенные настройки Зарплаты/Штрафа для данного курьера."
+  },
+  courierSalaryCustomSettingsAlt: {
+    en: "Courier-specific settings",
+    ru: "Индивидуальные настройки курьера"
+  },
+  courierSalaryCustomSettingsCaption: {
+    en: "Individual courier salary settings for different product types",
+    ru: "Индивидуальные настройки зарплаты курьера для разных типов товаров"
+  },
+  courierSalaryPaymentSystem: {
+    en: "For each completed purchase, the courier will receive a credit to their account. If operators resolve a dispute in favor of the client and choose to fine the courier, then this amount will be deducted from the account. In the Couriers section, you can view the current balances of couriers and also make deductions or credits to their accounts with comments.",
+    ru: "За каждую выполненную покупку курьеру будет производится начисление на его счет. Если операторы решают спор в пользу клиента и выбирают штраф курьеру - тогда эта сумма будет списана со счета. В разделе Курьеры можно посмотреть текущие балансы курьеров а также произвести списание или начисление средств на его счет с указанием комментария."
+  },
+  courierSalaryBalanceCaption: {
+    en: "Current courier balance screen",
+    ru: "Экран текущего баланса курьера"
+  },
+  courierSalaryLogsCaption: {
+    en: "Courier account transaction history",
+    ru: "История транзакций счета курьера"
+  },
+  courierSalaryBalance: {
+    en: "Courier Balance",
+    ru: "Баланс курьера"
+  },
+  courierSalaryLogs: {
+    en: "Transaction History",
+    ru: "История транзакций"
+  },
+  courierSalaryPaymentNote: {
+    en: "When deducting funds from a courier's account, you need to send the funds to the courier yourself. This accounting system only tracks profits - you will need to make the payments yourself in any convenient currency.",
+    ru: "При списании средств со счета курьера, сами средства вам необходимо самостоятельно отправить курьеру. Данная система учета лишь считает прибыль - отправку производить вам придется самим любой удобной валютой."
+  },
+  courierSalaryRubPayments: {
+    en: "To pay couriers' salaries in RUB, you can use our 'Withdraw to RUB' module on the main panel page.",
+    ru: "Для выплаты курьерам зарплаты в РУБ вы можете воспользоваться нашим модулем \"Вывод в RUB\" на главной странице панели."
+  },
+  courierSalaryDescription: {
+    en: "Manage courier salaries, commissions and fines",
+    ru: "Управление зарплатами курьеров, комиссиями и штрафами"
   }
 };
 
@@ -784,8 +912,16 @@ const localTranslations: LocalTranslations = {
 export const useTranslations = () => {
   const { t, language } = useLanguage();
   
-  // Create a translator with the current language
-  const tNew = createTranslator(language);
+  // New translation function that uses localTranslations
+  const tNew = (key: string) => {
+    // Check if key exists in localTranslations
+    if (key in localTranslations) {
+      return localTranslations[key as keyof LocalTranslations][language];
+    }
+    
+    // Fallback to original translation
+    return t(key);
+  };
   
   // Local translation function
   const tLocal = (key: keyof LocalTranslations) => {
