@@ -39,7 +39,7 @@ const Feedback = () => {
             
             <div className="flex justify-center">
               <img 
-                src="https://i.ibb.co/67ChdPnq/Screenshot-2025-05-18-at-12-33-42-PM.png" 
+                src="https://i.ibb.co/67ChdPn/Screenshot-2025-05-18-at-12-33-42-PM.png" 
                 alt="Client messaging interface" 
                 className="rounded-lg shadow-lg max-w-full" 
               />
