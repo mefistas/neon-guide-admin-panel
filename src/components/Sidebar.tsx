@@ -33,7 +33,6 @@ const Sidebar = () => {
     { key: 'howToAddAddress', path: '/how-to-add-address', icon: <Building size={18} /> },
     { key: 'howToAddBots', path: '/how-to-add-bots', icon: <Bot size={18} /> },
     { key: 'oneTimeDiscounts', path: '/one-time-discounts', icon: <Tag size={18} /> },
-    { key: 'balanceHistory', path: '/balance-history', icon: <Wallet size={18} /> },
     { key: 'internalChats', path: '/internal-chats', icon: <MessageSquare size={18} /> },
     { key: 'reviews', path: '/reviews', icon: <Star size={18} /> },
     { key: 'masterKlad', path: '/master-klad', icon: <Building size={18} /> },

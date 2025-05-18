@@ -41,7 +41,6 @@ import PromoCodes from "./pages/PromoCodes";
 import OneTimeDiscounts from "./pages/OneTimeDiscounts";
 import HappyHours from "./pages/HappyHours";
 import WithdrawFunds from "./pages/WithdrawFunds";
-import BalanceHistory from "./pages/BalanceHistory";
 import Feedback from "./pages/Feedback";
 import HelpBots from "./pages/HelpBots";
 import InternalChats from "./pages/InternalChats";
@@ -90,7 +89,6 @@ const App = () => (
             <Route path="/usdt" element={<Usdt />} />
             <Route path="/partners-exchangers" element={<PartnersExchangers />} />
             <Route path="/withdraw-funds" element={<WithdrawFunds />} />
-            <Route path="/balance-history" element={<BalanceHistory />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/help-bots" element={<HelpBots />} />
             <Route path="/internal-chats" element={<InternalChats />} />

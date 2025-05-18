@@ -2,7 +2,7 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
-import { Wallet, History, CreditCard, ArrowDownToLine } from 'lucide-react';
+import { Wallet, CreditCard, ArrowDownToLine } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import BackButton from '@/components/BackButton';
 
@@ -39,12 +39,6 @@ const Finance = () => {
       icon: <CreditCard size={20} className="mr-2" />,
       path: '/partners-exchangers',
       description: 'partnersExchangersDesc'
-    },
-    {
-      title: 'balanceHistory',
-      icon: <History size={20} className="mr-2" />,
-      path: '/balance-history',
-      description: 'balanceHistoryDesc'
     }
   ];
 
