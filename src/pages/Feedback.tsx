@@ -3,7 +3,8 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
-import { MessageSquare, Send } from 'lucide-react';
+import { MessageSquare, Send, Telegram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Feedback = () => {
   const { tLocal } = useTranslations();
@@ -27,7 +28,7 @@ const Feedback = () => {
             <p className="text-gray-300 whitespace-pre-line">{tLocal('feedbackInstruction')}</p>
           </div>
           
-          {/* New section for sending message to client */}
+          {/* Section for sending message to client */}
           <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mt-6">
             <div className="flex items-center gap-2 mb-4">
               <Send size={20} className="text-neonBlue" />
@@ -38,8 +39,26 @@ const Feedback = () => {
             
             <div className="flex justify-center">
               <img 
-                src="https://i.ibb.co/QvXp5cQZ/Screenshot-2025-05-17-at-11-49-39-PM.png" 
+                src="https://i.ibb.co/QvXp5cQ/Screenshot-2025-05-17-at-11-49-39-PM.png" 
                 alt="Client messaging interface" 
+                className="rounded-lg shadow-lg max-w-full" 
+              />
+            </div>
+          </div>
+          
+          {/* New section for Telegram operator button */}
+          <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mt-6">
+            <div className="flex items-center gap-2 mb-4">
+              <Telegram size={20} className="text-neonBlue" />
+              <h2 className="text-lg font-medium">{tLocal('telegramOperatorTitle')}</h2>
+            </div>
+            
+            <p className="text-gray-300 whitespace-pre-line mb-6">{tLocal('telegramOperatorInstruction')}</p>
+            
+            <div className="flex justify-center">
+              <img 
+                src="https://i.ibb.co/k681DgW/Screenshot-2025-05-18-at-12-21-41-PM.png" 
+                alt="Telegram operator button setup" 
                 className="rounded-lg shadow-lg max-w-full" 
               />
             </div>

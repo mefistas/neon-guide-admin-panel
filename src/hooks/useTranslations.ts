@@ -282,6 +282,14 @@ type LocalTranslations = {
     en: string;
     ru: string;
   };
+  telegramOperatorTitle: {
+    en: string;
+    ru: string;
+  };
+  telegramOperatorInstruction: {
+    en: string;
+    ru: string;
+  };
 };
 
 // Local translations that don't require modifying the language files
@@ -504,7 +512,7 @@ const localTranslations: LocalTranslations = {
   },
   purchasesFilters: {
     en: "There is a filter block in the Purchases section. You can filter purchases by courier, thus viewing their work statistics, as well as client reviews of their work. There are filters by districts, cities, and product types. An important filter is 'operator response required' - this will only show purchases where the client is waiting for a decision from the operator.",
-    ru: "В разделе Покупки есть блок фильтров. Вы можете отфильтровать покупки по курьеру, тем самым посмотреть статистику его работы, а также отзывы от клиентов на ему работу. Есть фильтр по районам, городам, по видам товаров. Важный фильтр \"требуется ответ оператора\" - при этом будут показаны только те покупки, по которым клиент ожидает решения от оператора."
+    ru: "В разделе Покупки есть блок фильтров. Вы можете отфильтровать покупки по курьеру, тем самым посмотреть статистику его работы, а так же отзывы от клиентов на ему работу. Есть фильтр по районам, городам, по видам товаров. Важный фильтр \"требуется ответ оператора\" - при этом будут показаны только те покупки, по которым клиент ожидает решения от оператора."
   },
   purchasesDisputeOperator: {
     en: "To process purchase disputes, there is an employee access type called 'Dispute Operator'. You can create this in the Employees section of the main menu panel. You need to select the employee type, specify the login and password. You also need to select a city or multiple cities for which the operator will work. Purchase disputes will only come to the operator from the cities that are selected for the operator.",
@@ -565,6 +573,14 @@ const localTranslations: LocalTranslations = {
   "Close in favor of store interface": {
     en: "Close in favor of store interface",
     ru: "Интерфейс закрытия в пользу магазина"
+  },
+  telegramOperatorTitle: {
+    en: "Connecting via Telegram Operator",
+    ru: "Связь через телеграмм аккаунт оператора"
+  },
+  telegramOperatorInstruction: {
+    en: "You can also add a button in your bot that links to your operator's Telegram account to maintain communication with your clients outside of the admin panel.",
+    ru: "Так же у вас есть возможность добавить кнопку в боте ведущую на телеграмм аккаунт оператора что бы иметь связь со своими клиентами вне панели администратора"
   }
 };
 
