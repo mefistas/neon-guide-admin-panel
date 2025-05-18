@@ -17,10 +17,10 @@ const Finance = () => {
       description: 'withdrawFundsDesc'
     },
     {
-      title: 'courierSalaryTitle',
+      title: 'courierSalary',
       icon: <CreditCard size={20} className="mr-2" />,
       path: '/couriers-salary',
-      description: 'courierSalaryDescription'
+      description: 'courierSalaryDesc'
     },
     {
       title: 'balanceTopUps',
