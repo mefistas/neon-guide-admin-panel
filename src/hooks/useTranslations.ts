@@ -753,8 +753,8 @@ const localTranslations: LocalTranslations = {
     ru: "Интерфейс изменения суммы"
   },
   balanceTopUpsRecommendation: {
-    en: "We recommend familiarizing yourself with the following section for connecting USDT payments:",
-    ru: "Советуем ознакомиться со следующим разделом для подключения оплат в USDT"
+    en: "We recommend familiarizing yourself with the following section for connecting",
+    ru: "Советуем ознакомиться со следующим разделом для подключения оплат в"
   },
   balanceTopUpsFilters: {
     en: "To search for the request you need, you can use convenient filters",
