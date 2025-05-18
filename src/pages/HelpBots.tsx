@@ -139,7 +139,7 @@ const HelpBots = () => {
             <div className="grid md:grid-cols-2 gap-6 items-center">
               <p className="text-gray-300">
                 {tNew('botCustomizationDescription')}
-                <span className="block mt-4 text-blue-400">БОТЫ/КАНАЛЫ - СООБЩЕНИЯ БОТОВ-ПОМОЩНИКОВ</span>
+                <span className="block mt-4 text-blue-400"></span>
               </p>
               <div className="flex justify-center">
                 <img 
