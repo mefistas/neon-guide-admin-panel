@@ -3,7 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
-import { MessageSquare, Send, Telegram } from 'lucide-react';
+import { MessageSquare, Send, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Feedback = () => {
@@ -49,7 +49,7 @@ const Feedback = () => {
           {/* New section for Telegram operator button */}
           <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mt-6">
             <div className="flex items-center gap-2 mb-4">
-              <Telegram size={20} className="text-neonBlue" />
+              <Mail size={20} className="text-neonBlue" />
               <h2 className="text-lg font-medium">{tLocal('telegramOperatorTitle')}</h2>
             </div>
             
