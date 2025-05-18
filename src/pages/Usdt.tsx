@@ -16,17 +16,20 @@ const Usdt = () => {
   const { t } = useLanguage();
 
   return (
-    <TutorialPage title={t('usdt')}>
+    <TutorialPage title="USDT">
       <div className="space-y-8">
         <div className="mb-4">
           <BackButton to="/finance" />
         </div>
         
-        <h2 className="text-xl font-semibold text-white">{t('usdtPayments')}</h2>
+        <h2 className="text-xl font-semibold text-white">USDT Payments</h2>
         
         <div className="space-y-6 bg-gray-800/50 rounded-lg p-6 border border-gray-700">
           <div className="space-y-4">
-            <p className="text-gray-300">{t('usdtPaymentSetup')}</p>
+            <p className="text-gray-300">
+              To enable USDT payments in your store, you need to go to the STORES-ALL STORES section, 
+              select your store, go to the EXCHANGER SETTINGS menu and check the box next to USDT as a payment method.
+            </p>
             
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="w-full md:w-2/3">
@@ -43,7 +46,9 @@ const Usdt = () => {
           
           <div className="space-y-4">
             <div className="grid md:grid-cols-2 gap-6 items-center">
-              <p className="text-gray-300">{t('usdtGoToAdditional')}</p>
+              <p className="text-gray-300">
+                After that, go to the ADDITIONAL - USDT TRC20 menu as shown in the photo.
+              </p>
               <div className="flex justify-center">
                 <img 
                   src="https://i.ibb.co/C5GYNkfx/IMAGE-2025-05-18-14-05-09.jpg" 
@@ -57,7 +62,10 @@ const Usdt = () => {
           <div className="border-t border-gray-700 my-6"></div>
           
           <div className="space-y-4">
-            <p className="text-gray-300">{t('usdtAddWallet')}</p>
+            <p className="text-gray-300">
+              In this section, click ADD in the upper right corner of the page and fill in all the information as shown in the photos.
+              After that, all your USDT wallets will be displayed in this section:
+            </p>
             
             <div className="p-2">
               <Carousel className="w-full max-w-3xl mx-auto">
