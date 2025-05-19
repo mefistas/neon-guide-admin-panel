@@ -3,7 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
-import { TrendingUp, Tag, Clock, Mail, MessageSquare, Percent, Gift } from 'lucide-react';
+import { TrendingUp, Tag, Clock, Mail, MessageSquare, Percent, Gift, Rss } from 'lucide-react';
 import BackButton from '@/components/BackButton';
 
 const Marketing = () => {
@@ -51,6 +51,12 @@ const Marketing = () => {
       icon: <Clock size={20} className="mr-2" />,
       path: '/happy-hours',
       description: 'happyHoursDesc'
+    },
+    {
+      title: 'mustSubscribe',
+      icon: <Rss size={20} className="mr-2" />,
+      path: '/must-subscribe',
+      description: 'mustSubscribeDesc'
     }
   ];
 

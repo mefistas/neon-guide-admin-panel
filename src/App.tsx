@@ -45,6 +45,9 @@ import Feedback from "./pages/Feedback";
 import HelpBots from "./pages/HelpBots";
 import InternalChats from "./pages/InternalChats";
 import Reviews from "./pages/Reviews";
+import Preorders from "./pages/Preorders";
+import Addresses from "./pages/Addresses";
+import MustSubscribe from "./pages/MustSubscribe";
 
 const queryClient = new QueryClient();
 
@@ -94,6 +97,9 @@ const App = () => (
             <Route path="/internal-chats" element={<InternalChats />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/ask-question" element={<AskQuestion />} />
+            <Route path="/preorders" element={<Preorders />} />
+            <Route path="/addresses" element={<Addresses />} />
+            <Route path="/must-subscribe" element={<MustSubscribe />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
