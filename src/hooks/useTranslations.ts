@@ -1,4 +1,3 @@
-
 import { useContext } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import * as translations from "@/utils/translations";
@@ -54,7 +53,7 @@ const localTranslations = {
     balanceTopUpsFilters: "Use filters to quickly find specific transactions by date, status, or payment method:",
     balanceTopUpsFiltersImage: "Balance top-ups filters",
     balanceTopUpsBalanceHistory: "You can also view the complete balance history of each client in the Balance History section.",
-
+    
     // Casino Setup Page
     casino: "Casino Setup",
     casinoInstructions: "Casino Integration Instructions",
@@ -91,6 +90,28 @@ const localTranslations = {
     internalChatsInviteButton: "Invite team members to the chat",
     internalChatsOwnerCapabilities: "What you can do as the chat owner",
     internalChatsDescription2: "Configure permissions for different chat participants",
+    internalChatsChannelOption: "Create a channel for one-way communication",
+    internalChatsGroupOption: "Create a group for team discussions",
+    internalChatsEncryption: "Encryption Options",
+    internalChatsEncryptionDetails: "Choose end-to-end encryption for sensitive communications",
+    internalChatsServerStorage: "Messages are stored on secure servers",
+    internalChatsPasswordSharing: "Secure password sharing protocol",
+    internalChatsAutoDeletion: "Configure auto-deletion of messages",
+    
+    // Purchases Page
+    purchasesTitle: "Purchases Management",
+    purchasesSubtitle: "Track and manage all customer purchases",
+    purchasesClientOptions: "Options for managing client purchases",
+    purchasesSection: "Purchases Section Overview",
+    purchasesFlowDescription: "How purchases flow through your system",
+    purchasesDisputeInfo: "How to handle purchase disputes",
+    purchasesStatistics: "Purchase statistics and analytics",
+    purchasesStatusColumn: "Understanding the purchase status column",
+    purchasesFilters: "Using filters to find specific purchases",
+    
+    // Mailouts Page
+    mailouts: "Marketing Mailouts",
+    mailoutsDesc: "Configure automated mailouts to your customer base",
     
     // More pages can add their translations here
   },
@@ -143,7 +164,7 @@ const localTranslations = {
     balanceTopUpsFilters: "Используйте фильтры для быстрого поиска определенных транзакций по дате, статусу или способу оплаты:",
     balanceTopUpsFiltersImage: "Фильтры пополнений баланса",
     balanceTopUpsBalanceHistory: "Вы также можете просмотреть полную историю баланса каждого клиента в разделе История баланса.",
-
+    
     // Casino Setup Page
     casino: "Настройка казино",
     casinoInstructions: "Инструкции по интеграции казино",
@@ -180,6 +201,28 @@ const localTranslations = {
     internalChatsInviteButton: "Пригласить членов команды в чат",
     internalChatsOwnerCapabilities: "Что вы можете делать как владелец чата",
     internalChatsDescription2: "Настройте разрешения для различных участников чата",
+    internalChatsChannelOption: "Создать канал для односторонней коммуникации",
+    internalChatsGroupOption: "Создать группу для командных обсуждений",
+    internalChatsEncryption: "Параметры шифрования",
+    internalChatsEncryptionDetails: "Выберите сквозное шифрование для конфиденциальных коммуникаций",
+    internalChatsServerStorage: "Сообщения хранятся на защищенных серверах",
+    internalChatsPasswordSharing: "Безопасный протокол обмена паролями",
+    internalChatsAutoDeletion: "Настройка автоматического удаления сообщений",
+    
+    // Purchases Page
+    purchasesTitle: "Управление покупками",
+    purchasesSubtitle: "Отслеживание и управление всеми покупками клиентов",
+    purchasesClientOptions: "Опции для управления покупками клиентов",
+    purchasesSection: "Обзор раздела покупок",
+    purchasesFlowDescription: "Как покупки проходят через вашу систему",
+    purchasesDisputeInfo: "Как обрабатывать споры по покупкам",
+    purchasesStatistics: "Статистика и аналитика покупок",
+    purchasesStatusColumn: "Понимание колонки статуса покупки",
+    purchasesFilters: "Использование фильтров для поиска определенных покупок",
+    
+    // Mailouts Page
+    mailouts: "Маркетинговые рассылки",
+    mailoutsDesc: "Настройка автоматических рассылок вашей клиентской базе",
     
     // More pages can add their translations here
   },
@@ -190,7 +233,7 @@ type LocalTranslations = typeof localTranslations.en;
 export type LocalTranslationKey = keyof LocalTranslations;
 
 const useTranslations = () => {
-  // Import from the LanguageContext using useContext
+  // Import from the LanguageContext
   const { language = 'en' } = useLanguage();
   
   // Function to get local translation
@@ -208,4 +251,6 @@ const useTranslations = () => {
   return { tNew, tLocal, language };
 };
 
+// Export both as default and named export to fix the import errors
 export default useTranslations;
+export { useTranslations };

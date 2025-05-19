@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
@@ -15,7 +14,7 @@ import { Separator } from '@/components/ui/separator';
 
 const CouriersSalary = () => {
   const { tLocal } = useTranslations();
-
+  
   const carouselImages = [
     {
       src: "https://i.ibb.co/WpM8dypp/Screenshot-2025-05-18-at-5-53-19-PM.png",
