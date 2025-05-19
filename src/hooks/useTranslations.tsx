@@ -22,6 +22,11 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
+    // Check in new sections translations first (including preorders)
+    if (newSectionsTranslations[language]?.[key]) {
+      return newSectionsTranslations[language][key];
+    }
+    
     // Check in happy hours translations
     if (happyHoursTranslations[language]?.[key]) {
       return happyHoursTranslations[language][key];
@@ -30,11 +35,6 @@ export function useTranslations() {
     // Check in help bots translations
     if (helpBotsTranslations[language]?.[key]) {
       return helpBotsTranslations[language][key];
-    }
-    
-    // Check in new sections translations
-    if (newSectionsTranslations[language]?.[key]) {
-      return newSectionsTranslations[language][key];
     }
 
     // Fall back to the original translation system
