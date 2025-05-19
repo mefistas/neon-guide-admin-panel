@@ -6,7 +6,7 @@ import BackButton from '@/components/BackButton';
 import { Link } from 'react-router-dom';
 
 const Preorders = () => {
-  const { tNew } = useTranslations();
+  const { tNew, language } = useTranslations();
   
   return (
     <TutorialPage title={tNew('preordersTitle')}>
@@ -16,10 +16,6 @@ const Preorders = () => {
         <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
           <p className="mb-6">{tNew('preordersIntro')}</p>
 
-          <h2 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
-            {tNew('preordersSetupTitle')}
-          </h2>
-          
           <div className="space-y-6 mb-8">
             <div className="space-y-4">
               <p>{tNew('preordersStep1')}</p>
@@ -46,71 +42,79 @@ const Preorders = () => {
             <p className="font-medium text-amber-300">{tNew('preordersRequirement')}</p>
           </div>
 
-          <h2 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
-            {tNew('preordersProductsTitle')}
-          </h2>
-          
-          <div className="space-y-6 mb-8">
-            <p>{tNew('preordersProductsDesc')}</p>
-            <p>{tNew('preordersProductSetup')}</p>
+          <div className="border-t border-gray-700 pt-6 mt-6">
+            <h2 className="text-xl font-medium mb-4">
+              {tNew('preordersProductsTitle')}
+            </h2>
             
-            <div className="flex justify-center">
-              <img 
-                src="https://i.ibb.co/TMt9wCH/Screenshot-2025-05-19-at-12-40-08-PM.png" 
-                alt="Product setup" 
-                className="rounded-lg max-w-full h-auto border border-gray-700" 
-              />
-            </div>
-            
-            <p>{tNew('preordersMenuInfo')}</p>
-            
-            <div className="bg-gray-800/50 p-4 rounded-lg mt-4">
-              <h3 className="font-medium mb-2">{tNew('preordersExampleTitle')}</h3>
-              <div className="flex flex-col md:flex-row gap-4 items-center">
-                <p className="md:w-2/3">{tNew('preordersExampleDesc')}</p>
-                <div className="md:w-1/3">
-                  <img 
-                    src="https://i.ibb.co/DHvMhS6/Screenshot-2025-05-19-at-12-50-46-PM.png" 
-                    alt="Example setup" 
-                    className="rounded-lg max-w-full h-auto border border-gray-700" 
-                  />
+            <div className="space-y-6 mb-8">
+              <p>{tNew('preordersProductsDesc')}</p>
+              <p>{tNew('preordersProductSetup')}</p>
+              
+              <div className="flex justify-center">
+                <img 
+                  src="https://i.ibb.co/TMt9wCH/Screenshot-2025-05-19-at-12-40-08-PM.png" 
+                  alt="Product setup" 
+                  className="rounded-lg max-w-full h-auto border border-gray-700" 
+                />
+              </div>
+              
+              <p>{tNew('preordersOtherSettings')}</p>
+              <p>{tNew('preordersMenuInfo')}</p>
+              
+              <div className="bg-gray-800/50 p-4 rounded-lg mt-4">
+                <div className="flex flex-col md:flex-row gap-4 items-center">
+                  <p className="md:w-2/3">{tNew('preordersExampleDesc')}</p>
+                  <div className="md:w-1/3">
+                    <img 
+                      src="https://i.ibb.co/DHvMhS6/Screenshot-2025-05-19-at-12-50-46-PM.png" 
+                      alt="Example setup" 
+                      className="rounded-lg max-w-full h-auto border border-gray-700" 
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           
-          <h2 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
-            {tNew('preordersProcessingTitle')}
-          </h2>
-          
-          <div className="space-y-6 mb-8">
-            <p>{tNew('preordersProcessingDesc')}</p>
+          <div className="border-t border-gray-700 pt-6 mt-6">
+            <h2 className="text-xl font-medium mb-4">
+              {tNew('preordersProcessingTitle')}
+            </h2>
             
-            <div className="flex justify-center">
-              <img 
-                src="https://i.ibb.co/WdV5xYm/IMAGE-2025-05-19-12-58-03.jpg" 
-                alt="Processing preorders" 
-                className="rounded-lg max-w-full h-auto border border-gray-700" 
-              />
+            <div className="space-y-6 mb-8">
+              <p>{tNew('preordersProcessingDesc')}</p>
+              
+              <div className="flex justify-center">
+                <img 
+                  src="https://i.ibb.co/WdV5xYm/IMAGE-2025-05-19-12-58-03.jpg" 
+                  alt="Processing preorders" 
+                  className="rounded-lg max-w-full h-auto border border-gray-700" 
+                />
+              </div>
+              
+              <p>{tNew('preordersProcessingSteps')}</p>
             </div>
-            
-            <p>{tNew('preordersProcessingSteps')}</p>
           </div>
           
-          <h2 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
-            {tNew('preordersStaffTitle')}
-          </h2>
-          
-          <div className="space-y-4">
-            <p>{tNew('preordersStaffDesc')}</p>
-            <p>{tNew('preordersStaffSetup')}</p>
-            <p>
-              {tNew('preordersStaffMore').split('РАБОТНИКИ')[0]}
-              <Link to="/workers" className="text-neonBlue hover:underline">
-                {tNew('workers')}
-              </Link>
-              {tNew('preordersStaffMore').split('РАБОТНИКИ')[1] || ''}
-            </p>
+          <div className="border-t border-gray-700 pt-6 mt-6">
+            <h2 className="text-xl font-medium mb-4">
+              {tNew('preordersStaffTitle')}
+            </h2>
+            
+            <div className="space-y-4">
+              <p>{tNew('preordersStaffDesc')}</p>
+              <p>{tNew('preordersStaffSetup')}</p>
+              <p>
+                {language === 'ru' 
+                  ? "Что бы узнать подробнее о настройках сотрудника для предзаказов ознакомьтесь пожалуйста с разделом "
+                  : "To learn more about employee settings for preorders, please refer to the section "
+                }
+                <Link to="/workers" className="text-neonBlue hover:underline">
+                  {language === 'ru' ? 'РАБОТНИКИ' : 'WORKERS'}
+                </Link>
+              </p>
+            </div>
           </div>
         </section>
       </div>
