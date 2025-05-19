@@ -1,5 +1,4 @@
 
-import { useContext } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import translations from '../translations/translations';
 import preorders from '../translations/preorders';
@@ -39,4 +38,5 @@ const useTranslations = () => {
 // For backwards compatibility with named imports
 export { useTranslations };
 
+// Default export
 export default useTranslations;
