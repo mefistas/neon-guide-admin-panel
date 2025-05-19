@@ -3,6 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
+import { Link } from 'react-router-dom';
 import {
   Carousel,
   CarouselContent,
@@ -97,6 +98,56 @@ const Usdt = () => {
                 </div>
               </Carousel>
             </div>
+          </div>
+          
+          {/* New USDT payment information section from balance-top-ups */}
+          <div className="border-t border-gray-700 my-6"></div>
+          
+          <div className="space-y-4">
+            <div className="bg-gray-700/30 rounded-lg p-4 my-4">
+              <h3 className="text-lg font-semibold text-white mb-2">{tLocal('balanceTopUpsUsdtPayment')}</h3>
+              <ol className="list-decimal pl-5 text-gray-300 space-y-2">
+                <li>{tLocal('balanceTopUpsCheckUsdtTransaction')}</li>
+                <li>{tLocal('balanceTopUpsProcessApplication')}</li>
+              </ol>
+              
+              <div className="p-2">
+                <Carousel className="w-full max-w-3xl mx-auto">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="p-1">
+                        <AspectRatio ratio={16 / 9}>
+                          <img
+                            src="https://i.ibb.co/MyHKY59h/IMAGE-2025-05-18-14-58-42.jpg"
+                            alt={tLocal('balanceTopUpsCarouselImage1')}
+                            className="rounded-xl object-cover w-full h-full"
+                          />
+                        </AspectRatio>
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="p-1">
+                        <AspectRatio ratio={16 / 9}>
+                          <img
+                            src="https://i.ibb.co/4nMYRDRm/IMAGE-2025-05-18-15-02-07.jpg"
+                            alt={tLocal('balanceTopUpsCarouselImage2')}
+                            className="rounded-xl object-cover w-full h-full"
+                          />
+                        </AspectRatio>
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <div className="flex justify-center mt-4 space-x-4">
+                    <CarouselPrevious className="relative static translate-y-0 left-0" />
+                    <CarouselNext className="relative static translate-y-0 right-0" />
+                  </div>
+                </Carousel>
+              </div>
+            </div>
+            
+            <p className="text-gray-300">
+              {tLocal('balanceTopUpsRecommendation')}
+            </p>
           </div>
         </div>
       </div>
