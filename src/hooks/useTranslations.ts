@@ -502,7 +502,7 @@ const localTranslations: LocalTranslations = {
   },
   casinoHistory: {
     en: "Casino Game History",
-    ru: "Ис��ория игр в Казино"
+    ru: "Истоория игр в Казино"
   },
   casinoHistoryInfo: {
     en: "To view the history of your clients' Casino games, go to the ADDITIONAL -> CASINO GAME HISTORY menu",
