@@ -1,7 +1,6 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { createTranslator } from '@/utils/translations';
-import preorders from '@/translations/preorders';
 
 type LocalTranslations = {
   back: {
@@ -876,7 +875,7 @@ export const useTranslations = () => {
   const { t, language } = useLanguage();
   
   // Create a translator with the current language
-  const tNew = createTranslator(language, preorders);
+  const tNew = createTranslator(language);
   
   // Local translation function
   const tLocal = (key: keyof LocalTranslations) => {

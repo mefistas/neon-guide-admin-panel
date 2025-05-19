@@ -1,6 +1,6 @@
 
 import React from 'react';
-import useTranslations from '@/hooks/useTranslations';
+import { useTranslations } from '@/hooks/useTranslations';
 
 interface TranslationExampleProps {
   translationKey: string;
@@ -38,3 +38,4 @@ const TranslationExample: React.FC<TranslationExampleProps> = ({
 };
 
 export default TranslationExample;
+
