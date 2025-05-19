@@ -562,7 +562,7 @@ const localTranslations: LocalTranslations = {
   },
   internalChatsTitle: {
     en: "New Feature - Internal Encrypted Chats!",
-    ru: "Появилась функция - Внутренние зашифрованные ч��ты!"
+    ru: "Появилась функция - Внутренние зашифрованные чаты!"
   },
   internalChatsMenuPath: {
     en: "In the menu under ADDITIONAL section, there is now an INTERNAL CHATS option.",
