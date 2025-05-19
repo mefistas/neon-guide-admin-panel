@@ -799,7 +799,7 @@ const localTranslations: LocalTranslations = {
   },
   balanceTopUpsRecommendation: {
     en: "We recommend familiarizing yourself with the following section for connecting ",
-    ru: "Советуем ознакомиться со следующим разделом для подключения оплат  "
+    ru: "Советуем ознакомиться со следующим разделом для подключения оплат в "
   },
   balanceTopUpsFilters: {
     en: "To search for the request you need, you can use convenient filters",
