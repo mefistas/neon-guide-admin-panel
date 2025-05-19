@@ -16,7 +16,6 @@ import HowToAddAddress from "./pages/HowToAddAddress";
 import HowToAddBots from "./pages/HowToAddBots";
 import CasinoSetup from "./pages/CasinoSetup";
 import CardsPayments from "./pages/CardsPayments";
-import Preorders from "./pages/Preorders";
 import AskQuestion from "./pages/AskQuestion";
 import QuickStart from "./pages/QuickStart";
 import BasicSetup from "./pages/BasicSetup";
@@ -68,7 +67,6 @@ const App = () => (
             <Route path="/how-to-add-bots" element={<HowToAddBots />} />
             <Route path="/casino-setup" element={<CasinoSetup />} />
             <Route path="/cards-payments" element={<CardsPayments />} />
-            <Route path="/preorders" element={<Preorders />} />
             <Route path="/merchants" element={<Merchants />} />
             <Route path="/master-klad" element={<MasterKlad />} />
             <Route path="/custom-bot" element={<CustomBot />} />
