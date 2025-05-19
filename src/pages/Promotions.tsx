@@ -1,7 +1,7 @@
 
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
-import usePromotionsTranslations from '@/hooks/usePromotionsTranslations';
+import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
 import { 
   Carousel, 
