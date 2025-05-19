@@ -1,5 +1,6 @@
-import happyHoursTranslations from './happyHours';
-import helpBotsTranslations from './helpBots';
+
+import { happyHoursTranslations } from './happyHours';
+import { helpBotsTranslations } from './helpBots';
 import mailoutTranslations from './mailouts';
 import preordersTranslations from './preorders';
 import promotionsTranslations from './promotions';
