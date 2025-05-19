@@ -199,7 +199,7 @@ const additionalTranslations: TranslationsStore = {
   },
   bonusButton: {
     en: ' In the Bonuses button section, you can see the conditions regarding the referral system in your store, to change the referral % use the Channel/Referral menu',
-    ru: ' В разделе кн�����ки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
+    ru: ' В разделе кнопки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
   },
   customizationSection: {
     en: 'Bot Customization Section',
@@ -390,7 +390,7 @@ const additionalTranslations: TranslationsStore = {
   },
   oneTimeDiscounts: {
     en: "One-Time Product Discounts",
-    ru: "Раз��вые ск��дки на тов��ры"
+    ru: "Разоввые скидки на товрры"
   },
   oneTimeDiscountsDesc: {
     en: "Create special one-time discounts for products",
