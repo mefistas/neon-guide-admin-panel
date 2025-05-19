@@ -512,6 +512,11 @@ const localTranslations: LocalTranslations = {
     en: "Client cards and their editing. Go to the CLIENTS section to see a summary of brief information about each client, as well as the ability to export your client database in one of two formats: CSV or XLS.",
     ru: "Карточки клиентов и их редактирование. Переходим в раздел КЛИЕНТЫ и видим сводку короткой информации о каждом, а так же возможность экспорта базы данных ваших клиентов в одном из двух форматов csv или xls."
   },
+
+  clientsDescription1:{
+    en: вввв ,
+    ru:вввввв
+  },
   clientsSearch: {
     en: "You can use the search bar to quickly find a client. The search works by the client's Telegram account name, do not confuse it with the username!",
     ru: "Можно воспользоваться поисковой строкой для быстрого поиска клиента, поиск работает по имени телеграмм акаунта, не путайте с username!"

@@ -19,6 +19,7 @@ const Clients = () => {
         
         <div className="space-y-4">
           <p className="text-lg text-gray-300">{tLocal('clientsDescription')}</p>
+           <p className="text-lg text-gray-300">{tLocal('clientsDescription1')}</p>
           
           {/* Search section */}
           <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 mt-6">
