@@ -34,7 +34,8 @@ const translations = {
     preordersStaffTitle: "Additional Staff Accounts",
     preordersStaffDesc: "There is also the possibility to create an additional account for an employee with access to process preorders for a specific district. This way, you can create several employee accounts and assign them to different districts. At the same time, when creating a preorder, the employee assigned to the corresponding district will receive a notification in the Telegram bot. Also, through this Telegram bot, the employee will be able to process the request and send information about the product or shipment to the client.",
     preordersStaffSetup: "For this, go to the \"Employees\" section and click the \"Add employee\" button. Employee type - Preorder Operator",
-    preordersStaffMore: "To learn more about employee settings for preorders, please refer to the WORKERS section",
+    preordersStaffMore: "To learn more about employee settings for preorders, please refer to the РАБОТНИКИ section",
+    workers: "WORKERS",
     
     // Addresses page
     addressesTitle: "Addresses",
@@ -43,6 +44,7 @@ const translations = {
     // Must Subscribe page
     mustSubscribeTitle: "Must Subscribe Channel",
     mustSubscribeIntro: "Configure required channel subscription settings for users",
+    tip: "Tip",
   },
   ru: {
     // Cards/Payments section
@@ -79,6 +81,7 @@ const translations = {
     preordersStaffDesc: "Также есть возможность создать дополнительный аккаунт для сотрудника с доступом обработки предзаказов на определенный район. Таким образом, вы можете создать несколько учетных записей для сотрудников и прикрепить их к разным районам. При этом, при создании предзаказа сотрудник, прикрепленный к соответствующему району получит уведомление в ТГ-бот. Также, через этот ТГ-бот сотрудник сможет обработать заявку и отправить информацию о товаре или об отправке клиенту.",
     preordersStaffSetup: "Для этого заходим в раздел \"Сотрудники\" и нажимаем кнопку \"Добавить сотрудника\". Тип сотрудника - Оператор предзаказов",
     preordersStaffMore: "Что бы узнать подробнее о настройках сотрудника для предзаказов ознакомьтесь пожалуйста с разделом РАБОТНИКИ",
+    workers: "РАБОТНИКИ",
     
     // Addresses page
     addressesTitle: "Адреса",
@@ -87,6 +90,7 @@ const translations = {
     // Must Subscribe page
     mustSubscribeTitle: "Обязательная подписка на канал",
     mustSubscribeIntro: "Настройка параметров обязательной подписки пользователей на канал",
+    tip: "Совет",
   }
 };
 
