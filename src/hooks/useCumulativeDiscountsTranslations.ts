@@ -1,10 +1,9 @@
 
-import { useContext } from 'react';
-import { LanguageContext } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 import cumulativeDiscountsTranslations from '@/translations/cumulativeDiscounts';
 
 export function useCumulativeDiscountsTranslations() {
-  const { language } = useContext(LanguageContext);
+  const { language } = useLanguage();
 
   const t = (key: string): string => {
     if (cumulativeDiscountsTranslations[language]?.[key]) {
