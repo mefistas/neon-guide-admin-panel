@@ -5,6 +5,7 @@ import translations from '@/utils/translations';
 import happyHoursTranslations from '@/translations/happyHours';
 import helpBotsTranslations from '@/translations/helpBots';
 import newSectionsTranslations from '@/translations/newSections';
+import preordersTranslations from '@/translations/preorders';
 
 // Original translation function that works with the legacy system
 export function useTranslations() {
@@ -22,7 +23,12 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
-    // Check in new sections translations first (including preorders)
+    // Check in preorders translations first
+    if (preordersTranslations[language]?.[key]) {
+      return preordersTranslations[language][key];
+    }
+    
+    // Check in new sections translations
     if (newSectionsTranslations[language]?.[key]) {
       return newSectionsTranslations[language][key];
     }
