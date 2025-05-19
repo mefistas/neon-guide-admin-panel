@@ -62,6 +62,7 @@ const Preorders = () => {
               />
             </div>
             
+            <p>{tNew('preordersAdditionalSettings')}</p>
             <p>{tNew('preordersMenuInfo')}</p>
             
             <div className="bg-gray-800/50 p-4 rounded-lg mt-4">
