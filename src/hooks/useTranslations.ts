@@ -1,7 +1,8 @@
+
 import { useContext } from 'react';
-import { LanguageContext } from '@/contexts/LanguageContext';
-import translations from '@/translations/translations';
-import preorders from '@/translations/preorders';
+import { LanguageContext } from '../contexts/LanguageContext';
+import translations from '../translations/translations';
+import preorders from '../translations/preorders';
 
 const newTranslations = {
   en: {
