@@ -9,6 +9,7 @@ import preordersTranslations from '@/translations/preorders';
 import mailoutTranslations from '@/translations/mailouts';
 import promotionsTranslations from '@/translations/promotions';
 import cumulativeDiscountsTranslations from '@/translations/cumulativeDiscounts';
+import promoCodesTranslations from '@/translations/promoCodes';
 
 // Original translation function that works with the legacy system
 export function useTranslations() {
@@ -26,6 +27,11 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
+    // Check in promo codes translations
+    if (promoCodesTranslations[language]?.[key]) {
+      return promoCodesTranslations[language][key];
+    }
+    
     // Check in cumulative discounts translations
     if (cumulativeDiscountsTranslations[language]?.[key]) {
       return cumulativeDiscountsTranslations[language][key];
