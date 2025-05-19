@@ -34,6 +34,39 @@ const localTranslations = {
     happyHoursReason3: "When addresses are made in places where searches are better done during the daytime and you don't want to explain this to each client.",
     happyHoursSettings1Alt: "Happy hours settings activation",
     happyHoursSettings2Alt: "Happy hours price settings",
+
+    // Balance TopUps Page
+    balanceTopUpsTitle: "Balance Top Ups/Disputes",
+    balanceTopUpsSubtitle: "Managing Balance Top-Ups and Payment Disputes",
+    balanceTopUpsDescription: "In this section, you can see all the balance top-up requests from your clients. You can filter them by status, payment method, and date range.",
+    balanceTopUpsImage: "Balance top-ups interface",
+    balanceTopUpsMostCommonIssue: "The most common issue with balance top-ups is when a client claims they've made a payment but the system hasn't received it yet. Here's how to handle such situations:",
+    balanceTopUpsServicePayment: "For Service Payment Issues:",
+    balanceTopUpsCheckTransaction: "Check the transaction ID or payment details in your payment processor dashboard",
+    balanceTopUpsOpenDispute: "If the payment is confirmed but not reflected in the system, open a dispute and resolve it manually",
+    balanceTopUpsDisputeImage: "Dispute resolution interface",
+    balanceTopUpsUsdtPayment: "For USDT Payment Issues:",
+    balanceTopUpsCheckUsdtTransaction: "Verify the transaction on the blockchain using the transaction ID",
+    balanceTopUpsProcessApplication: "Process the application manually if the transaction is confirmed",
+    balanceTopUpsCarouselImage1: "USDT transaction verification step 1",
+    balanceTopUpsCarouselImage2: "USDT transaction verification step 2",
+    balanceTopUpsRecommendation: "We recommend using USDT for all transactions to avoid payment processing issues. Learn more about USDT payments here:",
+    balanceTopUpsFilters: "Use filters to quickly find specific transactions by date, status, or payment method:",
+    balanceTopUpsFiltersImage: "Balance top-ups filters",
+    balanceTopUpsBalanceHistory: "You can also view the complete balance history of each client in the Balance History section.",
+
+    // Casino Setup Page
+    casino: "Casino Setup",
+    casinoInstructions: "Casino Integration Instructions",
+    storeSetupTitle: "Setting Up Casino in Your Store",
+    casinoSteps: "1. Go to the Stores menu and select your store\n2. Navigate to the Casino tab\n3. Enable the casino feature\n4. Select which games you want to make available\n5. Set the house edge percentage for each game",
+    availableGames: "Available Casino Games",
+    gamesList: "• Dice - Classic dice game with customizable odds\n• Crash - Multiplier game with increasing risk\n• Coinflip - Simple 50/50 game\n• Slots - Classic slot machine\n• Mines - Risk-based tile selection game\n• Stairs - Climbing game with increasing rewards",
+    gameChanceInfo: "Each game has adjustable odds and house edge settings. The default house edge is 3%, but you can adjust this based on your business model.",
+    slotMachines: "Slot Machine Settings",
+    slotMachineInfo: "Slot machines can be customized with different themes and payout structures. You can set the RTP (Return To Player) percentage and the frequency of bonus rounds.",
+    casinoHistory: "Casino Game History",
+    casinoHistoryInfo: "To view the history of your clients' Casino games, go to the ADDITIONAL -> CASINO GAME HISTORY menu",
   },
   ru: {
     // Common
@@ -64,6 +97,39 @@ const localTranslations = {
     happyHoursReason3: "Когда адреса выполнены в местах поиски в которых лучше проводить в дневное время суток и вам не хочется объяснять это каждому клиенту.",
     happyHoursSettings1Alt: "Активация настроек счастливых часов",
     happyHoursSettings2Alt: "Настройки цен счастливых часов",
+
+    // Balance TopUps Page
+    balanceTopUpsTitle: "Пополнения балансов/споры",
+    balanceTopUpsSubtitle: "Управление пополнениями баланса и спорами по оплатам",
+    balanceTopUpsDescription: "В этом разделе вы можете видеть все запросы на пополнение баланса от ваших клиентов. Вы можете фильтровать их по статусу, способу оплаты и диапазону дат.",
+    balanceTopUpsImage: "Интерфейс пополнения баланса",
+    balanceTopUpsMostCommonIssue: "Наиболее распространенной проблемой с пополнением баланса является ситуация, когда клиент утверждает, что произвел оплату, но система еще не получила ее. Вот как обрабатывать такие ситуации:",
+    balanceTopUpsServicePayment: "Для проблем с оплатой услуг:",
+    balanceTopUpsCheckTransaction: "Проверьте ID транзакции или детали платежа в панели управления вашего платежного процессора",
+    balanceTopUpsOpenDispute: "Если оплата подтверждена, но не отражена в системе, откройте спор и разрешите его вручную",
+    balanceTopUpsDisputeImage: "Интерфейс разрешения споров",
+    balanceTopUpsUsdtPayment: "Для проблем с оплатой USDT:",
+    balanceTopUpsCheckUsdtTransaction: "Проверьте транзакцию на блокчейне, используя ID транзакции",
+    balanceTopUpsProcessApplication: "Обработайте заявку вручную, если транзакция подтверждена",
+    balanceTopUpsCarouselImage1: "Шаг 1 проверки транзакции USDT",
+    balanceTopUpsCarouselImage2: "Шаг 2 проверки транзакции USDT",
+    balanceTopUpsRecommendation: "Мы рекомендуем использовать USDT для всех транзакций, чтобы избежать проблем с обработкой платежей. Узнайте больше о платежах USDT здесь:",
+    balanceTopUpsFilters: "Используйте фильтры для быстрого поиска определенных транзакций по дате, статусу или способу оплаты:",
+    balanceTopUpsFiltersImage: "Фильтры пополнений баланса",
+    balanceTopUpsBalanceHistory: "Вы также можете просмотреть полную историю баланса каждого клиента в разделе История баланса.",
+
+    // Casino Setup Page
+    casino: "Настройка казино",
+    casinoInstructions: "Инструкции по интеграции казино",
+    storeSetupTitle: "Настройка казино в вашем магазине",
+    casinoSteps: "1. Перейдите в меню Магазины и выберите свой магазин\n2. Перейдите на вкладку Казино\n3. Включите функцию казино\n4. Выберите, какие игры вы хотите сделать доступными\n5. Установите процент преимущества заведения для каждой игры",
+    availableGames: "Доступные игры казино",
+    gamesList: "• Кости - Классическая игра в кости с настраиваемыми шансами\n• Краш - Игра с множителем и возрастающим риском\n• Монетка - Простая игра 50/50\n• Слоты - Классический игровой автомат\n• Мины - Игра с выбором плитки на основе риска\n• Лестница - Игра с подъемом с увеличивающимися наградами",
+    gameChanceInfo: "Каждая игра имеет настраиваемые шансы и настройки преимущества заведения. По умолчанию преимущество заведения составляет 3%, но вы можете настроить это в соответствии с вашей бизнес-моделью.",
+    slotMachines: "Настройки игровых автоматов",
+    slotMachineInfo: "Игровые автоматы можно настроить с разными темами и структурами выплат. Вы можете установить процент RTP (возврат игроку) и частоту бонусных раундов.",
+    casinoHistory: "История игр в казино",
+    casinoHistoryInfo: "Чтобы просмотреть историю игр в казино ваших клиентов, перейдите в меню ДОПОЛНИТЕЛЬНО -> ИСТОРИЯ ИГР В КАЗИНО",
   },
 };
 
@@ -72,15 +138,16 @@ type LocalTranslations = typeof localTranslations.en;
 export type LocalTranslationKey = keyof LocalTranslations;
 
 const useTranslations = () => {
-  const contextValue = useContext(LanguageContext);
-  const language = contextValue?.language || 'en'; // Safe access to language
+  // Import from the LanguageContext using useContext
+  const { language = 'en' } = useContext(LanguageContext) || {};
   
+  // Function to get local translation
   const tLocal = (key: LocalTranslationKey): string => {
     const lang = language as keyof typeof localTranslations;
     return localTranslations[lang]?.[key] || key;
   };
 
-  // Use the correct import from translations module
+  // Function to get translation from the translations module
   const tNew = (key: string): string => {
     if (!translations.getTranslation) return key;
     return translations.getTranslation(key, language as 'en' | 'ru');
