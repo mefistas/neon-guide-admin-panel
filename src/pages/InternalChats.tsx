@@ -1,117 +1,93 @@
-
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
-import { 
-  MessageSquare, 
-  Users, 
-  Shield, 
-  Lock, 
-  Clock,
-  ChevronRight
-} from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const InternalChats = () => {
   const { tLocal } = useTranslations();
-  
+
+  const images = [
+    {
+      src: "https://i.ibb.co/7NR5jyZq/Screenshot-2025-05-18-at-8-28-00-AM.png",
+      alt: "Internal chats interface"
+    },
+    {
+      src: "https://i.ibb.co/SbXzdXk/Screenshot-2025-05-18-at-8-29-26-AM.png",
+      alt: "Add my branch interface"
+    }
+  ];
+
   return (
     <TutorialPage title={tLocal('internalChatsTitle')}>
       <div className="space-y-6">
         <div className="mb-4">
-          <BackButton to="/marketing" />
+          <BackButton to="/cards-payments" />
         </div>
+
+        <p className="text-gray-300">{tLocal('internalChatsMenuPath')}</p>
+        <p className="text-gray-300">{tLocal('internalChatsAddBranch')}</p>
         
-        {/* Menu path section */}
-        <div className="bg-gray-900/40 rounded-lg p-6 border border-gray-700 mb-8">
-          <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
-            <span>ADDITIONAL</span>
-            <ChevronRight size={16} />
-            <span>INNER COMMUNICATION</span>
-            <ChevronRight size={16} />
-            <span className="text-gray-200">{tLocal('internalChatsMenuPath')}</span>
+        <div className="p-2">
+          <Carousel className="w-full max-w-3xl mx-auto">
+            <CarouselContent>
+              {images.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <AspectRatio ratio={16 / 9}>
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="rounded-xl object-cover w-full h-full"
+                      />
+                    </AspectRatio>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-4 space-x-4">
+              <CarouselPrevious className="relative static translate-y-0 left-0" />
+              <CarouselNext className="relative static translate-y-0 right-0" />
+            </div>
+          </Carousel>
+        </div>
+
+        <div className="space-y-4">
+          <p className="text-gray-300">{tLocal('internalChatsDescription')}</p>
+          
+          <div className="my-6 space-y-4">
+            <p className="text-gray-300">{tLocal('internalChatsInviteButton')}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-xl font-medium mb-4">{tLocal('internalChatsAddBranch')}</h3>
-              
-              <div className="space-y-4">
-                <div className="flex gap-3 p-4 bg-gray-800/60 rounded-lg">
-                  <div className="h-10 w-10 rounded-full bg-purple-600/20 flex items-center justify-center">
-                    <MessageSquare size={20} className="text-purple-400" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Inner Chat</h4>
-                    <p className="text-sm text-gray-400">Private discussions with team members</p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-3 p-4 bg-gray-800/60 rounded-lg">
-                  <div className="h-10 w-10 rounded-full bg-blue-600/20 flex items-center justify-center">
-                    <Users size={20} className="text-blue-400" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Broadcast Channel</h4>
-                    <p className="text-sm text-gray-400">One-way communication to team</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <p className="text-lg">{tLocal('internalChatsDescription')}</p>
-              
-              <div className="mt-4 p-4 border border-gray-700 rounded-lg">
-                <button className="w-full py-2 bg-purple-600/20 text-purple-400 rounded hover:bg-purple-600/30 transition-colors">
-                  {tLocal('internalChatsInviteButton')}
-                </button>
-              </div>
-            </div>
+          <div className="my-6 space-y-4">
+            <p className="text-gray-300">{tLocal('internalChatsOwnerCapabilities')}</p>
+            <p className="text-gray-300">{tLocal('internalChatsDescription2')}</p>
           </div>
-        </div>
-        
-        {/* Owner capabilities section */}
-        <div className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-4 flex items-center">
-            <Shield className="mr-2 text-amber-500" size={20} />
-            {tLocal('internalChatsOwnerCapabilities')}
-          </h3>
           
-          <p className="mb-6">{tLocal('internalChatsDescription2')}</p>
+          <div className="my-6 space-y-4">
+            <p className="text-gray-300">{tLocal('internalChatsChannelOption')}</p>
+            <p className="text-gray-300">{tLocal('internalChatsGroupOption')}</p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-3">
-              <div className="p-3 bg-gray-800/60 rounded-lg">
-                <h4 className="text-lg font-medium">{tLocal('internalChatsChannelOption')}</h4>
-                <p className="text-sm text-gray-400">{tLocal('internalChatsGroupOption')}</p>
-              </div>
-              
-              <div className="p-3 bg-gray-800/60 rounded-lg">
-                <h4 className="text-lg font-medium">{tLocal('internalChatsEncryption')}</h4>
-                <p className="text-sm text-gray-400">{tLocal('internalChatsEncryptionDetails')}</p>
-                <p className="text-sm text-gray-400 mt-1">{tLocal('internalChatsServerStorage')}</p>
-              </div>
-              
-              <div className="p-3 bg-gray-800/60 rounded-lg">
-                <h4 className="text-lg font-medium">{tLocal('internalChatsPasswordSharing')}</h4>
-              </div>
-              
-              <div className="p-3 bg-gray-800/60 rounded-lg">
-                <h4 className="text-lg font-medium flex items-center">
-                  <Clock size={16} className="mr-2 text-blue-400" />
-                  {tLocal('internalChatsAutoDeletion')}
-                </h4>
-              </div>
-            </div>
-            
-            <div>
-              <img 
-                src="https://i.ibb.co/NTYbvQ6/Screenshot-2025-05-18-at-2-51-15-PM.png" 
-                alt="Internal chat interface" 
-                className="rounded-lg shadow-lg" 
-              />
-            </div>
+          <div className="my-6 space-y-4">
+            <p className="text-gray-300">{tLocal('internalChatsEncryption')}</p>
+            <p className="text-gray-300">{tLocal('internalChatsEncryptionDetails')}</p>
+            <p className="text-gray-300">{tLocal('internalChatsServerStorage')}</p>
+          </div>
+          
+          <div className="my-6 space-y-4">
+            <p className="text-gray-300">{tLocal('internalChatsPasswordSharing')}</p>
+          </div>
+          
+          <div className="my-6 space-y-4">
+            <p className="text-gray-300">{tLocal('internalChatsAutoDeletion')}</p>
           </div>
         </div>
       </div>

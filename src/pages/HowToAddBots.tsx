@@ -2,7 +2,7 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
-import useTranslations from '@/hooks/useTranslations';
+import { useTranslations } from '@/hooks/useTranslations';
 import {
   Carousel,
   CarouselContent,

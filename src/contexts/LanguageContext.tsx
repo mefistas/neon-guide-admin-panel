@@ -14,7 +14,7 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-export const translations: Translations = {
+const translations: Translations = {
   en: {
     adminPanelTutorial: 'Admin Panel Tutorial',
     quickStart: 'Quick Start',
@@ -203,7 +203,7 @@ export const translations: Translations = {
     howToAddBots: 'Как добавить ботов',
     oneTimeDiscounts: 'Разовые скидки на товары',
     btcCashout: 'Обнал BTC',
-    balanceHistory: 'И��тория изменения балансов',
+    balanceHistory: 'История изменения балансов',
     internalChats: 'Внутренние чаты',
     reviews: 'Отзывы',
     marketing: 'Маркетинг',
@@ -254,7 +254,7 @@ export const translations: Translations = {
     
     quickStartPoint3: 'Создаем группы товаров',
     quickStartPoint3Note1: 'Идем в раздел СКЛАД->ГРУППЫ ТОВАРОВ, кликаем справа сверху ДОБАВИТЬ ГРУППА ТОВАРОВ',
-    quickStartPoint3Note2: 'Slug автогенерируем можем игнорировать этот пункт',
+    quickStartPoint3Note2: 'Slug автогенерируем можем игнорить этот пункт',
     quickStartPoint3Note3: 'Рекомендуем сразу поставить фото товара что бы не возвращаться в этот раздел по 10 раз',
     quickStartPoint3Note4: 'Название группы это и есть ваш продукт например КОКАИН/мефчик',
     quickStartPoint3Note5: 'Это название будет отображаться в боте для клиентов поэтому прописывайте сразу в нужном стиле и на нужном языке',
@@ -276,7 +276,7 @@ export const translations: Translations = {
     quickStartPoint5Note1: 'Для создания курьеров необходимо зайти в раздел Склад -> Курьеры, нажать кнопку ДОБАВИТЬ КУРЬЕРА в правом верхнем углу и да это обязательный пункт, даже если у тебя нет сотрудников ты обязан добавить одного для того что бы выгружать адреса',
     quickStartPoint5Note2: 'Даем курьеру имя, выбираем магазин к которому он относится, можешь обхуесосить его в коментарии он не увидит',
     quickStartPoint5Note3: 'Дальше ты видишь Available kinds и меню с твоими видами товаров которые мы уже создали',
-    quickStartPoint5Note4: 'Выделяем то с чем должен работать данный курьер (если ты сам будешь добавлять адреса естественно переноси все виды товаров вправо для легкой работы)',
+    quickStartPoint5Note4: 'Выделяем то с чем должен работать данный курьер (если ты сам будешь добавлять адреса естсетвенно переноси все виды товаров вправо для легкой работы)',
     quickStartPoint5Note5: 'Выделяем все с помощью зажатого command или что у тебя там за железо и тык стрелку вправо',
     quickStartPoint5Note6: 'Все сохраняем больше нам тут пока ничего не нужно',
     quickStartPoint5Note7: 'Для более детальной настройки смотри полное руководство',
@@ -293,7 +293,7 @@ export const translations: Translations = {
     quickStartPoint6Note8: 'Остальное пока все можно оставить без изменений. Сохраняемся и передаем сотруднику логин/пароль и ссылку на панель',
     
     quickStartPoint7: 'Добавление МК',
-    quickStartPoint7Note1: 'Этот пункт тоже можешь скипнуть и пойти на 8 если не знаешь точно сколько у тебя веса у курьеров на руках или �� шкафу этот пункт для дрочеров перфекционистов',
+    quickStartPoint7Note1: 'Этот пункт тоже можешь скипнуть и пойти на 8 если не знаешь точно сколько у тебя веса у курьеров на руках или в шкафу этот пункт для дрочеров перфекционистов',
     quickStartPoint7Note2: 'Идем в раздел СКЛАД- МК',
     quickStartPoint7Note3: 'Выбираем название своего магазина',
     quickStartPoint7Note4: 'Выбираем курьера у которого на руках этот мк',
@@ -314,7 +314,7 @@ export const translations: Translations = {
     
     quickStartPoint9: 'Добавление адресов',
     quickStartPoint9Note1: 'Идем в раздел ДОБАВИТЬ АДРЕСА',
-    quickStartPoint9Note2: 'Тут мы видим уже списки районов которые есть воспользуйся поисковом если их много, находим нужный район для загрузки адресов и нажимаем ДОБАВИТЬ АД��ЕСА',
+    quickStartPoint9Note2: 'Тут мы видим уже списки районов которые есть воспользуйся поисковом если их много, находим нужный район для загрузки адресов и нажимаем ДОБАВИТЬ АДРЕСА',
     quickStartPoint9Note3: 'Выбираем нужного курьера обязательно поэтому мы его и добавляли',
     quickStartPoint9Note4: 'Выбираем нужный МК если он есть, если нет оставляем как есть',
     quickStartPoint9Note5: 'Выбираем тип продукта (название и грамовка) например у нас готово 5 кладов мефа по 1г на данном районе',
@@ -361,7 +361,7 @@ export const translations: Translations = {
   },
 };
 
-export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');
