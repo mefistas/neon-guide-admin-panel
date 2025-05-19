@@ -18,9 +18,9 @@ const Mailouts = () => {
   
   // Array of carousel images
   const carouselImages = [
-    "https://i.ibb.co/wFcFbv5/IMAGE-2025-05-19-15-25-59.jpg",
+    "https://i.ibb.co/wFcFbv5R/IMAGE-2025-05-19-15-25-59.jpg",
     "https://i.ibb.co/Tzm3S4x/IMAGE-2025-05-19-15-31-32.jpg",
-    "https://i.ibb.co/Tzm3S4x/IMAGE-2025-05-19-15-31-32.jpg"
+    "https://i.ibb.co/LdmBB0hC/IMAGE-2025-05-19-15-32-56.jpg"
   ];
 
   return (
@@ -100,7 +100,7 @@ const Mailouts = () => {
           
           <div className="mt-6">
             <img 
-              src="https://i.ibb.co/LdmBB0h/IMAGE-2025-05-19-15-32-56.jpg" 
+              src="https://i.ibb.co/LdmBB0hC/IMAGE-2025-05-19-15-32-56.jpg" 
               alt="Error example" 
               className="rounded-md w-full max-w-lg mx-auto"
             />
