@@ -1,6 +1,6 @@
 
 import { useContext } from "react";
-import { LanguageContext } from "@/contexts/LanguageContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 import * as translations from "@/utils/translations";
 
 // Local translations specific to components
@@ -67,6 +67,32 @@ const localTranslations = {
     slotMachineInfo: "Slot machines can be customized with different themes and payout structures. You can set the RTP (Return To Player) percentage and the frequency of bonus rounds.",
     casinoHistory: "Casino Game History",
     casinoHistoryInfo: "To view the history of your clients' Casino games, go to the ADDITIONAL -> CASINO GAME HISTORY menu",
+    
+    // Clients Page
+    clientsDescription: "In this section, you can manage all your platform clients. View transaction history, balance details, and user activity.",
+    clientsSearch: "Search for clients by username, email, or ID",
+    clientsCardTitle: "Client Management",
+    clientsCardDescription: "Comprehensive user management for your platform",
+    
+    // Feedback Page
+    feedbackTitle: "Feedback System",
+    feedbackDescription: "Configure and manage your customer feedback systems",
+    feedbackInstruction: "Set up your feedback collection methods",
+    sendingMessageTitle: "Message Templates",
+    sendingMessageInstruction: "Configure automated messages to collect customer feedback",
+    telegramOperatorTitle: "Telegram Support",
+    telegramOperatorInstruction: "Set up Telegram operators for customer support",
+    
+    // Internal Chats Page
+    internalChatsTitle: "Internal Chats",
+    internalChatsMenuPath: "Follow this menu path to access internal chats",
+    internalChatsAddBranch: "Add a new communication branch",
+    internalChatsDescription: "Internal chats provide secure communication channels for your team",
+    internalChatsInviteButton: "Invite team members to the chat",
+    internalChatsOwnerCapabilities: "What you can do as the chat owner",
+    internalChatsDescription2: "Configure permissions for different chat participants",
+    
+    // More pages can add their translations here
   },
   ru: {
     // Common
@@ -130,6 +156,32 @@ const localTranslations = {
     slotMachineInfo: "Игровые автоматы можно настроить с разными темами и структурами выплат. Вы можете установить процент RTP (возврат игроку) и частоту бонусных раундов.",
     casinoHistory: "История игр в казино",
     casinoHistoryInfo: "Чтобы просмотреть историю игр в казино ваших клиентов, перейдите в меню ДОПОЛНИТЕЛЬНО -> ИСТОРИЯ ИГР В КАЗИНО",
+    
+    // Clients Page
+    clientsDescription: "В этом разделе вы можете управлять всеми клиентами вашей платформы. Просматривайте историю транзакций, детали баланса и активность пользователей.",
+    clientsSearch: "Поиск клиентов по имени пользователя, email или ID",
+    clientsCardTitle: "Управление клиентами",
+    clientsCardDescription: "Комплексное управление пользователями для вашей платформы",
+    
+    // Feedback Page
+    feedbackTitle: "Система обратной связи",
+    feedbackDescription: "Настройка и управление системами обратной связи с клиентами",
+    feedbackInstruction: "Настройте методы сбора обратной связи",
+    sendingMessageTitle: "Шаблоны сообщений",
+    sendingMessageInstruction: "Настройте автоматические сообщения для сбора обратной связи от клиентов",
+    telegramOperatorTitle: "Поддержка в Telegram",
+    telegramOperatorInstruction: "Настройте операторов Telegram для поддержки клиентов",
+    
+    // Internal Chats Page
+    internalChatsTitle: "Внутренние чаты",
+    internalChatsMenuPath: "Следуйте этому пути меню для доступа к внутренним чатам",
+    internalChatsAddBranch: "Добавить новую ветку коммуникации",
+    internalChatsDescription: "Внутренние чаты предоставляют защищенные каналы связи для вашей команды",
+    internalChatsInviteButton: "Пригласить членов команды в чат",
+    internalChatsOwnerCapabilities: "Что вы можете делать как владелец чата",
+    internalChatsDescription2: "Настройте разрешения для различных участников чата",
+    
+    // More pages can add their translations here
   },
 };
 
@@ -139,7 +191,7 @@ export type LocalTranslationKey = keyof LocalTranslations;
 
 const useTranslations = () => {
   // Import from the LanguageContext using useContext
-  const { language = 'en' } = useContext(LanguageContext) || {};
+  const { language = 'en' } = useLanguage();
   
   // Function to get local translation
   const tLocal = (key: LocalTranslationKey): string => {
