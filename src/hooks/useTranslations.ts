@@ -1,7 +1,7 @@
 
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-import enTranslations from "@/utils/translations";
+import * as translations from "@/utils/translations";
 
 // Local translations specific to components
 const localTranslations = {
@@ -72,17 +72,21 @@ type LocalTranslations = typeof localTranslations.en;
 export type LocalTranslationKey = keyof LocalTranslations;
 
 const useTranslations = () => {
-  const { language } = useContext(LanguageContext);
+  const contextValue = useContext(LanguageContext);
+  const language = contextValue?.language || 'en'; // Safe access to language
   
-  const tLocal = (key: keyof LocalTranslations): string => {
-    return localTranslations[language as keyof typeof localTranslations]?.[key] || key;
+  const tLocal = (key: LocalTranslationKey): string => {
+    const lang = language as keyof typeof localTranslations;
+    return localTranslations[lang]?.[key] || key;
   };
 
+  // Use the correct import from translations module
   const tNew = (key: string): string => {
-    return enTranslations[language as keyof typeof enTranslations]?.[key] || key;
+    if (!translations.getTranslation) return key;
+    return translations.getTranslation(key, language as 'en' | 'ru');
   };
 
-  return { tNew, tLocal };
+  return { tNew, tLocal, language };
 };
 
 export default useTranslations;

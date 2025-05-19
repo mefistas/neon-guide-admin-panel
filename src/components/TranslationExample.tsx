@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useTranslations } from '@/hooks/useTranslations';
+import useTranslations from '@/hooks/useTranslations';
 
 interface TranslationExampleProps {
   translationKey: string;
@@ -16,18 +16,12 @@ const TranslationExample: React.FC<TranslationExampleProps> = ({
   fallback
 }) => {
   // Use both original and new translation systems
-  const { t, tNew, language } = useTranslations();
+  const { tNew, language } = useTranslations();
   
-  // Try to get translation from original system first
-  const originalTranslation = t(translationKey);
+  // Try to get translation from new system
+  const translation = tNew(translationKey);
   
-  // If the original translation returns the key itself, try the new system
-  const translation = 
-    originalTranslation === translationKey 
-      ? tNew(translationKey) 
-      : originalTranslation;
-  
-  // If both systems fail, use the fallback
+  // If the new system fails, use the fallback
   const displayText = translation === translationKey ? fallback || translationKey : translation;
   
   return (
@@ -38,4 +32,3 @@ const TranslationExample: React.FC<TranslationExampleProps> = ({
 };
 
 export default TranslationExample;
-
