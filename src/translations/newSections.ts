@@ -61,6 +61,9 @@ const translations = {
     mustSubscribeIntro: "Configure required channel subscription settings for users",
     tip: "Tip",
     important: "Important",
+    
+    // Additional settings section
+    additionalSettings: "Additional Settings",
   },
   ru: {
     // Cards/Payments section
@@ -123,6 +126,9 @@ const translations = {
     mustSubscribeIntro: "Настройка параметров обязательной подписки пользователей на канал",
     tip: "Совет",
     important: "Важно",
+    
+    // Additional settings section
+    additionalSettings: "Дополнительные настройки",
   }
 };
 

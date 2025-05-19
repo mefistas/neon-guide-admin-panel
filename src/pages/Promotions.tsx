@@ -3,23 +3,186 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from '@/components/ui/carousel';
 
 const Promotions = () => {
   const { tNew } = useTranslations();
   
   return (
-    <TutorialPage title={tNew('promotions')}>
-      <div className="space-y-6">
+    <TutorialPage title={tNew('promotionsTitle')}>
+      <div className="space-y-8 max-w-4xl mx-auto">
         <div className="mb-4">
           <BackButton to="/marketing" />
         </div>
         
-        <p>{tNew('promotionsDesc')}</p>
-        
-        <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-          <p className="font-semibold">{tNew('tip')}:</p>
-          <p>{tNew('promotionsTip')}</p>
-        </div>
+        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
+          <p className="mb-6">{tNew('promotionsIntro')}</p>
+          
+          {/* Purchase Count Promotion */}
+          <div className="mt-10 border-t border-gray-700 pt-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex-1">
+                <h3 className="text-xl font-medium mb-4">{tNew('purchaseCountPromoTitle')}</h3>
+                <p className="mb-4">{tNew('purchaseCountPromoDesc')}</p>
+                <p className="bg-neonBlue/10 p-4 rounded-md border border-neonBlue">
+                  {tNew('purchaseCountPromoExample')}
+                </p>
+              </div>
+              <div className="md:w-1/3">
+                <img 
+                  src="https://i.ibb.co/WN3MkSNB/IMAGE-2025-05-19-15-56-32.jpg" 
+                  alt="Purchase Count Promotion" 
+                  className="rounded-lg border border-gray-700 w-full" 
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* Deposit Sum Promotion */}
+          <div className="mt-10 border-t border-gray-700 pt-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex-1">
+                <h3 className="text-xl font-medium mb-4">{tNew('depositSumPromoTitle')}</h3>
+                <p className="mb-4">{tNew('depositSumPromoDesc')}</p>
+                <p className="bg-neonBlue/10 p-4 rounded-md border border-neonBlue">
+                  {tNew('depositSumPromoExample')}
+                </p>
+              </div>
+              <div className="md:w-1/3">
+                <img 
+                  src="https://i.ibb.co/LD613Kfp/IMAGE-2025-05-19-16-07-50.jpg" 
+                  alt="Deposit Sum Promotion" 
+                  className="rounded-lg border border-gray-700 w-full" 
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* One-Time Deposit Promotion */}
+          <div className="mt-10 border-t border-gray-700 pt-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex-1">
+                <h3 className="text-xl font-medium mb-4">{tNew('oneTimeDepositTitle')}</h3>
+                <p className="mb-4">{tNew('oneTimeDepositDesc')}</p>
+              </div>
+              <div className="md:w-1/3">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <img 
+                        src="https://i.ibb.co/RkMTv1fP/IMAGE-2025-05-19-16-21-24.jpg" 
+                        alt="One-time Deposit Promotion 1" 
+                        className="rounded-lg border border-gray-700 w-full" 
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img 
+                        src="https://i.ibb.co/7t7jPFfz/IMAGE-2025-05-19-16-21-25.jpg" 
+                        alt="One-time Deposit Promotion 2" 
+                        className="rounded-lg border border-gray-700 w-full" 
+                      />
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2" />
+                  <CarouselNext className="right-2" />
+                </Carousel>
+              </div>
+            </div>
+          </div>
+          
+          {/* Reviews Promotion */}
+          <div className="mt-10 border-t border-gray-700 pt-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex-1">
+                <h3 className="text-xl font-medium mb-4">{tNew('reviewsPromoTitle')}</h3>
+                <p className="mb-4">{tNew('reviewsPromoDesc')}</p>
+              </div>
+              <div className="md:w-1/3">
+                <img 
+                  src="https://i.ibb.co/zW8L1d0k/IMAGE-2025-05-19-16-25-48.jpg" 
+                  alt="Reviews Promotion" 
+                  className="rounded-lg border border-gray-700 w-full" 
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* Next Purchase Discount */}
+          <div className="mt-10 border-t border-gray-700 pt-6">
+            <h3 className="text-xl font-medium mb-4">{tNew('nextPurchaseTitle')}</h3>
+            <p className="mb-4">{tNew('nextPurchaseDesc')}</p>
+            <ul className="list-disc pl-5 mb-4">
+              <li className="mb-2">{tNew('nextPurchaseSteps')}</li>
+            </ul>
+            
+            <Carousel className="w-full">
+              <CarouselContent>
+                <CarouselItem>
+                  <img 
+                    src="https://i.ibb.co/JjSPFYgJ/IMAGE-2025-05-19-16-30-38.jpg" 
+                    alt="Next Purchase Discount 1" 
+                    className="rounded-lg border border-gray-700 w-full" 
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <img 
+                    src="https://i.ibb.co/MxCmhyGy/IMAGE-2025-05-19-16-45-23.jpg" 
+                    alt="Next Purchase Discount 2" 
+                    className="rounded-lg border border-gray-700 w-full" 
+                  />
+                </CarouselItem>
+                <CarouselItem>
+                  <img 
+                    src="https://i.ibb.co/5xMdzZd4/IMAGE-2025-05-19-16-45-24.jpg" 
+                    alt="Next Purchase Discount 3" 
+                    className="rounded-lg border border-gray-700 w-full" 
+                  />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="left-2" />
+              <CarouselNext className="right-2" />
+            </Carousel>
+            
+            <div className="mt-6 space-y-4">
+              <p>{tNew('nextPurchaseDetails1')}</p>
+              <p>{tNew('nextPurchaseDetails2')}</p>
+              <p>{tNew('nextPurchaseNotification')}</p>
+              <p>{tNew('nextPurchaseDiscounts')}</p>
+              <p>{tNew('nextPurchaseMultiple')}</p>
+            </div>
+          </div>
+          
+          {/* Sale Promotion */}
+          <div className="mt-10 border-t border-gray-700 pt-6">
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex-1">
+                <h3 className="text-xl font-medium mb-4">{tNew('salePromoTitle')}</h3>
+                <p className="mb-4">{tNew('salePromoDesc')}</p>
+                <p className="mb-4">{tNew('salePromoDetails')}</p>
+              </div>
+              <div className="md:w-1/3">
+                <img 
+                  src="https://i.ibb.co/6c1sWrwC/IMAGE-2025-05-19-16-50-24.jpg" 
+                  alt="Sale Promotion" 
+                  className="rounded-lg border border-gray-700 w-full" 
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* Additional Settings */}
+          <div className="mt-10 border-t border-gray-700 pt-6">
+            <h3 className="text-xl font-medium mb-4">{tNew('additionalSettings')}</h3>
+            <p className="mb-4">{tNew('deleteUnusedDiscounts')}</p>
+            <p className="mb-4">{tNew('followingDiscountsInfo')}</p>
+          </div>
+        </section>
       </div>
     </TutorialPage>
   );

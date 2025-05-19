@@ -7,6 +7,7 @@ import helpBotsTranslations from '@/translations/helpBots';
 import newSectionsTranslations from '@/translations/newSections';
 import preordersTranslations from '@/translations/preorders';
 import mailoutTranslations from '@/translations/mailouts';
+import promotionsTranslations from '@/translations/promotions';
 
 // Original translation function that works with the legacy system
 export function useTranslations() {
@@ -24,7 +25,12 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
-    // Check in mailouts translations first
+    // Check in promotions translations
+    if (promotionsTranslations[language]?.[key]) {
+      return promotionsTranslations[language][key];
+    }
+    
+    // Check in mailouts translations
     if (mailoutTranslations[language]?.[key]) {
       return mailoutTranslations[language][key];
     }
