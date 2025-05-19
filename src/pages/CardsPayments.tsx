@@ -1,8 +1,9 @@
+
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
-import { Users, MessageSquare, Headset, Bot } from 'lucide-react';
+import { Users, MessageSquare, Headset, Bot, Truck } from 'lucide-react';
 import BackButton from '@/components/BackButton';
 
 const CardsPayments = () => {
@@ -26,6 +27,12 @@ const CardsPayments = () => {
       icon: <Headset size={20} className="mr-2" />,
       path: '/purchases',
       description: 'purchasesProcessingDesc'
+    },
+    {
+      title: 'preorders',
+      icon: <Truck size={20} className="mr-2" />,
+      path: '/preorders',
+      description: 'preordersDesc'
     },
     {
       title: 'helpBots',
