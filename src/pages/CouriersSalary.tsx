@@ -154,7 +154,7 @@ const CouriersSalary = () => {
     <TutorialPage title={tLocal("couriersSalaryTitle")}>
       <div className="space-y-6">
         <div className="mb-4">
-          <BackButton to="/workers" />
+          <BackButton to="/finance" />
         </div>
 
         <section className="space-y-6">
