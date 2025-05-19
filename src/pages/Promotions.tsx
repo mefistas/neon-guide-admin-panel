@@ -1,7 +1,7 @@
 
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
-import useTranslations from '@/hooks/useTranslations';
+import usePromotionsTranslations from '@/hooks/usePromotionsTranslations';
 import BackButton from '@/components/BackButton';
 import { 
   Carousel, 
@@ -12,26 +12,26 @@ import {
 } from '@/components/ui/carousel';
 
 const Promotions = () => {
-  const { tNew } = useTranslations();
+  const { t } = usePromotionsTranslations();
   
   return (
-    <TutorialPage title={tNew('promotionsTitle')}>
+    <TutorialPage title={t('promotionsTitle')}>
       <div className="space-y-8 max-w-4xl mx-auto">
         <div className="mb-4">
           <BackButton to="/marketing" />
         </div>
         
         <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <p className="mb-6">{tNew('promotionsIntro')}</p>
+          <p className="mb-6">{t('promotionsIntro')}</p>
           
           {/* Purchase Count Promotion */}
           <div className="mt-10 border-t border-gray-700 pt-6">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{tNew('purchaseCountPromoTitle')}</h3>
-                <p className="mb-4">{tNew('purchaseCountPromoDesc')}</p>
+                <h3 className="text-xl font-medium mb-4">{t('purchaseCountPromoTitle')}</h3>
+                <p className="mb-4">{t('purchaseCountPromoDesc')}</p>
                 <p className="bg-neonBlue/10 p-4 rounded-md border border-neonBlue">
-                  {tNew('purchaseCountPromoExample')}
+                  {t('purchaseCountPromoExample')}
                 </p>
               </div>
               <div className="md:w-1/3">
@@ -48,10 +48,10 @@ const Promotions = () => {
           <div className="mt-10 border-t border-gray-700 pt-6">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{tNew('depositSumPromoTitle')}</h3>
-                <p className="mb-4">{tNew('depositSumPromoDesc')}</p>
+                <h3 className="text-xl font-medium mb-4">{t('depositSumPromoTitle')}</h3>
+                <p className="mb-4">{t('depositSumPromoDesc')}</p>
                 <p className="bg-neonBlue/10 p-4 rounded-md border border-neonBlue">
-                  {tNew('depositSumPromoExample')}
+                  {t('depositSumPromoExample')}
                 </p>
               </div>
               <div className="md:w-1/3">
@@ -68,8 +68,8 @@ const Promotions = () => {
           <div className="mt-10 border-t border-gray-700 pt-6">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{tNew('oneTimeDepositTitle')}</h3>
-                <p className="mb-4">{tNew('oneTimeDepositDesc')}</p>
+                <h3 className="text-xl font-medium mb-4">{t('oneTimeDepositTitle')}</h3>
+                <p className="mb-4">{t('oneTimeDepositDesc')}</p>
               </div>
               <div className="md:w-1/3">
                 <Carousel className="w-full">
@@ -100,8 +100,8 @@ const Promotions = () => {
           <div className="mt-10 border-t border-gray-700 pt-6">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{tNew('reviewsPromoTitle')}</h3>
-                <p className="mb-4">{tNew('reviewsPromoDesc')}</p>
+                <h3 className="text-xl font-medium mb-4">{t('reviewsPromoTitle')}</h3>
+                <p className="mb-4">{t('reviewsPromoDesc')}</p>
               </div>
               <div className="md:w-1/3">
                 <img 
@@ -115,10 +115,10 @@ const Promotions = () => {
           
           {/* Next Purchase Discount */}
           <div className="mt-10 border-t border-gray-700 pt-6">
-            <h3 className="text-xl font-medium mb-4">{tNew('nextPurchaseTitle')}</h3>
-            <p className="mb-4">{tNew('nextPurchaseDesc')}</p>
+            <h3 className="text-xl font-medium mb-4">{t('nextPurchaseTitle')}</h3>
+            <p className="mb-4">{t('nextPurchaseDesc')}</p>
             <ul className="list-disc pl-5 mb-4">
-              <li className="mb-2">{tNew('nextPurchaseSteps')}</li>
+              <li className="mb-2">{t('nextPurchaseSteps')}</li>
             </ul>
             
             <Carousel className="w-full">
@@ -150,11 +150,11 @@ const Promotions = () => {
             </Carousel>
             
             <div className="mt-6 space-y-4">
-              <p>{tNew('nextPurchaseDetails1')}</p>
-              <p>{tNew('nextPurchaseDetails2')}</p>
-              <p>{tNew('nextPurchaseNotification')}</p>
-              <p>{tNew('nextPurchaseDiscounts')}</p>
-              <p>{tNew('nextPurchaseMultiple')}</p>
+              <p>{t('nextPurchaseDetails1')}</p>
+              <p>{t('nextPurchaseDetails2')}</p>
+              <p>{t('nextPurchaseNotification')}</p>
+              <p>{t('nextPurchaseDiscounts')}</p>
+              <p>{t('nextPurchaseMultiple')}</p>
             </div>
           </div>
           
@@ -162,9 +162,9 @@ const Promotions = () => {
           <div className="mt-10 border-t border-gray-700 pt-6">
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{tNew('salePromoTitle')}</h3>
-                <p className="mb-4">{tNew('salePromoDesc')}</p>
-                <p className="mb-4">{tNew('salePromoDetails')}</p>
+                <h3 className="text-xl font-medium mb-4">{t('salePromoTitle')}</h3>
+                <p className="mb-4">{t('salePromoDesc')}</p>
+                <p className="mb-4">{t('salePromoDetails')}</p>
               </div>
               <div className="md:w-1/3">
                 <img 
@@ -178,9 +178,9 @@ const Promotions = () => {
           
           {/* Additional Settings */}
           <div className="mt-10 border-t border-gray-700 pt-6">
-            <h3 className="text-xl font-medium mb-4">{tNew('additionalSettings')}</h3>
-            <p className="mb-4">{tNew('deleteUnusedDiscounts')}</p>
-            <p className="mb-4">{tNew('followingDiscountsInfo')}</p>
+            <h3 className="text-xl font-medium mb-4">{t('additionalSettings')}</h3>
+            <p className="mb-4">{t('deleteUnusedDiscounts')}</p>
+            <p className="mb-4">{t('followingDiscountsInfo')}</p>
           </div>
         </section>
       </div>
