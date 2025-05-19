@@ -171,7 +171,7 @@ const additionalTranslations: TranslationsStore = {
   },
   saveAndContinue: {
     en: ' We recommend using the save and continue editing button to see the changes happening in your bot',
-    ru: ' Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно изменения кото��ые происходят в вашем боте'
+    ru: ' Рекомендуем использовать кнопку сохранить и продолжить редактирование что бы видеть наглядно и��менения кото��ые происходят в вашем боте'
   },
   activateCasino: {
     en: ' To activate the casino button, go to the casino menu and check at least one game, otherwise the casino WILL NOT be displayed in your menu, don\'t forget to save',
@@ -199,7 +199,7 @@ const additionalTranslations: TranslationsStore = {
   },
   bonusButton: {
     en: ' In the Bonuses button section, you can see the conditions regarding the referral system in your store, to change the referral % use the Channel/Referral menu',
-    ru: ' В разделе кн����ки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
+    ru: ' В разделе кн�����ки Бонусы вы можете видеть условия касательно рефератной системы в вашем магазине, что бы изменить рефератный % используйте меню Канал/Рефералка'
   },
   customizationSection: {
     en: 'Bot Customization Section',
@@ -231,7 +231,7 @@ const additionalTranslations: TranslationsStore = {
   },
   allMessagesHere: {
     en: ' All messages that the bot sends to your clients are right here, here you can change absolutely everything, just don\'t break the logic and don\'t forget to use html where it exists',
-    ru: ' Все сообщения которые бот отправляет вашим клиентам находятся именно тут, здесь вы можете менят�� вообще все только не нарушайте логику и не забывайте использовать html где он есть'
+    ru: ' Все сообщения которые бот отправляет вашим клиентам находятся именно тут, зде��ь вы можете менят�� вообще все только не нарушайте логику и не забывайте использовать html где он есть'
   },
   htmlGuide: {
     en: '{{ variable }} - variables used in the text are inserted here.\nHTML tags:\n<b>Bold text</b>\n<i>Italic</i>\n<code>Text for copying</code>\nTags must be opened and closed. If an error is made, then an error will be returned to you. You can contact support with this error and they will help you solve it.\nIt is important to understand that tags have a beginning and an end - the difference between them is in one slash - /\nBeginning - <b>\nEnd - </b>',
@@ -390,7 +390,7 @@ const additionalTranslations: TranslationsStore = {
   },
   oneTimeDiscounts: {
     en: "One-Time Product Discounts",
-    ru: "Разовые ск��дки на тов��ры"
+    ru: "Раз��вые ск��дки на тов��ры"
   },
   oneTimeDiscountsDesc: {
     en: "Create special one-time discounts for products",
@@ -542,7 +542,7 @@ const additionalTranslations: TranslationsStore = {
   },
   mainBotConnectionSteps: {
     en: "Go to STORES -> ALL STORES and select your store\n- Then go to the NOTIFICATIONS section, check the boxes and click CONNECT. After that, you'll be automatically redirected to a Telegram bot that will be linked to the account you use to log in.\n- If you want to connect it from another account, COPY THE LINK IN THE BROWSER and paste it into the saved messages of the account you want to link it to.\n- Then just enter the bot. Now you will receive all notifications about events!",
-    ru: "Идем в меню МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ - выбираем свой магазин\n- Далее заходим в раздел ОПОВЕЩЕНИЯ, проставляем галочки и нажимаем ПОДКЛЮЧИТЬ. После этого вас автоматически перекинет на телеграмм бот который привяжется к аккаунту с которого вы в него зайдете.\n- В случае если вы хотите подключить его с другого аккаунта СКОПИРУЙТЕ ССЫЛКУ В БРАУЗЕРЕ и вставьте ее в сохраненные сообщения с того акаунта к которому его привязываете.\n- После этого просто зайдите в бот. Теперь вы будете получать все уведомления о происходящих событиях!"
+    ru: "Идем в меню МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ - выбираем свой магазин\n- Далее заходим в раздел ОПОВЕЩЕНИЯ, проставляем галочки и нажимаем ПОДКЛЮЧИТЬ. После этого вас автоматически перекинет на телеграмм бот который привяжется к аккаунту с которого вы в него зайдете.\n- В случае если вы хотите подключить его с другого аккаунта СКОПИРУЙТЕ ССЫЛКУ В БРАУЗЕРЕ и вставьте ее в сохраненные сообщения с того акаунта к которому его привязываете.\n- После этого просто зайдите в бот. Теперь вы будете получать все уведомления о происхо��их событиях!"
   },
   employeeNotificationBot: {
     en: "Notification Bots for Employees",
@@ -627,6 +627,33 @@ const additionalTranslations: TranslationsStore = {
   sendingMessageInstruction: {
     en: "Send direct messages to your clients through the admin panel. You can respond to their inquiries and provide support without leaving the system.",
     ru: "Отправляйте прямые сообщения своим клиентам через панель администратора. Вы можете отвечать на их запросы и оказывать поддержку, не выходя из системы."
+  },
+  
+  // Addresses page
+  addressesTitle: {
+    en: "Addresses",
+    ru: "Адреса"
+  },
+  addressesIntro: {
+    en: "Manage customer delivery addresses in this section",
+    ru: "Управление адресами доставки клиентов в этом разделе"
+  },
+  // Preorders and Addresses translations - making sure they're correct
+  preorders: {
+    en: "Preorders/Deliveries",
+    ru: "Предзаказы/Доставки"
+  },
+  preordersDesc: {
+    en: "Manage product preorders and deliveries",
+    ru: "Управление предзаказами товаров и доставками"
+  },
+  addresses: {
+    en: "Addresses",
+    ru: "Адреса"
+  },
+  addressesDesc: {
+    en: "Manage customer delivery addresses",
+    ru: "Управление адресами доставки клиентов"
   },
 };
 
