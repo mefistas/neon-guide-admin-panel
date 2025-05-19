@@ -19,11 +19,11 @@ const CouriersSalary = () => {
   const carouselImages = [
     {
       src: "https://i.ibb.co/WpM8dypp/Screenshot-2025-05-18-at-5-53-19-PM.png",
-      alt: "courierSalaryBalanceAlt"
+      alt: "couriersSalaryBalance"
     },
     {
       src: "https://i.ibb.co/BVdqHt91/IMAGE-2025-05-18-17-53-59.jpg",
-      alt: "courierSalaryLogsAlt"
+      alt: "couriersSalaryLogs"
     }
   ];
 
@@ -38,7 +38,7 @@ const CouriersSalary = () => {
           <div className="my-6">
             <img 
               src="https://i.ibb.co/1GcZY0Kg/Screenshot-2025-05-18-at-5-25-22-PM.png" 
-              alt={tLocal('couriersSalaryProductTypeAlt')} 
+              alt={tLocal('couriersSalaryProductType')} 
               className="rounded-lg w-full max-w-2xl mx-auto border border-gray-700"
             />
           </div>
@@ -48,7 +48,7 @@ const CouriersSalary = () => {
           <div className="my-6">
             <img 
               src="https://i.ibb.co/DDqLrzy6/IMAGE-2025-05-18-17-50-51.jpg" 
-              alt={tLocal('couriersSalarySettingsAlt')} 
+              alt={tLocal('couriersSalarySettings')} 
               className="rounded-lg w-full max-w-2xl mx-auto border border-gray-700"
             />
           </div>
