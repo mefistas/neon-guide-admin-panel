@@ -3,6 +3,7 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
 import BackButton from '@/components/BackButton';
+import { Rss } from 'lucide-react';
 
 const MustSubscribe = () => {
   const { tNew } = useTranslations();
@@ -13,11 +14,14 @@ const MustSubscribe = () => {
         <BackButton to="/marketing" className="mb-6" />
         
         <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
-            {tNew('mustSubscribeTitle')}
-          </h3>
+          <div className="flex items-center gap-3 mb-4">
+            <Rss className="text-neonBlue" size={24} />
+            <h3 className="text-xl font-medium border-l-4 border-neonBlue pl-3">
+              {tNew('mustSubscribeTitle')}
+            </h3>
+          </div>
           
-          <p>{tNew('mustSubscribeIntro')}</p>
+          <p className="mb-6">{tNew('mustSubscribeIntro')}</p>
           
           <div className="p-4 bg-neonBlue/10 rounded-md mt-6 border border-neonBlue">
             <p className="font-semibold">{tNew('tip')}:</p>
