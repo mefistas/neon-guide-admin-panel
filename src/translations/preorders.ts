@@ -3,8 +3,8 @@ const preordersTranslations = {
   en: {
     preordersTitle: "Preorders/Deliveries",
     preordersIntro: "To work with preorders, you need to have cities created with districts.",
-    preordersStep1: "1) In the Warehouse - Cities section, create a new city or check that your city/cities have the \"Active for preorder?\" checkbox marked. In the list of cities, you'll see checkmarks under the necessary column and can set or remove the needed ones. After that, you need to click the \"SAVE\" button at the bottom of the screen.",
-    preordersStep2: "2) In the Districts section, check for districts for our cities. Similarly, add new ones or set checkmarks to activate for preorder.",
+    preordersStep1: " In the Warehouse - Cities section, create a new city or check that your city/cities have the \"Active for preorder?\" checkbox marked. In the list of cities, you'll see checkmarks under the necessary column and can set or remove the needed ones. After that, you need to click the \"SAVE\" button at the bottom of the screen.",
+    preordersStep2: " In the Districts section, check for districts for our cities. Similarly, add new ones or set checkmarks to activate for preorder.",
     preordersRequirement: "For preorders to work correctly, you need at least one district available for preorder.",
     preordersProductsTitle: "Creating Product Types for Preorder",
     preordersProductsDesc: "In the \"Product Types\" section, you need to create SEPARATE product types for preorder, which cannot have addresses added. You can use these products ONLY for preorder, thus, for example, make a discount for this product or add separate positions that are available only for preorder.",
@@ -25,8 +25,8 @@ const preordersTranslations = {
   ru: {
     preordersTitle: "Предзаказы/Доставки",
     preordersIntro: "Для работы с предзаказами необходимо чтобы у вас были созданы города и к ним районы.",
-    preordersStep1: "1) в разделе Склад - Города создаем новый город или проверяем, чтобы у нужного вам города/городов стояла галочка \"Активен для предзаказа?\". В списке городов видим галочки под нужной колонкой и устанавливаем или убираем нужные. После этого, необходимо нажать кнопку \"СОХРАНИТЬ\" внизу экрана.",
-    preordersStep2: "2) В разделе Районы проверяем наличие районов для наших городов. Аналогично, добавляем новые или выставляем галочки на активацию для предзаказа.",
+    preordersStep1: "В разделе Склад - Города создаем новый город или проверяем, чтобы у нужного вам города/городов стояла галочка \"Активен для предзаказа?\". В списке городов видим галочки под нужной колонкой и устанавливаем или убираем нужные. После этого, необходимо нажать кнопку \"СОХРАНИТЬ\" внизу экрана.",
+    preordersStep2: "В разделе Районы проверяем наличие районов для наших городов. Аналогично, добавляем новые или выставляем галочки на активацию для предзаказа.",
     preordersRequirement: "Для корректной работы предзаказов вам необходимо, чтобы хотя бы один район был доступен для предзаказа.",
     preordersProductsTitle: "Далее приступаем к созданию Видов товаров для предзаказа.",
     preordersProductsDesc: "В разделе \"Виды товаров\" необходимо создать для предзаказа ОТДЕЛЬНЫЕ виды товаров, к которым нельзя будет добавить адреса. Вы можете использовать эти товары ТОЛЬКО для предзаказа тем самым, например, сделать скидку для данного товара или добавить отдельные позиции, которые доступны только для предзаказа.",
@@ -42,7 +42,7 @@ const preordersTranslations = {
     preordersStaffSetup: "Для этого заходим в раздел \"Сотрудники\" и нажимаем кнопку \"Добавить сотрудника\". Тип сотрудника - Оператор предзаказов",
     preordersLearnMore: "Что бы узнать подробнее о настройках сотрудника для предзаказов ознакомьтесь пожалуйста с разделом",
     workers: "РАБОТНИКИ",
-    section: ""
+    section: "."
   }
 };
 
