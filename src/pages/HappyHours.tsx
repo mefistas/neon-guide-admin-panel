@@ -17,11 +17,11 @@ const HappyHours = () => {
   
   const images = [
     {
-      src: "https://i.ibb.co/bMCZm8S/Screenshot-2025-05-18-at-6-32-33-PM.png",
+      src: "https://i.ibb.co/bMCZm8SF/Screenshot-2025-05-18-at-6-32-33-PM.png",
       alt: "Happy Hours Settings 1"
     },
     {
-      src: "https://i.ibb.co/jk4sv3T/Screenshot-2025-05-18-at-6-33-14-PM.png",
+      src: "https://i.ibb.co/jk4sv3Td/Screenshot-2025-05-18-at-6-33-14-PM.png",
       alt: "Happy Hours Settings 2"
     }
   ];
