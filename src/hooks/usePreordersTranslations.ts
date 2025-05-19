@@ -1,10 +1,10 @@
 
 import { useContext } from 'react';
-import { LanguageContext } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 import preordersTranslations from '@/translations/preorders';
 
 const usePreordersTranslations = () => {
-  const { language } = useContext(LanguageContext);
+  const { language } = useLanguage();
   
   const t = (key: string): string => {
     if (!preordersTranslations[language as keyof typeof preordersTranslations]) {
