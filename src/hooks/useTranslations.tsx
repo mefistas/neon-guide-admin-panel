@@ -6,6 +6,7 @@ import happyHoursTranslations from '@/translations/happyHours';
 import helpBotsTranslations from '@/translations/helpBots';
 import newSectionsTranslations from '@/translations/newSections';
 import preordersTranslations from '@/translations/preorders';
+import mailoutTranslations from '@/translations/mailouts';
 
 // Original translation function that works with the legacy system
 export function useTranslations() {
@@ -23,7 +24,12 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
-    // Check in preorders translations first
+    // Check in mailouts translations first
+    if (mailoutTranslations[language]?.[key]) {
+      return mailoutTranslations[language][key];
+    }
+    
+    // Check in preorders translations
     if (preordersTranslations[language]?.[key]) {
       return preordersTranslations[language][key];
     }
@@ -53,7 +59,7 @@ export function useTranslations() {
   };
 
   // Local translator for component-specific translations
-  const tLocal = (translations: Record<string, Record<string, string>>, key: string): string => {
+  const tLocal = (key: string): string => {
     if (!translations[language] || !translations[language][key]) {
       return key;
     }
