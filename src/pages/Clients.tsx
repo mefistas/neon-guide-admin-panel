@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import BackButton from '@/components/BackButton';
 import useTranslations from '@/hooks/useTranslations';
 import { Search, Users } from "lucide-react";
+import { Separator } from '@/components/ui/separator';
 
 const Clients = () => {
   const { t } = useLanguage();
