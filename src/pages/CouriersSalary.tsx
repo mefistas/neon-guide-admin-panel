@@ -1,37 +1,62 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import BackButton from '@/components/BackButton';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Separator } from '@/components/ui/separator';
+import { ChevronDown } from 'lucide-react';
+
+interface SalaryRule {
+  id: string;
+  title: string;
+  value: string | JSX.Element;
+}
+
+interface TranslationsType {
+  [key: string]: {
+    en: string;
+    ru: string;
+  };
+}
 
 const CouriersSalary = () => {
   const { tLocal } = useTranslations();
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
 
-  const carouselImages = [
+  const toggleAccordion = (id: string) => {
+    setOpenAccordion(openAccordion === id ? null : id);
+  };
+  
+  // Translation keys must be defined in the translations object
+  const translatedRules: SalaryRule[] = [
     {
-      src: "https://i.ibb.co/WpM8dypp/Screenshot-2025-05-18-at-5-53-19-PM.png",
-      alt: "courierSalaryBalanceAlt"
+      id: "rule1",
+      title: tLocal("couriersSalaryRule1Title"),
+      value: tLocal("couriersSalaryRule1Value")
     },
     {
-      src: "https://i.ibb.co/BVdqHt91/IMAGE-2025-05-18-17-53-59.jpg",
-      alt: "courierSalaryLogsAlt"
+      id: "rule2",
+      title: tLocal("couriersSalaryRule2Title"),
+      value: tLocal("couriersSalaryRule2Value")
+    },
+    {
+      id: "rule3",
+      title: tLocal("couriersSalaryRule3Title"),
+      value: (
+        <div className="space-y-2">
+          <p>{tLocal("couriersSalaryRule3Value1")}</p>
+          <p>{tLocal("couriersSalaryRule3Value2")}</p>
+        </div>
+      )
     }
   ];
 
   return (
-    <TutorialPage title={tLocal('couriersSalaryTitle')}>
-      <div className="space-y-8 max-w-4xl mx-auto">
-        <BackButton to="/finance" className="mb-6" />
-        
+    <TutorialPage title={tLocal("couriersSalaryTitle")}>
+      <div className="space-y-6">
+        <div className="mb-4">
+          <BackButton to="/workers" />
+        </div>
+
         <section className="space-y-6">
           <p className="text-base">{tLocal('couriersSalaryDescription1')}</p>
           

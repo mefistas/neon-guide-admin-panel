@@ -2,6 +2,7 @@
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
+import useHelpBotsTranslations from '@/hooks/useHelpBotsTranslations';
 import BackButton from '@/components/BackButton';
 import { Bot, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -15,6 +16,7 @@ import {
 
 const HelpBots = () => {
   const { tNew } = useTranslations();
+  const { t } = useHelpBotsTranslations();
   
   return (
     <TutorialPage title={tNew('helpBots')}>
@@ -130,7 +132,7 @@ const HelpBots = () => {
           <div className="border-t border-gray-700 my-8"></div>
           
           {/* Bot customization section */}
-          <div className="space-y-6">
+          <div className="space-y-6 mb-8">
             <h2 className="text-xl font-semibold text-white flex items-center gap-2">
               <Bot size={20} className="text-neonBlue" />
               {tNew('botCustomization')}
@@ -148,6 +150,33 @@ const HelpBots = () => {
                   className="rounded-lg shadow-lg max-w-full"
                 />
               </div>
+            </div>
+          </div>
+          
+          {/* Separator */}
+          <div className="border-t border-gray-700 my-8"></div>
+          
+          {/* Payment Acceptance Bot section - New section */}
+          <div className="space-y-6">
+            <h2 className="text-xl font-semibold text-white flex items-center gap-2">
+              <Bot size={20} className="text-neonBlue" />
+              {t('paymentBot')}
+            </h2>
+            
+            <p className="text-gray-300">{t('paymentBotDescription')}</p>
+            
+            <div className="flex justify-center my-6">
+              <img 
+                src="https://i.ibb.co/qQfMbPK/Screenshot-2025-05-19-at-11-04-26-AM.png" 
+                alt="Payment acceptance bot interface" 
+                className="rounded-lg shadow-lg max-w-full md:max-w-2xl" 
+              />
+            </div>
+            
+            <div className="space-y-4">
+              <p className="text-gray-300 whitespace-pre-line">{t('paymentBotSteps')}</p>
+              <p className="text-gray-300 whitespace-pre-line">{t('paymentBotFeatures')}</p>
+              <p className="text-gray-300 whitespace-pre-line">{t('paymentBotOperators')}</p>
             </div>
           </div>
         </div>
