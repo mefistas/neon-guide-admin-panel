@@ -2,6 +2,24 @@
 const translations = {
   en: {
     // Cards/Payments section
+    operatorWorkTitle: "Operator Work",
+    operatorWorkSections: "Operator Work Sections",
+    operatorTips: "Operator Tips",
+    operatorTip1: "Process all client requests promptly to ensure high satisfaction rates.",
+    operatorTip2: "Always verify client identity before processing sensitive transactions.",
+    
+    clients: "Clients",
+    clientsDesc: "Manage client accounts and preferences",
+    feedback: "Feedback",
+    feedbackDesc: "View and process client feedback",
+    purchasesProcessing: "Purchases Processing",
+    purchasesProcessingDesc: "Process and manage client purchases",
+    helpBots: "Help Bots",
+    helpBotsDesc: "Configure automated help systems",
+    internalChats: "Internal Chats",
+    internalChatsDesc: "Team communication platform",
+    
+    // Cards/Payments section
     preorders: "Preorders/Deliveries",
     preordersDesc: "Manage product preorders and deliveries",
     addresses: "Addresses",
@@ -42,8 +60,27 @@ const translations = {
     mustSubscribeTitle: "Must Subscribe Channel",
     mustSubscribeIntro: "Configure required channel subscription settings for users",
     tip: "Tip",
+    important: "Important",
   },
   ru: {
+    // Cards/Payments section
+    operatorWorkTitle: "Работа оператора",
+    operatorWorkSections: "Разделы работы оператора",
+    operatorTips: "Советы оператору",
+    operatorTip1: "Обрабатывайте все запросы клиентов оперативно для обеспечения высокого уровня удовлетворенности.",
+    operatorTip2: "Всегда проверяйте личность клиента перед обработкой конфиденциальных транзакций.",
+    
+    clients: "Клиенты",
+    clientsDesc: "Управление учетными записями и предпочтениями клиентов",
+    feedback: "Обратная связь",
+    feedbackDesc: "Просмотр и обработка отзывов клиентов",
+    purchasesProcessing: "Обработка покупок",
+    purchasesProcessingDesc: "Обработка и управление покупками клиентов",
+    helpBots: "Боты поддержки",
+    helpBotsDesc: "Настройка автоматизированных систем помощи",
+    internalChats: "Внутренние чаты",
+    internalChatsDesc: "Платформа для общения команды",
+    
     // Cards/Payments section
     preorders: "Предзаказы/Доставки",
     preordersDesc: "Управление предзаказами товаров и доставками",
@@ -85,6 +122,7 @@ const translations = {
     mustSubscribeTitle: "Обязательная подписка на канал",
     mustSubscribeIntro: "Настройка параметров обязательной подписки пользователей на канал",
     tip: "Совет",
+    important: "Важно",
   }
 };
 
