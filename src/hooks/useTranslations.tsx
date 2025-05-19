@@ -2,12 +2,13 @@
 import React, { useContext } from 'react';
 import { LanguageContext } from '@/contexts/LanguageContext';
 import translations from '@/utils/translations';
-import happyHoursTranslations from '@/translations/happyHours';
-import helpBotsTranslations from '@/translations/helpBots';
+import { happyHoursTranslations } from '@/translations/happyHours';
+import { helpBotsTranslations } from '@/translations/helpBots';
 import newSectionsTranslations from '@/translations/newSections';
 import preordersTranslations from '@/translations/preorders';
 import mailoutTranslations from '@/translations/mailouts';
 import promotionsTranslations from '@/translations/promotions';
+import cumulativeDiscountsTranslations from '@/translations/cumulativeDiscounts';
 
 // Original translation function that works with the legacy system
 export function useTranslations() {
@@ -25,6 +26,11 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
+    // Check in cumulative discounts translations
+    if (cumulativeDiscountsTranslations[language]?.[key]) {
+      return cumulativeDiscountsTranslations[language][key];
+    }
+    
     // Check in promotions translations
     if (promotionsTranslations[language]?.[key]) {
       return promotionsTranslations[language][key];
