@@ -31,7 +31,7 @@ const Preorders = () => {
             <p className="text-white mt-4">{t('preordersStep2')}</p>
             <div className="flex justify-center">
               <img 
-                src="https://i.ibb.co/QjvvqZ4/IMAGE-2025-05-19-12-34-27.jpg" 
+                src="https://i.ibb.co/QjvvqZ4n/IMAGE-2025-05-19-12-34-27.jpg" 
                 alt="Districts settings" 
                 className="rounded-lg border border-gray-700 max-w-full"
               />
@@ -51,7 +51,7 @@ const Preorders = () => {
           
           <div className="flex justify-center">
             <img 
-              src="https://i.ibb.co/TMt9wCH/Screenshot-2025-05-19-at-12-40-08-PM.png" 
+              src="https://i.ibb.co/TMt9wCHK/Screenshot-2025-05-19-at-12-40-08-PM.png" 
               alt="Product types settings" 
               className="rounded-lg border border-gray-700 max-w-full"
             />
@@ -66,7 +66,7 @@ const Preorders = () => {
             </div>
             <div className="flex-shrink-0 flex justify-center md:justify-end">
               <img 
-                src="https://i.ibb.co/DHvMhS6/Screenshot-2025-05-19-at-12-50-46-PM.png" 
+                src="https://i.ibb.co/DHvMhS6c/Screenshot-2025-05-19-at-12-50-46-PM.png" 
                 alt="Example district" 
                 className="rounded-lg border border-gray-700 max-w-full md:max-w-[300px]"
               />
