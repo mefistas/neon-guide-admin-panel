@@ -13,6 +13,7 @@ import promoCodesTranslations from '@/translations/promoCodes';
 import autoForwardingTranslations from '@/translations/autoForwarding';
 import workersTranslations from '@/translations/workers';
 import oneTimeDiscountsTranslations from '@/translations/oneTimeDiscounts';
+import detailedGuideTranslations from '@/translations/detailedGuide';
 
 // Original translation function that works with the legacy system
 export function useTranslations() {
@@ -30,6 +31,11 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
+    // Check in detailed guide translations
+    if (detailedGuideTranslations[language]?.[key]) {
+      return detailedGuideTranslations[language][key];
+    }
+    
     // Check in one time discounts translations
     if (oneTimeDiscountsTranslations[language]?.[key]) {
       return oneTimeDiscountsTranslations[language][key];

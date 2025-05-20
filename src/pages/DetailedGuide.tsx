@@ -1,7 +1,6 @@
 
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
-import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { 
   Home, 
@@ -19,86 +18,87 @@ import {
   Globe 
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import useDetailedGuideTranslations from '@/hooks/useDetailedGuideTranslations';
 
 const DetailedGuide = () => {
-  const { t } = useLanguage();
+  const { t } = useDetailedGuideTranslations();
 
   const guideItems = [
     {
-      title: 'Main/Statistics',
-      description: 'View main dashboard and statistics for your shop',
+      title: t('mainStats'),
+      description: t('mainStatsDesc'),
       path: '/main-stats',
       icon: <Home className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Shops',
-      description: 'Manage and configure your shops',
+      title: t('shops'),
+      description: t('shopsDesc'),
       path: '/allstores',
       icon: <Store className="h-6 w-6 text-primary" />
     },
     {
-      title: 'BOTS',
-      description: 'Add and configure bots for your shop',
+      title: t('bots'),
+      description: t('botsDesc'),
       path: '/how-to-add-bots',
       icon: <Bot className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Warehouse',
-      description: 'Manage your product inventory',
+      title: t('warehouse'),
+      description: t('warehouseDesc'),
       path: '/stock',
       icon: <Warehouse className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Addresses',
-      description: 'Manage delivery addresses',
+      title: t('addresses'),
+      description: t('addressesDesc'),
       path: '/addresses',
       icon: <MapPin className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Couriers',
-      description: 'Manage delivery couriers',
+      title: t('couriers'),
+      description: t('couriersDesc'),
       path: '/how-to-add-courier',
       icon: <Truck className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Employees',
-      description: 'Manage staff and employee accounts',
+      title: t('employees'),
+      description: t('employeesDesc'),
       path: '/workers',
       icon: <Users className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Clients',
-      description: 'View and manage client information',
+      title: t('clients'),
+      description: t('clientsDesc'),
       path: '/clients',
       icon: <User className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Purchases',
-      description: 'Track and manage purchases',
+      title: t('purchases'),
+      description: t('purchasesDesc'),
       path: '/purchases',
       icon: <ShoppingCart className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Balance Top-ups',
-      description: 'Manage balance top-ups and payments',
+      title: t('balanceTopUps'),
+      description: t('balanceTopUpsDesc'),
       path: '/balance-top-ups',
       icon: <Wallet className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Marketing',
-      description: 'Marketing tools and promotions',
+      title: t('marketing'),
+      description: t('marketingDesc'),
       path: '/marketing',
       icon: <TrendingUp className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Finance',
-      description: 'Financial management and reporting',
+      title: t('finance'),
+      description: t('financeDesc'),
       path: '/finance',
       icon: <Banknote className="h-6 w-6 text-primary" />
     },
     {
-      title: 'Websites',
-      description: 'Manage your websites',
+      title: t('websites'),
+      description: t('websitesDesc'),
       path: '/web',
       icon: <Globe className="h-6 w-6 text-primary" />
     }

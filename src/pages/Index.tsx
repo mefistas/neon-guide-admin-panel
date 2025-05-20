@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '@/components/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslations } from '@/hooks/useTranslations';
@@ -7,8 +7,15 @@ import { Link } from 'react-router-dom';
 import { Bot, Dices, Headset, TrendingUp, Wallet, Book } from 'lucide-react';
 
 const Index = () => {
-  const { t } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
   const { tNew } = useTranslations();
+  
+  // Set Russian as the priority language when the component mounts
+  useEffect(() => {
+    if (language !== 'ru') {
+      setLanguage('ru');
+    }
+  }, []);
 
   const mainSections = [
     {
