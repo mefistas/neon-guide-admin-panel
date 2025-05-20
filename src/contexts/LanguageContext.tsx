@@ -203,7 +203,7 @@ const translations: Translations = {
     howToCreateProductGroup: 'Как создать группу товаров',
     howToCreateProductTypes: 'Как создать типы товаров',
     howToAddAddress: 'Как добавить адрес',
-    howToAddBots: 'Как добавить ботов',
+    howToAddBots: 'БОТЫ',
     oneTimeDiscounts: 'Реферальная система, обязательные подписки, Разовые скидки ',
     btcCashout: 'Обнал BTC',
     balanceHistory: 'История изменения балансов',
