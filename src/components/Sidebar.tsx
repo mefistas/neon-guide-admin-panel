@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, ChevronUp, Bot, Building, HelpCircle, Headset, Dices, ExternalLink, Menu, Tag, MessageSquare, Star, TrendingUp, Wallet } from 'lucide-react';
+import { Bot, Building, HelpCircle, Headset, Dices, ExternalLink, Menu, Tag, MessageSquare, Star, TrendingUp, Wallet, Book } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
 import useTranslations from '@/hooks/useTranslations';
@@ -9,44 +10,13 @@ const Sidebar = () => {
   const { t } = useLanguage();
   const { tNew } = useTranslations();
   const location = useLocation();
-  const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
-
-  // Toggle function that only affects the clicked menu
-  const toggleMenu = (menu: string) => {
-    setExpandedMenu(prevMenu => prevMenu === menu ? null : menu);
-  };
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
   const isActive = (path: string) => location.pathname === path;
-
-  // Items for the detailed guide section
-  const detailedGuideSubItems = [
-    { key: 'howToAddCity', path: '/how-to-add-city', icon: <Building size={18} /> },
-    { key: 'howToAddDistrict', path: '/how-to-add-district', icon: <Building size={18} /> },
-    { key: 'howToAddCourier', path: '/how-to-add-courier', icon: <Building size={18} /> },
-    { key: 'howToCreateProductGroup', path: '/how-to-create-product-group', icon: <Building size={18} /> },
-    { key: 'howToCreateProductTypes', path: '/how-to-create-product-types', icon: <Building size={18} /> },
-    { key: 'howToAddAddress', path: '/how-to-add-address', icon: <Building size={18} /> },
-    { key: 'howToAddBots', path: '/how-to-add-bots', icon: <Bot size={18} /> },
-    { key: 'oneTimeDiscounts', path: '/one-time-discounts', icon: <Tag size={18} /> },
-    { key: 'internalChats', path: '/internal-chats', icon: <MessageSquare size={18} /> },
-    { key: 'reviews', path: '/reviews', icon: <Star size={18} /> },
-    { key: 'masterKlad', path: '/master-klad', icon: <Building size={18} /> },
-    { key: 'workers', path: '/workers', icon: <Building size={18} /> },
-    { key: 'clients', path: '/clients', icon: <Building size={18} /> },
-    { key: 'purchases', path: '/purchases', icon: <Building size={18} /> },
-    { key: 'balanceTopUps', path: '/balance-top-ups', icon: <Building size={18} /> },
-    { key: 'messages', path: '/messages', icon: <Building size={18} /> },
-    { key: 'web', path: '/web', icon: <Building size={18} /> },
-    { key: 'couriersSalary', path: '/couriers-salary', icon: <Building size={18} /> },
-    { key: 'usdt', path: '/usdt', icon: <Building size={18} /> },
-    { key: 'partnersExchangers', path: '/partners-exchangers', icon: <Building size={18} /> },
-    { key: 'withdrawFunds', path: '/withdraw-funds', icon: <Wallet size={18} /> },
-  ];
 
   return (
     <div className={cn(
@@ -151,40 +121,18 @@ const Sidebar = () => {
           {sidebarOpen && t('casinoSetup')}
         </Link>
 
-        {/* Detailed Guide menu */}
-        <div>
-          <button
-            onClick={() => toggleMenu('detailedGuide')}
-            className={cn(
-              "w-full flex items-center justify-between px-4 py-3 text-left hover:bg-gray-800/50 transition-colors",
-              expandedMenu === 'detailedGuide' ? 'text-white font-medium' : 'text-gray-300',
-              !sidebarOpen && "justify-center"
-            )}
-          >
-            <span className="flex items-center gap-2">
-              <Bot size={20} />
-              {sidebarOpen && t('detailedGuide')}
-            </span>
-            {sidebarOpen && (expandedMenu === 'detailedGuide' ? <ChevronUp size={18} /> : <ChevronDown size={18} />)}
-          </button>
-          {expandedMenu === 'detailedGuide' && sidebarOpen && (
-            <div className="pl-4 pr-2 py-2 space-y-1 bg-black/30">
-              {detailedGuideSubItems.map((item) => (
-                <Link
-                  key={item.key}
-                  to={item.path}
-                  className={cn(
-                    "flex items-center gap-2 px-4 py-2 text-sm rounded-md transition-colors",
-                    isActive(item.path) ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-400 hover:text-white'
-                  )}
-                >
-                  {item.icon}
-                  <span>{t(item.key)}</span>
-                </Link>
-              ))}
-            </div>
+        {/* Detailed Guide - Direct link */}
+        <Link
+          to="/detailed-guide"
+          className={cn(
+            "flex items-center px-4 py-3 hover:bg-gray-800/50 transition-colors",
+            isActive('/detailed-guide') ? 'bg-gray-800 text-white border-l-2 border-white' : 'text-gray-300',
+            !sidebarOpen && "justify-center"
           )}
-        </div>
+        >
+          <Book size={20} className={cn("mr-3", !sidebarOpen && "mr-0")} />
+          {sidebarOpen && t('detailedGuide')}
+        </Link>
 
         {/* Ask a Question - External Link */}
         <a

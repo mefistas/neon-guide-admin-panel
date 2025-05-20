@@ -1,9 +1,10 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTranslations } from '@/hooks/useTranslations';
 import { Link } from 'react-router-dom';
-import { Bot, Dices, Headset, TrendingUp, Wallet } from 'lucide-react';
+import { Bot, Dices, Headset, TrendingUp, Wallet, Book } from 'lucide-react';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -50,6 +51,13 @@ const Index = () => {
       icon: <Dices size={24} className="mb-2" />,
       description: 'casinoSetupShortDesc',
       link: '/casino-setup',
+      isCustom: false
+    },
+    {
+      title: 'detailedGuide',
+      icon: <Book size={24} className="mb-2" />,
+      description: 'detailedGuideShortDesc',
+      link: '/detailed-guide',
       isCustom: false
     }
   ];

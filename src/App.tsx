@@ -48,6 +48,7 @@ import Reviews from "./pages/Reviews";
 import Preorders from "./pages/Preorders";
 import Addresses from "./pages/Addresses";
 import MustSubscribe from "./pages/MustSubscribe";
+import DetailedGuide from "./pages/DetailedGuide";
 
 const queryClient = new QueryClient();
 
@@ -100,6 +101,7 @@ const App = () => (
             <Route path="/preorders" element={<Preorders />} />
             <Route path="/addresses" element={<Addresses />} />
             <Route path="/must-subscribe" element={<MustSubscribe />} />
+            <Route path="/detailed-guide" element={<DetailedGuide />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
