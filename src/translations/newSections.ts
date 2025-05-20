@@ -1,9 +1,9 @@
-
 import { happyHoursTranslations } from './happyHours';
 import { helpBotsTranslations } from './helpBots';
 import mailoutTranslations from './mailouts';
 import preordersTranslations from './preorders';
 import promotionsTranslations from './promotions';
+import autoForwardingTranslations from './autoForwarding';
 
 interface TranslationType {
   [key: string]: {
@@ -52,7 +52,7 @@ const newSectionsTranslations: TranslationType = {
     mailoutsDesc: "Информация о том, как настроить рассылки",
     promotions: 'Акции',
     promotionsDesc: 'Информация о том, как настроить акции',
-    autoForwarding: "Автоматическая пересылка",
+    autoForwarding: "Автопересылки",
     autoForwardingDesc: "Информация о том, как настроить автоматическую пересылку",
     cumulativeDiscounts: "Накопительные скидки",
     cumulativeDiscountsDesc: "Система \"накопительной скидки\" по количеству покупок.",

@@ -10,6 +10,7 @@ import mailoutTranslations from '@/translations/mailouts';
 import promotionsTranslations from '@/translations/promotions';
 import cumulativeDiscountsTranslations from '@/translations/cumulativeDiscounts';
 import promoCodesTranslations from '@/translations/promoCodes';
+import autoForwardingTranslations from '@/translations/autoForwarding';
 
 // Original translation function that works with the legacy system
 export function useTranslations() {
@@ -27,6 +28,11 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
+    // Check in auto forwarding translations
+    if (autoForwardingTranslations[language]?.[key]) {
+      return autoForwardingTranslations[language][key];
+    }
+    
     // Check in promo codes translations
     if (promoCodesTranslations[language]?.[key]) {
       return promoCodesTranslations[language][key];
