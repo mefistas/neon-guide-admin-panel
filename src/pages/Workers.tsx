@@ -32,7 +32,7 @@ const Workers = () => {
   return (
     <TutorialPage title={t('workers')}>
       <div className="space-y-6">
-        <BackButton to="/" className="mb-4" />
+        <BackButton to="/detailedguide" className="mb-4" />
         
         <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
