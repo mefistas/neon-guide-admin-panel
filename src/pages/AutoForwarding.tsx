@@ -55,7 +55,7 @@ const AutoForwarding = () => {
         
         <div className="mt-6">
           <img 
-            src="https://i.ibb.co/tPvR7PW/Screenshot-2025-05-20-at-2-31-04-AM.png" 
+            src="https://i.ibb.co/tPvR7PW4/Screenshot-2025-05-20-at-2-31-04-AM.png" 
             alt="Auto forwarding interface"
             className="rounded-lg shadow-lg max-w-full"
           />
