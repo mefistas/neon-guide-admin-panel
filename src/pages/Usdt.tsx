@@ -145,9 +145,7 @@ const Usdt = () => {
               </div>
             </div>
             
-            <p className="text-gray-300">
-              {tLocal('balanceTopUpsRecommendation')}
-            </p>
+          
           </div>
         </div>
       </div>
