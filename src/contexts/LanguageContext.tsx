@@ -14,6 +14,9 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
+// Make sure to export the context
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
 const translations: Translations = {
   en: {
     adminPanelTutorial: 'Admin Panel Tutorial',
@@ -254,7 +257,7 @@ const translations: Translations = {
     
     quickStartPoint3: 'Создаем группы товаров',
     quickStartPoint3Note1: 'Идем в раздел СКЛАД->ГРУППЫ ТОВАРОВ, кликаем справа сверху ДОБАВИТЬ ГРУППА ТОВАРОВ',
-    quickStartPoint3Note2: 'Slug автогенерируем можем игнорить этот пункт',
+    quickStartPoint3Note2: 'Slug автогенерируем можем игнорировать этот пункт',
     quickStartPoint3Note3: 'Рекомендуем сразу поставить фото товара что бы не возвращаться в этот раздел по 10 раз',
     quickStartPoint3Note4: 'Название группы это и есть ваш продукт например КОКАИН/мефчик',
     quickStartPoint3Note5: 'Это название будет отображаться в боте для клиентов поэтому прописывайте сразу в нужном стиле и на нужном языке',
@@ -276,7 +279,7 @@ const translations: Translations = {
     quickStartPoint5Note1: 'Для создания курьеров необходимо зайти в раздел Склад -> Курьеры, нажать кнопку ДОБАВИТЬ КУРЬЕРА в правом верхнем углу и да это обязательный пункт, даже если у тебя нет сотрудников ты обязан добавить одного для того что бы выгружать адреса',
     quickStartPoint5Note2: 'Даем курьеру имя, выбираем магазин к которому он относится, можешь обхуесосить его в коментарии он не увидит',
     quickStartPoint5Note3: 'Дальше ты видишь Available kinds и меню с твоими видами товаров которые мы уже создали',
-    quickStartPoint5Note4: 'Выделяем то с чем должен работать данный курьер (если ты сам будешь добавлять адреса естсетвенно переноси все виды товаров вправо для легкой работы)',
+    quickStartPoint5Note4: 'Выделяем то с чем должен работать данный курьер (если ты сам будешь добавлять адреса естественно переноси все виды товаров вправо для легкой работы)',
     quickStartPoint5Note5: 'Выделяем все с помощью зажатого command или что у тебя там за железо и тык стрелку вправо',
     quickStartPoint5Note6: 'Все сохраняем больше нам тут пока ничего не нужно',
     quickStartPoint5Note7: 'Для более детальной настройки смотри полное руководство',
@@ -360,8 +363,6 @@ const translations: Translations = {
     quickStartPoint13Note8: 'Создайте план мониторинга системы для текущих операций.',
   },
 };
-
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('en');

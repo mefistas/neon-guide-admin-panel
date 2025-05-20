@@ -1,10 +1,10 @@
 
 import { useContext } from 'react';
-import { LanguageContext } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 import oneTimeDiscountsTranslations from '@/translations/oneTimeDiscounts';
 
 export function useOneTimeDiscountsTranslations() {
-  const { language } = useContext(LanguageContext);
+  const { language } = useLanguage();
 
   const t = (key: string): string => {
     if (!oneTimeDiscountsTranslations[language] || !oneTimeDiscountsTranslations[language][key]) {
