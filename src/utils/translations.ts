@@ -389,12 +389,12 @@ const additionalTranslations: TranslationsStore = {
     ru: "Создание и управление промокодами"
   },
   oneTimeDiscounts: {
-    en: "One-Time Product Discounts",
-    ru: "Разоввые скидки на товрры"
+    en: "Ref system,subscribers,one time promocodes ",
+    ru: "Реферальная система/Обязательные подписки/Разовые скидки"
   },
   oneTimeDiscountsDesc: {
-    en: "Create special one-time discounts for products",
-    ru: "Создание специальных разовых скидок на товары"
+    en: "Your referal program and subscribers ",
+    ru: "Условия вашей рефки и увеличение клиентов за счет обязательных подписок"
   },
   happyHours: {
     en: "Happy Hours",
