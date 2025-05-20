@@ -176,7 +176,7 @@ const Promotions = () => {
             </div>
           </div>
           
-          {/* Additional Settings */}
+         
           <div className="mt-10 border-t border-gray-700 pt-6">
             <h3 className="text-xl font-medium mb-4">{t('additionalSettings')}</h3>
             <p className="mb-4">{t('deleteUnusedDiscounts')}</p>
