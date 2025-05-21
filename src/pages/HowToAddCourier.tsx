@@ -74,7 +74,7 @@ const HowToAddCourier = () => {
             
             <div className="flex justify-center my-6">
               <img 
-                src="https://i.ibb.co/VCT6qtfg/Screenshot-2025-05-21-at-9-54-45-PM.png" 
+                src="https://i.ibb.co/KzrVTwLL/Screenshot-2025-05-21-at-10-47-16-PM.png" 
                 alt="Bot token setup" 
                 className="rounded-lg shadow-md max-w-2xl w-full h-auto"
               />
