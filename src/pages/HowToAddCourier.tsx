@@ -84,7 +84,7 @@ const HowToAddCourier = () => {
             
             <div className="flex justify-center my-6">
               <img 
-                src="https://i.ibb.co/yWvz4W80/Screenshot-2025-05-21-at-9-56-15-PM.png" 
+                src="https://i.ibb.co/v6hhNCqN/Screenshot-2025-05-21-at-11-10-11-PM.png" 
                 alt="Courier bot links" 
                 className="rounded-lg shadow-md max-w-2xl w-full h-auto"
               />
