@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import BackButton from '@/components/BackButton';
@@ -11,7 +10,7 @@ import {
   Database, 
   CreditCard, 
   ImagePlus, 
-  MessageSquareQuestion,
+  MessageSquare, 
   AlertTriangle
 } from 'lucide-react';
 import {
@@ -282,7 +281,7 @@ const HowToAddBots = () => {
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-4">
               <Bot className="text-neonBlue" />
-              <MessageSquareQuestion className="text-neonBlue -ml-4 h-4 w-4" />
+              <MessageSquare className="text-neonBlue -ml-4 h-4 w-4" />
               {t('faqBots')}
             </h3>
             

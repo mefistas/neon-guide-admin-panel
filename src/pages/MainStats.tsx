@@ -24,7 +24,7 @@ const data = [
 ];
 
 const MainStats = () => {
-  const { t } = useMainStatsTranslations();
+  const { t, language } = useMainStatsTranslations();
   
   return (
     <TutorialPage title={t('mainStats')}>
