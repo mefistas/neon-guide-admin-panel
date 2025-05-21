@@ -7,19 +7,19 @@
   :root {
     /* Light theme variables - updated for better contrast with dark text */
     --background: 210 50% 98%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover-foreground: 222 47% 11%;
     --primary: 222 47% 40%;
     --primary-foreground: 0 0% 98%;
     --secondary: 210 40% 96.1%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary-foreground: 222 47% 11%;
     --muted: 210 40% 96.1%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted-foreground: 215 25% 27%;
     --accent: 210 40% 94%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent-foreground: 222 47% 11%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 13% 85%;
@@ -27,13 +27,13 @@
     --ring: 222 47% 40%;
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 240 10% 3.9%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 222 47% 11%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 240 5.9% 90%;
-    --sidebar-ring: 240 5.9% 10%;
+    --sidebar-accent: 222 4.8% 95.9%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 222 5.9% 90%;
+    --sidebar-ring: 222 47% 11%;
     
     --radius: 0.5rem;
   }
@@ -84,15 +84,15 @@
 
 @layer utilities {
   .formal-border {
-    @apply border border-gray-700 shadow-md dark:border-gray-700 border-gray-300;
+    @apply border border-gray-300 shadow-md dark:border-gray-700;
   }
   
   .sidebar-active {
-    @apply bg-gray-800 text-white border-l-2 border-white dark:bg-gray-800 dark:text-white dark:border-l-2 dark:border-white bg-blue-100 text-primary border-l-2 border-primary;
+    @apply bg-blue-100 text-primary border-l-2 border-primary dark:bg-gray-800 dark:text-white dark:border-l-2 dark:border-white;
   }
   
   .glass-morphism {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10 dark:border-white/5 backdrop-blur-xl bg-blue-50/70 border border-blue-200/30;
+    @apply backdrop-blur-xl bg-blue-50/70 border border-blue-200/30 dark:bg-white/5 dark:border-white/10;
   }
   
   .text-gradient {
@@ -100,6 +100,14 @@
   }
 
   .link-text {
-    @apply text-blue-700 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300 font-medium;
+    @apply text-blue-700 hover:text-blue-900 font-medium dark:text-blue-400 dark:hover:text-blue-300;
+  }
+  
+  .light-card {
+    @apply bg-white/90 border-gray-200 shadow-sm text-gray-800 dark:bg-gray-800/90 dark:border-gray-700 dark:text-gray-200;
+  }
+  
+  .hover-card {
+    @apply hover:bg-blue-50/60 dark:hover:bg-gray-700/60 transition-colors duration-200;
   }
 }
