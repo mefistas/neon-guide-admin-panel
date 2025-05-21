@@ -1,4 +1,3 @@
-
 import React, { useContext } from 'react';
 import { LanguageContext } from '@/contexts/LanguageContext';
 import translations from '@/utils/translations';
@@ -14,6 +13,7 @@ import autoForwardingTranslations from '@/translations/autoForwarding';
 import workersTranslations from '@/translations/workers';
 import oneTimeDiscountsTranslations from '@/translations/oneTimeDiscounts';
 import detailedGuideTranslations from '@/translations/detailedGuide';
+import { addressesTranslations } from '@/translations/addresses';
 
 // Original translation function that works with the legacy system
 export function useTranslations() {
@@ -31,6 +31,11 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
+    // Check in addresses translations
+    if (addressesTranslations[language]?.[key]) {
+      return addressesTranslations[language][key];
+    }
+    
     // Check in detailed guide translations
     if (detailedGuideTranslations[language]?.[key]) {
       return detailedGuideTranslations[language][key];
