@@ -6,7 +6,7 @@ import {
   Home, 
   Store, 
   Bot, 
-  Warehouse, 
+  HardDrive, 
   MapPin, 
   Truck, 
   Users, 
@@ -46,7 +46,7 @@ const DetailedGuide = () => {
       title: t('warehouse'),
       description: t('warehouseDesc'),
       path: '/stock',
-      icon: <Warehouse className="h-6 w-6 text-primary" />
+      icon: <HardDrive className="h-6 w-6 text-primary" />
     },
     {
       title: t('addresses'),

@@ -49,6 +49,7 @@ import Preorders from "./pages/Preorders";
 import Addresses from "./pages/Addresses";
 import MustSubscribe from "./pages/MustSubscribe";
 import DetailedGuide from "./pages/DetailedGuide";
+import Stock from "./pages/Stock";
 
 const queryClient = new QueryClient();
 
@@ -102,6 +103,7 @@ const App = () => (
             <Route path="/addresses" element={<Addresses />} />
             <Route path="/must-subscribe" element={<MustSubscribe />} />
             <Route path="/detailed-guide" element={<DetailedGuide />} />
+            <Route path="/stock" element={<Stock />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
