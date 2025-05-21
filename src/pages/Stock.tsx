@@ -205,6 +205,7 @@ const Stock = () => {
             {t('ФИНАНСЫ')}
           </Link>
         </p>
+           
         
         {/* Preorder Section */}
         <h3 className="text-xl font-semibold text-white mt-8">
@@ -295,7 +296,7 @@ const Stock = () => {
           <p className="text-gray-300">
             {t('recommendation')} {' '}
             <Link to="/workers" className="text-blue-400 hover:underline">
-              {t('workers')}
+              {t('СОТРУДНИКИ')}
             </Link>
           </p>
         </div>
