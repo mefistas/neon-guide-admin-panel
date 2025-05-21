@@ -181,7 +181,7 @@ const Stock = () => {
         <p className="text-gray-300 mb-4">{t('productTypesSettings')}</p>
         <p className="text-gray-300 mb-4">{t('productTypesPricing')} {' '}
           <Link to="/happy-hours" className="text-blue-400 hover:underline">
-            {t('happyHours')}
+            {t('СЧАСТЛИВЫЕ ЧАСЫ')}
           </Link>
         </p>
         <p className="text-gray-300 mb-4">{t('productTypesMarkups')}</p>
@@ -218,7 +218,7 @@ const Stock = () => {
         
         <p className="mb-2">
           <Link to="/preorders" className="text-blue-400 hover:underline">
-            {t('preorder')}
+            {t('ПРЕДЗАКАЗЫ')}
           </Link>
         </p>
         
