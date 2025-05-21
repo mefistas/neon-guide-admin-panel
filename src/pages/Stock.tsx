@@ -143,7 +143,7 @@ const Stock = () => {
         <p className="text-gray-300 mb-6">
           {t('districtsNote')} {' '}
           <Link to="/addresses" className="text-blue-400 hover:underline">
-            {t('addresses')}
+            {t('АДРЕСА')}
           </Link>
         </p>
         
@@ -202,7 +202,7 @@ const Stock = () => {
         
         <p className="mb-2">
           <Link to="/finance" className="text-blue-400 hover:underline">
-            {t('finance')}
+            {t('ФИНАНСЫ')}
           </Link>
         </p>
         
