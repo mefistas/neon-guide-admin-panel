@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -50,6 +49,7 @@ import Addresses from "./pages/Addresses";
 import MustSubscribe from "./pages/MustSubscribe";
 import DetailedGuide from "./pages/DetailedGuide";
 import Stock from "./pages/Stock";
+import MainStats from './pages/MainStats';
 
 const queryClient = new QueryClient();
 
@@ -104,6 +104,7 @@ const App = () => (
             <Route path="/must-subscribe" element={<MustSubscribe />} />
             <Route path="/detailed-guide" element={<DetailedGuide />} />
             <Route path="/stock" element={<Stock />} />
+            <Route path="/main-stats" element={<MainStats />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

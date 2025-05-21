@@ -5,7 +5,7 @@ import TutorialPage from '@/components/TutorialPage';
 import BackButton from '@/components/BackButton';
 import useStockTranslations from '@/hooks/useStockTranslations';
 import { 
-  City,
+  Building, // Replacing City with Building
   MapPin,
   Package,
   PackageX,

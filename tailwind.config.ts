@@ -64,6 +64,7 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				darkBg: '#000000',
+				neonBlue: '#7E69AB',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

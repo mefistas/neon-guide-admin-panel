@@ -16,6 +16,9 @@ import oneTimeDiscountsTranslations from '@/translations/oneTimeDiscounts';
 import detailedGuideTranslations from '@/translations/detailedGuide';
 import { addressesTranslations } from '@/translations/addresses';
 import stockTranslations from '@/translations/stock';
+import botsTranslations from '@/translations/bots';
+import mainStatsTranslations from '@/translations/mainStats';
+import couriersTranslations from '@/translations/couriers';
 
 // Original translation function that works with the legacy system
 export function useTranslations() {
@@ -33,6 +36,21 @@ export function useTranslations() {
 
   // New translator function that works with the modular approach
   const tNew = (key: string): string => {
+    // Check in couriers translations
+    if (couriersTranslations[language]?.[key]) {
+      return couriersTranslations[language][key];
+    }
+    
+    // Check in main stats translations
+    if (mainStatsTranslations[language]?.[key]) {
+      return mainStatsTranslations[language][key];
+    }
+    
+    // Check in bots translations
+    if (botsTranslations[language]?.[key]) {
+      return botsTranslations[language][key];
+    }
+    
     // Check in stock translations
     if (stockTranslations[language]?.[key]) {
       return stockTranslations[language][key];
