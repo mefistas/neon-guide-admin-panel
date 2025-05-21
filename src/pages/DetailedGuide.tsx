@@ -15,7 +15,8 @@ import {
   Wallet, 
   TrendingUp, 
   Banknote, 
-  Globe 
+  Globe,
+  MessageSquare 
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import useDetailedGuideTranslations from '@/hooks/useDetailedGuideTranslations';
@@ -41,6 +42,12 @@ const DetailedGuide = () => {
       description: t('botsDesc'),
       path: '/how-to-add-bots',
       icon: <Bot className="h-6 w-6 text-primary" />
+    },
+    {
+      title: t('chatsChannels'),
+      description: t('chatsChannelsDesc'),
+      path: '/chats-chan',
+      icon: <MessageSquare className="h-6 w-6 text-primary" />
     },
     {
       title: t('warehouse'),

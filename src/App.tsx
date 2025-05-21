@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -50,6 +51,7 @@ import MustSubscribe from "./pages/MustSubscribe";
 import DetailedGuide from "./pages/DetailedGuide";
 import Stock from "./pages/Stock";
 import MainStats from './pages/MainStats';
+import ChatsChannels from './pages/ChatsChannels';
 
 const queryClient = new QueryClient();
 
@@ -105,6 +107,7 @@ const App = () => (
             <Route path="/detailed-guide" element={<DetailedGuide />} />
             <Route path="/stock" element={<Stock />} />
             <Route path="/main-stats" element={<MainStats />} />
+            <Route path="/chats-chan" element={<ChatsChannels />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

@@ -5,26 +5,26 @@
 
 @layer base {
   :root {
-    /* Light theme variables */
-    --background: 0 0% 100%;
+    /* Light theme variables - updated for better contrast with dark text */
+    --background: 210 50% 98%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
+    --primary: 222 47% 40%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
+    --secondary: 210 40% 96.1%;
     --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
+    --muted: 210 40% 96.1%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
+    --accent: 210 40% 94%;
     --accent-foreground: 240 5.9% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --border: 220 13% 85%;
+    --input: 220 13% 85%;
+    --ring: 222 47% 40%;
 
     --sidebar-background: 0 0% 100%;
     --sidebar-foreground: 240 10% 3.9%;
@@ -39,7 +39,7 @@
   }
 
   .dark {
-    /* Dark theme variables */
+    /* Dark theme variables - keep as is */
     --background: 0 0% 0%;
     --foreground: 0 0% 98%;
     --card: 0 0% 0%;
@@ -84,18 +84,22 @@
 
 @layer utilities {
   .formal-border {
-    @apply border border-gray-700 shadow-md;
+    @apply border border-gray-700 shadow-md dark:border-gray-700 border-gray-300;
   }
   
   .sidebar-active {
-    @apply bg-gray-800 text-white border-l-2 border-white;
+    @apply bg-gray-800 text-white border-l-2 border-white dark:bg-gray-800 dark:text-white dark:border-l-2 dark:border-white bg-blue-100 text-primary border-l-2 border-primary;
   }
   
   .glass-morphism {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10 dark:border-white/5;
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 dark:border-white/5 backdrop-blur-xl bg-blue-50/70 border border-blue-200/30;
   }
   
   .text-gradient {
     @apply bg-gradient-to-br from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent;
+  }
+
+  .link-text {
+    @apply text-blue-700 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300 font-medium;
   }
 }

@@ -1,136 +1,198 @@
+import { useLanguage } from '@/contexts/LanguageContext';
 
-import React, { useContext } from 'react';
-import { LanguageContext } from '@/contexts/LanguageContext';
-import translations from '@/utils/translations';
-import { happyHoursTranslations } from '@/translations/happyHours';
-import { helpBotsTranslations } from '@/translations/helpBots';
-import newSectionsTranslations from '@/translations/newSections';
-import preordersTranslations from '@/translations/preorders';
-import mailoutTranslations from '@/translations/mailouts';
-import promotionsTranslations from '@/translations/promotions';
-import cumulativeDiscountsTranslations from '@/translations/cumulativeDiscounts';
-import promoCodesTranslations from '@/translations/promoCodes';
-import autoForwardingTranslations from '@/translations/autoForwarding';
-import workersTranslations from '@/translations/workers';
-import oneTimeDiscountsTranslations from '@/translations/oneTimeDiscounts';
-import detailedGuideTranslations from '@/translations/detailedGuide';
-import { addressesTranslations } from '@/translations/addresses';
-import stockTranslations from '@/translations/stock';
-import botsTranslations from '@/translations/bots';
-import mainStatsTranslations from '@/translations/mainStats';
-import couriersTranslations from '@/translations/couriers';
+type Languages = 'en' | 'ru';
 
-// Original translation function that works with the legacy system
-export function useTranslations() {
-  const { language, setLanguage } = useContext(LanguageContext);
+type Translations = {
+  [key in Languages]: {
+    [key: string]: string;
+  };
+};
 
-  // Original translator function
-  const t = (key: string): string => {
+const translations: Translations = {
+  en: {
+    adminPanelTutorial: "Admin Panel Tutorial",
+    quickStart: "Quick Start",
+    basicSetup: "Basic Setup",
+    howToAddCity: "How to Add City",
+    howToAddDistrict: "How to Add District",
+    howToAddCourier: "How to Add Courier",
+    howToCreateProductGroup: "How to Create Product Group",
+    howToCreateProductTypes: "How to Create Product Types",
+    howToAddAddress: "How to Add Address",
+    howToAddBots: "How to Add Bots",
+    casinoSetup: "Casino Setup",
+    cardsPayments: "Cards & Payments",
+    askQuestion: "Ask a Question",
+    languageSelector: "Select Language",
+    english: "English",
+    russian: "Russian",
+    shops: "Shops",
+    bots: "Bots",
+    warehouse: "Warehouse",
+    addresses: "Addresses",
+    couriers: "Couriers",
+    employees: "Employees",
+    clients: "Clients",
+    purchases: "Purchases",
+    balanceTopUps: "Balance Top-ups",
+    marketing: "Marketing",
+    messages: "Messages",
+    web: "Web",
+    finance: "Finance",
+    couriersSalary: "Couriers Salary",
+    usdt: "USDT",
+    partnersExchangers: "Partners/Exchangers",
+    mailouts: "Mailouts",
+    autoForwarding: "Auto Forwarding",
+    promotions: "Promotions",
+    cumulativeDiscounts: "Cumulative Discounts",
+    promoCodes: "Promo Codes",
+    oneTimeDiscounts: "One-Time Discounts",
+    happyHours: "Happy Hours",
+    withdrawFunds: "Withdraw Funds",
+    feedback: "Feedback",
+    helpBots: "Help Bots",
+    internalChats: "Internal Chats",
+    reviews: "Reviews",
+    preorders: "Preorders",
+    mustSubscribe: "Must Subscribe",
+    detailedGuide: "Detailed Guide",
+    stock: "Stock",
+    search: "Search",
+    back: "Back",
+    // Clients translations
+    clientCards: "Client cards and their editing",
+    clientCreation: "When a client writes to the bot - we create a client card in the panel.",
+    clientInfo: "In the Clients section, you can view a list of all your clients who have ever activated your store. In addition to personal data - username/name, etc., there is also:",
+    balance: "Balance: ",
+    balanceDescription: "Current client balance in store currency, which you can change if necessary",
+    discount: "Discount: ",
+    discountDescription: "Discount applicable to all products in the store, can also be negative, then the price of goods will be increased. The discount can be of two types: Percentage of the purchase amount or Fixed discount amount in the store currency.",
+    block: "Block: ",
+    blockDescription: "Want to block a client? Set the checkbox and the client will not be able to buy in your store",
+    referrer: "Referrer: ",
+    referrerDescription: "The person who invited your client with their referral link",
+    mailout: "Mailout: ",
+    mailoutDescription: "Does this client receive mailings? Set the desired value",
+    statistics: "Statistics: ",
+    statisticsDescription: "Number of invites, number of completed top-ups, number of purchases",
+    comments: "Comments: ",
+    commentsDescription: "You can leave any comments about the client",
+    history: "History: ",
+    historyDescription: "Last conversation history and changes in the client's account",
+    message: "Message: ",
+    messageDescription: "In the CONVERSATION tab, by writing text there and clicking the SAVE button, the user will receive your message from the bot.",
+    topup: "Top-up: ",
+    topupDescription: "After a successfully completed top-up request, we credit the amount to the client's balance. We also save information about this in the general history of changes for the client. You can view it by clicking the HISTORY button in the upper right corner of the client page.",
+    permissions: "Access Permissions",
+    permissionsDescription: "In the access section, you can customize restrictions on any functionality in the bot for the client, for example:",
+    privateBots: "Cannot create private bots (the button will disappear from the menu for this client and the ability to create private bots)",
+    supportChat: "Cannot write to the \"Support\" section. If you use an internal feedback system with the client - then this menu item will disappear for the client. But at the same time, you or your operators can write messages to the client through the Clients section - and the client will be able to reply to you.",
+    referrals: "Cannot invite/receive bonuses for invited users. The invitation link will work, but it will not be able to add new clients to invited ones. And also all accruals for already added referrals will be disabled.",
+    conversation: "Conversation Section",
+    conversationDescription: "All messages that the client sent to your bot will be logged in the conversation section. This section is not your correspondence with the client. If you want to contact the client through the bot, use the button in the right corner labeled SUPPORT CHAT.",
+    bulkActions: "Bulk Actions",
+    bulkActionsDescription: "In the Purchases or Feedback sections, you can select multiple items at once and in the actions selection menu, choose 'Close dispute without refund' or 'Mark as read'.",
+    messageTip: "After clicking the 'Execute' button in the form, you can specify a text message that will be sent to all marked clients from the list before closing the dispute or request.",
+  },
+  ru: {
+    adminPanelTutorial: "Обучение админ панели",
+    quickStart: "Быстрый старт",
+    basicSetup: "Основные настройки",
+    howToAddCity: "Как добавить город",
+    howToAddDistrict: "Как добавить район",
+    howToAddCourier: "Как добавить курьера",
+    howToCreateProductGroup: "Как создать группу товаров",
+    howToCreateProductTypes: "Как создать типы товаров",
+    howToAddAddress: "Как добавить адрес",
+    howToAddBots: "Как добавить ботов",
+    casinoSetup: "Настройка казино",
+    cardsPayments: "Карты и платежи",
+    askQuestion: "Задать вопрос",
+    languageSelector: "Выберите язык",
+    english: "Английский",
+    russian: "Русский",
+    shops: "Магазины",
+    bots: "Боты",
+    warehouse: "Склад",
+    addresses: "Адреса",
+    couriers: "Курьеры",
+    employees: "Сотрудники",
+    clients: "Клиенты",
+    purchases: "Покупки",
+    balanceTopUps: "Пополнение баланса",
+    marketing: "Маркетинг",
+    messages: "Сообщения",
+    web: "Веб",
+    finance: "Финансы",
+    couriersSalary: "Зарплата курьеров",
+    usdt: "USDT",
+    partnersExchangers: "Партнеры/Обменники",
+    mailouts: "Рассылки",
+    autoForwarding: "Автоматическая пересылка",
+    promotions: "Промо акции",
+    cumulativeDiscounts: "Накопительные скидки",
+    promoCodes: "Промокоды",
+    oneTimeDiscounts: "Одноразовые скидки",
+    happyHours: "Счастливые часы",
+    withdrawFunds: "Вывод средств",
+    feedback: "Обратная связь",
+    helpBots: "Помощь ботов",
+    internalChats: "Внутренние чаты",
+    reviews: "Отзывы",
+    preorders: "Предзаказы",
+    mustSubscribe: "Обязательная подписка",
+    detailedGuide: "Подробное руководство",
+    stock: "Склад",
+    search: "Поиск",
+    back: "Назад",
+    // Clients translations
+    clientCards: "Карточки клиентов и их редактирование.",
+    clientCreation: "Когда клиент пишет в бот - мы создаем карточку клиента в панели.",
+    clientInfo: "В разделе Клиенты вы можете посмотреть список всех ваших клиентов, которые когда-либо активировали ваш магазин. Помимо персональных данных - юзернейма/имени и тд есть еще:",
+    balance: "Баланс: ",
+    balanceDescription: "Текущий баланс клиента в валюте магазина, который вы можете менять при необходимости",
+    discount: "Скидка: ",
+    discountDescription: "Скидка действующая на всю продукцию в магазине, может быть и отрицательная, тогда цена на товары будет увеличена. Скидка может быть двух типов: Процент от суммы покупки или Фиксированная сумма скидки в валюте магазина.",
+    block: "Блокировка: ",
+    blockDescription: "Хотите заблокировать клиента? Установите галочку и клиент не сможет покупать в вашем магазине",
+    referrer: "Пригласитель: ",
+    referrerDescription: "Человек который пригласил вашего клиента по своей реферальной ссылке",
+    mailout: "Рассылка: ",
+    mailoutDescription: "Получает ли данный клиент Рассылку, установите нужное значение",
+    statistics: "Статистика: ",
+    statisticsDescription: "Кол-во приглашенных, кол-во выполненных пополнений, кол-во покупок",
+    comments: "Комментарий: ",
+    commentsDescription: "Вы можете оставлять любые коментарии по клиенту",
+    history: "История: ",
+    historyDescription: "Последняя история общения и изменений в аккаунте клиента",
+    message: "Сообщение: ",
+    messageDescription: "Во вкладке РАЗГОВОР, написав текст туда и нажав кнопку СОХРАНИТЬ, пользователь получит ваше сообщение от имени бота.",
+    topup: "Пополнение: ",
+    topupDescription: "После успешно выполненной заявки на пополнение мы начисляем сумму на баланс клиента. Также в этот момент мы сохраняем информацию об этом в общую историю изменений для клиента. Ее посмотреть можно нажав на кнопку ИСТОРИЯ в вверхнем правом углу страницы клиента.",
+    permissions: "Доступы",
+    permissionsDescription: "В разделе доступы вы можете кастомно менять ограничения на какой либо функционал в боте у клиента например:",
+    privateBots: "Не может создавать приватных ботов. (пропадет кнопка в меню для этого клиента и возможность создавать приватных ботов)",
+    supportChat: "Не может писать в раздел \"Поддержка\". Если вы используете внутреннюю систему обратной связи с клиентом - тогда этот пункт меню пропадет у клиента. Но при этом, вы или ваши операторы могут писать сообщения клиенту через раздел Клиенты - и клиент сможет вам отвечать.",
+    referrals: "Не может приглашать/получать бонусы за приглашенных. Ссылка для приглашения при этом будет работать, но вот добавлять новых клиентов в приглашенных не будет. А также отключатся все начисления за уже добавленных рефералов.",
+    conversation: "Раздел разговор",
+    conversationDescription: "В раздел разговор будут логироваться все сообщения которые клиент отправлял в ваш бот этот раздел не является вашей перепиской с клиентом. Если же вы хотите связаться с клиентом через бот используйте кнопку в правом углу с названием ОБЩЕНИЕ С ПОДДЕРЖКОЙ",
+    bulkActions: "Массовые действия",
+    bulkActionsDescription: "В разделах Покупки или Обратная связь вы можете выделить сразу несколько элементов и в меню выбора действий и выбрать \"Закрыть спор без возврата\" или \"Пометить прочитанным\"",
+    messageTip: "После нажатия на кнопку \"Выполнить\" в форме можете указать текстовое сообщение, которое будет отправлено всем помеченным клиентам из списка перед закрытием спора или обращения.",
+  }
+};
+
+export default function useTranslations() {
+  const { language } = useLanguage();
+  
+  const tNew = (key: string): string => {
     if (!translations[language] || !translations[language][key]) {
-      // Return the key if no translation exists
-      // console.warn(`Missing translation for key: ${key} in language: ${language}`);
       return key;
     }
     return translations[language][key];
   };
 
-  // New translator function that works with the modular approach
-  const tNew = (key: string): string => {
-    // Check in couriers translations
-    if (couriersTranslations[language]?.[key]) {
-      return couriersTranslations[language][key];
-    }
-    
-    // Check in main stats translations
-    if (mainStatsTranslations[language]?.[key]) {
-      return mainStatsTranslations[language][key];
-    }
-    
-    // Check in bots translations
-    if (botsTranslations[language]?.[key]) {
-      return botsTranslations[language][key];
-    }
-    
-    // Check in stock translations
-    if (stockTranslations[language]?.[key]) {
-      return stockTranslations[language][key];
-    }
-    
-    // Check in addresses translations
-    if (addressesTranslations[language]?.[key]) {
-      return addressesTranslations[language][key];
-    }
-    
-    // Check in detailed guide translations
-    if (detailedGuideTranslations[language]?.[key]) {
-      return detailedGuideTranslations[language][key];
-    }
-    
-    // Check in one time discounts translations
-    if (oneTimeDiscountsTranslations[language]?.[key]) {
-      return oneTimeDiscountsTranslations[language][key];
-    }
-    
-    // Check in workers translations
-    if (workersTranslations[language]?.[key]) {
-      return workersTranslations[language][key];
-    }
-    
-    // Check in auto forwarding translations
-    if (autoForwardingTranslations[language]?.[key]) {
-      return autoForwardingTranslations[language][key];
-    }
-    
-    // Check in promo codes translations
-    if (promoCodesTranslations[language]?.[key]) {
-      return promoCodesTranslations[language][key];
-    }
-    
-    // Check in cumulative discounts translations
-    if (cumulativeDiscountsTranslations[language]?.[key]) {
-      return cumulativeDiscountsTranslations[language][key];
-    }
-    
-    // Check in promotions translations
-    if (promotionsTranslations[language]?.[key]) {
-      return promotionsTranslations[language][key];
-    }
-    
-    // Check in mailouts translations
-    if (mailoutTranslations[language]?.[key]) {
-      return mailoutTranslations[language][key];
-    }
-    
-    // Check in preorders translations
-    if (preordersTranslations[language]?.[key]) {
-      return preordersTranslations[language][key];
-    }
-    
-    // Check in new sections translations
-    if (newSectionsTranslations[language]?.[key]) {
-      return newSectionsTranslations[language][key];
-    }
-    
-    // Check in happy hours translations
-    if (happyHoursTranslations[language]?.[key]) {
-      return happyHoursTranslations[language][key];
-    }
-    
-    // Check in help bots translations
-    if (helpBotsTranslations[language]?.[key]) {
-      return helpBotsTranslations[language][key];
-    }
-
-    // Fall back to the original translation system
-    if (translations[language]?.[key]) {
-      return translations[language][key];
-    }
-
-    // If no translation is found, return the key as a fallback
-    return key;
-  };
-
-  // Local translator for component-specific translations
   const tLocal = (key: string): string => {
     if (!translations[language] || !translations[language][key]) {
       return key;
@@ -138,7 +200,5 @@ export function useTranslations() {
     return translations[language][key];
   };
 
-  return { t, tNew, tLocal, language };
+  return { tNew, tLocal };
 }
-
-export default useTranslations;
