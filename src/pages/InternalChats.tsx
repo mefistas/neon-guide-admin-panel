@@ -16,7 +16,7 @@ const InternalChats = () => {
 
   const images = [
     {
-      src: "https://i.ibb.co/7NR5jyZq/Screenshot-2025-05-18-at-8-28-00-AM.png",
+      src: "https://i.ibb.co/gFv1hNdv/Screenshot-2025-05-22-at-3-11-38-PM.png",
       alt: "Internal chats interface"
     },
     {
