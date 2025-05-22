@@ -270,7 +270,9 @@ const SearchBar: React.FC = () => {
         <Search className="h-4 w-4 text-gray-600 dark:text-gray-400 mr-1" />
         <span className="sr-only md:not-sr-only md:ml-1 md:text-sm">{t('search')}</span>
       </Button>
-      <CommandDialog open={open} onOpenChange={setOpen} className="bg-white dark:bg-gray-900">
+      
+      {/* Remove className from CommandDialog as it's not in the type definition */}
+      <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput 
           placeholder={language === 'ru' ? "Поиск..." : "Search..."} 
           value={searchQuery}
