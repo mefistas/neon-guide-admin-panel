@@ -131,7 +131,7 @@ const AllStores = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/casio-setup" className="text-blue-600 dark:text-blue-400 hover:underline">
+                  <Link to="/casino-setup" className="text-blue-600 dark:text-blue-400 hover:underline">
                     Казино
                   </Link>
                 </li>
