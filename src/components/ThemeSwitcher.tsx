@@ -12,7 +12,7 @@ const ThemeSwitcher = () => {
       variant="ghost" 
       size="icon" 
       onClick={toggleTheme} 
-      className="rounded-full w-9 h-9"
+      className="rounded-full w-9 h-9 bg-white border-blue-200 dark:bg-gray-800 dark:border-gray-700"
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (

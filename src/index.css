@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    /* Light theme variables - updated for better contrast with dark text */
+    /* Light theme variables - updated for better readability with dark text */
     --background: 210 50% 98%;
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
@@ -109,5 +109,34 @@
   
   .hover-card {
     @apply hover:bg-blue-50/60 dark:hover:bg-gray-700/60 transition-colors duration-200;
+  }
+  
+  /* Additional utility classes for light theme improvements */
+  .light-bg {
+    @apply bg-white dark:bg-gray-900;
+  }
+  
+  .light-text {
+    @apply text-gray-800 dark:text-white;
+  }
+  
+  .light-text-secondary {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+  
+  .light-card-bg {
+    @apply bg-white/90 dark:bg-gray-800/90;
+  }
+  
+  .light-border {
+    @apply border-blue-100 dark:border-gray-700;
+  }
+  
+  .light-accent {
+    @apply bg-blue-50/80 dark:bg-gray-800/50;
+  }
+  
+  .light-hover {
+    @apply hover:bg-blue-100/80 dark:hover:bg-gray-700/50;
   }
 }
