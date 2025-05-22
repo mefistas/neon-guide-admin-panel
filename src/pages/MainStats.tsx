@@ -136,7 +136,7 @@ const MainStats = () => {
                     <p className="text-gray-400 text-sm mb-2">
                       {new Date(Date.now() - item * 24 * 60 * 60 * 1000).toLocaleDateString(language === 'ru' ? 'ru-RU' : 'en-US')}
                     </p>
-                    <p className="text-slate-950">
+                    <p className="text-zinc-400">
                       {language === 'ru' ? 'Мы добавили новые возможности для управления вашим магазином! Проверьте обновления в разделе настроек.' : 'We\'ve added new capabilities for managing your store! Check out the updates in the settings section.'}
                     </p>
                   </div>)}
