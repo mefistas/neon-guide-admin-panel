@@ -1,6 +1,6 @@
 
-import { useEffect, useState } from 'react';
-import translations from '../utils/translations';
+import { useState, useEffect } from 'react';
+import * as translations from '../utils/translations';
 import * as addressesTranslations from '../translations/addresses';
 import * as autoForwardingTranslations from '../translations/autoForwarding';
 import * as botsTranslations from '../translations/bots';
@@ -56,9 +56,24 @@ export const useSearchIndex = (searchTerm: string) => {
       });
     };
 
-    // Add main translations
-    flattenTranslations(translations.en, '/', 'main');
-    flattenTranslations(translations.ru, '/', 'main');
+    // Add main translations from translations.ts
+    // Access the nested objects properly
+    if (translations.additionalTranslations) {
+      Object.entries(translations.additionalTranslations).forEach(([key, translationObj]) => {
+        if (translationObj.en) index.push({
+          key,
+          text: translationObj.en,
+          path: '/',
+          section: 'main'
+        });
+        if (translationObj.ru) index.push({
+          key,
+          text: translationObj.ru,
+          path: '/',
+          section: 'main'
+        });
+      });
+    }
     
     // Add specialized translations
     const translationModules = [
@@ -84,9 +99,26 @@ export const useSearchIndex = (searchTerm: string) => {
     ];
     
     translationModules.forEach(({ content, path }) => {
-      // Extract en and ru objects from each translation module
-      if (content.en) flattenTranslations(content.en, path, path.substring(1));
-      if (content.ru) flattenTranslations(content.ru, path, path.substring(1));
+      // Check if module has default export or named exports
+      if (content.default) {
+        // Handle default export
+        if (content.default.en) flattenTranslations(content.default.en, path, path.substring(1));
+        if (content.default.ru) flattenTranslations(content.default.ru, path, path.substring(1));
+      } else {
+        // Handle named exports - look for common patterns in translation files
+        const translations = content as any;
+        if (translations.en) flattenTranslations(translations.en, path, path.substring(1));
+        if (translations.ru) flattenTranslations(translations.ru, path, path.substring(1));
+        
+        // Some translation files might have different structures
+        // e.g. addressesTranslations might export { addressesTranslations } with en/ru inside
+        Object.values(translations).forEach((exportedObj: any) => {
+          if (exportedObj && typeof exportedObj === 'object') {
+            if (exportedObj.en) flattenTranslations(exportedObj.en, path, path.substring(1));
+            if (exportedObj.ru) flattenTranslations(exportedObj.ru, path, path.substring(1));
+          }
+        });
+      }
     });
     
     return index;
