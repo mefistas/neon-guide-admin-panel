@@ -49,14 +49,14 @@ const MainStats = () => {
         <div className="prose prose-invert max-w-none">
           <p className="mb-6 font-normal text-zinc-400">{t('mainStatsDescription')}</p>
           
-          <p className="mb-6 text-slate-950">
+          <p className="mb-6 text-zinc-400">
             {t('withdrawFundsInfo')}{' '}
             <Link to="/withdraw-funds" className="text-blue-400 hover:underline">
               {t('withdrawFundsLink')}
             </Link>
           </p>
           
-          <p className="mb-6 flex items-center gap-2 text-slate-950">
+          <p className="mb-6 flex items-center gap-2 text-zinc-400">
             <MoveHorizontal className="text-neonBlue" />
             {t('dragDropInfo')}
           </p>
@@ -129,7 +129,7 @@ const MainStats = () => {
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {[1, 2, 3].map(item => <div key={item} className="p-3 rounded-lg transition-colors bg-cyan-50">
+                {[1, 2, 3].map(item => <div key={item} className="p-3 rounded-lg transition-colors bg-gray-950">
                     <p className="font-medium mb-1">
                       {language === 'ru' ? 'Обновление функциональности' : 'Feature Update'} v1.{item}
                     </p>
@@ -144,10 +144,10 @@ const MainStats = () => {
             </CardContent>
           </Card>
           
-          <p className="text-slate-950">{t('newsInfo')}</p>
+          <p className="text-zinc-300">{t('newsInfo')}</p>
           
           <div className="mt-10 mb-8 p-4 bg-neonBlue/10 rounded-lg border border-neonBlue text-center">
-            <p className="text-lg font-medium text-zinc-500">{t('ourMotto')}</p>
+            <p className="text-lg font-medium text-blue-500">{t('ourMotto')}</p>
           </div>
         </div>
       </div>
