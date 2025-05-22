@@ -484,7 +484,7 @@ const localTranslations: LocalTranslations = {
   },
   casinoSteps: {
     en: "- Go to STORES -> ALL STORES -> select your store\n- In the Language/Menu section, add a new item, set the line number, name it CASINO and select the casino button action accordingly\n- After creating the button, go to the Casino section and check the games you would like to see in your bot\nIMPORTANT: If at least one game is not selected, the casino will disappear from your bot's menu. You also need to set the minimum and maximum bets.",
-    ru: "- Переходим в раздел МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ -> выбираем наш магазин\n- В разделе Язык/Меню добавляем новый пункт, проставляем номер строки, называем КАЗИНО и выбираем действие кнопки казино соответственно\n- Когда кнопка создана идем в раздел Казино и ставим галочки напро��ив игр которые мы бы хотели видеть в нашем боте\nВАЖНО: если галочка не будет стоять хотя бы около одной игры, казино пропадает из меню вашего бота так же необходимо настроить минимальную и максимальную ставку"
+    ru: "- Переходим в раздел МАГАЗИНЫ -> ВСЕ МАГАЗИНЫ -> выбираем наш магазин\n- В разделе Язык/Меню добавляем новый пункт, проставляем номер строки, называем КАЗИНО и выбираем действие кнопки казино соответственно\n- Когда кнопка создана идем в раздел Казино и ставим галочки напротив игр которые мы бы хотели видеть в нашем боте\nВАЖНО: если галочка не будет стоять хотя бы около одной игры, казино пропадает из меню вашего бота так же необходимо настроить минимальную и максимальную ставку"
   },
   availableGames: {
     en: "Available Games:",
