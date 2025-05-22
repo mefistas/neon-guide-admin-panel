@@ -69,8 +69,7 @@ const MainStats = () => {
                           borderRadius: '8px',
                           color: '#111827',
                           boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
-                        }} 
-                        className="dark:bg-gray-800 dark:border-gray-700 dark:text-white"
+                        }}
                       />
                       <Legend />
                       <Line 
