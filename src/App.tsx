@@ -12,7 +12,6 @@ import HowToAddCourier from "./pages/HowToAddCourier";
 import HowToAddBots from "./pages/HowToAddBots";
 import CasinoSetup from "./pages/CasinoSetup";
 import CardsPayments from "./pages/CardsPayments";
-import AskQuestion from "./pages/AskQuestion";
 import QuickStart from "./pages/QuickStart";
 import BasicSetup from "./pages/BasicSetup";
 import Merchants from "./pages/Merchants";
@@ -23,7 +22,6 @@ import Clients from "./pages/Clients";
 import Purchases from "./pages/Purchases";
 import BalanceTopUps from "./pages/BalanceTopUps";
 import Marketing from "./pages/Marketing";
-import Messages from "./pages/Messages";
 import Web from "./pages/Web";
 import Finance from "./pages/Finance";
 import CouriersSalary from "./pages/CouriersSalary";
@@ -46,6 +44,7 @@ import DetailedGuide from "./pages/DetailedGuide";
 import Stock from "./pages/Stock";
 import MainStats from './pages/MainStats';
 import ChatsChannels from './pages/ChatsChannels';
+import AllStores from './pages/AllStores';
 
 const queryClient = new QueryClient();
 
@@ -79,7 +78,6 @@ const App = () => (
               <Route path="/promo-codes" element={<PromoCodes />} />
               <Route path="/one-time-discounts" element={<OneTimeDiscounts />} />
               <Route path="/happy-hours" element={<HappyHours />} />
-              <Route path="/messages" element={<Messages />} />
               <Route path="/web" element={<Web />} />
               <Route path="/finance" element={<Finance />} />
               <Route path="/couriers-salary" element={<CouriersSalary />} />
@@ -89,13 +87,13 @@ const App = () => (
               <Route path="/help-bots" element={<HelpBots />} />
               <Route path="/internal-chats" element={<InternalChats />} />
               <Route path="/reviews" element={<Reviews />} />
-              <Route path="/ask-question" element={<AskQuestion />} />
               <Route path="/preorders" element={<Preorders />} />
               <Route path="/addresses" element={<Addresses />} />
               <Route path="/detailed-guide" element={<DetailedGuide />} />
               <Route path="/stock" element={<Stock />} />
               <Route path="/main-stats" element={<MainStats />} />
               <Route path="/chats-chan" element={<ChatsChannels />} />
+              <Route path="/allstores" element={<AllStores />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

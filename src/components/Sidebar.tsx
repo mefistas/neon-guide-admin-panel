@@ -134,9 +134,9 @@ const Sidebar = () => {
           {sidebarOpen && <span className="font-medium">{t('detailedGuide')}</span>}
         </Link>
 
-        {/* Ask a Question - External Link */}
+        {/* Ask a Question - External Link - Updated to correct URL */}
         <a
-          href="https://example.com"
+          href="https://t.me/express_supermanager"
           target="_blank"
           rel="noopener noreferrer"
           className={cn(

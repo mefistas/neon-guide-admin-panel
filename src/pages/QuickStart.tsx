@@ -131,7 +131,7 @@ const QuickStart = () => {
       title: 'quickStartPoint9',
       customContent: (
         <div className="mt-4">
-          <div className="space-y-3 text-gray-200">
+          <div className="space-y-3 text-gray-700 dark:text-gray-200">
             {/* Bilingual section */}
             {language === 'ru' ? (
               <>
@@ -157,41 +157,41 @@ const QuickStart = () => {
           </div>
           
           <div className="mt-4 rounded-lg overflow-hidden">
-            <div className="bg-[#1A1F2C] px-4 py-2">
-              <h3 className="font-medium text-white">{language === 'ru' ? 'Пример:' : 'Example:'}</h3>
+            <div className="bg-blue-50 px-4 py-2 dark:bg-[#1A1F2C]">
+              <h3 className="font-medium text-gray-800 dark:text-white">{language === 'ru' ? 'Пример:' : 'Example:'}</h3>
             </div>
-            <div className="bg-[#111827] p-4">
-              <div className="border border-[#7E69AB]/30 rounded bg-[#0C111D] p-3 font-mono text-sm">
+            <div className="bg-white p-4 dark:bg-[#111827]">
+              <div className="border border-blue-100 rounded bg-blue-50/50 p-3 font-mono text-sm dark:border-[#7E69AB]/30 dark:bg-[#0C111D]">
                 <div>
-                  <span className="text-[#D6BCFA]">https://imgbb.com</span>
+                  <span className="text-blue-700 dark:text-[#D6BCFA]">https://imgbb.com</span>
                   <br />
-                  <span className="text-gray-300">{language === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{language === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
                 </div>
-                <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
-                  {language === 'ru' ? '[пустая строка]' : '[empty line]'}
-                  <br />
-                  {language === 'ru' ? '[пустая строка]' : '[empty line]'}
-                </div>
-                <div>
-                  <span className="text-[#D6BCFA]">https://imgbb.com</span>
-                  <br />
-                  <span className="text-gray-300">{language === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
-                </div>
-                <div className="my-4 border-t border-b border-dashed border-gray-700 py-1 text-center text-xs text-gray-500">
+                <div className="my-4 border-t border-b border-dashed border-gray-300 dark:border-gray-700 py-1 text-center text-xs text-gray-500">
                   {language === 'ru' ? '[пустая строка]' : '[empty line]'}
                   <br />
                   {language === 'ru' ? '[пустая строка]' : '[empty line]'}
                 </div>
                 <div>
-                  <span className="text-[#D6BCFA]">https://imgbb.com</span>
+                  <span className="text-blue-700 dark:text-[#D6BCFA]">https://imgbb.com</span>
                   <br />
-                  <span className="text-gray-300">{language === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
+                  <span className="text-gray-700 dark:text-gray-300">{language === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
+                </div>
+                <div className="my-4 border-t border-b border-dashed border-gray-300 dark:border-gray-700 py-1 text-center text-xs text-gray-500">
+                  {language === 'ru' ? '[пустая строка]' : '[empty line]'}
+                  <br />
+                  {language === 'ru' ? '[пустая строка]' : '[empty line]'}
+                </div>
+                <div>
+                  <span className="text-blue-700 dark:text-[#D6BCFA]">https://imgbb.com</span>
+                  <br />
+                  <span className="text-gray-700 dark:text-gray-300">{language === 'ru' ? 'в указанной точке по кордам' : 'at the specified point by coordinates'}</span>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="mt-4 space-y-2 text-gray-200">
+          <div className="mt-4 space-y-2 text-gray-700 dark:text-gray-200">
             {language === 'ru' ? (
               <>
                 <p>Итого теперь бот видит что ты загрузил три адреса для данного района</p>
@@ -244,7 +244,7 @@ const QuickStart = () => {
       </div>
       
       <div className="space-y-8">
-        <p className="text-lg text-gray-200">{t('quickStartDescription')}</p>
+        <p className="text-lg text-gray-700 dark:text-gray-200">{t('quickStartDescription')}</p>
 
         <div className="space-y-4">
           {quickStartSections.map((section) => {
@@ -257,18 +257,18 @@ const QuickStart = () => {
                 onOpenChange={() => toggleExpand(section.id)}
                 className={`backdrop-blur-sm transition-all duration-300 overflow-hidden rounded-lg ${
                   isExpanded 
-                    ? 'bg-[#1A1F2C]' 
-                    : 'bg-[#111827] hover:bg-[#1A1F2C]/80'
+                    ? 'bg-blue-50/90 dark:bg-[#1A1F2C]' 
+                    : 'bg-white/90 hover:bg-blue-50/80 dark:bg-[#111827] dark:hover:bg-[#1A1F2C]/80'
                 }`}
               >
                 <CollapsibleTrigger className="flex items-center justify-between w-full p-5 cursor-pointer">
                   <div className="flex items-center gap-4">
-                    <div className="flex items-center justify-center min-w-8 h-8 rounded-full bg-[#7E69AB]/40 text-white font-medium">
+                    <div className="flex items-center justify-center min-w-8 h-8 rounded-full bg-blue-100 text-blue-700 font-medium dark:bg-[#7E69AB]/40 dark:text-white">
                       {section.id}
                     </div>
-                    <h2 className="text-xl font-medium text-gray-100">{t(section.title)}</h2>
+                    <h2 className="text-xl font-medium text-gray-800 dark:text-gray-100">{t(section.title)}</h2>
                   </div>
-                  <div className="text-[#D6BCFA]">
+                  <div className="text-blue-700 dark:text-[#D6BCFA]">
                     {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                   </div>
                 </CollapsibleTrigger>
@@ -285,9 +285,9 @@ const QuickStart = () => {
                         return (
                           <div 
                             key={index}
-                            className="relative pl-5 text-gray-200"
+                            className="relative pl-5 text-gray-700 dark:text-gray-200"
                           >
-                            <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#D6BCFA]/70"></span>
+                            <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-blue-500/70 dark:bg-[#D6BCFA]/70"></span>
                             <p className="leading-relaxed">{noteText}</p>
                           </div>
                         );
