@@ -147,7 +147,7 @@ const MainStats = () => {
           <p className="text-slate-950">{t('newsInfo')}</p>
           
           <div className="mt-10 mb-8 p-4 bg-neonBlue/10 rounded-lg border border-neonBlue text-center">
-            <p className="text-lg font-medium text-zinc-300">{t('ourMotto')}</p>
+            <p className="text-lg font-medium text-zinc-500">{t('ourMotto')}</p>
           </div>
         </div>
       </div>
