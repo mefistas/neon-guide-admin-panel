@@ -3,7 +3,6 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeSwitcher from './ThemeSwitcher';
-import SearchBar from './SearchBar';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -11,7 +10,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
         <header className="h-16 flex items-center justify-end gap-2 px-6 border-b border-blue-100 dark:border-border bg-white dark:bg-background shadow-sm">
-          <SearchBar />
           <ThemeSwitcher />
           <LanguageSwitcher />
         </header>
