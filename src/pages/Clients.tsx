@@ -90,7 +90,7 @@ const Clients = () => {
               <Card className="overflow-hidden light-card">
                 <CardContent className="p-0">
                   <img 
-                    src="https://i.ibb.co/rGxHQWN/Screenshot-2025-05-22-at-12-51-02-AM.png" 
+                    src="https://i.ibb.co/rGxHQWN8/Screenshot-2025-05-22-at-12-51-02-AM.png" 
                     alt="Client balance edit interface"
                     className="w-full h-auto rounded-sm"
                   />
@@ -119,7 +119,7 @@ const Clients = () => {
               <Card className="overflow-hidden light-card">
                 <CardContent className="p-0">
                   <img 
-                    src="https://i.ibb.co/9m0G41T/Screenshot-2025-05-22-at-12-46-46-AM.png" 
+                    src="https://i.ibb.co/9m0G41Ts/Screenshot-2025-05-22-at-12-46-46-AM.png" 
                     alt="Client permissions interface"
                     className="w-full h-auto rounded-sm"
                   />
@@ -140,7 +140,7 @@ const Clients = () => {
             <Card className="overflow-hidden light-card">
               <CardContent className="p-0">
                 <img 
-                  src="https://i.ibb.co/M5cW782/Screenshot-2025-05-22-at-12-55-45-AM.png" 
+                  src="https://i.ibb.co/M5cW782Z/Screenshot-2025-05-22-at-12-55-45-AM.png" 
                   alt="Client conversation history"
                   className="w-full h-auto rounded-sm"
                 />
@@ -149,7 +149,7 @@ const Clients = () => {
             <Card className="overflow-hidden light-card">
               <CardContent className="p-0">
                 <img 
-                  src="https://i.ibb.co/TxbMk8c/IMAGE-2025-05-22-00-58-45.jpg" 
+                  src="https://i.ibb.co/TxbMk8cP/IMAGE-2025-05-22-00-58-45.jpg" 
                   alt="Support chat interface"
                   className="w-full h-auto rounded-sm"
                 />
