@@ -23,17 +23,17 @@ const HowToAddCourier = () => {
           <BackButton to="/detailed-guide" />
         </div>
         
-        <div className="prose prose-invert max-w-none">
-          <p className="text-lg text-gray-200 font-medium mb-6">{t('couriersDescription')}</p>
+        <div className="prose max-w-none">
+          <p className="text-lg text-gray-800 dark:text-gray-200 font-medium mb-6">{t('couriersDescription')}</p>
           
-          <p className="text-gray-300 mb-6">{t('couriersInfo')}</p>
+          <p className="text-gray-700 dark:text-gray-300 mb-6">{t('couriersInfo')}</p>
           
           <div className="space-y-4 mb-8">
-            <p className="text-gray-300">{t('addCourier')}</p>
-            <p className="text-gray-300">{t('selectShop')}</p>
+            <p className="text-gray-700 dark:text-gray-300">{t('addCourier')}</p>
+            <p className="text-gray-700 dark:text-gray-300">{t('selectShop')}</p>
             
             <div className="flex flex-col md:flex-row gap-6 items-start mb-4">
-              <p className="text-gray-300 md:w-2/3">{t('dragProducts')}</p>
+              <p className="text-gray-700 dark:text-gray-300 md:w-2/3">{t('dragProducts')}</p>
               <img 
                 src="https://i.ibb.co/rKw45rQD/Screenshot-2025-05-21-at-9-25-37-PM.png" 
                 alt="Drag products interface" 
@@ -42,22 +42,22 @@ const HowToAddCourier = () => {
             </div>
           </div>
           
-          <Alert className="bg-secondary/30 dark:bg-secondary/20 border-border mb-8">
+          <Alert className="bg-blue-50 dark:bg-secondary/30 border-blue-200 dark:border-border mb-8">
             <div className="flex gap-2">
-              <Keyboard className="h-5 w-5 text-neonBlue" />
+              <Keyboard className="h-5 w-5 text-blue-600 dark:text-neonBlue" />
               <AlertDescription>
-                <p className="font-medium">{t('shortcutTip')}</p>
+                <p className="font-medium text-gray-800 dark:text-white">{t('shortcutTip')}</p>
                 <ul className="list-disc pl-5 mt-2 space-y-1">
-                  <li className="text-gray-300">{t('macShortcut')}</li>
-                  <li className="text-gray-300">{t('winShortcut')}</li>
+                  <li className="text-gray-700 dark:text-gray-300">{t('macShortcut')}</li>
+                  <li className="text-gray-700 dark:text-gray-300">{t('winShortcut')}</li>
                 </ul>
               </AlertDescription>
             </div>
           </Alert>
           
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-700 dark:text-gray-300 mb-6">
             {t('balanceInfo')}{' '}
-            <Link to="/couriers-salary" className="text-blue-400 hover:underline">
+            <Link to="/couriers-salary" className="text-blue-600 hover:underline dark:text-blue-400">
               {t('couriersSalaryLink')}
             </Link>
           </p>
@@ -65,12 +65,12 @@ const HowToAddCourier = () => {
           <Separator className="my-8" />
           
           <div className="space-y-4 mb-8">
-            <h3 className="text-xl font-medium text-white flex items-center gap-2">
-              <Bot className="text-neonBlue" />
+            <h3 className="text-xl font-medium text-gray-800 dark:text-white flex items-center gap-2">
+              <Bot className="text-blue-600 dark:text-neonBlue" />
               {language === 'ru' ? 'Настройка ботов для курьера' : 'Setting up bots for courier'}
             </h3>
             
-            <p className="text-gray-300 mb-6">{t('botSetup')}</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-6">{t('botSetup')}</p>
             
             <div className="flex justify-center my-6">
               <img 
@@ -80,7 +80,7 @@ const HowToAddCourier = () => {
               />
             </div>
             
-            <p className="text-gray-300 mb-6">{t('botUsage')}</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-6">{t('botUsage')}</p>
             
             <div className="flex justify-center my-6">
               <img 
@@ -91,16 +91,16 @@ const HowToAddCourier = () => {
             </div>
           </div>
           
-          <div className="mt-10 p-4 bg-gray-800 rounded-lg">
-            <p className="text-gray-300">
+          <div className="mt-10 p-4 bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-200 dark:border-gray-700">
+            <p className="text-gray-700 dark:text-gray-300">
               {t('recommendation')}{' '}
-              <Link to="/workers" className="text-blue-400 hover:underline">
+              <Link to="/workers" className="text-blue-600 hover:underline dark:text-blue-400">
                 {t('workersLink')}
               </Link>
               {' '}{t('couriersSalaryLink') !== t('workersLink') ? 
                 <>
                   {language === 'ru' ? 'и' : 'and'}{' '}
-                  <Link to="/couriers-salary" className="text-blue-400 hover:underline">
+                  <Link to="/couriers-salary" className="text-blue-600 hover:underline dark:text-blue-400">
                     {t('couriersSalaryLink')}
                   </Link>
                 </> : ''}

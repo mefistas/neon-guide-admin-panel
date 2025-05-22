@@ -33,15 +33,15 @@ const HappyHours = () => {
           <BackButton to="/marketing" />
         </div>
         
-        <p className="text-xl text-gray-200 mb-8">{t('happyHoursDesc')}</p>
+        <p className="text-xl text-gray-800 dark:text-gray-200 mb-8">{t('happyHoursDesc')}</p>
         
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h2 className="text-xl font-semibold mb-4 flex items-center">
-            <Clock className="mr-2" size={20} />
+        <section className="bg-white/80 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
+            <Clock className="mr-2 text-blue-600 dark:text-neonBlue" size={20} />
             {t('howToSetup')}
           </h2>
           
-          <div className="space-y-4 mb-6">
+          <div className="space-y-4 mb-6 text-gray-700 dark:text-gray-300">
             <p>{t('goToProductTypes')}</p>
             <p>{t('activateHappyHours')}</p>
             <p>{t('setupInstructions')}</p>
@@ -56,7 +56,7 @@ const HappyHours = () => {
                       <img 
                         src={image.src} 
                         alt={image.alt}
-                        className="rounded-md w-full h-auto border border-gray-600" 
+                        className="rounded-md w-full h-auto border border-gray-200 dark:border-gray-600" 
                       />
                     </div>
                   </CarouselItem>
@@ -69,31 +69,31 @@ const HappyHours = () => {
             </Carousel>
           </div>
           
-          <p className="mt-6">{t('exampleExplanation')}</p>
+          <p className="mt-6 text-gray-700 dark:text-gray-300">{t('exampleExplanation')}</p>
         </section>
         
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h2 className="text-xl font-semibold mb-4">{t('whenIsItUseful')}</h2>
+        <section className="bg-white/80 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">{t('whenIsItUseful')}</h2>
           
           <ul className="space-y-4">
             <li className="flex">
               <Check size={20} className="mr-2 text-green-500 shrink-0 mt-1" />
-              <p>{t('useCasePromote')}</p>
+              <p className="text-gray-700 dark:text-gray-300">{t('useCasePromote')}</p>
             </li>
             <li className="flex">
               <Check size={20} className="mr-2 text-green-500 shrink-0 mt-1" />
-              <p>{t('useCaseOldAddresses')}</p>
+              <p className="text-gray-700 dark:text-gray-300">{t('useCaseOldAddresses')}</p>
             </li>
             <li className="flex">
               <Check size={20} className="mr-2 text-green-500 shrink-0 mt-1" />
-              <p>{t('useCaseDaylight')}</p>
+              <p className="text-gray-700 dark:text-gray-300">{t('useCaseDaylight')}</p>
             </li>
           </ul>
         </section>
         
-        <div className="p-4 bg-neonBlue/10 rounded-md mt-4 border border-neonBlue">
-          <p className="font-semibold">{t('tip')}:</p>
-          <p>{t('happyHoursTip')}</p>
+        <div className="p-4 bg-blue-50 dark:bg-neonBlue/10 rounded-md mt-4 border border-blue-200 dark:border-neonBlue">
+          <p className="font-semibold text-gray-800 dark:text-white">{t('tip')}:</p>
+          <p className="text-gray-700 dark:text-gray-300">{t('happyHoursTip')}</p>
         </div>
       </div>
     </TutorialPage>
