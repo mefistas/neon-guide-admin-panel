@@ -62,7 +62,7 @@ const MainStats = () => {
           </p>
           
           <div className="mt-8">
-            <img src="https://i.ibb.co/CfdQKFp/Screenshot-2025-05-21-at-8-44-54-PM.png" alt="Statistics dashboard" className="rounded-lg shadow-md w-full h-auto mb-8 text-zinc-200" />
+            <img src="https://i.ibb.co/CfdQKFp/Screenshot-2025-05-21-at-8-44-54-PM.png" alt="Statistics dashboard" className="rounded-lg shadow-md w-full h-auto mb-8 text-zinc-400" />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-zinc-500">
