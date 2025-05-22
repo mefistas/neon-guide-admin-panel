@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import useTranslations from '@/hooks/useTranslations';
@@ -22,17 +21,14 @@ const Addresses = () => {
   
   // Determine the referrer for the back button
   useEffect(() => {
-    // Check if there's a state with a from property
     if (location.state && location.state.from) {
       setReferrer(location.state.from);
     } else {
-      // Default paths based on common navigation patterns
       const referrerMap: Record<string, string> = {
         '/marketing': '/marketing',
         '/detailed-guide': '/detailed-guide'
       };
       
-      // Use document.referrer or a default path
       const prevPath = document.referrer.split('/').pop() || '';
       setReferrer(referrerMap[`/${prevPath}`] || '/detailed-guide');
     }
@@ -88,21 +84,21 @@ const Addresses = () => {
       <div className="space-y-6 max-w-4xl mx-auto">
         <BackButton to={referrer} className="mb-6" />
         
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+        <section className="bg-white/80 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-blue-500 dark:border-neonBlue pl-3 text-gray-800 dark:text-white">
             {t('addressesTitle')}
           </h3>
           
-          <p className="mb-8">{t('addressesIntro')}</p>
+          <p className="mb-8 text-gray-700 dark:text-gray-300">{t('addressesIntro')}</p>
           
           {/* ADD ADDRESSES MODULE */}
           <div className="space-y-6">
-            <h4 className="text-lg font-medium border-b border-gray-700 pb-2">{t('addAddressesModule')}</h4>
-            <p>{t('addAddressesDescription')}</p>
+            <h4 className="text-lg font-medium border-b border-gray-200 dark:border-gray-700 pb-2 text-gray-800 dark:text-white">{t('addAddressesModule')}</h4>
+            <p className="text-gray-700 dark:text-gray-300">{t('addAddressesDescription')}</p>
             
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="w-full md:w-1/2">
-                <AspectRatio ratio={16 / 9} className="bg-gray-800 overflow-hidden rounded-lg">
+                <AspectRatio ratio={16 / 9} className="bg-gray-50 dark:bg-gray-800 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700">
                   <img 
                     src={addAddressesImages[0].src} 
                     alt={addAddressesImages[0].alt} 
@@ -111,13 +107,13 @@ const Addresses = () => {
                 </AspectRatio>
               </div>
               <div className="w-full md:w-1/2">
-                <p>{t('districtList')}</p>
-                <p className="mt-2">{t('districtPriority')}</p>
+                <p className="text-gray-700 dark:text-gray-300">{t('districtList')}</p>
+                <p className="mt-2 text-gray-700 dark:text-gray-300">{t('districtPriority')}</p>
               </div>
             </div>
             
-            <p>{t('uploadOptions')}</p>
-            <ul className="list-disc pl-6 space-y-1">
+            <p className="text-gray-700 dark:text-gray-300">{t('uploadOptions')}</p>
+            <ul className="list-disc pl-6 space-y-1 text-gray-700 dark:text-gray-300">
               <li>{t('blueArrow')}</li>
               <li>{t('greenArrow')}</li>
             </ul>
@@ -125,7 +121,7 @@ const Addresses = () => {
           
           {/* ADD ADDRESSES SECTION */}
           <div className="space-y-6 mt-10">
-            <h4 className="text-lg font-medium border-b border-gray-700 pb-2">{t('addAddressesSection')}</h4>
+            <h4 className="text-lg font-medium border-b border-gray-200 dark:border-gray-700 pb-2 text-gray-800 dark:text-white">{t('addAddressesSection')}</h4>
             <p>{t('linkTextFormat')}</p>
             
             <div className="flex flex-col md:flex-row gap-6 items-center">
@@ -163,7 +159,7 @@ const Addresses = () => {
           
           {/* MULTI-UPLOAD PHOTO+TEXT */}
           <div className="space-y-6 mt-10">
-            <h4 className="text-lg font-medium border-b border-gray-700 pb-2">{t('multiUploadSection')}</h4>
+            <h4 className="text-lg font-medium border-b border-gray-200 dark:border-gray-700 pb-2 text-gray-800 dark:text-white">{t('multiUploadSection')}</h4>
             <p>{t('convenientModule')}</p>
             
             <div className="flex flex-col gap-6">
@@ -187,7 +183,7 @@ const Addresses = () => {
           
           {/* ADDRESSES MODULE */}
           <div className="space-y-6 mt-12">
-            <h4 className="text-lg font-medium border-b border-gray-700 pb-2">{t('addressesModule')}</h4>
+            <h4 className="text-lg font-medium border-b border-gray-200 dark:border-gray-700 pb-2 text-gray-800 dark:text-white">{t('addressesModule')}</h4>
             <p>{t('accessModule')}</p>
             <p>{t('allAddresses')}</p>
             
@@ -257,9 +253,9 @@ const Addresses = () => {
                 </AspectRatio>
               </div>
               
-              <div className="p-4 bg-neonBlue/10 rounded-md border border-neonBlue mt-6">
-                <p className="font-semibold">{t('tip')}:</p>
-                <p>{t('nextRecommendation')}</p>
+              <div className="p-4 bg-blue-50 dark:bg-neonBlue/10 rounded-md border border-blue-200 dark:border-neonBlue mt-6">
+                <p className="font-semibold text-gray-800 dark:text-white">{t('tip')}:</p>
+                <p className="text-gray-700 dark:text-gray-300">{t('nextRecommendation')}</p>
               </div>
             </div>
           </div>
