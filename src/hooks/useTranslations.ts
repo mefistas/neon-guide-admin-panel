@@ -662,7 +662,7 @@ const localTranslations: LocalTranslations = {
   },
   purchasesFilters: {
     en: "There is a filter block in the Purchases section. You can filter purchases by courier, thus viewing their work statistics, as well as client reviews of their work. There are filters by districts, cities, and product types. An important filter is 'operator response required' - this will only show purchases where the client is waiting for a decision from the operator.",
-    ru: "В разделе Покупки есть блок фильтров. Вы можете отфильтровать покупки по курьеру, тем самым посмотреть статистику его работы, а так же отзывы от клиентов на ему работу. Есть фильтр по районам, городам, по видам товаров. Важный фильтр \"требуется ответ оператора\" - при э��ом будут показаны только те покупки, по которым клиент ожидает решения от оператора."
+    ru: "В разделе Покупки есть блок фильтров. Вы можете отфильтровать покупки по курьеру, тем самым посмотреть статистику его работы, а так же отзывы от клиентов на ему работу. Есть фильтр по районам, городам, по видам товаров. Важный фильтр \"требуется ответ оператора\" - при этом будут показаны только те покупки, по которым клиент ожидает решения от оператора."
   },
   purchasesDisputeOperator: {
     en: "To process purchase disputes, there is an employee access type called 'Dispute Operator'. You can create this in the Employees section of the main menu panel. You need to select the employee type, specify the login and password. You also need to select a city or multiple cities for which the operator will work. Purchase disputes will only come to the operator from the cities that are selected for the operator.",
