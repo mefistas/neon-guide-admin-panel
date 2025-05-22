@@ -15,11 +15,11 @@ const WithdrawFunds = () => {
           <BackButton to="/finance" />
         </div>
         
-        <p className="text-lg text-gray-300 mb-6">{tNew('withdrawFundsIntro')}</p>
+        <p className="text-lg light-text-secondary mb-6">{tNew('withdrawFundsIntro')}</p>
         
         {/* Crypto Withdrawal Section */}
-        <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
-          <h2 className="text-2xl font-semibold mb-4 text-white border-l-4 border-neonBlue pl-3">
+        <div className="bg-white/80 dark:bg-gray-800/50 rounded-lg p-6 border light-border">
+          <h2 className="text-2xl font-semibold mb-4 light-text border-l-4 border-blue-500 dark:border-neonBlue pl-3">
             1. {tNew('cryptoWithdrawal')}
           </h2>
           
@@ -31,14 +31,14 @@ const WithdrawFunds = () => {
             />
           </div>
           
-          <div className="whitespace-pre-line text-gray-300 mb-8">
+          <div className="whitespace-pre-line light-text-secondary mb-8">
             {tNew('cryptoWithdrawalSteps')}
           </div>
           
           {/* Auto-withdrawal section */}
-          <div className="mt-6 mb-8 border-t border-gray-700 pt-6">
-            <h3 className="flex items-center gap-2 text-xl font-semibold mb-4 text-white">
-              <Clock className="text-neonBlue" /> {tNew('autoWithdrawal')}
+          <div className="mt-6 mb-8 border-t border-gray-200 dark:border-gray-700 pt-6">
+            <h3 className="flex items-center gap-2 text-xl font-semibold mb-4 light-text">
+              <Clock className="text-blue-600 dark:text-neonBlue" /> {tNew('autoWithdrawal')}
             </h3>
             
             <div className="mb-6">
@@ -49,25 +49,25 @@ const WithdrawFunds = () => {
               />
             </div>
             
-            <div className="whitespace-pre-line text-gray-300">
+            <div className="whitespace-pre-line light-text-secondary">
               {tNew('autoWithdrawalSteps')}
             </div>
           </div>
           
           {/* Exchanger withdrawal section */}
-          <div className="mt-6 border-t border-gray-700 pt-6">
-            <h3 className="flex items-center gap-2 text-xl font-semibold mb-4 text-white">
-              <ArrowLeftRight className="text-neonBlue" /> {tNew('exchangerWithdrawal')}
+          <div className="mt-6 border-t border-gray-200 dark:border-gray-700 pt-6">
+            <h3 className="flex items-center gap-2 text-xl font-semibold mb-4 light-text">
+              <ArrowLeftRight className="text-blue-600 dark:text-neonBlue" /> {tNew('exchangerWithdrawal')}
             </h3>
             
-            <div className="whitespace-pre-line text-gray-300">
+            <div className="whitespace-pre-line light-text-secondary">
               {tNew('exchangerWithdrawalSteps')}
               <div className="mt-4">
                 <a 
                   href="https://ff.io/terms-of-service" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-neonBlue hover:underline"
+                  className="flex items-center gap-2 text-blue-700 dark:text-neonBlue hover:underline"
                 >
                   <Link size={16} /> {tNew('termsOfService')}
                 </a>
@@ -77,8 +77,8 @@ const WithdrawFunds = () => {
         </div>
         
         {/* Fiat Withdrawal Section */}
-        <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700">
-          <h2 className="text-2xl font-semibold mb-4 text-white border-l-4 border-neonBlue pl-3">
+        <div className="bg-white/80 dark:bg-gray-800/50 rounded-lg p-6 border light-border">
+          <h2 className="text-2xl font-semibold mb-4 light-text border-l-4 border-blue-500 dark:border-neonBlue pl-3">
             2. {tNew('fiatWithdrawal')}
           </h2>
           
@@ -90,15 +90,15 @@ const WithdrawFunds = () => {
             />
           </div>
           
-          <div className="whitespace-pre-line text-gray-300">
+          <div className="whitespace-pre-line light-text-secondary">
             {tNew('fiatWithdrawalSteps')}
           </div>
         </div>
         
         {/* Advice Section */}
-        <div className="bg-amber-900/20 border border-amber-700/50 rounded-lg p-4 flex items-start">
-          <AlertCircle className="text-amber-500 mr-3 mt-0.5 shrink-0" />
-          <p className="text-amber-200">{tNew('withdrawalAdvice')}</p>
+        <div className="bg-amber-100/80 dark:bg-amber-900/20 border border-amber-300 dark:border-amber-700/50 rounded-lg p-4 flex items-start">
+          <AlertCircle className="text-amber-600 dark:text-amber-500 mr-3 mt-0.5 shrink-0" />
+          <p className="text-amber-800 dark:text-amber-200">{tNew('withdrawalAdvice')}</p>
         </div>
       </div>
     </TutorialPage>

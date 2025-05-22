@@ -59,8 +59,8 @@ const CardsPayments = () => {
       <div className="space-y-8 max-w-4xl mx-auto">
         <BackButton to="/" className="mb-6" />
         
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-6 border-l-4 border-neonBlue pl-3">
+        <section className="bg-white/80 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <h3 className="text-xl font-medium mb-6 border-l-4 border-blue-500 dark:border-neonBlue pl-3 light-text">
             {tNew('operatorWorkSections')}
           </h3>
           
@@ -69,31 +69,31 @@ const CardsPayments = () => {
               <Link 
                 key={index} 
                 to={section.path}
-                className="bg-gray-800/50 p-4 rounded-lg hover:bg-gray-700/50 transition-colors flex items-center"
+                className="light-accent p-4 rounded-lg light-hover transition-colors flex items-center shadow-sm border light-border"
               >
-                {section.icon}
+                <span className="text-blue-700 dark:text-neonBlue">{section.icon}</span>
                 <div>
-                  <h4 className="font-medium">{tNew(section.title)}</h4>
-                  <p className="text-sm text-gray-400">{tNew(section.description)}</p>
+                  <h4 className="font-medium light-text">{tNew(section.title)}</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{tNew(section.description)}</p>
                 </div>
               </Link>
             ))}
           </div>
         </section>
 
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+        <section className="bg-white/80 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-blue-500 dark:border-neonBlue pl-3 light-text">
             {tNew('operatorTips')}
           </h3>
           
           <div className="space-y-4">
-            <div className="p-4 bg-neonBlue/10 rounded-md border border-neonBlue">
-              <p className="font-semibold">{tNew('tip')}:</p>
-              <p>{tNew('operatorTip1')}</p>
+            <div className="p-4 bg-blue-50/80 dark:bg-neonBlue/10 rounded-md border border-blue-200 dark:border-neonBlue">
+              <p className="font-semibold text-gray-800 dark:text-white">{tNew('tip')}:</p>
+              <p className="text-gray-700 dark:text-gray-300">{tNew('operatorTip1')}</p>
             </div>
-            <div className="p-4 bg-neonBlue/10 rounded-md border border-neonBlue">
-              <p className="font-semibold">{tNew('important')}:</p>
-              <p>{tNew('operatorTip2')}</p>
+            <div className="p-4 bg-blue-50/80 dark:bg-neonBlue/10 rounded-md border border-blue-200 dark:border-neonBlue">
+              <p className="font-semibold text-gray-800 dark:text-white">{tNew('important')}:</p>
+              <p className="text-gray-700 dark:text-gray-300">{tNew('operatorTip2')}</p>
             </div>
           </div>
         </section>
