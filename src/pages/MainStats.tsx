@@ -47,7 +47,7 @@ const MainStats = () => {
         </div>
         
         <div className="prose prose-invert max-w-none">
-          <p className="mb-6 text-slate-950">{t('mainStatsDescription')}</p>
+          <p className="mb-6 font-normal text-zinc-400">{t('mainStatsDescription')}</p>
           
           <p className="mb-6 text-slate-950">
             {t('withdrawFundsInfo')}{' '}
@@ -62,10 +62,10 @@ const MainStats = () => {
           </p>
           
           <div className="mt-8">
-            <img src="https://i.ibb.co/CfdQKFp/Screenshot-2025-05-21-at-8-44-54-PM.png" alt="Statistics dashboard" className="rounded-lg shadow-md w-full h-auto mb-8" />
+            <img src="https://i.ibb.co/CfdQKFp/Screenshot-2025-05-21-at-8-44-54-PM.png" alt="Statistics dashboard" className="rounded-lg shadow-md w-full h-auto mb-8 text-zinc-200" />
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-zinc-500">
             <Card className="bg-secondary/30 dark:bg-secondary/20 border-border">
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg flex items-center gap-2">
@@ -147,7 +147,7 @@ const MainStats = () => {
           <p className="text-slate-950">{t('newsInfo')}</p>
           
           <div className="mt-10 mb-8 p-4 bg-neonBlue/10 rounded-lg border border-neonBlue text-center">
-            <p className="text-lg font-medium text-sky-500">{t('ourMotto')}</p>
+            <p className="text-lg font-medium text-zinc-300">{t('ourMotto')}</p>
           </div>
         </div>
       </div>
