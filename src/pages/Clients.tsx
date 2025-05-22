@@ -1,42 +1,28 @@
-
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import BackButton from '@/components/BackButton';
 import useClientsTranslations from '@/hooks/useClientsTranslations';
-import { 
-  Search, 
-  UserCircle, 
-  Tag, 
-  PercentCircle, 
-  History, 
-  MessageSquare,
-  Shield,
-  UserX,
-  Download
-} from "lucide-react";
+import { Search, UserCircle, Tag, PercentCircle, History, MessageSquare, Shield, UserX, Download } from "lucide-react";
 import { Separator } from '@/components/ui/separator';
 import { Card, CardContent } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-
 const Clients = () => {
-  const { t: globalT } = useLanguage();
-  const { t } = useClientsTranslations();
-
-  return (
-    <TutorialPage title={globalT('clients')}>
+  const {
+    t: globalT
+  } = useLanguage();
+  const {
+    t
+  } = useClientsTranslations();
+  return <TutorialPage title={globalT('clients')}>
       <div className="space-y-6">
         <div className="mb-4 flex justify-between items-center">
           <BackButton to="/detailed-guide" />
           <div className="flex gap-2">
-            <Button variant="outline" size="sm" className="light-text">
-              <Download className="h-4 w-4 mr-1" /> CSV
-            </Button>
-            <Button variant="outline" size="sm" className="light-text">
-              <Download className="h-4 w-4 mr-1" /> XLS
-            </Button>
+            
+            
           </div>
         </div>
         
@@ -101,11 +87,7 @@ const Clients = () => {
             <div className="md:w-1/3">
               <Card className="overflow-hidden light-card border-blue-100 dark:border-gray-700">
                 <CardContent className="p-0">
-                  <img 
-                    src="https://i.ibb.co/rGxHQWN8/Screenshot-2025-05-22-at-12-51-02-AM.png" 
-                    alt="Client balance edit interface"
-                    className="w-full h-auto rounded-sm"
-                  />
+                  <img src="https://i.ibb.co/rGxHQWN8/Screenshot-2025-05-22-at-12-51-02-AM.png" alt="Client balance edit interface" className="w-full h-auto rounded-sm" />
                 </CardContent>
               </Card>
             </div>
@@ -139,11 +121,7 @@ const Clients = () => {
             <div className="md:w-1/3">
               <Card className="overflow-hidden light-card border-blue-100 dark:border-gray-700">
                 <CardContent className="p-0">
-                  <img 
-                    src="https://i.ibb.co/9m0G41Ts/Screenshot-2025-05-22-at-12-46-46-AM.png" 
-                    alt="Client permissions interface"
-                    className="w-full h-auto rounded-sm"
-                  />
+                  <img src="https://i.ibb.co/9m0G41Ts/Screenshot-2025-05-22-at-12-46-46-AM.png" alt="Client permissions interface" className="w-full h-auto rounded-sm" />
                 </CardContent>
               </Card>
             </div>
@@ -160,20 +138,12 @@ const Clients = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
             <Card className="overflow-hidden light-card border-blue-100 dark:border-gray-700">
               <CardContent className="p-0">
-                <img 
-                  src="https://i.ibb.co/M5cW782Z/Screenshot-2025-05-22-at-12-55-45-AM.png" 
-                  alt="Client conversation history"
-                  className="w-full h-auto rounded-sm"
-                />
+                <img src="https://i.ibb.co/M5cW782Z/Screenshot-2025-05-22-at-12-55-45-AM.png" alt="Client conversation history" className="w-full h-auto rounded-sm" />
               </CardContent>
             </Card>
             <Card className="overflow-hidden light-card border-blue-100 dark:border-gray-700">
               <CardContent className="p-0">
-                <img 
-                  src="https://i.ibb.co/TxbMk8cP/IMAGE-2025-05-22-00-58-45.jpg" 
-                  alt="Support chat interface"
-                  className="w-full h-auto rounded-sm"
-                />
+                <img src="https://i.ibb.co/TxbMk8cP/IMAGE-2025-05-22-00-58-45.jpg" alt="Support chat interface" className="w-full h-auto rounded-sm" />
               </CardContent>
             </Card>
           </div>
@@ -190,8 +160,6 @@ const Clients = () => {
           </Alert>
         </div>
       </div>
-    </TutorialPage>
-  );
+    </TutorialPage>;
 };
-
 export default Clients;
