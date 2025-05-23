@@ -7,7 +7,6 @@ export function usePromotionsTranslations() {
 
   const t = (key: string): string => {
     if (!promotionsTranslations[language] || !promotionsTranslations[language][key]) {
-      // Return the key if no translation exists
       return key;
     }
     return promotionsTranslations[language][key];
