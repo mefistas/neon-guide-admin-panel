@@ -3,185 +3,58 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import usePromotionsTranslations from '@/hooks/usePromotionsTranslations';
 import BackButton from '@/components/BackButton';
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
-} from '@/components/ui/carousel';
+import { MapPin, Gift, Target } from 'lucide-react';
 
 const Promotions = () => {
   const { t } = usePromotionsTranslations();
   
   return (
-    <TutorialPage title={t('promotionsTitle')}>
-      <div className="space-y-8 max-w-4xl mx-auto">
+    <TutorialPage title={t('promotions')}>
+      <div className="space-y-6 max-w-4xl mx-auto">
         <div className="mb-4">
           <BackButton to="/marketing" />
         </div>
         
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <p className="mb-6">{t('promotionsIntro')}</p>
-          
-          {/* Purchase Count Promotion */}
-          <div className="mt-10 border-t border-gray-700 pt-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{t('purchaseCountPromoTitle')}</h3>
-                <p className="mb-4">{t('purchaseCountPromoDesc')}</p>
-                <p className="bg-neonBlue/10 p-4 rounded-md border border-neonBlue">
-                  {t('purchaseCountPromoExample')}
-                </p>
-              </div>
-              <div className="md:w-1/3">
-                <img 
-                  src="https://i.ibb.co/WN3MkSNB/IMAGE-2025-05-19-15-56-32.jpg" 
-                  alt="Purchase Count Promotion" 
-                  className="rounded-lg border border-gray-700 w-full" 
-                />
-              </div>
+        <section className="bg-white/90 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <div className="grid md:grid-cols-2 gap-6 items-center mb-6">
+            <div>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">{t('promotionsDesc')}</p>
+              <p className="text-gray-700 dark:text-gray-300">{t('promotionsPath')}</p>
             </div>
+            <img 
+              src="https://i.ibb.co/y2kSKH8/Screenshot-2025-05-19-at-3-13-35-PM.png" 
+              alt="Promotions Interface" 
+              className="rounded-md shadow-lg border border-gray-200 dark:border-gray-700"
+            />
           </div>
           
-          {/* Deposit Sum Promotion */}
-          <div className="mt-10 border-t border-gray-700 pt-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{t('depositSumPromoTitle')}</h3>
-                <p className="mb-4">{t('depositSumPromoDesc')}</p>
-                <p className="bg-neonBlue/10 p-4 rounded-md border border-neonBlue">
-                  {t('depositSumPromoExample')}
-                </p>
-              </div>
-              <div className="md:w-1/3">
-                <img 
-                  src="https://i.ibb.co/LD613Kfp/IMAGE-2025-05-19-16-07-50.jpg" 
-                  alt="Deposit Sum Promotion" 
-                  className="rounded-lg border border-gray-700 w-full" 
-                />
+          <div className="space-y-6">
+            <div className="flex items-start gap-3">
+              <MapPin className="text-blue-600 dark:text-blue-400 mt-1" size={20} />
+              <div>
+                <h3 className="font-medium text-gray-800 dark:text-white mb-2">{t('locationPromotions')}</h3>
+                <p className="text-gray-700 dark:text-gray-300">{t('locationPromotionsDesc')}</p>
               </div>
             </div>
-          </div>
-          
-          {/* One-Time Deposit Promotion */}
-          <div className="mt-10 border-t border-gray-700 pt-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{t('oneTimeDepositTitle')}</h3>
-                <p className="mb-4">{t('oneTimeDepositDesc')}</p>
-              </div>
-              <div className="md:w-1/3">
-                <Carousel className="w-full">
-                  <CarouselContent>
-                    <CarouselItem>
-                      <img 
-                        src="https://i.ibb.co/RkMTv1fP/IMAGE-2025-05-19-16-21-24.jpg" 
-                        alt="One-time Deposit Promotion 1" 
-                        className="rounded-lg border border-gray-700 w-full" 
-                      />
-                    </CarouselItem>
-                    <CarouselItem>
-                      <img 
-                        src="https://i.ibb.co/7t7jPFfz/IMAGE-2025-05-19-16-21-25.jpg" 
-                        alt="One-time Deposit Promotion 2" 
-                        className="rounded-lg border border-gray-700 w-full" 
-                      />
-                    </CarouselItem>
-                  </CarouselContent>
-                  <CarouselPrevious className="left-2" />
-                  <CarouselNext className="right-2" />
-                </Carousel>
-              </div>
-            </div>
-          </div>
-          
-          {/* Reviews Promotion */}
-          <div className="mt-10 border-t border-gray-700 pt-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{t('reviewsPromoTitle')}</h3>
-                <p className="mb-4">{t('reviewsPromoDesc')}</p>
-              </div>
-              <div className="md:w-1/3">
-                <img 
-                  src="https://i.ibb.co/zW8L1d0k/IMAGE-2025-05-19-16-25-48.jpg" 
-                  alt="Reviews Promotion" 
-                  className="rounded-lg border border-gray-700 w-full" 
-                />
-              </div>
-            </div>
-          </div>
-          
-          {/* Next Purchase Discount */}
-          <div className="mt-10 border-t border-gray-700 pt-6">
-            <h3 className="text-xl font-medium mb-4">{t('nextPurchaseTitle')}</h3>
-            <p className="mb-4">{t('nextPurchaseDesc')}</p>
-            <ul className="list-disc pl-5 mb-4">
-              <li className="mb-2">{t('nextPurchaseSteps')}</li>
-            </ul>
             
-            <Carousel className="w-full">
-              <CarouselContent>
-                <CarouselItem>
-                  <img 
-                    src="https://i.ibb.co/JjSPFYgJ/IMAGE-2025-05-19-16-30-38.jpg" 
-                    alt="Next Purchase Discount 1" 
-                    className="rounded-lg border border-gray-700 w-full" 
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <img 
-                    src="https://i.ibb.co/MxCmhyGy/IMAGE-2025-05-19-16-45-23.jpg" 
-                    alt="Next Purchase Discount 2" 
-                    className="rounded-lg border border-gray-700 w-full" 
-                  />
-                </CarouselItem>
-                <CarouselItem>
-                  <img 
-                    src="https://i.ibb.co/5xMdzZd4/IMAGE-2025-05-19-16-45-24.jpg" 
-                    alt="Next Purchase Discount 3" 
-                    className="rounded-lg border border-gray-700 w-full" 
-                  />
-                </CarouselItem>
-              </CarouselContent>
-              <CarouselPrevious className="left-2" />
-              <CarouselNext className="right-2" />
-            </Carousel>
+            <div className="flex items-start gap-3">
+              <Gift className="text-blue-600 dark:text-blue-400 mt-1" size={20} />
+              <div>
+                <h3 className="font-medium text-gray-800 dark:text-white mb-2">{t('productPromotions')}</h3>
+                <p className="text-gray-700 dark:text-gray-300">{t('productPromotionsDesc')}</p>
+              </div>
+            </div>
             
-            <div className="mt-6 space-y-4">
-              <p>{t('nextPurchaseDetails1')}</p>
-              <p>{t('nextPurchaseDetails2')}</p>
-              <p>{t('nextPurchaseNotification')}</p>
-              <p>{t('nextPurchaseDiscounts')}</p>
-              <p>{t('nextPurchaseMultiple')}</p>
-            </div>
-          </div>
-          
-          {/* Sale Promotion */}
-          <div className="mt-10 border-t border-gray-700 pt-6">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-1">
-                <h3 className="text-xl font-medium mb-4">{t('salePromoTitle')}</h3>
-                <p className="mb-4">{t('salePromoDesc')}</p>
-                <p className="mb-4">{t('salePromoDetails')}</p>
-              </div>
-              <div className="md:w-1/3">
-                <img 
-                  src="https://i.ibb.co/6c1sWrwC/IMAGE-2025-05-19-16-50-24.jpg" 
-                  alt="Sale Promotion" 
-                  className="rounded-lg border border-gray-700 w-full" 
-                />
+            <div className="flex items-start gap-3">
+              <Target className="text-blue-600 dark:text-blue-400 mt-1" size={20} />
+              <div>
+                <h3 className="font-medium text-gray-800 dark:text-white mb-2">{t('targetedPromotions')}</h3>
+                <p className="text-gray-700 dark:text-gray-300">{t('targetedPromotionsDesc')}</p>
               </div>
             </div>
           </div>
           
-          {/* Additional Settings */}
-          <div className="mt-10 border-t border-gray-700 pt-6">
-         
-            <p className="mb-4">{t('deleteUnusedDiscounts')}</p>
-            <p className="mb-4">{t('followingDiscountsInfo')}</p>
-          </div>
+          <p className="mt-6 text-gray-700 dark:text-gray-300">{t('promotionsSetupInstructions')}</p>
         </section>
       </div>
     </TutorialPage>

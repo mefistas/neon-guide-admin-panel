@@ -31,22 +31,22 @@ const Mailouts = () => {
         </div>
         
         {/* Introduction */}
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h2 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+        <section className="bg-white/90 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <h2 className="text-xl font-medium mb-4 border-l-4 border-blue-600 dark:border-neonBlue pl-3 text-gray-800 dark:text-white">
             {t('mailoutsTypes')}
           </h2>
-          <ul className="space-y-4 list-disc pl-6">
+          <ul className="space-y-4 list-disc pl-6 text-gray-700 dark:text-gray-300">
             <li>{t('oneTimeMailouts')}</li>
             <li>{t('manualLaunchMailouts')}</li>
             <li>{t('automaticLaunchMailouts')}</li>
           </ul>
         </section>
         
-        <div className="border-t border-gray-700 my-6"></div>
+        <div className="border-t border-gray-200 dark:border-gray-700 my-6"></div>
         
         {/* How to create mailout */}
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h2 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+        <section className="bg-white/90 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <h2 className="text-xl font-medium mb-4 border-l-4 border-blue-600 dark:border-neonBlue pl-3 text-gray-800 dark:text-white">
             {t('howToCreateMailout')}
           </h2>
           
@@ -60,7 +60,7 @@ const Mailouts = () => {
                       <img 
                         src={image} 
                         alt={`Mailout interface ${index + 1}`} 
-                        className="w-full h-auto rounded-md object-contain"
+                        className="w-full h-auto rounded-md object-contain border border-gray-200 dark:border-gray-700"
                       />
                     </div>
                   </CarouselItem>
@@ -73,8 +73,8 @@ const Mailouts = () => {
             </Carousel>
           </div>
           
-          <h3 className="text-lg font-medium mb-3">{t('createMailoutSteps')}</h3>
-          <ul className="space-y-4 list-disc pl-6">
+          <h3 className="text-lg font-medium mb-3 text-gray-800 dark:text-white">{t('createMailoutSteps')}</h3>
+          <ul className="space-y-4 list-disc pl-6 text-gray-700 dark:text-gray-300">
             <li>{t('step1')}</li>
             <li>{t('step2')}</li>
             <li>{t('step3')}</li>
@@ -84,16 +84,16 @@ const Mailouts = () => {
             <li>{t('step7')}</li>
           </ul>
           
-          <p className="mt-4">{t('saveButton')}</p>
+          <p className="mt-4 text-gray-700 dark:text-gray-300">{t('saveButton')}</p>
         </section>
         
         {/* Possible errors */}
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h2 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+        <section className="bg-white/90 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <h2 className="text-xl font-medium mb-4 border-l-4 border-blue-600 dark:border-neonBlue pl-3 text-gray-800 dark:text-white">
             {t('possibleErrors')}
           </h2>
           
-          <div className="space-y-4">
+          <div className="space-y-4 text-gray-700 dark:text-gray-300">
             <p>{t('error1')}</p>
             <p>{t('error2')}</p>
           </div>
@@ -102,7 +102,7 @@ const Mailouts = () => {
             <img 
               src="https://i.ibb.co/LdmBB0hC/IMAGE-2025-05-19-15-32-56.jpg" 
               alt="Error example" 
-              className="rounded-md w-full max-w-lg mx-auto"
+              className="rounded-md w-full max-w-lg mx-auto border border-gray-200 dark:border-gray-700"
             />
           </div>
         </section>

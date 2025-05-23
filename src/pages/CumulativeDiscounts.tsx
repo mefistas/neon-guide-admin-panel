@@ -14,22 +14,22 @@ const CumulativeDiscounts = () => {
           <BackButton to="/marketing" />
         </div>
         
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <p className="mb-4">{t('cumulativeDiscountsDesc')}</p>
+        <section className="bg-white/90 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <p className="mb-4 text-gray-700 dark:text-gray-300">{t('cumulativeDiscountsDesc')}</p>
           
-          <p className="mb-6">{t('cumulativeDiscountsExplanation')}</p>
+          <p className="mb-6 text-gray-700 dark:text-gray-300">{t('cumulativeDiscountsExplanation')}</p>
           
-          <p className="mb-4">{t('cumulativeDiscountsPath')}</p>
+          <p className="mb-4 text-gray-700 dark:text-gray-300">{t('cumulativeDiscountsPath')}</p>
 
           <div className="mt-6 mb-6">
             <img 
               src="https://i.ibb.co/S4GLcRfM/image.png" 
               alt="Cumulative Discounts Interface" 
-              className="rounded-md w-full max-w-lg mx-auto border border-gray-600"
+              className="rounded-md w-full max-w-lg mx-auto border border-gray-200 dark:border-gray-700"
             />
           </div>
           
-          <p className="mb-4">{t('cumulativeDiscountsSetupInstructions')}</p>
+          <p className="mb-4 text-gray-700 dark:text-gray-300">{t('cumulativeDiscountsSetupInstructions')}</p>
         </section>
       </div>
     </TutorialPage>

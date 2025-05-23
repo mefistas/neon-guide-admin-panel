@@ -3,7 +3,6 @@ import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import usePromoCodesTranslations from '@/hooks/usePromoCodesTranslations';
 import BackButton from '@/components/BackButton';
-import { Link } from 'react-router-dom';
 
 const PromoCodes = () => {
   const { t } = usePromoCodesTranslations();
@@ -15,24 +14,22 @@ const PromoCodes = () => {
           <BackButton to="/marketing" />
         </div>
         
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <p className="mb-4">{t('promoCodesDesc').split('(см раздел КЛИЕНТЫ)')[0]} 
-            (<Link to="/clients" className="text-neonBlue hover:underline">
-              {t('clients')}
-            </Link>).
-          </p>
+        <section className="bg-white/90 dark:bg-gray-900/40 rounded-lg p-6 border light-border">
+          <p className="mb-4 text-gray-700 dark:text-gray-300">{t('promoCodesDesc')}</p>
           
-          <p className="mb-6">{t('promoCodesGeneration')}</p>
+          <p className="mb-6 text-gray-700 dark:text-gray-300">{t('promoCodesExplanation')}</p>
           
+          <p className="mb-4 text-gray-700 dark:text-gray-300">{t('promoCodesPath')}</p>
+
           <div className="mt-6 mb-6">
             <img 
-              src="https://i.ibb.co/B7m8HdV/Screenshot-2025-05-19-at-6-55-21-PM.png" 
-              alt="Promo Codes Generation Interface" 
-              className="rounded-md w-full max-w-lg mx-auto border border-gray-600"
+              src="https://i.ibb.co/M5zKSHM2/image.png" 
+              alt="Promo Codes Interface" 
+              className="rounded-md w-full max-w-lg mx-auto border border-gray-200 dark:border-gray-700"
             />
           </div>
           
-          <p className="mb-4">{t('promoCodesUsage')}</p>
+          <p className="mb-4 text-gray-700 dark:text-gray-300">{t('promoCodesSetupInstructions')}</p>
         </section>
       </div>
     </TutorialPage>
