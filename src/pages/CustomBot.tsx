@@ -56,58 +56,58 @@ const CustomBot = () => {
       
       <div className="space-y-6 max-w-4xl mx-auto">
         <section>
-          <h2 className="text-2xl font-semibold mb-3">{tNew('customBotIntro')}</h2>
+          <h2 className="text-2xl font-semibold mb-3 text-gray-800 dark:text-white">{tNew('customBotIntro')}</h2>
         </section>
 
         <section>
-          <h3 className="text-xl font-medium mb-3">{tNew('customBotTypes')}</h3>
+          <h3 className="text-xl font-medium mb-3 text-gray-800 dark:text-white">{tNew('customBotTypes')}</h3>
           <ul className="space-y-2 text-lg">
             <li className="flex items-center gap-2">
-              <Bot size={20} className="flex-shrink-0 text-neonBlue" />
-              {tNew('customBotType1')}
+              <Bot size={20} className="flex-shrink-0 text-blue-600 dark:text-neonBlue" />
+              <span className="text-gray-700 dark:text-gray-200">{tNew('customBotType1')}</span>
             </li>
             <li className="flex items-center gap-2">
-              <Bot size={20} className="flex-shrink-0 text-neonBlue" />
-              {tNew('customBotType2')}
+              <Bot size={20} className="flex-shrink-0 text-blue-600 dark:text-neonBlue" />
+              <span className="text-gray-700 dark:text-gray-200">{tNew('customBotType2')}</span>
             </li>
           </ul>
         </section>
 
         {/* Section 1: Customization of appearance */}
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+        <section className="bg-white/90 dark:bg-gray-900/40 rounded-lg p-6 border border-blue-100 dark:border-gray-700">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-blue-500 dark:border-neonBlue pl-3 text-gray-800 dark:text-white">
             {tNew('customBotAppearance')}
           </h3>
           
           <div className="space-y-3">
-            <p>{tNew('gotoStores')}</p>
-            <p>{tNew('clickStoreName')}</p>
-            <p className="mb-2">{tNew('twoMainMenus')}</p>
+            <p className="text-gray-700 dark:text-gray-200">{tNew('gotoStores')}</p>
+            <p className="text-gray-700 dark:text-gray-200">{tNew('clickStoreName')}</p>
+            <p className="mb-2 text-gray-700 dark:text-gray-200">{tNew('twoMainMenus')}</p>
             
             <Collapsible className="w-full">
-              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-gray-800 p-4 text-left font-medium">
+              <CollapsibleTrigger className="flex w-full items-center justify-between rounded-md bg-blue-100 dark:bg-gray-800 p-4 text-left font-medium text-gray-800 dark:text-white">
                 <span>{tNew('addNewLanguage')}</span>
                 <ChevronDown className="h-5 w-5" />
               </CollapsibleTrigger>
               <CollapsibleContent className="p-4 pt-2 text-sm">
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>{tNew('deleteMenuItems')}</li>
-                  <li>{tNew('sortingNote')}</li>
-                  <li>{tNew('addTwoItems')}</li>
-                  <li>{tNew('chooseLanguage')}</li>
-                  <li>{tNew('writeButton')}</li>
-                  <li>{tNew('externalSite')}</li>
+                  <li className="text-gray-700 dark:text-gray-300">{tNew('deleteMenuItems')}</li>
+                  <li className="text-gray-700 dark:text-gray-300">{tNew('sortingNote')}</li>
+                  <li className="text-gray-700 dark:text-gray-300">{tNew('addTwoItems')}</li>
+                  <li className="text-gray-700 dark:text-gray-300">{tNew('chooseLanguage')}</li>
+                  <li className="text-gray-700 dark:text-gray-300">{tNew('writeButton')}</li>
+                  <li className="text-gray-700 dark:text-gray-300">{tNew('externalSite')}</li>
                 </ul>
               </CollapsibleContent>
             </Collapsible>
             
-            <div className="bg-neonBlue/10 border border-neonBlue/30 rounded-md p-4 mb-2">
-              <p className="font-medium text-neonBlue">{tNew('tip')}:</p>
-              <p>{tNew('saveAndContinue')}</p>
+            <div className="bg-blue-50 dark:bg-neonBlue/10 border border-blue-200 dark:border-neonBlue/30 rounded-md p-4 mb-2">
+              <p className="font-medium text-blue-700 dark:text-neonBlue">{tNew('tip')}:</p>
+              <p className="text-gray-700 dark:text-gray-300">{tNew('saveAndContinue')}</p>
             </div>
             
-            <p>{tNew('activateCasino')}</p>
-            <p className="font-medium">{tNew('exampleSettings')}</p>
+            <p className="text-gray-700 dark:text-gray-200">{tNew('activateCasino')}</p>
+            <p className="font-medium text-gray-800 dark:text-white">{tNew('exampleSettings')}</p>
             
             {/* Updated Carousel with larger images */}
             <div className="relative py-4">
@@ -116,14 +116,14 @@ const CustomBot = () => {
                   {carouselImages.map((image, index) => (
                     <CarouselItem key={index} className="basis-full">
                       <div className="p-1">
-                        <div className="rounded-lg overflow-hidden border border-gray-700">
+                        <div className="rounded-lg overflow-hidden border border-blue-200 dark:border-gray-700">
                           <img 
                             src={image.src} 
                             alt={image.alt} 
-                            className="w-full h-80 object-contain bg-gray-800/60" 
+                            className="w-full h-80 object-contain bg-blue-50 dark:bg-gray-800/60" 
                           />
                         </div>
-                        <p className="text-center text-sm text-gray-400 mt-2">{image.alt}</p>
+                        <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-2">{image.alt}</p>
                       </div>
                     </CarouselItem>
                   ))}
@@ -134,27 +134,27 @@ const CustomBot = () => {
             </div>
             
             <div className="space-y-3 mt-4">
-              <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-md p-4">
-                <p className="font-medium text-yellow-500">{tNew('important')}:</p>
-                <p>{tNew('supportItem')}</p>
+              <div className="bg-yellow-50 dark:bg-yellow-500/10 border border-yellow-200 dark:border-yellow-500/30 rounded-md p-4">
+                <p className="font-medium text-yellow-700 dark:text-yellow-500">{tNew('important')}:</p>
+                <p className="text-gray-700 dark:text-gray-300">{tNew('supportItem')}</p>
               </div>
               
               <ul className="space-y-2 pl-5">
                 <li className={cn("flex gap-2")}>
-                  <span className="text-neonBlue">•</span>
-                  <span>{tNew('citySelection')}</span>
+                  <span className="text-blue-600 dark:text-neonBlue">•</span>
+                  <span className="text-gray-700 dark:text-gray-200">{tNew('citySelection')}</span>
                 </li>
                 <li className={cn("flex gap-2")}>
-                  <span className="text-neonBlue">•</span>
-                  <span>{tNew('personalBots')}</span>
+                  <span className="text-blue-600 dark:text-neonBlue">•</span>
+                  <span className="text-gray-700 dark:text-gray-200">{tNew('personalBots')}</span>
                 </li>
                 <li className={cn("flex gap-2")}>
-                  <span className="text-neonBlue">•</span>
-                  <span>{tNew('preorderButton')}</span>
+                  <span className="text-blue-600 dark:text-neonBlue">•</span>
+                  <span className="text-gray-700 dark:text-gray-200">{tNew('preorderButton')}</span>
                 </li>
                 <li className={cn("flex gap-2")}>
-                  <span className="text-neonBlue">•</span>
-                  <span>{tNew('bonusButton')}</span>
+                  <span className="text-blue-600 dark:text-neonBlue">•</span>
+                  <span className="text-gray-700 dark:text-gray-200">{tNew('bonusButton')}</span>
                 </li>
               </ul>
             </div>
@@ -162,26 +162,26 @@ const CustomBot = () => {
         </section>
 
         {/* Section 2: Bot Customization Section */}
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+        <section className="bg-white/90 dark:bg-gray-900/40 rounded-lg p-6 border border-blue-100 dark:border-gray-700">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-blue-500 dark:border-neonBlue pl-3 text-gray-800 dark:text-white">
             {tNew('customizationSection')}
           </h3>
           
           <div className="space-y-3">
-            <p>{tNew('buttonOptions')}</p>
+            <p className="text-gray-700 dark:text-gray-200">{tNew('buttonOptions')}</p>
             
             <ul className="space-y-2 pl-5">
               <li className={cn("flex gap-2")}>
-                <span className="text-neonBlue">•</span>
-                <span>{tNew('oneColumnMenu')}</span>
+                <span className="text-blue-600 dark:text-neonBlue">•</span>
+                <span className="text-gray-700 dark:text-gray-200">{tNew('oneColumnMenu')}</span>
               </li>
               <li className={cn("flex gap-2")}>
-                <span className="text-neonBlue">•</span>
-                <span>{tNew('supportLink')}</span>
+                <span className="text-blue-600 dark:text-neonBlue">•</span>
+                <span className="text-gray-700 dark:text-gray-200">{tNew('supportLink')}</span>
               </li>
             </ul>
             
-            <div className="rounded-lg overflow-hidden border border-gray-700 mt-3">
+            <div className="rounded-lg overflow-hidden border border-blue-200 dark:border-gray-700 mt-3">
               <img 
                 src={supportSectionImage.src}
                 alt={supportSectionImage.alt}
@@ -189,9 +189,9 @@ const CustomBot = () => {
               />
             </div>
             
-            <p>{tNew('editButtons')}</p>
+            <p className="text-gray-700 dark:text-gray-200">{tNew('editButtons')}</p>
             
-            <div className="rounded-lg overflow-hidden border border-gray-700 mt-3">
+            <div className="rounded-lg overflow-hidden border border-blue-200 dark:border-gray-700 mt-3">
               <img 
                 src={messagesSectionImage.src}
                 alt={messagesSectionImage.alt}
@@ -202,47 +202,47 @@ const CustomBot = () => {
         </section>
 
         {/* Section 3: Message Customization */}
-        <section className="bg-gray-900/40 rounded-lg p-6 border border-gray-700">
-          <h3 className="text-xl font-medium mb-4 border-l-4 border-neonBlue pl-3">
+        <section className="bg-white/90 dark:bg-gray-900/40 rounded-lg p-6 border border-blue-100 dark:border-gray-700">
+          <h3 className="text-xl font-medium mb-4 border-l-4 border-blue-500 dark:border-neonBlue pl-3 text-gray-800 dark:text-white">
             {tNew('messageCustomization')}
           </h3>
           
           <div className="space-y-3">
-            <p>{tNew('messageBotSection')}</p>
-            <p>{tNew('allMessagesHere')}</p>
+            <p className="text-gray-700 dark:text-gray-200">{tNew('messageBotSection')}</p>
+            <p className="text-gray-700 dark:text-gray-200">{tNew('allMessagesHere')}</p>
             
-            <div className="bg-gray-800 rounded-md p-4 font-mono text-sm whitespace-pre-wrap">
+            <div className="bg-blue-100 dark:bg-gray-800 rounded-md p-4 font-mono text-sm whitespace-pre-wrap text-gray-800 dark:text-gray-200">
               {tNew('htmlGuide')}
             </div>
             
-            <h4 className="text-lg font-medium mt-4">{tNew('settingsRecommendations')}</h4>
+            <h4 className="text-lg font-medium mt-4 text-gray-800 dark:text-white">{tNew('settingsRecommendations')}</h4>
             
             <ul className="space-y-2 pl-5">
               <li className={cn("flex gap-2")}>
-                <span className="text-neonBlue">•</span>
-                <span>{tNew('searchTip')}</span>
+                <span className="text-blue-600 dark:text-neonBlue">•</span>
+                <span className="text-gray-700 dark:text-gray-200">{tNew('searchTip')}</span>
               </li>
               <li className={cn("flex gap-2")}>
-                <span className="text-neonBlue">•</span>
-                <span>{tNew('addVariant')}</span>
+                <span className="text-blue-600 dark:text-neonBlue">•</span>
+                <span className="text-gray-700 dark:text-gray-200">{tNew('addVariant')}</span>
               </li>
               <li className={cn("flex gap-2")}>
-                <span className="text-neonBlue">•</span>
-                <span>{tNew('notVisibleMessage')}</span>
+                <span className="text-blue-600 dark:text-neonBlue">•</span>
+                <span className="text-gray-700 dark:text-gray-200">{tNew('notVisibleMessage')}</span>
               </li>
               <li className={cn("flex gap-2")}>
-                <span className="text-neonBlue">•</span>
-                <span>{tNew('messageCount')}</span>
+                <span className="text-blue-600 dark:text-neonBlue">•</span>
+                <span className="text-gray-700 dark:text-gray-200">{tNew('messageCount')}</span>
               </li>
             </ul>
             
-            <div className="flex items-center gap-2 mt-3 bg-gray-800/60 p-3 rounded-md">
-              <p>{tNew('translationTip')}</p>
+            <div className="flex items-center gap-2 mt-3 bg-blue-50 dark:bg-gray-800/60 p-3 rounded-md">
+              <p className="text-gray-700 dark:text-gray-300">{tNew('translationTip')}</p>
               <a 
                 href="https://chat.deepseek.com/sign_in" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-neonBlue hover:text-neonBlue/80 inline-flex items-center gap-1"
+                className="text-blue-600 dark:text-neonBlue hover:text-blue-800 dark:hover:text-neonBlue/80 inline-flex items-center gap-1"
               >
                 <span>DeepSeek Chat</span>
                 <ExternalLink size={14} />

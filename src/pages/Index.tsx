@@ -72,23 +72,25 @@ const Index = () => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6 text-white text-center">{t('welcome')}</h1>
+        <h1 className="text-4xl font-bold mb-6 text-gray-800 dark:text-white text-center">{t('welcome')}</h1>
         
-        <div className="bg-gray-900/70 p-8 rounded-lg formal-border mb-8">
-          <p className="text-xl mb-6">{t('selectTopic')}</p>
+        <div className="bg-white/90 dark:bg-gray-900/70 p-8 rounded-lg formal-border mb-8">
+          <p className="text-xl mb-6 text-gray-800 dark:text-gray-200">{t('selectTopic')}</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {mainSections.map((section, index) => (
               <Link 
                 key={index} 
                 to={section.link}
-                className="bg-black/50 p-6 rounded-lg formal-border hover:bg-gray-800/50 transition-colors flex flex-col items-center text-center"
+                className="bg-blue-50/80 dark:bg-black/50 p-6 rounded-lg formal-border hover:bg-blue-100/80 dark:hover:bg-gray-800/50 transition-colors flex flex-col items-center text-center"
               >
-                {section.icon}
-                <h2 className="text-xl font-medium mb-2">
+                <div className="text-blue-600 dark:text-neonBlue">
+                  {section.icon}
+                </div>
+                <h2 className="text-xl font-medium mb-2 text-gray-800 dark:text-white">
                   {section.isCustom ? tNew(section.title) : t(section.title)}
                 </h2>
-                <p className="text-gray-300">
+                <p className="text-gray-700 dark:text-gray-300">
                   {section.isCustom ? tNew(section.description) : t(section.description)}
                 </p>
               </Link>

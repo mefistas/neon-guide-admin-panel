@@ -16,14 +16,14 @@ const Purchases = () => {
           <BackButton to="/cards-payments" />
         </div>
         
-        <h2 className="text-xl font-semibold text-gray-200 mb-6">{tLocal('purchasesSubtitle')}</h2>
+        <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-6">{tLocal('purchasesSubtitle')}</h2>
         
         <div className="space-y-6">
-          <div className="text-gray-300">
+          <div className="text-gray-700 dark:text-gray-300">
             <p>{tLocal('purchasesClientOptions')}</p>
             
-            <div className="border-t border-gray-700 my-6 pt-6">
-              <p className="font-medium text-lg text-white">{tLocal('purchasesSection')}</p>
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6 pt-6">
+              <p className="font-medium text-lg text-gray-800 dark:text-white">{tLocal('purchasesSection')}</p>
               <p className="mt-2">{tLocal('purchasesFlowDescription')}</p>
               <p className="mt-2">{tLocal('purchasesDisputeInfo')}</p>
               
@@ -36,11 +36,11 @@ const Purchases = () => {
               </div>
             </div>
 
-            <div className="border-t border-gray-700 my-6 pt-6">
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6 pt-6">
               <p>{tLocal('purchasesStatistics')}</p>
             </div>
             
-            <div className="border-t border-gray-700 my-6 pt-6">
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6 pt-6">
               <p>{tLocal('purchasesStatusColumn')}</p>
               <div className="my-4">
                 <img 
@@ -51,7 +51,7 @@ const Purchases = () => {
               </div>
             </div>
             
-            <div className="border-t border-gray-700 my-6 pt-6">
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6 pt-6">
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="flex-1">
                   <p>{tLocal('purchasesFilters')}</p>
@@ -66,7 +66,7 @@ const Purchases = () => {
               </div>
             </div>
             
-            <div className="border-t border-gray-700 my-6 pt-6">
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6 pt-6">
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="flex-1">
                   <p>{tLocal('purchasesDisputeOperator')}</p>
@@ -81,7 +81,7 @@ const Purchases = () => {
               </div>
             </div>
             
-            <div className="border-t border-gray-700 my-6 pt-6">
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6 pt-6">
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="flex-1">
                   <p>{tLocal('purchasesOperatorActions')}</p>
@@ -96,7 +96,7 @@ const Purchases = () => {
               </div>
             </div>
             
-            <div className="border-t border-gray-700 my-6 pt-6">
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6 pt-6">
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="flex-1">
                   <p>{tLocal('purchasesFullRefund')}</p>
@@ -111,7 +111,7 @@ const Purchases = () => {
               </div>
             </div>
             
-            <div className="border-t border-gray-700 my-6 pt-6">
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6 pt-6">
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 <div className="flex-1">
                   <p>{tLocal('purchasesCloseForStore')}</p>
@@ -126,17 +126,17 @@ const Purchases = () => {
               </div>
             </div>
             
-            <div className="border-t border-gray-700 my-6 pt-6">
+            <div className="border-t border-gray-200 dark:border-gray-700 my-6 pt-6">
               <p>
                 {tLocal('purchasesHelpBots')} 
-                <Link to="/help-bots" className="text-neonBlue hover:underline ml-1">
+                <Link to="/help-bots" className="text-blue-600 dark:text-neonBlue hover:underline ml-1">
                   {tLocal('helpBotsLink')}
                 </Link>
               </p>
               
               <p className="mt-4">
                 {tLocal('purchasesBalanceRecommendation')} 
-                <Link to="/balance-top-ups" className="text-neonBlue hover:underline ml-1">
+                <Link to="/balance-top-ups" className="text-blue-600 dark:text-neonBlue hover:underline ml-1">
                   {tLocal('balanceTopUpsLink')}
                 </Link>
               </p>
