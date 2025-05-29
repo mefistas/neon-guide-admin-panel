@@ -206,13 +206,13 @@ const QuickStart = () => {
                 
                 <CollapsibleContent className="overflow-hidden">
                   <div className="pl-12 pr-6 pb-6 space-y-4">
-                    {section.customContent ? section.customContent : section.notes.map((noteKey, index) => {
+                    {section.customContent ? section.customContent : section.notes?.map((noteKey, index) => {
                       const noteText = t(noteKey);
                       if (!noteText) return null;
                       return (
                         <div key={index} className="relative pl-5 text-gray-700 dark:text-gray-200">
                           <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-blue-500/70 dark:bg-[#D6BCFA]/70"></span>
-                          <p className="leading-relaxed">{renderTextWithLineBreaks(noteText)}</p>
+                          <div className="leading-relaxed">{renderTextWithLineBreaks(noteText)}</div>
                         </div>
                       );
                     })}
