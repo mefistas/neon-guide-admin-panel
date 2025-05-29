@@ -18,11 +18,14 @@ const QuickStart = () => {
     );
   };
 
-  // Function to render text with line breaks
+  // Function to render text with line breaks - improved version
   const renderTextWithLineBreaks = (text: string) => {
     if (!text) return null;
     
-    return text.split('\\n').map((line, index, array) => (
+    // Handle both \n and \\n patterns
+    const lines = text.split(/\\n|\n/);
+    
+    return lines.map((line, index, array) => (
       <React.Fragment key={index}>
         {line}
         {index < array.length - 1 && <br />}
@@ -176,7 +179,9 @@ const QuickStart = () => {
       </div>
       
       <div className="space-y-8">
-        <p className="text-lg text-gray-700 dark:text-gray-200">{renderTextWithLineBreaks(t('quickStartDescription'))}</p>
+        <div className="text-lg text-gray-700 dark:text-gray-200">
+          {renderTextWithLineBreaks(t('quickStartDescription'))}
+        </div>
 
         <div className="space-y-4">
           {quickStartSections.map(section => {
@@ -197,7 +202,9 @@ const QuickStart = () => {
                     <div className="flex items-center justify-center min-w-8 h-8 rounded-full bg-blue-100 text-blue-700 font-medium dark:bg-[#7E69AB]/40 dark:text-white">
                       {section.id}
                     </div>
-                    <h2 className="text-xl font-medium text-gray-800 dark:text-gray-100">{renderTextWithLineBreaks(t(section.title))}</h2>
+                    <h2 className="text-xl font-medium text-gray-800 dark:text-gray-100">
+                      {renderTextWithLineBreaks(t(section.title))}
+                    </h2>
                   </div>
                   <div className="text-blue-700 dark:text-[#D6BCFA]">
                     {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -208,11 +215,14 @@ const QuickStart = () => {
                   <div className="pl-12 pr-6 pb-6 space-y-4">
                     {section.customContent ? section.customContent : section.notes?.map((noteKey, index) => {
                       const noteText = t(noteKey);
+                      console.log(`Note ${noteKey}:`, noteText); // Debug log
                       if (!noteText) return null;
                       return (
                         <div key={index} className="relative pl-5 text-gray-700 dark:text-gray-200">
                           <span className="absolute left-0 top-2 w-2 h-2 rounded-full bg-blue-500/70 dark:bg-[#D6BCFA]/70"></span>
-                          <div className="leading-relaxed">{renderTextWithLineBreaks(noteText)}</div>
+                          <div className="leading-relaxed whitespace-pre-wrap">
+                            {renderTextWithLineBreaks(noteText)}
+                          </div>
                         </div>
                       );
                     })}
