@@ -1,4 +1,3 @@
-
 import React from 'react';
 import TutorialPage from '@/components/TutorialPage';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -32,6 +31,117 @@ const QuickStart = () => {
       </React.Fragment>
     ));
   };
+
+  // Formatted description content
+  const FormattedDescription = () => (
+    <div className="space-y-6">
+      {/* Introduction */}
+      <div className="bg-blue-50/80 dark:bg-[#1A1F2C]/80 p-4 rounded-lg border border-blue-200 dark:border-[#7E69AB]/30">
+        <h2 className="text-lg font-semibold text-blue-800 dark:text-[#D6BCFA] mb-2">
+          🚀 Добро пожаловать в руководство по быстрому старту
+        </h2>
+        <p className="text-gray-700 dark:text-gray-200">
+          Это руководство поможет тебе настроить и сконфигурировать админ-панель всего за 11 шагов. 
+          Следуйте этим инструкциям, чтобы быстро запустить свои продажи.
+        </p>
+      </div>
+
+      {/* Main page overview */}
+      <div className="space-y-3">
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100 flex items-center">
+          📊 Главная страница
+        </h3>
+        <p className="text-gray-700 dark:text-gray-200 pl-4 border-l-2 border-gray-300 dark:border-gray-600">
+          На главной странице есть графики - в них собраны статистические данные работы вашего магазина
+        </p>
+      </div>
+
+      {/* Menu sections */}
+      <div className="space-y-4">
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100 flex items-center">
+          🧭 Основные разделы меню
+        </h3>
+        <div className="pl-4 space-y-3">
+          <div className="bg-gray-50 dark:bg-[#111827] p-3 rounded border-l-4 border-blue-500">
+            <span className="font-medium text-blue-700 dark:text-[#D6BCFA]">Боты</span> - где создаете ботов
+          </div>
+          <div className="bg-gray-50 dark:bg-[#111827] p-3 rounded border-l-4 border-green-500">
+            <span className="font-medium text-green-700 dark:text-green-400">Сотрудники</span> - где создаете сотрудников
+          </div>
+          <div className="bg-gray-50 dark:bg-[#111827] p-3 rounded border-l-4 border-purple-500">
+            <span className="font-medium text-purple-700 dark:text-purple-400">Клиенты</span> - список ваших клиентов кто когда либо писал боту
+          </div>
+          <div className="bg-gray-50 dark:bg-[#111827] p-3 rounded border-l-4 border-orange-500">
+            <span className="font-medium text-orange-700 dark:text-orange-400">Маркетинг</span> - различные промо акции и всё такое
+          </div>
+          <div className="bg-gray-50 dark:bg-[#111827] p-3 rounded border-l-4 border-red-500">
+            <span className="font-medium text-red-700 dark:text-red-400">СКЛАД</span> - основной раздел где можно настроить города, районы, курьеры, товары и адреса
+          </div>
+        </div>
+      </div>
+
+      {/* How to add objects */}
+      <div className="space-y-3">
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100 flex items-center">
+          ➕ Как добавить объект
+        </h3>
+        <div className="bg-green-50 dark:bg-[#0C1A0C] p-4 rounded-lg border border-green-200 dark:border-green-800">
+          <ol className="list-decimal pl-4 space-y-2 text-gray-700 dark:text-gray-200">
+            <li>Перейти в нужный раздел</li>
+            <li>Сверху справа найти кнопку <span className="bg-green-100 dark:bg-green-800 px-2 py-1 rounded font-medium">"ДОБАВИТЬ"</span></li>
+            <li>Заполнить форму добавления</li>
+          </ol>
+        </div>
+      </div>
+
+      {/* How to delete objects */}
+      <div className="space-y-3">
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100 flex items-center">
+          🗑️ Как удалить объект
+        </h3>
+        <div className="bg-red-50 dark:bg-[#1A0C0C] p-4 rounded-lg border border-red-200 dark:border-red-800">
+          <ol className="list-decimal pl-4 space-y-2 text-gray-700 dark:text-gray-200">
+            <li>Перейти в нужный раздел</li>
+            <li>Выбрать нужный объект и кликнуть на первую колонку</li>
+            <li>Перейти в настройки этого объекта</li>
+            <li>Внизу слева будет кнопка <span className="bg-red-100 dark:bg-red-800 px-2 py-1 rounded font-medium">"УДАЛИТЬ"</span></li>
+          </ol>
+          <div className="mt-3 p-2 bg-red-100 dark:bg-red-900/50 rounded text-sm">
+            <strong>⚠️ Внимание:</strong> После подтверждения объект удалится - восстановление не возможно!
+          </div>
+        </div>
+      </div>
+
+      {/* Mass actions */}
+      <div className="space-y-3">
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100 flex items-center">
+          ☑️ Массовые действия
+        </h3>
+        <div className="bg-blue-50 dark:bg-[#0C1420] p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+          <p className="text-gray-700 dark:text-gray-200 mb-3">
+            На странице списка объектов (например адресов) есть строка массовых действий:
+          </p>
+          <ul className="list-disc pl-4 space-y-1 text-gray-700 dark:text-gray-200">
+            <li>Выберите несколько объектов галочками слева от строчки</li>
+            <li>Выберите необходимое действие из выпадающего меню</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Row actions */}
+      <div className="space-y-3">
+        <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100 flex items-center">
+          ⚡ Быстрые действия
+        </h3>
+        <div className="bg-purple-50 dark:bg-[#1A0C20] p-4 rounded-lg border border-purple-200 dark:border-purple-800">
+          <p className="text-gray-700 dark:text-gray-200">
+            На некоторых страницах списка есть у каждой строчки справа разные кнопки действий. 
+            Они чаще всего располагаются в самой крайней правой колонке.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 
   // Quick start section data
   const quickStartSections = [
@@ -179,9 +289,7 @@ const QuickStart = () => {
       </div>
       
       <div className="space-y-8">
-        <div className="text-lg text-gray-700 dark:text-gray-200">
-          {renderTextWithLineBreaks(t('quickStartDescription'))}
-        </div>
+        <FormattedDescription />
 
         <div className="space-y-4">
           {quickStartSections.map(section => {
